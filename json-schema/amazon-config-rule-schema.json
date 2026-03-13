@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/amazon-config-rule.json",
+  "title": "AWS Config Rule",
+  "description": "Schema for an AWS Config rule resource, representing a compliance rule that evaluates whether AWS resources conform to desired configurations.",
+  "type": "object",
+  "properties": {
+    "ConfigRuleName": {
+      "type": "string",
+      "description": "The name that you assign to the AWS Config rule.",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[a-zA-Z0-9-_]+$"
+    },
+    "ConfigRuleArn": {
+      "type": "string",
+      "description": "The ARN of the AWS Config rule.",
+      "pattern": "^arn:aws:config:[a-z0-9-]+:[0-9]{12}:config-rule/.+"
+    },
+    "ConfigRuleId": {
+      "type": "string",
+      "description": "The ID of the AWS Config rule."
+    },
+    "Description": {
+      "type": "string",
+      "description": "The description that you provide for the AWS Config rule.",
+      "maxLength": 256
+    },
+    "Scope": {
+      "type": "object",
+      "description": "Defines which resources trigger an evaluation for the rule.",
+      "properties": {
+        "ComplianceResourceTypes": {
+          "type": "array",
+          "description": "The resource types of only those AWS resources that you want to trigger an evaluation.",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100
+        },
+        "TagKey": {
+          "type": "string",
+          "description": "The tag key that is applied to only those AWS resources that you want to trigger an evaluation.",
+          "maxLength": 128
+        },
+        "TagValue": {
+          "type": "string",
+          "description": "The tag value applied to only those AWS resources that you want to trigger an evaluation.",
+          "maxLength": 256
+        },
+        "ComplianceResourceId": {
+          "type": "string",
+          "description": "The ID of the only AWS resource that you want to trigger an evaluation.",
+          "maxLength": 256
+        }
+      }
+    },
+    "Source": {
+      "type": "object",
+      "description": "Provides the rule owner, rule identifier, and notifications that cause the function to evaluate your AWS resources.",
+      "required": ["Owner", "SourceIdentifier"],
+      "properties": {
+        "Owner": {
+          "type": "string",
+          "description": "Indicates whether AWS or the customer owns and manages the AWS Config rule.",
+          "enum": ["CUSTOM_LAMBDA", "AWS", "CUSTOM_POLICY"]
+        },
+        "SourceIdentifier": {
+          "type": "string",
+          "description": "For AWS managed rules, a predefined identifier. For custom rules, the ARN of the Lambda function."
+        },
+        "SourceDetails": {
+          "type": "array",
+          "description": "Provides the source and type of the event that causes AWS Config to evaluate your resources.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "EventSource": {
+                "type": "string",
+                "enum": ["aws.config"]
+              },
+              "MessageType": {
+                "type": "string",
+                "enum": [
+                  "ConfigurationItemChangeNotification",
+                  "ConfigurationSnapshotDeliveryCompleted",
+                  "ScheduledNotification",
+                  "OversizedConfigurationItemChangeNotification"
+                ]
+              },
+              "MaximumExecutionFrequency": {
+                "type": "string",
+                "enum": [
+                  "One_Hour",
+                  "Three_Hours",
+                  "Six_Hours",
+                  "Twelve_Hours",
+                  "TwentyFour_Hours"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "InputParameters": {
+      "type": "string",
+      "description": "A string, in JSON format, that is passed to the AWS Config rule Lambda function.",
+      "maxLength": 1024
+    },
+    "MaximumExecutionFrequency": {
+      "type": "string",
+      "description": "The maximum frequency with which AWS Config runs evaluations for a rule.",
+      "enum": [
+        "One_Hour",
+        "Three_Hours",
+        "Six_Hours",
+        "Twelve_Hours",
+        "TwentyFour_Hours"
+      ]
+    },
+    "ConfigRuleState": {
+      "type": "string",
+      "description": "Indicates whether the AWS Config rule is active or is currently being deleted.",
+      "enum": ["ACTIVE", "DELETING", "DELETING_RESULTS", "EVALUATING"]
+    }
+  },
+  "required": ["ConfigRuleName", "Source"]
+}

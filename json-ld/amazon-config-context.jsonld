@@ -1,0 +1,92 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "config": "https://docs.aws.amazon.com/config/latest/APIReference/",
+    "aws": "https://aws.amazon.com/",
+    "ConfigRule": {
+      "@id": "config:API_ConfigRule",
+      "@context": {
+        "configRuleName": {
+          "@id": "config:ConfigRule/ConfigRuleName",
+          "@type": "xsd:string"
+        },
+        "configRuleArn": {
+          "@id": "config:ConfigRule/ConfigRuleArn",
+          "@type": "xsd:string"
+        },
+        "configRuleId": {
+          "@id": "config:ConfigRule/ConfigRuleId",
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@id": "config:ConfigRule/Description",
+          "@type": "xsd:string"
+        },
+        "configRuleState": {
+          "@id": "config:ConfigRule/ConfigRuleState",
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "ConfigurationRecorder": {
+      "@id": "config:API_ConfigurationRecorder",
+      "@context": {
+        "name": {
+          "@id": "config:ConfigurationRecorder/Name",
+          "@type": "xsd:string"
+        },
+        "roleARN": {
+          "@id": "config:ConfigurationRecorder/RoleARN",
+          "@type": "xsd:string"
+        },
+        "allSupported": {
+          "@id": "config:ConfigurationRecorder/AllSupported",
+          "@type": "xsd:boolean"
+        }
+      }
+    },
+    "ComplianceResult": {
+      "@id": "config:API_ComplianceResult",
+      "@context": {
+        "complianceType": {
+          "@id": "config:ComplianceResult/ComplianceType",
+          "@type": "xsd:string"
+        },
+        "resourceType": {
+          "@id": "config:ComplianceResult/ResourceType",
+          "@type": "xsd:string"
+        },
+        "resourceId": {
+          "@id": "config:ComplianceResult/ResourceId",
+          "@type": "xsd:string"
+        },
+        "resultRecordedTime": {
+          "@id": "config:ComplianceResult/ResultRecordedTime",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "ConfigurationItem": {
+      "@id": "config:API_ConfigurationItem",
+      "@context": {
+        "resourceType": {
+          "@id": "config:ConfigurationItem/ResourceType",
+          "@type": "xsd:string"
+        },
+        "resourceId": {
+          "@id": "config:ConfigurationItem/ResourceId",
+          "@type": "xsd:string"
+        },
+        "configurationStateId": {
+          "@id": "config:ConfigurationItem/ConfigurationStateId",
+          "@type": "xsd:string"
+        },
+        "configurationItemCaptureTime": {
+          "@id": "config:ConfigurationItem/CaptureTime",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}

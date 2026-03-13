@@ -1,0 +1,309 @@
+openapi: 3.1.0
+info:
+  title: AWS Config API
+  description: >-
+    AWS Config provides a detailed view of the configuration of AWS resources
+    in your account. The API enables programmatic management of configuration
+    recorders, delivery channels, config rules, and resource compliance
+    evaluation.
+  version: "2014-11-12"
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/config/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: https://config.amazonaws.com
+    description: AWS Config API endpoint
+paths:
+  /:
+    post:
+      operationId: PutConfigRule
+      summary: Create or update a config rule
+      description: >-
+        Adds or updates an AWS Config rule for evaluating whether your AWS
+        resources comply with your desired configurations.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: "#/components/schemas/PutConfigRuleInput"
+      responses:
+        "200":
+          description: Config rule created or updated successfully
+        "400":
+          description: Bad request
+      tags:
+        - Rules
+  /describeConfigRules:
+    post:
+      operationId: DescribeConfigRules
+      summary: Describe config rules
+      description: >-
+        Returns details about your AWS Config rules.
+      requestBody:
+        required: false
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                ConfigRuleNames:
+                  type: array
+                  items:
+                    type: string
+                NextToken:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConfigRuleList"
+      tags:
+        - Rules
+  /getComplianceDetailsByConfigRule:
+    post:
+      operationId: GetComplianceDetailsByConfigRule
+      summary: Get compliance details by config rule
+      description: >-
+        Returns the evaluation results for the specified AWS Config rule.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - ConfigRuleName
+              properties:
+                ConfigRuleName:
+                  type: string
+                ComplianceTypes:
+                  type: array
+                  items:
+                    type: string
+                    enum:
+                      - COMPLIANT
+                      - NON_COMPLIANT
+                      - NOT_APPLICABLE
+                      - INSUFFICIENT_DATA
+                Limit:
+                  type: integer
+                NextToken:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ComplianceResults"
+      tags:
+        - Compliance
+  /describeConfigurationRecorders:
+    post:
+      operationId: DescribeConfigurationRecorders
+      summary: Describe configuration recorders
+      description: >-
+        Returns the details for the specified configuration recorders.
+      requestBody:
+        required: false
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                ConfigurationRecorderNames:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ConfigurationRecorders:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/ConfigurationRecorder"
+      tags:
+        - Recorders
+  /getResourceConfigHistory:
+    post:
+      operationId: GetResourceConfigHistory
+      summary: Get resource configuration history
+      description: >-
+        Returns a list of configuration items for the specified resource.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - resourceType
+                - resourceId
+              properties:
+                resourceType:
+                  type: string
+                resourceId:
+                  type: string
+                laterTime:
+                  type: string
+                  format: date-time
+                earlierTime:
+                  type: string
+                  format: date-time
+                limit:
+                  type: integer
+                nextToken:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+      tags:
+        - Resources
+components:
+  schemas:
+    PutConfigRuleInput:
+      type: object
+      required:
+        - ConfigRule
+      properties:
+        ConfigRule:
+          $ref: "#/components/schemas/ConfigRule"
+    ConfigRule:
+      type: object
+      required:
+        - Source
+      properties:
+        ConfigRuleName:
+          type: string
+          description: The name of the AWS Config rule.
+        ConfigRuleArn:
+          type: string
+          description: The ARN of the AWS Config rule.
+        ConfigRuleId:
+          type: string
+          description: The ID of the AWS Config rule.
+        Description:
+          type: string
+          description: The description of the AWS Config rule.
+        Scope:
+          type: object
+          properties:
+            ComplianceResourceTypes:
+              type: array
+              items:
+                type: string
+            TagKey:
+              type: string
+            TagValue:
+              type: string
+            ComplianceResourceId:
+              type: string
+        Source:
+          type: object
+          required:
+            - Owner
+            - SourceIdentifier
+          properties:
+            Owner:
+              type: string
+              enum:
+                - CUSTOM_LAMBDA
+                - AWS
+                - CUSTOM_POLICY
+            SourceIdentifier:
+              type: string
+            SourceDetails:
+              type: array
+              items:
+                type: object
+                properties:
+                  EventSource:
+                    type: string
+                  MessageType:
+                    type: string
+                  MaximumExecutionFrequency:
+                    type: string
+        ConfigRuleState:
+          type: string
+          enum:
+            - ACTIVE
+            - DELETING
+            - DELETING_RESULTS
+            - EVALUATING
+    ConfigRuleList:
+      type: object
+      properties:
+        ConfigRules:
+          type: array
+          items:
+            $ref: "#/components/schemas/ConfigRule"
+        NextToken:
+          type: string
+    ComplianceResults:
+      type: object
+      properties:
+        EvaluationResults:
+          type: array
+          items:
+            type: object
+            properties:
+              EvaluationResultIdentifier:
+                type: object
+                properties:
+                  EvaluationResultQualifier:
+                    type: object
+                    properties:
+                      ConfigRuleName:
+                        type: string
+                      ResourceType:
+                        type: string
+                      ResourceId:
+                        type: string
+              ComplianceType:
+                type: string
+              ResultRecordedTime:
+                type: string
+                format: date-time
+              ConfigRuleInvokedTime:
+                type: string
+                format: date-time
+        NextToken:
+          type: string
+    ConfigurationRecorder:
+      type: object
+      properties:
+        name:
+          type: string
+        roleARN:
+          type: string
+        recordingGroup:
+          type: object
+          properties:
+            allSupported:
+              type: boolean
+            includeGlobalResourceTypes:
+              type: boolean
+            resourceTypes:
+              type: array
+              items:
+                type: string
+tags:
+  - name: Rules
+    description: Operations for managing AWS Config rules
+  - name: Compliance
+    description: Operations for evaluating resource compliance
+  - name: Recorders
+    description: Operations for managing configuration recorders
+  - name: Resources
+    description: Operations for querying resource configurations
