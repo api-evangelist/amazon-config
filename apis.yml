@@ -1,7 +1,7 @@
 aid: amazon-config
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/apis.yml
-name: Amazon Config API
+name: Amazon Config
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 specificationVersion: '0.19'
