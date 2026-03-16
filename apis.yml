@@ -1,16 +1,17 @@
+aid: amazon-config
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/apis.yml
 name: Amazon Config API
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+specificationVersion: '0.19'
 description: >-
   AWS Config provides a detailed view of the configuration of AWS resources in
   your AWS account. This includes how the resources are related to one another
-  and how they were configured in the past so that you can see how the
-  configurations and relationships change over time. AWS Config enables you to
-  assess, audit, and evaluate the configurations of your AWS resources for
-  compliance and security governance.
-image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-url: https://aws.amazon.com/config/
-baseURL: https://config.amazonaws.com
+  and how they were configured in the past, enabling assessment, auditing, and
+  evaluation of configurations for compliance and security governance.
 created: '2024-01-15'
-modified: '2026-03-13'
+modified: '2026-03-16'
 tags:
   - Configuration
   - Compliance
