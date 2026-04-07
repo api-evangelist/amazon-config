@@ -299,11 +299,11 @@ components:
               items:
                 type: string
 tags:
-  - name: Rules
-    description: Operations for managing AWS Config rules
   - name: Compliance
     description: Operations for evaluating resource compliance
   - name: Recorders
     description: Operations for managing configuration recorders
   - name: Resources
     description: Operations for querying resource configurations
+  - name: Rules
+    description: Operations for managing AWS Config rules
