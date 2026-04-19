@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-put-retention-configuration-response-structure.json",
+  "name": "PutRetentionConfigurationResponse",
+  "description": "PutRetentionConfigurationResponse schema",
+  "type": "object",
+  "properties": {
+    "RetentionConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RetentionConfiguration"
+        },
+        {
+          "description": "Returns a retention configuration object."
+        }
+      ]
+    }
+  }
+}

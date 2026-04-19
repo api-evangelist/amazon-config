@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-sort-by-schema.json",
+  "title": "SortBy",
+  "description": "SortBy schema",
+  "type": "string",
+  "enum": [
+    "SCORE"
+  ]
+}

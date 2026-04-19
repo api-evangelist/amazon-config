@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-aggregate-conformance-pack-compliance-summary-schema.json",
+  "title": "AggregateConformancePackComplianceSummary",
+  "description": "Provides a summary of compliance based on either account ID or region. ",
+  "type": "object",
+  "properties": {
+    "ComplianceSummary": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AggregateConformancePackComplianceCount"
+        },
+        {
+          "description": "Returns an <code>AggregateConformancePackComplianceCount</code> object. "
+        }
+      ]
+    },
+    "GroupName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "Groups the result based on Amazon Web Services account ID or Amazon Web Services Region."
+        }
+      ]
+    }
+  }
+}

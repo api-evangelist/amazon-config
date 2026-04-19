@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-deliver-config-snapshot-request-structure.json",
+  "name": "DeliverConfigSnapshotRequest",
+  "description": "The input for the <a>DeliverConfigSnapshot</a> action.",
+  "type": "object",
+  "properties": {
+    "deliveryChannelName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ChannelName"
+        },
+        {
+          "description": "The name of the delivery channel through which the snapshot is delivered."
+        }
+      ]
+    }
+  },
+  "required": [
+    "deliveryChannelName"
+  ]
+}

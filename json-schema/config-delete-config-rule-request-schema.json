@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-delete-config-rule-request-schema.json",
+  "title": "DeleteConfigRuleRequest",
+  "description": "<p/>",
+  "type": "object",
+  "properties": {
+    "ConfigRuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigRuleName"
+        },
+        {
+          "description": "The name of the Config rule that you want to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConfigRuleName"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "ResourceId": "example-string",
+  "ResourceType": "AWS::EC2::Instance",
+  "ResourceConfiguration": "example-string",
+  "ResourceConfigurationSchemaType": "AWS::EC2::Instance"
+}

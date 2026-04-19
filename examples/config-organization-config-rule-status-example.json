@@ -1,0 +1,7 @@
+{
+  "OrganizationConfigRuleName": "example-config-rule",
+  "OrganizationRuleStatus": "COMPLIANT",
+  "ErrorCode": "example-string",
+  "ErrorMessage": "example-string",
+  "LastUpdateTime": "example-string"
+}

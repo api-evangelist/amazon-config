@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-put-configuration-aggregator-response-structure.json",
+  "name": "PutConfigurationAggregatorResponse",
+  "description": "PutConfigurationAggregatorResponse schema",
+  "type": "object",
+  "properties": {
+    "ConfigurationAggregator": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationAggregator"
+        },
+        {
+          "description": "Returns a ConfigurationAggregator object."
+        }
+      ]
+    }
+  }
+}

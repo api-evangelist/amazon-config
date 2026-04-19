@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-put-stored-query-request-structure.json",
+  "name": "PutStoredQueryRequest",
+  "description": "PutStoredQueryRequest schema",
+  "type": "object",
+  "properties": {
+    "StoredQuery": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StoredQuery"
+        },
+        {
+          "description": "<p>A list of <code>StoredQuery</code> objects. The mandatory fields are <code>QueryName</code> and <code>Expression</code>.</p> <note> <p>When you are creating a query, you must provide a query name and an expression. When you are updating a query, you must provide a query name but updating the description is optional.</p> </note>"
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagsList"
+        },
+        {
+          "description": "A list of <code>Tags</code> object."
+        }
+      ]
+    }
+  },
+  "required": [
+    "StoredQuery"
+  ]
+}

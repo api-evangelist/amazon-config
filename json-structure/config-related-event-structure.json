@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-related-event-structure.json",
+  "name": "RelatedEvent",
+  "description": "RelatedEvent schema",
+  "type": "string"
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-conformance-pack-evaluation-filters-structure.json",
+  "name": "ConformancePackEvaluationFilters",
+  "description": "Filters a conformance pack by Config rule names, compliance types, Amazon Web Services resource types, and resource IDs.",
+  "type": "object",
+  "properties": {
+    "ConfigRuleNames": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackConfigRuleNames"
+        },
+        {
+          "description": "Filters the results by Config rule names."
+        }
+      ]
+    },
+    "ComplianceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackComplianceType"
+        },
+        {
+          "description": "<p>Filters the results by compliance.</p> <p>The allowed values are <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. <code>INSUFFICIENT_DATA</code> is not supported.</p>"
+        }
+      ]
+    },
+    "ResourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "Filters the results by the resource type (for example, <code>\"AWS::EC2::Instance\"</code>). "
+        }
+      ]
+    },
+    "ResourceIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackComplianceResourceIds"
+        },
+        {
+          "description": "<p>Filters the results by resource IDs.</p> <note> <p>This is valid only when you provide resource type. If there is no resource type, you will see an error.</p> </note>"
+        }
+      ]
+    }
+  }
+}

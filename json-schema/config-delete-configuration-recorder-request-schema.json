@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-delete-configuration-recorder-request-schema.json",
+  "title": "DeleteConfigurationRecorderRequest",
+  "description": "The request object for the <code>DeleteConfigurationRecorder</code> action.",
+  "type": "object",
+  "properties": {
+    "ConfigurationRecorderName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RecorderName"
+        },
+        {
+          "description": "The name of the configuration recorder to be deleted. You can retrieve the name of your configuration recorder by using the <code>DescribeConfigurationRecorders</code> action."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConfigurationRecorderName"
+  ]
+}

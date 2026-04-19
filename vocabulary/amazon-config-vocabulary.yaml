@@ -1,0 +1,225 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: "Amazon Config"
+  description: "Vocabulary and taxonomy for Amazon Config covering resource configuration tracking, compliance rules, configuration history, remediation, and governance dimensions."
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - name: Amazon Config API
+      namespace: config
+      version: "2014-11-12"
+      baseUrl: https://config.{region}.amazonaws.com
+      status: active
+
+  resources:
+    - name: config-rules
+      description: "Compliance rules that evaluate resource configurations."
+      api: config
+      actions: [describe, put, delete, start-evaluation]
+    - name: configuration-recorder
+      description: "Records configuration changes to AWS resources."
+      api: config
+      actions: [describe, put, start, stop, delete]
+    - name: delivery-channel
+      description: "Delivers configuration snapshots and changes to S3/SNS."
+      api: config
+      actions: [describe, put, delete]
+    - name: compliance
+      description: "Compliance evaluation results for resources and rules."
+      api: config
+      actions: [describe, get-summary]
+    - name: resources
+      description: "Discovered AWS resources in the Config inventory."
+      api: config
+      actions: [list, batch-get, get-history]
+    - name: conformance-packs
+      description: "Collections of Config rules deployed as a unit."
+      api: config
+      actions: [describe, put, delete, get-compliance]
+    - name: remediation
+      description: "Automated remediation configurations and executions."
+      api: config
+      actions: [put, describe, start, cancel, list]
+    - name: aggregators
+      description: "Configuration aggregators collecting data from multiple accounts/regions."
+      api: config
+      actions: [put, describe, delete, get-resource-config]
+    - name: config-snapshots
+      description: "Point-in-time snapshots of all resource configurations."
+      api: config
+      actions: [deliver]
+
+  actions:
+    - name: describe
+      httpMethods: [POST]
+      pattern: read
+    - name: put
+      httpMethods: [POST]
+      pattern: write
+    - name: delete
+      httpMethods: [POST]
+      pattern: destructive
+    - name: list
+      httpMethods: [POST]
+      pattern: read
+    - name: get
+      httpMethods: [POST]
+      pattern: read
+    - name: start
+      httpMethods: [POST]
+      pattern: write
+    - name: stop
+      httpMethods: [POST]
+      pattern: write
+    - name: batch-get
+      httpMethods: [POST]
+      pattern: read
+
+  schemas:
+    core:
+      - name: ConfigRule
+        description: "An AWS Config rule for compliance evaluation."
+        properties: [ConfigRuleName, ConfigRuleArn, ConfigRuleId, Description, Source, Scope, InputParameters, MaximumExecutionFrequency, ConfigRuleState]
+      - name: ConfigurationItem
+        description: "A point-in-time record of the configuration of an AWS resource."
+        properties: [version, accountId, configurationItemCaptureTime, configurationItemStatus, configurationStateId, arn, resourceType, resourceId, resourceName, awsRegion, availabilityZone, tags, configuration]
+      - name: Compliance
+        description: "The compliance status of a Config rule or resource."
+        properties: [ComplianceType, ComplianceContributorCount]
+      - name: RemediationConfiguration
+        description: "An action that Config can take to remediate noncompliance."
+        properties: [ConfigRuleName, TargetType, TargetId, TargetVersion, Parameters, ResourceType, Arn]
+      - name: ConformancePack
+        description: "A pack of Config rules deployed as a unit."
+        properties: [ConformancePackName, ConformancePackArn, DeliveryS3Bucket, DeliveryS3KeyPrefix]
+
+  parameters:
+    pagination:
+      - NextToken
+      - Limit
+    identifiers:
+      - ConfigRuleNames
+      - ResourceType
+      - ResourceId
+      - ResourceKeys
+      - ConformancePackNames
+    filters:
+      - Filters
+      - ComplianceTypes
+      - ResourceTypes
+
+  enums:
+    compliance_types:
+      - COMPLIANT
+      - NON_COMPLIANT
+      - NOT_APPLICABLE
+      - INSUFFICIENT_DATA
+    config_rule_states:
+      - ACTIVE
+      - DELETING
+      - DELETING_RESULTS
+      - EVALUATING
+    resource_types:
+      - "AWS::EC2::Instance"
+      - "AWS::EC2::SecurityGroup"
+      - "AWS::S3::Bucket"
+      - "AWS::IAM::Role"
+      - "AWS::RDS::DBInstance"
+      - "AWS::Lambda::Function"
+
+  authentication:
+    schemes:
+      - type: AWS SigV4
+        description: AWS Signature Version 4 for all API calls
+
+capability:
+  workflows:
+    - name: Compliance and Governance
+      file: capabilities/compliance-governance.yaml
+      description: "Resource compliance monitoring, configuration history, and automated remediation."
+      apis: [config]
+      toolCount: 10
+      personas:
+        - Security Engineer
+        - Compliance Officer
+
+  personas:
+    - id: security-engineer
+      name: Security Engineer
+      description: "Creates and manages Config rules to enforce security policies."
+      workflows: [compliance-governance]
+    - id: compliance-officer
+      name: Compliance Officer
+      description: "Audits resource compliance, reviews configuration history, and ensures governance standards."
+      workflows: [compliance-governance]
+
+  domains:
+    - name: Compliance Monitoring
+      resources: [config-rules, compliance, conformance-packs]
+      workflows: [compliance-governance]
+    - name: Configuration Inventory
+      resources: [resources, configuration-recorder, delivery-channel, config-snapshots]
+      workflows: [compliance-governance]
+    - name: Remediation
+      resources: [remediation]
+      workflows: [compliance-governance]
+    - name: Multi-Account Governance
+      resources: [aggregators]
+      workflows: [compliance-governance]
+
+  namespaces:
+    - name: config
+      type: consumed
+      baseUri: https://config.{region}.amazonaws.com
+    - name: compliance-governance-api
+      type: rest-exposed
+      port: 8080
+    - name: compliance-governance-mcp
+      type: mcp-exposed
+      port: 9090
+
+  binds:
+    - name: AWS_ACCESS_KEY_ID
+      workflows: [compliance-governance]
+    - name: AWS_SECRET_ACCESS_KEY
+      workflows: [compliance-governance]
+    - name: AWS_REGION
+      workflows: [compliance-governance]
+
+crossReference:
+  - resource: config-rules
+    operations:
+      - DescribeConfigRules
+      - PutConfigRule
+      - DeleteConfigRule
+      - StartConfigRulesEvaluation
+    workflows: [compliance-governance]
+    personas: [security-engineer, compliance-officer]
+
+  - resource: compliance
+    operations:
+      - DescribeComplianceByResource
+      - DescribeComplianceByConfigRule
+      - GetComplianceSummaryByResourceType
+      - GetComplianceSummaryByConfigRule
+    workflows: [compliance-governance]
+    personas: [security-engineer, compliance-officer]
+
+  - resource: resources
+    operations:
+      - ListDiscoveredResources
+      - GetResourceConfigHistory
+      - BatchGetResourceConfig
+    workflows: [compliance-governance]
+    personas: [security-engineer, compliance-officer]
+
+  - resource: remediation
+    operations:
+      - PutRemediationConfigurations
+      - StartRemediationExecution
+      - DescribeRemediationExecutionStatus
+    workflows: [compliance-governance]
+    personas: [security-engineer]

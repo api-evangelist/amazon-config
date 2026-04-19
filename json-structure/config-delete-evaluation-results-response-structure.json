@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-delete-evaluation-results-response-structure.json",
+  "name": "DeleteEvaluationResultsResponse",
+  "description": "The output when you delete the evaluation results for the specified Config rule.",
+  "type": "object",
+  "properties": {}
+}

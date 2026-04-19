@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-get-organization-custom-rule-policy-request-structure.json",
+  "name": "GetOrganizationCustomRulePolicyRequest",
+  "description": "GetOrganizationCustomRulePolicyRequest schema",
+  "type": "object",
+  "properties": {
+    "OrganizationConfigRuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationConfigRuleName"
+        },
+        {
+          "description": "The name of your organization Config Custom Policy rule. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "OrganizationConfigRuleName"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-describe-config-rules-filters-structure.json",
+  "name": "DescribeConfigRulesFilters",
+  "description": "Returns a filtered list of Detective or Proactive Config rules. By default, if the filter is not defined, this API returns an unfiltered list. For more information on Detective or Proactive Config rules, see <a href=\"https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html\"> <b>Evaluation Mode</b> </a> in the <i>Config Developer Guide</i>.",
+  "type": "object",
+  "properties": {
+    "EvaluationMode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationMode"
+        },
+        {
+          "description": "The mode of an evaluation. The valid values are Detective or Proactive."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-query-info-schema.json",
+  "title": "QueryInfo",
+  "description": "Details about the query.",
+  "type": "object",
+  "properties": {
+    "SelectFields": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FieldInfoList"
+        },
+        {
+          "description": "Returns a <code>FieldInfo</code> object."
+        }
+      ]
+    }
+  }
+}

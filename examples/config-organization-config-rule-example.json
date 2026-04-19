@@ -1,0 +1,9 @@
+{
+  "OrganizationConfigRuleName": "example-config-rule",
+  "OrganizationConfigRuleArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "OrganizationManagedRuleMetadata": "example-string",
+  "OrganizationCustomRuleMetadata": "example-string",
+  "ExcludedAccounts": "123456789012",
+  "LastUpdateTime": "example-string",
+  "OrganizationCustomPolicyRuleMetadata": "example-string"
+}

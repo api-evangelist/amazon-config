@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-message-type-structure.json",
+  "name": "MessageType",
+  "description": "MessageType schema",
+  "type": "string",
+  "enum": [
+    "ConfigurationItemChangeNotification",
+    "ConfigurationSnapshotDeliveryCompleted",
+    "ScheduledNotification",
+    "OversizedConfigurationItemChangeNotification"
+  ]
+}

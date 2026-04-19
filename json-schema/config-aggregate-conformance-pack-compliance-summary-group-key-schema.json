@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-aggregate-conformance-pack-compliance-summary-group-key-schema.json",
+  "title": "AggregateConformancePackComplianceSummaryGroupKey",
+  "description": "AggregateConformancePackComplianceSummaryGroupKey schema",
+  "type": "string",
+  "enum": [
+    "ACCOUNT_ID",
+    "AWS_REGION"
+  ]
+}

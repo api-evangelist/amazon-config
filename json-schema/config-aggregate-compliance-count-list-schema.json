@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-aggregate-compliance-count-list-schema.json",
+  "title": "AggregateComplianceCountList",
+  "description": "AggregateComplianceCountList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/AggregateComplianceCount"
+  }
+}

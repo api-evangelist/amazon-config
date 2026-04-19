@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-aggregate-conformance-pack-compliance-filters-schema.json",
+  "title": "AggregateConformancePackComplianceFilters",
+  "description": "Filters the conformance packs based on an account ID, region, compliance type, and the name of the conformance pack.",
+  "type": "object",
+  "properties": {
+    "ConformancePackName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackName"
+        },
+        {
+          "description": "The name of the conformance pack."
+        }
+      ]
+    },
+    "ComplianceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackComplianceType"
+        },
+        {
+          "description": "The compliance status of the conformance pack."
+        }
+      ]
+    },
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "description": "The 12-digit Amazon Web Services account ID of the source account."
+        }
+      ]
+    },
+    "AwsRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsRegion"
+        },
+        {
+          "description": "The source Amazon Web Services Region from where the data is aggregated."
+        }
+      ]
+    }
+  }
+}

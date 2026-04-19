@@ -1,0 +1,11 @@
+{
+  "ConformancePackName": "example-config-rule",
+  "ConformancePackArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "ConformancePackId": "example-string",
+  "DeliveryS3Bucket": "example-string",
+  "DeliveryS3KeyPrefix": "example-string",
+  "ConformancePackInputParameters": "example-string",
+  "LastUpdateRequestedTime": "example-string",
+  "CreatedBy": "example-string",
+  "TemplateSSMDocumentDetails": "example-string"
+}

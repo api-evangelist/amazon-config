@@ -1,0 +1,7 @@
+{
+  "ResourceType": "AWS::EC2::Instance",
+  "ResourceId": "example-string",
+  "ComplianceTypes": "example-string",
+  "NextToken": "example-string",
+  "ResourceEvaluationId": "example-string"
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-delete-remediation-configuration-request-structure.json",
+  "name": "DeleteRemediationConfigurationRequest",
+  "description": "DeleteRemediationConfigurationRequest schema",
+  "type": "object",
+  "properties": {
+    "ConfigRuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigRuleName"
+        },
+        {
+          "description": "The name of the Config rule for which you want to delete remediation configuration."
+        }
+      ]
+    },
+    "ResourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The type of a resource."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConfigRuleName"
+  ]
+}

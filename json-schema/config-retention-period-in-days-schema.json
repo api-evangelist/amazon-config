@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-retention-period-in-days-schema.json",
+  "title": "RetentionPeriodInDays",
+  "description": "RetentionPeriodInDays schema",
+  "type": "integer",
+  "minimum": 30,
+  "maximum": 2557
+}

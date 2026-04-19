@@ -1,0 +1,10 @@
+{
+  "name": "example-config-rule",
+  "lastStartTime": "example-string",
+  "lastStopTime": "example-string",
+  "recording": "example-string",
+  "lastStatus": "COMPLIANT",
+  "lastErrorCode": "example-string",
+  "lastErrorMessage": "example-string",
+  "lastStatusChangeTime": "COMPLIANT"
+}

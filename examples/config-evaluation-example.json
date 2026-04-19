@@ -1,0 +1,7 @@
+{
+  "ComplianceResourceType": "AWS::EC2::Instance",
+  "ComplianceResourceId": "example-string",
+  "ComplianceType": "example-string",
+  "Annotation": "example-string",
+  "OrderingTimestamp": "example-string"
+}

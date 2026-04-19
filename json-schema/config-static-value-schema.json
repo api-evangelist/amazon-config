@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-static-value-schema.json",
+  "title": "StaticValue",
+  "description": "The static value of the resource.",
+  "type": "object",
+  "properties": {
+    "Values": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StaticParameterValues"
+        },
+        {
+          "description": "A list of values. For example, the ARN of the assumed role. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "Values"
+  ]
+}

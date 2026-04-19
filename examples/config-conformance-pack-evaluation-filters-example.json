@@ -1,0 +1,6 @@
+{
+  "ConfigRuleNames": "example-config-rule",
+  "ComplianceType": "example-string",
+  "ResourceType": "AWS::EC2::Instance",
+  "ResourceIds": "example-string"
+}

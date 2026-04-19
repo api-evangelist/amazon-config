@@ -1,0 +1,244 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: "Amazon Config Compliance and Governance"
+  description: "Workflow capability for AWS resource configuration tracking, compliance evaluation, configuration history auditing, and automated remediation using Amazon Config. Used by security engineers and compliance officers to enforce governance policies and audit configuration changes across AWS infrastructure."
+  tags:
+    - Amazon
+    - AWS
+    - Compliance
+    - Configuration Management
+    - Governance
+    - Security
+    - Auditing
+    - Remediation
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+binds:
+  - namespace: env
+    keys:
+      AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+      AWS_REGION: AWS_REGION
+
+capability:
+  consumes:
+    - import: config
+      location: ./shared/config.yaml
+
+  exposes:
+    - type: rest
+      port: 8080
+      namespace: compliance-governance-api
+      description: "Unified REST API for Amazon Config compliance monitoring and governance."
+      resources:
+        - path: /v1/config-rules
+          name: config-rules
+          description: "Manage Config compliance rules."
+          operations:
+            - method: GET
+              name: list-config-rules
+              description: "List all AWS Config rules."
+              call: "config.describe-config-rules"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+            - method: PUT
+              name: put-config-rule
+              description: "Create or update a Config rule."
+              call: "config.put-config-rule"
+              with:
+                config_rule: "rest.config_rule"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/compliance/resources
+          name: resource-compliance
+          description: "Check resource compliance status."
+          operations:
+            - method: GET
+              name: get-resource-compliance
+              description: "Get compliance status for AWS resources."
+              call: "config.describe-compliance-by-resource"
+              with:
+                resource_type: "rest.resource_type"
+                resource_id: "rest.resource_id"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/compliance/summary
+          name: compliance-summary
+          description: "Compliance summary by resource type."
+          operations:
+            - method: GET
+              name: get-compliance-summary
+              description: "Get compliance summary across resource types."
+              call: "config.get-compliance-summary-by-resource-type"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/resources
+          name: resources
+          description: "Discovered resource inventory."
+          operations:
+            - method: GET
+              name: list-resources
+              description: "List discovered AWS resources of a given type."
+              call: "config.list-discovered-resources"
+              with:
+                resource_type: "rest.resource_type"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/resources/{resource_type}/{resource_id}/history
+          name: resource-history
+          description: "Resource configuration history."
+          operations:
+            - method: GET
+              name: get-config-history
+              description: "Get configuration history for a resource."
+              call: "config.get-resource-config-history"
+              with:
+                resource_type: "rest.resource_type"
+                resource_id: "rest.resource_id"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/remediation
+          name: remediation
+          description: "Remediation configuration and execution."
+          operations:
+            - method: POST
+              name: start-remediation
+              description: "Start remediation execution for noncompliant resources."
+              call: "config.start-remediation-execution"
+              with:
+                rule_name: "rest.rule_name"
+                resource_keys: "rest.resource_keys"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+    - type: mcp
+      port: 9090
+      namespace: compliance-governance-mcp
+      transport: http
+      description: "MCP server for AI-assisted Amazon Config compliance monitoring and governance."
+      tools:
+        - name: list-config-rules
+          description: "List all AWS Config compliance rules in the account."
+          hints:
+            readOnly: true
+          call: "config.describe-config-rules"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: check-resource-compliance
+          description: "Check compliance status of a specific AWS resource against Config rules."
+          hints:
+            readOnly: true
+            openWorld: false
+          call: "config.describe-compliance-by-resource"
+          with:
+            resource_type: "tools.resource_type"
+            resource_id: "tools.resource_id"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: check-rule-compliance
+          description: "Check compliance status across all resources for a specific Config rule."
+          hints:
+            readOnly: true
+          call: "config.describe-compliance-by-config-rule"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: get-compliance-summary
+          description: "Get a summary of compliant vs noncompliant resources by resource type."
+          hints:
+            readOnly: true
+          call: "config.get-compliance-summary-by-resource-type"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: list-resources
+          description: "List all discovered AWS resources of a given type in Config inventory."
+          hints:
+            readOnly: true
+          call: "config.list-discovered-resources"
+          with:
+            resource_type: "tools.resource_type"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: get-resource-history
+          description: "Get the configuration history for a specific AWS resource."
+          hints:
+            readOnly: true
+          call: "config.get-resource-config-history"
+          with:
+            resource_type: "tools.resource_type"
+            resource_id: "tools.resource_id"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: get-current-config
+          description: "Get the current configuration of one or more AWS resources."
+          hints:
+            readOnly: true
+          call: "config.batch-get-resource-config"
+          with:
+            resource_keys: "tools.resource_keys"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: create-config-rule
+          description: "Create or update an AWS Config compliance rule."
+          hints:
+            readOnly: false
+            destructive: false
+          call: "config.put-config-rule"
+          with:
+            config_rule: "tools.config_rule"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: delete-config-rule
+          description: "Delete an AWS Config compliance rule."
+          hints:
+            readOnly: false
+            destructive: true
+          call: "config.delete-config-rule"
+          with:
+            rule_name: "tools.rule_name"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: start-remediation
+          description: "Start automated remediation for noncompliant resources."
+          hints:
+            readOnly: false
+            destructive: false
+          call: "config.start-remediation-execution"
+          with:
+            rule_name: "tools.rule_name"
+            resource_keys: "tools.resource_keys"
+          outputParameters:
+            - type: object
+              mapping: "$."

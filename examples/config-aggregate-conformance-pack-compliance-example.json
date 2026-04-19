@@ -1,0 +1,6 @@
+{
+  "ComplianceType": "example-string",
+  "CompliantRuleCount": "example-string",
+  "NonCompliantRuleCount": "example-string",
+  "TotalRuleCount": "example-string"
+}

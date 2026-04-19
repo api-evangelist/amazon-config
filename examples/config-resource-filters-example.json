@@ -1,0 +1,6 @@
+{
+  "AccountId": "123456789012",
+  "ResourceId": "example-string",
+  "ResourceName": "example-config-rule",
+  "Region": "us-east-1"
+}

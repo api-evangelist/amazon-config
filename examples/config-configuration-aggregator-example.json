@@ -1,0 +1,9 @@
+{
+  "ConfigurationAggregatorName": "example-config-rule",
+  "ConfigurationAggregatorArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "AccountAggregationSources": "123456789012",
+  "OrganizationAggregationSource": "example-string",
+  "CreationTime": "example-string",
+  "LastUpdatedTime": "example-string",
+  "CreatedBy": "example-string"
+}

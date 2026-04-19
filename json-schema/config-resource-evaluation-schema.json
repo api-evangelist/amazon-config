@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-resource-evaluation-schema.json",
+  "title": "ResourceEvaluation",
+  "description": "Returns details of a resource evaluation.",
+  "type": "object",
+  "properties": {
+    "ResourceEvaluationId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceEvaluationId"
+        },
+        {
+          "description": "The ResourceEvaluationId of a evaluation."
+        }
+      ]
+    },
+    "EvaluationMode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationMode"
+        },
+        {
+          "description": "The mode of an evaluation. The valid values are Detective or Proactive."
+        }
+      ]
+    },
+    "EvaluationStartTimestamp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The starting time of an execution."
+        }
+      ]
+    }
+  }
+}

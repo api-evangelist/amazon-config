@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-maximum-execution-frequency-schema.json",
+  "title": "MaximumExecutionFrequency",
+  "description": "MaximumExecutionFrequency schema",
+  "type": "string",
+  "enum": [
+    "One_Hour",
+    "Three_Hours",
+    "Six_Hours",
+    "Twelve_Hours",
+    "TwentyFour_Hours"
+  ]
+}

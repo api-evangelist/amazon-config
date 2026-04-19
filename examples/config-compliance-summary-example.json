@@ -1,0 +1,5 @@
+{
+  "CompliantResourceCount": "example-string",
+  "NonCompliantResourceCount": "example-string",
+  "ComplianceSummaryTimestamp": "example-string"
+}

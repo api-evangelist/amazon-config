@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-exclusion-by-resource-types-structure.json",
+  "name": "ExclusionByResourceTypes",
+  "description": "Specifies whether the configuration recorder excludes resource types from being recorded. Use the <code>resourceTypes</code> field to enter a comma-separated list of resource types to exclude as exemptions.",
+  "type": "object",
+  "properties": {
+    "resourceTypes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceTypeList"
+        },
+        {
+          "description": "A comma-separated list of resource types to exclude from recording by the configuration recorder."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "example-config-rule",
+  "roleARN": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "recordingGroup": "example-string"
+}

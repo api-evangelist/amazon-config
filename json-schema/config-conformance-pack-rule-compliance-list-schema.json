@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-conformance-pack-rule-compliance-list-schema.json",
+  "title": "ConformancePackRuleComplianceList",
+  "description": "ConformancePackRuleComplianceList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ConformancePackRuleCompliance"
+  },
+  "minItems": 0,
+  "maxItems": 1000
+}

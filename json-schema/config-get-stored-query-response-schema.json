@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-get-stored-query-response-schema.json",
+  "title": "GetStoredQueryResponse",
+  "description": "GetStoredQueryResponse schema",
+  "type": "object",
+  "properties": {
+    "StoredQuery": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StoredQuery"
+        },
+        {
+          "description": "Returns a <code>StoredQuery</code> object."
+        }
+      ]
+    }
+  }
+}

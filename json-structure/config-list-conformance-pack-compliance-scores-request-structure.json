@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-list-conformance-pack-compliance-scores-request-structure.json",
+  "name": "ListConformancePackComplianceScoresRequest",
+  "description": "ListConformancePackComplianceScoresRequest schema",
+  "type": "object",
+  "properties": {
+    "Filters": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackComplianceScoresFilters"
+        },
+        {
+          "description": "Filters the results based on the <code>ConformancePackComplianceScoresFilters</code>."
+        }
+      ]
+    },
+    "SortOrder": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SortOrder"
+        },
+        {
+          "description": "<p>Determines the order in which conformance pack compliance scores are sorted. Either in ascending or descending order.</p> <p>By default, conformance pack compliance scores are sorted in alphabetical order by name of the conformance pack. Conformance pack compliance scores are sorted in reverse alphabetical order if you enter <code>DESCENDING</code>.</p> <p>You can sort conformance pack compliance scores by the numerical value of the compliance score by entering <code>SCORE</code> in the <code>SortBy</code> action. When compliance scores are sorted by <code>SCORE</code>, conformance packs with a compliance score of <code>INSUFFICIENT_DATA</code> will be last when sorting by ascending order and first when sorting by descending order.</p>"
+        }
+      ]
+    },
+    "SortBy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SortBy"
+        },
+        {
+          "description": "<p>Sorts your conformance pack compliance scores in either ascending or descending order, depending on <code>SortOrder</code>.</p> <p>By default, conformance pack compliance scores are sorted in alphabetical order by name of the conformance pack. Enter <code>SCORE</code>, to sort conformance pack compliance scores by the numerical value of the compliance score.</p>"
+        }
+      ]
+    },
+    "Limit": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PageSizeLimit"
+        },
+        {
+          "description": "The maximum number of conformance pack compliance scores returned on each page."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "The <code>nextToken</code> string in a prior request that you can use to get the paginated response for the next set of conformance pack compliance scores."
+        }
+      ]
+    }
+  }
+}

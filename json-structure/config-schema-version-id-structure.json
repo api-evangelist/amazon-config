@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-schema-version-id-structure.json",
+  "name": "SchemaVersionId",
+  "description": "SchemaVersionId schema",
+  "type": "string",
+  "pattern": "[A-Za-z0-9-]+",
+  "minLength": 1,
+  "maxLength": 128
+}

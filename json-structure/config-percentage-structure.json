@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-percentage-structure.json",
+  "name": "Percentage",
+  "description": "Percentage schema",
+  "type": "integer",
+  "minimum": 1,
+  "maximum": 100
+}

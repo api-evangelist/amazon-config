@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-resource-count-group-key-structure.json",
+  "name": "ResourceCountGroupKey",
+  "description": "ResourceCountGroupKey schema",
+  "type": "string",
+  "enum": [
+    "RESOURCE_TYPE",
+    "ACCOUNT_ID",
+    "AWS_REGION"
+  ]
+}

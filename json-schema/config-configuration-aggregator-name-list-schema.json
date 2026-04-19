@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-configuration-aggregator-name-list-schema.json",
+  "title": "ConfigurationAggregatorNameList",
+  "description": "ConfigurationAggregatorNameList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ConfigurationAggregatorName"
+  },
+  "minItems": 0,
+  "maxItems": 10
+}

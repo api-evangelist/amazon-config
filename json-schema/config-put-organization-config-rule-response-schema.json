@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-put-organization-config-rule-response-schema.json",
+  "title": "PutOrganizationConfigRuleResponse",
+  "description": "PutOrganizationConfigRuleResponse schema",
+  "type": "object",
+  "properties": {
+    "OrganizationConfigRuleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of an organization Config rule."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-conformance-pack-compliance-summary-schema.json",
+  "title": "ConformancePackComplianceSummary",
+  "description": "Summary includes the name and status of the conformance pack.",
+  "type": "object",
+  "properties": {
+    "ConformancePackName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackName"
+        },
+        {
+          "description": "The name of the conformance pack name."
+        }
+      ]
+    },
+    "ConformancePackComplianceStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackComplianceType"
+        },
+        {
+          "description": "The status of the conformance pack."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConformancePackName",
+    "ConformancePackComplianceStatus"
+  ]
+}

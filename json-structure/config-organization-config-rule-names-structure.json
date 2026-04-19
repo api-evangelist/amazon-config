@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-organization-config-rule-names-structure.json",
+  "name": "OrganizationConfigRuleNames",
+  "description": "OrganizationConfigRuleNames schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/StringWithCharLimit64"
+  },
+  "minItems": 0,
+  "maxItems": 25
+}

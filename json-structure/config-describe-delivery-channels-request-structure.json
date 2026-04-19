@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-describe-delivery-channels-request-structure.json",
+  "name": "DescribeDeliveryChannelsRequest",
+  "description": "The input for the <a>DescribeDeliveryChannels</a> action.",
+  "type": "object",
+  "properties": {
+    "DeliveryChannelNames": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeliveryChannelNameList"
+        },
+        {
+          "description": "A list of delivery channel names."
+        }
+      ]
+    }
+  }
+}

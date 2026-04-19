@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-group-by-api-limit-structure.json",
+  "name": "GroupByAPILimit",
+  "description": "GroupByAPILimit schema",
+  "type": "integer",
+  "minimum": 0,
+  "maximum": 1000
+}

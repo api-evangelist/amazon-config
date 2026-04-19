@@ -1,0 +1,7 @@
+{
+  "Name": "example-config-rule",
+  "State": "example-string",
+  "ErrorMessage": "example-string",
+  "StartTime": "example-string",
+  "StopTime": "example-string"
+}

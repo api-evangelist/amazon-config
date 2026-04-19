@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-organization-config-rule-detailed-status-structure.json",
+  "name": "OrganizationConfigRuleDetailedStatus",
+  "description": "OrganizationConfigRuleDetailedStatus schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/MemberAccountStatus"
+  }
+}

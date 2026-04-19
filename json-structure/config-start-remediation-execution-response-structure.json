@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-start-remediation-execution-response-structure.json",
+  "name": "StartRemediationExecutionResponse",
+  "description": "StartRemediationExecutionResponse schema",
+  "type": "object",
+  "properties": {
+    "FailureMessage": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Returns a failure message. For example, the resource is already compliant."
+        }
+      ]
+    },
+    "FailedItems": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceKeys"
+        },
+        {
+          "description": "For resources that have failed to start execution, the API returns a resource key object."
+        }
+      ]
+    }
+  }
+}

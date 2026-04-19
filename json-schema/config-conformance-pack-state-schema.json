@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-conformance-pack-state-schema.json",
+  "title": "ConformancePackState",
+  "description": "ConformancePackState schema",
+  "type": "string",
+  "enum": [
+    "CREATE_IN_PROGRESS",
+    "CREATE_COMPLETE",
+    "CREATE_FAILED",
+    "DELETE_IN_PROGRESS",
+    "DELETE_FAILED"
+  ]
+}

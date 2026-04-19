@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-configuration-item-structure.json",
+  "name": "ConfigurationItem",
+  "description": "A list that contains detailed configurations of a specified resource.",
+  "type": "object",
+  "properties": {
+    "version": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Version"
+        },
+        {
+          "description": "The version number of the resource configuration."
+        }
+      ]
+    },
+    "accountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "description": "The 12-digit Amazon Web Services account ID associated with the resource."
+        }
+      ]
+    },
+    "configurationItemCaptureTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationItemCaptureTime"
+        },
+        {
+          "description": "The time when the configuration recording was initiated."
+        }
+      ]
+    },
+    "configurationItemStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationItemStatus"
+        },
+        {
+          "description": "<p>The configuration item status. The valid values are:</p> <ul> <li> <p>OK \u2013 The resource configuration has been updated</p> </li> <li> <p>ResourceDiscovered \u2013 The resource was newly discovered</p> </li> <li> <p>ResourceNotRecorded \u2013 The resource was discovered but its configuration was not recorded since the recorder excludes the recording of resources of this type</p> </li> <li> <p>ResourceDeleted \u2013 The resource was deleted</p> </li> <li> <p>ResourceDeletedNotRecorded \u2013 The resource was deleted but its configuration was not recorded since the recorder excludes the recording of resources of this type</p> </li> </ul> <note> <p>The CIs do not incur any cost.</p> </note>"
+        }
+      ]
+    },
+    "configurationStateId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationStateId"
+        },
+        {
+          "description": "An identifier that indicates the ordering of the configuration items of a resource."
+        }
+      ]
+    },
+    "configurationItemMD5Hash": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationItemMD5Hash"
+        },
+        {
+          "description": "<p>Unique MD5 hash that represents the configuration item's state.</p> <p>You can use MD5 hash to compare the states of two or more configuration items that are associated with the same resource.</p>"
+        }
+      ]
+    },
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "Amazon Resource Name (ARN) associated with the resource."
+        }
+      ]
+    },
+    "resourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceType"
+        },
+        {
+          "description": "The type of Amazon Web Services resource."
+        }
+      ]
+    },
+    "resourceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceId"
+        },
+        {
+          "description": "The ID of the resource (for example, <code>sg-xxxxxx</code>)."
+        }
+      ]
+    },
+    "resourceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceName"
+        },
+        {
+          "description": "The custom name of the resource, if available."
+        }
+      ]
+    },
+    "awsRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsRegion"
+        },
+        {
+          "description": "The region where the resource resides."
+        }
+      ]
+    },
+    "availabilityZone": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AvailabilityZone"
+        },
+        {
+          "description": "The Availability Zone associated with the resource."
+        }
+      ]
+    },
+    "resourceCreationTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceCreationTime"
+        },
+        {
+          "description": "The time stamp when the resource was created."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tags"
+        },
+        {
+          "description": "A mapping of key value tags associated with the resource."
+        }
+      ]
+    },
+    "relatedEvents": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RelatedEventList"
+        },
+        {
+          "description": "<p>A list of CloudTrail event IDs.</p> <p>A populated field indicates that the current configuration was initiated by the events recorded in the CloudTrail log. For more information about CloudTrail, see <a href=\"https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html\">What Is CloudTrail</a>.</p> <p>An empty field indicates that the current configuration was not initiated by any event. As of Version 1.3, the relatedEvents field is empty. You can access the <a href=\"https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html\">LookupEvents API</a> in the <i>CloudTrail API Reference</i> to retrieve the events for the resource.</p>"
+        }
+      ]
+    },
+    "relationships": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RelationshipList"
+        },
+        {
+          "description": "A list of related Amazon Web Services resources."
+        }
+      ]
+    },
+    "configuration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Configuration"
+        },
+        {
+          "description": "The description of the resource configuration."
+        }
+      ]
+    },
+    "supplementaryConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SupplementaryConfiguration"
+        },
+        {
+          "description": "Configuration attributes that Config returns for certain resource types to supplement the information returned for the <code>configuration</code> parameter."
+        }
+      ]
+    }
+  }
+}

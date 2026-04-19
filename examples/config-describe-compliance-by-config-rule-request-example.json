@@ -1,0 +1,5 @@
+{
+  "ConfigRuleNames": "example-config-rule",
+  "ComplianceTypes": "example-string",
+  "NextToken": "example-string"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-deliver-config-snapshot-response-schema.json",
+  "title": "DeliverConfigSnapshotResponse",
+  "description": "The output for the <a>DeliverConfigSnapshot</a> action, in JSON format.",
+  "type": "object",
+  "properties": {
+    "configSnapshotId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The ID of the snapshot that is being created."
+        }
+      ]
+    }
+  }
+}

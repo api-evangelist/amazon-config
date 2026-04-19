@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-delete-configuration-aggregator-request-structure.json",
+  "name": "DeleteConfigurationAggregatorRequest",
+  "description": "DeleteConfigurationAggregatorRequest schema",
+  "type": "object",
+  "properties": {
+    "ConfigurationAggregatorName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationAggregatorName"
+        },
+        {
+          "description": "The name of the configuration aggregator."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConfigurationAggregatorName"
+  ]
+}

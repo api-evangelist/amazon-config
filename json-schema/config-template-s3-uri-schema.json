@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-template-s3-uri-schema.json",
+  "title": "TemplateS3Uri",
+  "description": "TemplateS3Uri schema",
+  "type": "string",
+  "pattern": "s3://.*",
+  "minLength": 1,
+  "maxLength": 1024
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-conformance-pack-name-filter-structure.json",
+  "name": "ConformancePackNameFilter",
+  "description": "ConformancePackNameFilter schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ConformancePackName"
+  },
+  "minItems": 1,
+  "maxItems": 25
+}

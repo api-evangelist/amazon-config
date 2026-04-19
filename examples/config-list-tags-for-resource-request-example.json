@@ -1,0 +1,5 @@
+{
+  "ResourceArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "Limit": "example-string",
+  "NextToken": "example-string"
+}

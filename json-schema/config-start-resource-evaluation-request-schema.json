@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-start-resource-evaluation-request-schema.json",
+  "title": "StartResourceEvaluationRequest",
+  "description": "StartResourceEvaluationRequest schema",
+  "type": "object",
+  "properties": {
+    "ResourceDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceDetails"
+        },
+        {
+          "description": "Returns a <code>ResourceDetails</code> object."
+        }
+      ]
+    },
+    "EvaluationContext": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationContext"
+        },
+        {
+          "description": "Returns an <code>EvaluationContext</code> object."
+        }
+      ]
+    },
+    "EvaluationMode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationMode"
+        },
+        {
+          "description": "The mode of an evaluation. The valid values for this API are <code>DETECTIVE</code> and <code>PROACTIVE</code>."
+        }
+      ]
+    },
+    "EvaluationTimeout": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationTimeout"
+        },
+        {
+          "description": "The timeout for an evaluation. The default is 900 seconds. You cannot specify a number greater than 3600. If you specify 0, Config uses the default."
+        }
+      ]
+    },
+    "ClientToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientToken"
+        },
+        {
+          "description": "<p>A client token is a unique, case-sensitive string of up to 64 ASCII characters. To make an idempotent API request using one of these actions, specify a client token in the request.</p> <note> <p>Avoid reusing the same client token for other API requests. If you retry a request that completed successfully using the same client token and the same parameters, the retry succeeds without performing any further actions. If you retry a successful request using the same client token, but one or more of the parameters are different, other than the Region or Availability Zone, the retry fails with an IdempotentParameterMismatch error.</p> </note>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "ResourceDetails",
+    "EvaluationMode"
+  ]
+}

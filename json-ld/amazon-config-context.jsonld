@@ -1,92 +1,1540 @@
 {
   "@context": {
-    "@vocab": "https://schema.org/",
-    "config": "https://docs.aws.amazon.com/config/latest/APIReference/",
-    "aws": "https://aws.amazon.com/",
-    "ConfigRule": {
-      "@id": "config:API_ConfigRule",
-      "@context": {
-        "configRuleName": {
-          "@id": "config:ConfigRule/ConfigRuleName",
-          "@type": "xsd:string"
-        },
-        "configRuleArn": {
-          "@id": "config:ConfigRule/ConfigRuleArn",
-          "@type": "xsd:string"
-        },
-        "configRuleId": {
-          "@id": "config:ConfigRule/ConfigRuleId",
-          "@type": "xsd:string"
-        },
-        "description": {
-          "@id": "config:ConfigRule/Description",
-          "@type": "xsd:string"
-        },
-        "configRuleState": {
-          "@id": "config:ConfigRule/ConfigRuleState",
-          "@type": "xsd:string"
-        }
-      }
+    "@version": 1.1,
+    "aws": "https://aws.amazon.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "GetComplianceDetailsByResourceRequest": "aws:GetComplianceDetailsByResourceRequest",
+    "DeleteEvaluationResultsRequest": "aws:DeleteEvaluationResultsRequest",
+    "RemediationParameters": "aws:RemediationParameters",
+    "GetResourceEvaluationSummaryRequest": "aws:GetResourceEvaluationSummaryRequest",
+    "PutConformancePackResponse": "aws:PutConformancePackResponse",
+    "PutRemediationConfigurationsRequest": "aws:PutRemediationConfigurationsRequest",
+    "DeleteConformancePackRequest": "aws:DeleteConformancePackRequest",
+    "GetConformancePackComplianceDetailsResponse": "aws:GetConformancePackComplianceDetailsResponse",
+    "DescribeConfigurationRecordersResponse": "aws:DescribeConfigurationRecordersResponse",
+    "DescribeOrganizationConformancePacksRequest": "aws:DescribeOrganizationConformancePacksRequest",
+    "ConfigurationRecorderStatus": "aws:ConfigurationRecorderStatus",
+    "ConformancePackEvaluationResult": "aws:ConformancePackEvaluationResult",
+    "ResourceFilters": "aws:ResourceFilters",
+    "BatchGetResourceConfigResponse": "aws:BatchGetResourceConfigResponse",
+    "DescribeOrganizationConfigRulesResponse": "aws:DescribeOrganizationConfigRulesResponse",
+    "GetComplianceDetailsByConfigRuleResponse": "aws:GetComplianceDetailsByConfigRuleResponse",
+    "ConfigRuleComplianceSummaryFilters": "aws:ConfigRuleComplianceSummaryFilters",
+    "DescribeConfigRuleEvaluationStatusRequest": "aws:DescribeConfigRuleEvaluationStatusRequest",
+    "PutOrganizationConformancePackResponse": "aws:PutOrganizationConformancePackResponse",
+    "SelectAggregateResourceConfigRequest": "aws:SelectAggregateResourceConfigRequest",
+    "PendingAggregationRequest": "aws:PendingAggregationRequest",
+    "EvaluationResultIdentifier": {
+      "@id": "aws:EvaluationResultIdentifier",
+      "@type": "xsd:string"
     },
+    "GetComplianceSummaryByResourceTypeResponse": "aws:GetComplianceSummaryByResourceTypeResponse",
+    "BatchGetAggregateResourceConfigRequest": "aws:BatchGetAggregateResourceConfigRequest",
+    "EvaluationResult": "aws:EvaluationResult",
+    "DescribeDeliveryChannelStatusResponse": "aws:DescribeDeliveryChannelStatusResponse",
+    "ComplianceSummaryByResourceType": "aws:ComplianceSummaryByResourceType",
+    "ListDiscoveredResourcesRequest": "aws:ListDiscoveredResourcesRequest",
+    "PutConfigRuleRequest": "aws:PutConfigRuleRequest",
+    "PutEvaluationsResponse": "aws:PutEvaluationsResponse",
+    "DescribeConformancePackStatusResponse": "aws:DescribeConformancePackStatusResponse",
+    "DeleteResourceConfigRequest": "aws:DeleteResourceConfigRequest",
+    "PutConfigurationRecorderRequest": "aws:PutConfigurationRecorderRequest",
+    "ConformancePackStatusDetail": "aws:ConformancePackStatusDetail",
+    "OrganizationResourceDetailedStatusFilters": "aws:OrganizationResourceDetailedStatusFilters",
+    "ConfigStreamDeliveryInfo": "aws:ConfigStreamDeliveryInfo",
+    "ResourceDetails": {
+      "@id": "aws:ResourceDetails",
+      "@type": "xsd:string"
+    },
+    "PutConfigurationAggregatorResponse": "aws:PutConfigurationAggregatorResponse",
+    "ConformancePackComplianceSummary": "aws:ConformancePackComplianceSummary",
+    "ConformancePackComplianceScoresFilters": "aws:ConformancePackComplianceScoresFilters",
+    "GetAggregateConformancePackComplianceSummaryRequest": "aws:GetAggregateConformancePackComplianceSummaryRequest",
+    "DescribeComplianceByConfigRuleResponse": "aws:DescribeComplianceByConfigRuleResponse",
+    "StartConfigurationRecorderRequest": "aws:StartConfigurationRecorderRequest",
+    "SupplementaryConfiguration": "aws:SupplementaryConfiguration",
+    "AggregateResourceIdentifier": "aws:AggregateResourceIdentifier",
+    "EvaluationStatus": {
+      "@id": "aws:EvaluationStatus",
+      "@type": "xsd:string"
+    },
+    "DescribeConfigRulesRequest": "aws:DescribeConfigRulesRequest",
+    "RemediationParameterValue": "aws:RemediationParameterValue",
+    "DeleteAggregationAuthorizationRequest": "aws:DeleteAggregationAuthorizationRequest",
+    "GetOrganizationCustomRulePolicyResponse": "aws:GetOrganizationCustomRulePolicyResponse",
+    "StartResourceEvaluationResponse": "aws:StartResourceEvaluationResponse",
+    "ListAggregateDiscoveredResourcesResponse": "aws:ListAggregateDiscoveredResourcesResponse",
+    "ListAggregateDiscoveredResourcesRequest": "aws:ListAggregateDiscoveredResourcesRequest",
+    "DeleteRemediationConfigurationResponse": "aws:DeleteRemediationConfigurationResponse",
+    "GetOrganizationConformancePackDetailedStatusResponse": "aws:GetOrganizationConformancePackDetailedStatusResponse",
+    "OrganizationConfigRule": "aws:OrganizationConfigRule",
+    "FailedRemediationBatch": "aws:FailedRemediationBatch",
+    "ConfigRuleEvaluationStatus": "aws:ConfigRuleEvaluationStatus",
+    "ComplianceByResource": "aws:ComplianceByResource",
+    "ListStoredQueriesRequest": "aws:ListStoredQueriesRequest",
+    "DeliverConfigSnapshotResponse": "aws:DeliverConfigSnapshotResponse",
+    "GetConformancePackComplianceSummaryResponse": "aws:GetConformancePackComplianceSummaryResponse",
+    "DescribeOrganizationConformancePackStatusesResponse": "aws:DescribeOrganizationConformancePackStatusesResponse",
+    "GetConformancePackComplianceSummaryRequest": "aws:GetConformancePackComplianceSummaryRequest",
+    "GroupedResourceCount": "aws:GroupedResourceCount",
+    "OrganizationManagedRuleMetadata": {
+      "@id": "aws:OrganizationManagedRuleMetadata",
+      "@type": "xsd:string"
+    },
+    "DescribeConfigurationAggregatorsRequest": "aws:DescribeConfigurationAggregatorsRequest",
+    "ListConformancePackComplianceScoresRequest": "aws:ListConformancePackComplianceScoresRequest",
+    "FieldInfo": "aws:FieldInfo",
+    "SelectAggregateResourceConfigResponse": "aws:SelectAggregateResourceConfigResponse",
+    "DeletePendingAggregationRequestRequest": "aws:DeletePendingAggregationRequestRequest",
+    "GetResourceEvaluationSummaryResponse": "aws:GetResourceEvaluationSummaryResponse",
+    "GetAggregateDiscoveredResourceCountsRequest": "aws:GetAggregateDiscoveredResourceCountsRequest",
+    "SsmControls": {
+      "@id": "aws:SsmControls",
+      "@type": "xsd:string"
+    },
+    "RecordingStrategy": "aws:RecordingStrategy",
+    "RetentionConfiguration": {
+      "@id": "aws:RetentionConfiguration",
+      "@type": "xsd:string"
+    },
+    "PutDeliveryChannelRequest": "aws:PutDeliveryChannelRequest",
+    "GetComplianceSummaryByConfigRuleResponse": "aws:GetComplianceSummaryByConfigRuleResponse",
+    "PutResourceConfigRequest": "aws:PutResourceConfigRequest",
+    "GetOrganizationConfigRuleDetailedStatusRequest": "aws:GetOrganizationConfigRuleDetailedStatusRequest",
+    "DeleteStoredQueryResponse": "aws:DeleteStoredQueryResponse",
+    "Scope": {
+      "@id": "aws:Scope",
+      "@type": "xsd:string"
+    },
+    "GetAggregateConformancePackComplianceSummaryResponse": "aws:GetAggregateConformancePackComplianceSummaryResponse",
+    "DescribeRemediationConfigurationsRequest": "aws:DescribeRemediationConfigurationsRequest",
+    "DescribeConfigurationAggregatorSourcesStatusRequest": "aws:DescribeConfigurationAggregatorSourcesStatusRequest",
+    "GetAggregateConfigRuleComplianceSummaryResponse": "aws:GetAggregateConfigRuleComplianceSummaryResponse",
+    "BatchGetAggregateResourceConfigResponse": "aws:BatchGetAggregateResourceConfigResponse",
+    "PutRemediationConfigurationsResponse": "aws:PutRemediationConfigurationsResponse",
+    "ResourceEvaluationFilters": "aws:ResourceEvaluationFilters",
+    "DeliveryChannelStatus": "aws:DeliveryChannelStatus",
+    "AggregateEvaluationResult": "aws:AggregateEvaluationResult",
+    "AggregateConformancePackCompliance": "aws:AggregateConformancePackCompliance",
+    "PutConfigurationAggregatorRequest": "aws:PutConfigurationAggregatorRequest",
+    "DeliveryChannel": {
+      "@id": "aws:DeliveryChannel",
+      "@type": "xsd:string"
+    },
+    "DescribeRemediationConfigurationsResponse": "aws:DescribeRemediationConfigurationsResponse",
     "ConfigurationRecorder": {
-      "@id": "config:API_ConfigurationRecorder",
-      "@context": {
-        "name": {
-          "@id": "config:ConfigurationRecorder/Name",
-          "@type": "xsd:string"
-        },
-        "roleARN": {
-          "@id": "config:ConfigurationRecorder/RoleARN",
-          "@type": "xsd:string"
-        },
-        "allSupported": {
-          "@id": "config:ConfigurationRecorder/AllSupported",
-          "@type": "xsd:boolean"
-        }
-      }
+      "@id": "aws:ConfigurationRecorder",
+      "@type": "xsd:string"
     },
-    "ComplianceResult": {
-      "@id": "config:API_ComplianceResult",
-      "@context": {
-        "complianceType": {
-          "@id": "config:ComplianceResult/ComplianceType",
-          "@type": "xsd:string"
-        },
-        "resourceType": {
-          "@id": "config:ComplianceResult/ResourceType",
-          "@type": "xsd:string"
-        },
-        "resourceId": {
-          "@id": "config:ComplianceResult/ResourceId",
-          "@type": "xsd:string"
-        },
-        "resultRecordedTime": {
-          "@id": "config:ComplianceResult/ResultRecordedTime",
-          "@type": "xsd:dateTime"
-        }
-      }
+    "DeleteStoredQueryRequest": "aws:DeleteStoredQueryRequest",
+    "GetOrganizationConfigRuleDetailedStatusResponse": "aws:GetOrganizationConfigRuleDetailedStatusResponse",
+    "EvaluationContext": {
+      "@id": "aws:EvaluationContext",
+      "@type": "xsd:string"
     },
+    "ConformancePackDetail": "aws:ConformancePackDetail",
+    "ResourceValue": {
+      "@id": "aws:ResourceValue",
+      "@type": "xsd:string"
+    },
+    "ExternalEvaluation": {
+      "@id": "aws:ExternalEvaluation",
+      "@type": "xsd:string"
+    },
+    "QueryInfo": {
+      "@id": "aws:QueryInfo",
+      "@type": "xsd:string"
+    },
+    "DescribeOrganizationConfigRuleStatusesRequest": "aws:DescribeOrganizationConfigRuleStatusesRequest",
+    "SourceDetail": "aws:SourceDetail",
+    "DescribeConfigRulesResponse": "aws:DescribeConfigRulesResponse",
+    "ResourceEvaluation": "aws:ResourceEvaluation",
+    "AggregateComplianceCount": "aws:AggregateComplianceCount",
+    "GetOrganizationConformancePackDetailedStatusRequest": "aws:GetOrganizationConformancePackDetailedStatusRequest",
+    "GetCustomRulePolicyRequest": "aws:GetCustomRulePolicyRequest",
+    "DescribeDeliveryChannelsResponse": "aws:DescribeDeliveryChannelsResponse",
+    "SelectResourceConfigResponse": "aws:SelectResourceConfigResponse",
+    "AggregateConformancePackComplianceSummary": "aws:AggregateConformancePackComplianceSummary",
+    "DescribeConfigRuleEvaluationStatusResponse": "aws:DescribeConfigRuleEvaluationStatusResponse",
+    "ConfigSnapshotDeliveryProperties": "aws:ConfigSnapshotDeliveryProperties",
+    "DescribePendingAggregationRequestsRequest": "aws:DescribePendingAggregationRequestsRequest",
+    "Evaluation": "aws:Evaluation",
+    "OrganizationCustomRuleMetadata": {
+      "@id": "aws:OrganizationCustomRuleMetadata",
+      "@type": "xsd:string"
+    },
+    "RecordingGroup": "aws:RecordingGroup",
+    "ConfigRule": {
+      "@id": "aws:ConfigRule",
+      "@type": "xsd:string"
+    },
+    "AccountAggregationSource": "aws:AccountAggregationSource",
+    "MemberAccountStatus": "aws:MemberAccountStatus",
+    "RemediationExecutionStatus": "aws:RemediationExecutionStatus",
+    "PutOrganizationConfigRuleRequest": "aws:PutOrganizationConfigRuleRequest",
+    "EvaluationModeConfiguration": "aws:EvaluationModeConfiguration",
+    "DescribeComplianceByResourceResponse": "aws:DescribeComplianceByResourceResponse",
+    "ConformancePackEvaluationFilters": "aws:ConformancePackEvaluationFilters",
+    "RemediationExecutionStep": "aws:RemediationExecutionStep",
+    "GetResourceConfigHistoryRequest": "aws:GetResourceConfigHistoryRequest",
+    "DescribeOrganizationConformancePackStatusesRequest": "aws:DescribeOrganizationConformancePackStatusesRequest",
+    "StartConfigRulesEvaluationRequest": "aws:StartConfigRulesEvaluationRequest",
+    "TagResourceRequest": "aws:TagResourceRequest",
+    "ListTagsForResourceRequest": "aws:ListTagsForResourceRequest",
+    "GetAggregateComplianceDetailsByConfigRuleResponse": "aws:GetAggregateComplianceDetailsByConfigRuleResponse",
+    "OrganizationConformancePackDetailedStatus": "aws:OrganizationConformancePackDetailedStatus",
+    "Relationship": "aws:Relationship",
+    "DescribeAggregationAuthorizationsRequest": "aws:DescribeAggregationAuthorizationsRequest",
+    "GetCustomRulePolicyResponse": "aws:GetCustomRulePolicyResponse",
+    "ConformancePackRuleCompliance": "aws:ConformancePackRuleCompliance",
+    "EvaluationResultQualifier": {
+      "@id": "aws:EvaluationResultQualifier",
+      "@type": "xsd:string"
+    },
+    "PutStoredQueryResponse": "aws:PutStoredQueryResponse",
+    "AggregateConformancePackComplianceFilters": "aws:AggregateConformancePackComplianceFilters",
+    "DeleteConfigurationAggregatorRequest": "aws:DeleteConfigurationAggregatorRequest",
+    "GetAggregateDiscoveredResourceCountsResponse": "aws:GetAggregateDiscoveredResourceCountsResponse",
+    "Compliance": {
+      "@id": "aws:Compliance",
+      "@type": "xsd:string"
+    },
+    "AggregateConformancePackComplianceSummaryFilters": "aws:AggregateConformancePackComplianceSummaryFilters",
+    "GetResourceConfigHistoryResponse": "aws:GetResourceConfigHistoryResponse",
+    "StartRemediationExecutionResponse": "aws:StartRemediationExecutionResponse",
+    "ListConformancePackComplianceScoresResponse": "aws:ListConformancePackComplianceScoresResponse",
+    "GetDiscoveredResourceCountsResponse": "aws:GetDiscoveredResourceCountsResponse",
+    "DescribeConfigurationAggregatorsResponse": "aws:DescribeConfigurationAggregatorsResponse",
+    "DeleteRemediationConfigurationRequest": "aws:DeleteRemediationConfigurationRequest",
+    "DescribeRetentionConfigurationsResponse": "aws:DescribeRetentionConfigurationsResponse",
+    "DescribeConfigurationRecorderStatusRequest": "aws:DescribeConfigurationRecorderStatusRequest",
+    "ComplianceContributorCount": {
+      "@id": "aws:ComplianceContributorCount",
+      "@type": "xsd:string"
+    },
+    "DescribeConformancePackComplianceResponse": "aws:DescribeConformancePackComplianceResponse",
+    "DescribeOrganizationConformancePacksResponse": "aws:DescribeOrganizationConformancePacksResponse",
+    "ListResourceEvaluationsResponse": "aws:ListResourceEvaluationsResponse",
+    "PutAggregationAuthorizationResponse": "aws:PutAggregationAuthorizationResponse",
+    "GetStoredQueryRequest": "aws:GetStoredQueryRequest",
+    "StartResourceEvaluationRequest": "aws:StartResourceEvaluationRequest",
+    "DescribeRemediationExecutionStatusRequest": "aws:DescribeRemediationExecutionStatusRequest",
+    "SelectResourceConfigRequest": "aws:SelectResourceConfigRequest",
+    "DescribeConfigurationRecorderStatusResponse": "aws:DescribeConfigurationRecorderStatusResponse",
+    "GetAggregateConfigRuleComplianceSummaryRequest": "aws:GetAggregateConfigRuleComplianceSummaryRequest",
+    "DescribeConfigRulesFilters": "aws:DescribeConfigRulesFilters",
+    "DescribeDeliveryChannelStatusRequest": "aws:DescribeDeliveryChannelStatusRequest",
+    "GetComplianceSummaryByResourceTypeRequest": "aws:GetComplianceSummaryByResourceTypeRequest",
+    "StopConfigurationRecorderRequest": "aws:StopConfigurationRecorderRequest",
+    "DescribeComplianceByResourceRequest": "aws:DescribeComplianceByResourceRequest",
+    "DeleteOrganizationConfigRuleRequest": "aws:DeleteOrganizationConfigRuleRequest",
+    "ConformancePackComplianceScore": "aws:ConformancePackComplianceScore",
+    "PutRetentionConfigurationResponse": "aws:PutRetentionConfigurationResponse",
+    "GetAggregateResourceConfigRequest": "aws:GetAggregateResourceConfigRequest",
+    "DescribeConfigurationAggregatorSourcesStatusResponse": "aws:DescribeConfigurationAggregatorSourcesStatusResponse",
+    "StartRemediationExecutionRequest": "aws:StartRemediationExecutionRequest",
+    "CustomPolicyDetails": {
+      "@id": "aws:CustomPolicyDetails",
+      "@type": "xsd:string"
+    },
+    "ConformancePackInputParameter": "aws:ConformancePackInputParameter",
+    "DeliverConfigSnapshotRequest": "aws:DeliverConfigSnapshotRequest",
+    "ConfigRuleComplianceFilters": "aws:ConfigRuleComplianceFilters",
+    "DescribeDeliveryChannelsRequest": "aws:DescribeDeliveryChannelsRequest",
+    "BaseConfigurationItem": "aws:BaseConfigurationItem",
+    "ExecutionControls": {
+      "@id": "aws:ExecutionControls",
+      "@type": "xsd:string"
+    },
+    "DescribeOrganizationConfigRuleStatusesResponse": "aws:DescribeOrganizationConfigRuleStatusesResponse",
+    "ExclusionByResourceTypes": "aws:ExclusionByResourceTypes",
+    "DescribeConformancePackComplianceRequest": "aws:DescribeConformancePackComplianceRequest",
+    "PutExternalEvaluationResponse": "aws:PutExternalEvaluationResponse",
+    "OrganizationAggregationSource": {
+      "@id": "aws:OrganizationAggregationSource",
+      "@type": "xsd:string"
+    },
+    "ConfigurationAggregator": {
+      "@id": "aws:ConfigurationAggregator",
+      "@type": "xsd:string"
+    },
+    "PutAggregationAuthorizationRequest": "aws:PutAggregationAuthorizationRequest",
+    "TimeWindow": {
+      "@id": "aws:TimeWindow",
+      "@type": "xsd:string"
+    },
+    "AWS Config Rule": "aws:AWS Config Rule",
+    "DescribeAggregateComplianceByConformancePacksRequest": "aws:DescribeAggregateComplianceByConformancePacksRequest",
+    "DeleteDeliveryChannelRequest": "aws:DeleteDeliveryChannelRequest",
+    "DescribeConformancePacksResponse": "aws:DescribeConformancePacksResponse",
+    "GetAggregateResourceConfigResponse": "aws:GetAggregateResourceConfigResponse",
+    "OrganizationCustomPolicyRuleMetadata": {
+      "@id": "aws:OrganizationCustomPolicyRuleMetadata",
+      "@type": "xsd:string"
+    },
+    "DeleteConfigurationRecorderRequest": "aws:DeleteConfigurationRecorderRequest",
+    "GetAggregateComplianceDetailsByConfigRuleRequest": "aws:GetAggregateComplianceDetailsByConfigRuleRequest",
+    "DeleteEvaluationResultsResponse": "aws:DeleteEvaluationResultsResponse",
+    "ComplianceByConfigRule": "aws:ComplianceByConfigRule",
+    "ResourceIdentifier": {
+      "@id": "aws:ResourceIdentifier",
+      "@type": "xsd:string"
+    },
+    "ListDiscoveredResourcesResponse": "aws:ListDiscoveredResourcesResponse",
+    "DescribePendingAggregationRequestsResponse": "aws:DescribePendingAggregationRequestsResponse",
+    "DescribeConformancePackStatusRequest": "aws:DescribeConformancePackStatusRequest",
+    "ConformancePackComplianceFilters": "aws:ConformancePackComplianceFilters",
+    "ResourceCountFilters": "aws:ResourceCountFilters",
+    "GetConformancePackComplianceDetailsRequest": "aws:GetConformancePackComplianceDetailsRequest",
+    "ListResourceEvaluationsRequest": "aws:ListResourceEvaluationsRequest",
+    "StatusDetailFilters": "aws:StatusDetailFilters",
+    "ListTagsForResourceResponse": "aws:ListTagsForResourceResponse",
     "ConfigurationItem": {
-      "@id": "config:API_ConfigurationItem",
-      "@context": {
-        "resourceType": {
-          "@id": "config:ConfigurationItem/ResourceType",
-          "@type": "xsd:string"
-        },
-        "resourceId": {
-          "@id": "config:ConfigurationItem/ResourceId",
-          "@type": "xsd:string"
-        },
-        "configurationStateId": {
-          "@id": "config:ConfigurationItem/ConfigurationStateId",
-          "@type": "xsd:string"
-        },
-        "configurationItemCaptureTime": {
-          "@id": "config:ConfigurationItem/CaptureTime",
-          "@type": "xsd:dateTime"
-        }
-      }
+      "@id": "aws:ConfigurationItem",
+      "@type": "xsd:string"
     },
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "ResourceCount": {
+      "@id": "aws:ResourceCount",
+      "@type": "xsd:string"
+    },
+    "PutOrganizationConfigRuleResponse": "aws:PutOrganizationConfigRuleResponse",
+    "AggregateComplianceByConformancePack": "aws:AggregateComplianceByConformancePack",
+    "GetStoredQueryResponse": "aws:GetStoredQueryResponse",
+    "GetOrganizationCustomRulePolicyRequest": "aws:GetOrganizationCustomRulePolicyRequest",
+    "AggregatedSourceStatus": "aws:AggregatedSourceStatus",
+    "PutEvaluationsRequest": "aws:PutEvaluationsRequest",
+    "OrganizationCustomPolicyRuleMetadataNoPolicy": "aws:OrganizationCustomPolicyRuleMetadataNoPolicy",
+    "StaticValue": {
+      "@id": "aws:StaticValue",
+      "@type": "xsd:string"
+    },
+    "TemplateSSMDocumentDetails": {
+      "@id": "aws:TemplateSSMDocumentDetails",
+      "@type": "xsd:string"
+    },
+    "DescribeAggregateComplianceByConfigRulesResponse": "aws:DescribeAggregateComplianceByConfigRulesResponse",
+    "DescribeAggregateComplianceByConfigRulesRequest": "aws:DescribeAggregateComplianceByConfigRulesRequest",
+    "DescribeRetentionConfigurationsRequest": "aws:DescribeRetentionConfigurationsRequest",
+    "AggregationAuthorization": {
+      "@id": "aws:AggregationAuthorization",
+      "@type": "xsd:string"
+    },
+    "DescribeOrganizationConfigRulesRequest": "aws:DescribeOrganizationConfigRulesRequest",
+    "BatchGetResourceConfigRequest": "aws:BatchGetResourceConfigRequest",
+    "AggregateComplianceByConfigRule": "aws:AggregateComplianceByConfigRule",
+    "StoredQuery": {
+      "@id": "aws:StoredQuery",
+      "@type": "xsd:string"
+    },
+    "StartConfigRulesEvaluationResponse": "aws:StartConfigRulesEvaluationResponse",
+    "GetComplianceDetailsByResourceResponse": "aws:GetComplianceDetailsByResourceResponse",
+    "OrganizationConformancePack": "aws:OrganizationConformancePack",
+    "AggregateConformancePackComplianceCount": "aws:AggregateConformancePackComplianceCount",
+    "StoredQueryMetadata": {
+      "@id": "aws:StoredQueryMetadata",
+      "@type": "xsd:string"
+    },
+    "OrganizationConformancePackStatus": "aws:OrganizationConformancePackStatus",
+    "Tag": "aws:Tag",
+    "Tags": {
+      "@id": "aws:Tags",
+      "@type": "xsd:string"
+    },
+    "ConfigExportDeliveryInfo": "aws:ConfigExportDeliveryInfo",
+    "DescribeAggregationAuthorizationsResponse": "aws:DescribeAggregationAuthorizationsResponse",
+    "DescribeAggregateComplianceByConformancePacksResponse": "aws:DescribeAggregateComplianceByConformancePacksResponse",
+    "PutRetentionConfigurationRequest": "aws:PutRetentionConfigurationRequest",
+    "PutExternalEvaluationRequest": "aws:PutExternalEvaluationRequest",
+    "OrganizationConfigRuleStatus": "aws:OrganizationConfigRuleStatus",
+    "DeleteRetentionConfigurationRequest": "aws:DeleteRetentionConfigurationRequest",
+    "GetComplianceDetailsByConfigRuleRequest": "aws:GetComplianceDetailsByConfigRuleRequest",
+    "GetDiscoveredResourceCountsRequest": "aws:GetDiscoveredResourceCountsRequest",
+    "DeleteOrganizationConformancePackRequest": "aws:DeleteOrganizationConformancePackRequest",
+    "RemediationConfiguration": "aws:RemediationConfiguration",
+    "UntagResourceRequest": "aws:UntagResourceRequest",
+    "DescribeComplianceByConfigRuleRequest": "aws:DescribeComplianceByConfigRuleRequest",
+    "DeleteConfigRuleRequest": "aws:DeleteConfigRuleRequest",
+    "DescribeConfigurationRecordersRequest": "aws:DescribeConfigurationRecordersRequest",
+    "PutStoredQueryRequest": "aws:PutStoredQueryRequest",
+    "PutConformancePackRequest": "aws:PutConformancePackRequest",
+    "ResourceKey": {
+      "@id": "aws:ResourceKey",
+      "@type": "xsd:string"
+    },
+    "DescribeRemediationExecutionStatusResponse": "aws:DescribeRemediationExecutionStatusResponse",
+    "ComplianceSummary": {
+      "@id": "aws:ComplianceSummary",
+      "@type": "xsd:string"
+    },
+    "ListStoredQueriesResponse": "aws:ListStoredQueriesResponse",
+    "PutOrganizationConformancePackRequest": "aws:PutOrganizationConformancePackRequest",
+    "Source": {
+      "@id": "aws:Source",
+      "@type": "xsd:string"
+    },
+    "DescribeConformancePacksRequest": "aws:DescribeConformancePacksRequest",
+    "ResourceType": {
+      "@id": "aws:ResourceType",
+      "@type": "xsd:string"
+    },
+    "ResourceId": {
+      "@id": "aws:ResourceId",
+      "@type": "xsd:string"
+    },
+    "ComplianceTypes": {
+      "@id": "aws:ComplianceTypes",
+      "@type": "xsd:string"
+    },
+    "NextToken": {
+      "@id": "aws:NextToken",
+      "@type": "xsd:string"
+    },
+    "ResourceEvaluationId": {
+      "@id": "aws:ResourceEvaluationId",
+      "@type": "xsd:string"
+    },
+    "ConfigRuleName": {
+      "@id": "aws:ConfigRuleName",
+      "@type": "xsd:string"
+    },
+    "ConformancePackArn": {
+      "@id": "aws:ConformancePackArn",
+      "@type": "xsd:string"
+    },
+    "RemediationConfigurations": {
+      "@id": "aws:RemediationConfigurations",
+      "@type": "xsd:string"
+    },
+    "ConformancePackName": {
+      "@id": "aws:ConformancePackName",
+      "@type": "xsd:string"
+    },
+    "ConformancePackRuleEvaluationResults": {
+      "@id": "aws:ConformancePackRuleEvaluationResults",
+      "@type": "xsd:string"
+    },
+    "ConfigurationRecorders": {
+      "@id": "aws:ConfigurationRecorders",
+      "@type": "xsd:string"
+    },
+    "OrganizationConformancePackNames": {
+      "@id": "aws:OrganizationConformancePackNames",
+      "@type": "xsd:string"
+    },
+    "Limit": {
+      "@id": "aws:Limit",
+      "@type": "xsd:string"
+    },
+    "name": "schema:name",
+    "lastStartTime": {
+      "@id": "aws:lastStartTime",
+      "@type": "xsd:string"
+    },
+    "lastStopTime": {
+      "@id": "aws:lastStopTime",
+      "@type": "xsd:string"
+    },
+    "recording": {
+      "@id": "aws:recording",
+      "@type": "xsd:string"
+    },
+    "lastStatus": {
+      "@id": "aws:lastStatus",
+      "@type": "xsd:string"
+    },
+    "lastErrorCode": {
+      "@id": "aws:lastErrorCode",
+      "@type": "xsd:string"
+    },
+    "lastErrorMessage": {
+      "@id": "aws:lastErrorMessage",
+      "@type": "xsd:string"
+    },
+    "lastStatusChangeTime": {
+      "@id": "aws:lastStatusChangeTime",
+      "@type": "xsd:string"
+    },
+    "ComplianceType": {
+      "@id": "aws:ComplianceType",
+      "@type": "xsd:string"
+    },
+    "ConfigRuleInvokedTime": {
+      "@id": "aws:ConfigRuleInvokedTime",
+      "@type": "xsd:string"
+    },
+    "ResultRecordedTime": {
+      "@id": "aws:ResultRecordedTime",
+      "@type": "xsd:string"
+    },
+    "Annotation": {
+      "@id": "aws:Annotation",
+      "@type": "xsd:string"
+    },
+    "AccountId": {
+      "@id": "aws:AccountId",
+      "@type": "xsd:string"
+    },
+    "ResourceName": {
+      "@id": "aws:ResourceName",
+      "@type": "xsd:string"
+    },
+    "Region": {
+      "@id": "aws:Region",
+      "@type": "xsd:string"
+    },
+    "baseConfigurationItems": {
+      "@id": "aws:baseConfigurationItems",
+      "@type": "xsd:string"
+    },
+    "unprocessedResourceKeys": {
+      "@id": "aws:unprocessedResourceKeys",
+      "@type": "xsd:string"
+    },
+    "OrganizationConfigRules": {
+      "@id": "aws:OrganizationConfigRules",
+      "@type": "xsd:string"
+    },
+    "EvaluationResults": {
+      "@id": "aws:EvaluationResults",
+      "@type": "xsd:string"
+    },
+    "AwsRegion": {
+      "@id": "aws:AwsRegion",
+      "@type": "xsd:string"
+    },
+    "ConfigRuleNames": {
+      "@id": "aws:ConfigRuleNames",
+      "@type": "xsd:string"
+    },
+    "OrganizationConformancePackArn": {
+      "@id": "aws:OrganizationConformancePackArn",
+      "@type": "xsd:string"
+    },
+    "Expression": {
+      "@id": "aws:Expression",
+      "@type": "xsd:string"
+    },
+    "ConfigurationAggregatorName": {
+      "@id": "aws:ConfigurationAggregatorName",
+      "@type": "xsd:string"
+    },
+    "MaxResults": {
+      "@id": "aws:MaxResults",
+      "@type": "xsd:string"
+    },
+    "RequesterAccountId": {
+      "@id": "aws:RequesterAccountId",
+      "@type": "xsd:string"
+    },
+    "RequesterAwsRegion": {
+      "@id": "aws:RequesterAwsRegion",
+      "@type": "xsd:string"
+    },
+    "OrderingTimestamp": {
+      "@id": "aws:OrderingTimestamp",
+      "@type": "xsd:string"
+    },
+    "ComplianceSummariesByResourceType": {
+      "@id": "aws:ComplianceSummariesByResourceType",
+      "@type": "xsd:string"
+    },
+    "ResourceIdentifiers": {
+      "@id": "aws:ResourceIdentifiers",
+      "@type": "xsd:string"
+    },
+    "ResultToken": {
+      "@id": "aws:ResultToken",
+      "@type": "xsd:string"
+    },
+    "DeliveryChannelsStatus": {
+      "@id": "aws:DeliveryChannelsStatus",
+      "@type": "xsd:string"
+    },
+    "resourceType": {
+      "@id": "aws:resourceType",
+      "@type": "xsd:string"
+    },
+    "resourceIds": {
+      "@id": "aws:resourceIds",
+      "@type": "xsd:string"
+    },
+    "resourceName": {
+      "@id": "aws:resourceName",
+      "@type": "xsd:string"
+    },
+    "limit": {
+      "@id": "aws:limit",
+      "@type": "xsd:string"
+    },
+    "includeDeletedResources": {
+      "@id": "aws:includeDeletedResources",
+      "@type": "xsd:string"
+    },
+    "nextToken": {
+      "@id": "aws:nextToken",
+      "@type": "xsd:string"
+    },
+    "FailedEvaluations": {
+      "@id": "aws:FailedEvaluations",
+      "@type": "xsd:string"
+    },
+    "ConformancePackStatusDetails": {
+      "@id": "aws:ConformancePackStatusDetails",
+      "@type": "xsd:string"
+    },
+    "ConformancePackId": {
+      "@id": "aws:ConformancePackId",
+      "@type": "xsd:string"
+    },
+    "ConformancePackState": {
+      "@id": "aws:ConformancePackState",
+      "@type": "xsd:string"
+    },
+    "StackArn": {
+      "@id": "aws:StackArn",
+      "@type": "xsd:string"
+    },
+    "ConformancePackStatusReason": {
+      "@id": "aws:ConformancePackStatusReason",
+      "@type": "xsd:string"
+    },
+    "LastUpdateRequestedTime": {
+      "@id": "aws:LastUpdateRequestedTime",
+      "@type": "xsd:string"
+    },
+    "LastUpdateCompletedTime": {
+      "@id": "aws:LastUpdateCompletedTime",
+      "@type": "xsd:string"
+    },
+    "Status": {
+      "@id": "aws:Status",
+      "@type": "xsd:string"
+    },
+    "ResourceConfiguration": {
+      "@id": "aws:ResourceConfiguration",
+      "@type": "xsd:string"
+    },
+    "ResourceConfigurationSchemaType": {
+      "@id": "aws:ResourceConfigurationSchemaType",
+      "@type": "xsd:string"
+    },
+    "ConformancePackComplianceStatus": {
+      "@id": "aws:ConformancePackComplianceStatus",
+      "@type": "xsd:string"
+    },
+    "ConformancePackNames": {
+      "@id": "aws:ConformancePackNames",
+      "@type": "xsd:string"
+    },
+    "Filters": {
+      "@id": "aws:Filters",
+      "@type": "xsd:string"
+    },
+    "GroupByKey": {
+      "@id": "aws:GroupByKey",
+      "@type": "xsd:string"
+    },
+    "ComplianceByConfigRules": {
+      "@id": "aws:ComplianceByConfigRules",
+      "@type": "xsd:string"
+    },
+    "ConfigurationRecorderName": {
+      "@id": "aws:ConfigurationRecorderName",
+      "@type": "xsd:string"
+    },
+    "SourceAccountId": {
+      "@id": "aws:SourceAccountId",
+      "@type": "xsd:string"
+    },
+    "SourceRegion": {
+      "@id": "aws:SourceRegion",
+      "@type": "xsd:string"
+    },
+    "FailureReason": {
+      "@id": "aws:FailureReason",
+      "@type": "xsd:string"
+    },
+    "AuthorizedAccountId": {
+      "@id": "aws:AuthorizedAccountId",
+      "@type": "xsd:string"
+    },
+    "AuthorizedAwsRegion": {
+      "@id": "aws:AuthorizedAwsRegion",
+      "@type": "xsd:string"
+    },
+    "PolicyText": {
+      "@id": "aws:PolicyText",
+      "@type": "xsd:string"
+    },
+    "OrganizationConformancePackDetailedStatuses": {
+      "@id": "aws:OrganizationConformancePackDetailedStatuses",
+      "@type": "xsd:string"
+    },
+    "OrganizationConfigRuleName": {
+      "@id": "aws:OrganizationConfigRuleName",
+      "@type": "xsd:string"
+    },
+    "OrganizationConfigRuleArn": {
+      "@id": "aws:OrganizationConfigRuleArn",
+      "@type": "xsd:string"
+    },
+    "ExcludedAccounts": {
+      "@id": "aws:ExcludedAccounts",
+      "@type": "xsd:string"
+    },
+    "LastUpdateTime": {
+      "@id": "aws:LastUpdateTime",
+      "@type": "xsd:string"
+    },
+    "FailureMessage": {
+      "@id": "aws:FailureMessage",
+      "@type": "xsd:string"
+    },
+    "FailedItems": {
+      "@id": "aws:FailedItems",
+      "@type": "xsd:string"
+    },
+    "ConfigRuleArn": {
+      "@id": "aws:ConfigRuleArn",
+      "@type": "xsd:string"
+    },
+    "ConfigRuleId": {
+      "@id": "aws:ConfigRuleId",
+      "@type": "xsd:string"
+    },
+    "LastSuccessfulInvocationTime": {
+      "@id": "aws:LastSuccessfulInvocationTime",
+      "@type": "xsd:string"
+    },
+    "LastFailedInvocationTime": {
+      "@id": "aws:LastFailedInvocationTime",
+      "@type": "xsd:string"
+    },
+    "LastSuccessfulEvaluationTime": {
+      "@id": "aws:LastSuccessfulEvaluationTime",
+      "@type": "xsd:string"
+    },
+    "LastFailedEvaluationTime": {
+      "@id": "aws:LastFailedEvaluationTime",
+      "@type": "xsd:string"
+    },
+    "FirstActivatedTime": {
+      "@id": "aws:FirstActivatedTime",
+      "@type": "xsd:string"
+    },
+    "LastDeactivatedTime": {
+      "@id": "aws:LastDeactivatedTime",
+      "@type": "xsd:string"
+    },
+    "LastErrorCode": {
+      "@id": "aws:LastErrorCode",
+      "@type": "xsd:string"
+    },
+    "LastErrorMessage": {
+      "@id": "aws:LastErrorMessage",
+      "@type": "xsd:string"
+    },
+    "FirstEvaluationStarted": {
+      "@id": "aws:FirstEvaluationStarted",
+      "@type": "xsd:string"
+    },
+    "LastDebugLogDeliveryStatus": {
+      "@id": "aws:LastDebugLogDeliveryStatus",
+      "@type": "xsd:string"
+    },
+    "LastDebugLogDeliveryStatusReason": {
+      "@id": "aws:LastDebugLogDeliveryStatusReason",
+      "@type": "xsd:string"
+    },
+    "LastDebugLogDeliveryTime": {
+      "@id": "aws:LastDebugLogDeliveryTime",
+      "@type": "xsd:string"
+    },
+    "configSnapshotId": {
+      "@id": "aws:configSnapshotId",
+      "@type": "xsd:string"
+    },
+    "ConformancePackComplianceSummaryList": {
+      "@id": "aws:ConformancePackComplianceSummaryList",
+      "@type": "xsd:string"
+    },
+    "OrganizationConformancePackStatuses": {
+      "@id": "aws:OrganizationConformancePackStatuses",
+      "@type": "xsd:string"
+    },
+    "GroupName": {
+      "@id": "aws:GroupName",
+      "@type": "xsd:string"
+    },
+    "Description": {
+      "@id": "aws:Description",
+      "@type": "xsd:string"
+    },
+    "RuleIdentifier": {
+      "@id": "aws:RuleIdentifier",
+      "@type": "xsd:string"
+    },
+    "InputParameters": {
+      "@id": "aws:InputParameters",
+      "@type": "xsd:string"
+    },
+    "MaximumExecutionFrequency": {
+      "@id": "aws:MaximumExecutionFrequency",
+      "@type": "xsd:string"
+    },
+    "ResourceTypesScope": {
+      "@id": "aws:ResourceTypesScope",
+      "@type": "xsd:string"
+    },
+    "ResourceIdScope": {
+      "@id": "aws:ResourceIdScope",
+      "@type": "xsd:string"
+    },
+    "TagKeyScope": {
+      "@id": "aws:TagKeyScope",
+      "@type": "xsd:string"
+    },
+    "TagValueScope": {
+      "@id": "aws:TagValueScope",
+      "@type": "xsd:string"
+    },
+    "ConfigurationAggregatorNames": {
+      "@id": "aws:ConfigurationAggregatorNames",
+      "@type": "xsd:string"
+    },
+    "SortOrder": {
+      "@id": "aws:SortOrder",
+      "@type": "xsd:string"
+    },
+    "SortBy": {
+      "@id": "aws:SortBy",
+      "@type": "xsd:string"
+    },
+    "Name": {
+      "@id": "aws:Name",
+      "@type": "xsd:string"
+    },
+    "Results": {
+      "@id": "aws:Results",
+      "@type": "xsd:string"
+    },
+    "EvaluationMode": {
+      "@id": "aws:EvaluationMode",
+      "@type": "xsd:string"
+    },
+    "EvaluationStartTimestamp": {
+      "@id": "aws:EvaluationStartTimestamp",
+      "@type": "xsd:string"
+    },
+    "ConcurrentExecutionRatePercentage": {
+      "@id": "aws:ConcurrentExecutionRatePercentage",
+      "@type": "xsd:string"
+    },
+    "ErrorPercentage": {
+      "@id": "aws:ErrorPercentage",
+      "@type": "xsd:string"
+    },
+    "useOnly": {
+      "@id": "aws:useOnly",
+      "@type": "xsd:string"
+    },
+    "RetentionPeriodInDays": {
+      "@id": "aws:RetentionPeriodInDays",
+      "@type": "xsd:string"
+    },
+    "SchemaVersionId": {
+      "@id": "aws:SchemaVersionId",
+      "@type": "xsd:string"
+    },
+    "Configuration": {
+      "@id": "aws:Configuration",
+      "@type": "xsd:string"
+    },
+    "ComplianceResourceTypes": {
+      "@id": "aws:ComplianceResourceTypes",
+      "@type": "xsd:string"
+    },
+    "TagKey": {
+      "@id": "aws:TagKey",
+      "@type": "xsd:string"
+    },
+    "TagValue": {
+      "@id": "aws:TagValue",
+      "@type": "xsd:string"
+    },
+    "ComplianceResourceId": {
+      "@id": "aws:ComplianceResourceId",
+      "@type": "xsd:string"
+    },
+    "AggregateConformancePackComplianceSummaries": {
+      "@id": "aws:AggregateConformancePackComplianceSummaries",
+      "@type": "xsd:string"
+    },
+    "UpdateStatus": {
+      "@id": "aws:UpdateStatus",
+      "@type": "xsd:string"
+    },
+    "AggregateComplianceCounts": {
+      "@id": "aws:AggregateComplianceCounts",
+      "@type": "xsd:string"
+    },
+    "BaseConfigurationItems": {
+      "@id": "aws:BaseConfigurationItems",
+      "@type": "xsd:string"
+    },
+    "UnprocessedResourceIdentifiers": {
+      "@id": "aws:UnprocessedResourceIdentifiers",
+      "@type": "xsd:string"
+    },
+    "FailedBatches": {
+      "@id": "aws:FailedBatches",
+      "@type": "xsd:string"
+    },
+    "EvaluationContextIdentifier": {
+      "@id": "aws:EvaluationContextIdentifier",
+      "@type": "xsd:string"
+    },
+    "configSnapshotDeliveryInfo": {
+      "@id": "aws:configSnapshotDeliveryInfo",
+      "@type": "xsd:string"
+    },
+    "configHistoryDeliveryInfo": {
+      "@id": "aws:configHistoryDeliveryInfo",
+      "@type": "xsd:string"
+    },
+    "configStreamDeliveryInfo": {
+      "@id": "aws:configStreamDeliveryInfo",
+      "@type": "xsd:string"
+    },
+    "CompliantRuleCount": {
+      "@id": "aws:CompliantRuleCount",
+      "@type": "xsd:string"
+    },
+    "NonCompliantRuleCount": {
+      "@id": "aws:NonCompliantRuleCount",
+      "@type": "xsd:string"
+    },
+    "TotalRuleCount": {
+      "@id": "aws:TotalRuleCount",
+      "@type": "xsd:string"
+    },
+    "AccountAggregationSources": {
+      "@id": "aws:AccountAggregationSources",
+      "@type": "xsd:string"
+    },
+    "s3BucketName": {
+      "@id": "aws:s3BucketName",
+      "@type": "xsd:string"
+    },
+    "s3KeyPrefix": {
+      "@id": "aws:s3KeyPrefix",
+      "@type": "xsd:string"
+    },
+    "s3KmsKeyArn": {
+      "@id": "aws:s3KmsKeyArn",
+      "@type": "xsd:string"
+    },
+    "snsTopicARN": {
+      "@id": "aws:snsTopicARN",
+      "@type": "xsd:string"
+    },
+    "configSnapshotDeliveryProperties": {
+      "@id": "aws:configSnapshotDeliveryProperties",
+      "@type": "xsd:string"
+    },
+    "roleARN": {
+      "@id": "aws:roleARN",
+      "@type": "xsd:string"
+    },
+    "recordingGroup": {
+      "@id": "aws:recordingGroup",
+      "@type": "xsd:string"
+    },
+    "QueryName": {
+      "@id": "aws:QueryName",
+      "@type": "xsd:string"
+    },
+    "OrganizationConfigRuleDetailedStatus": {
+      "@id": "aws:OrganizationConfigRuleDetailedStatus",
+      "@type": "xsd:string"
+    },
+    "DeliveryS3Bucket": {
+      "@id": "aws:DeliveryS3Bucket",
+      "@type": "xsd:string"
+    },
+    "DeliveryS3KeyPrefix": {
+      "@id": "aws:DeliveryS3KeyPrefix",
+      "@type": "xsd:string"
+    },
+    "ConformancePackInputParameters": {
+      "@id": "aws:ConformancePackInputParameters",
+      "@type": "xsd:string"
+    },
+    "CreatedBy": {
+      "@id": "aws:CreatedBy",
+      "@type": "xsd:string"
+    },
+    "Value": {
+      "@id": "aws:Value",
+      "@type": "xsd:string"
+    },
+    "ComplianceResourceType": {
+      "@id": "aws:ComplianceResourceType",
+      "@type": "xsd:string"
+    },
+    "SelectFields": {
+      "@id": "aws:SelectFields",
+      "@type": "xsd:string"
+    },
+    "OrganizationConfigRuleNames": {
+      "@id": "aws:OrganizationConfigRuleNames",
+      "@type": "xsd:string"
+    },
+    "EventSource": {
+      "@id": "aws:EventSource",
+      "@type": "xsd:string"
+    },
+    "MessageType": {
+      "@id": "aws:MessageType",
+      "@type": "xsd:string"
+    },
+    "ConfigRules": {
+      "@id": "aws:ConfigRules",
+      "@type": "xsd:string"
+    },
+    "OrganizationConformancePackName": {
+      "@id": "aws:OrganizationConformancePackName",
+      "@type": "xsd:string"
+    },
+    "DeliveryChannels": {
+      "@id": "aws:DeliveryChannels",
+      "@type": "xsd:string"
+    },
+    "ConfigRulesEvaluationStatus": {
+      "@id": "aws:ConfigRulesEvaluationStatus",
+      "@type": "xsd:string"
+    },
+    "deliveryFrequency": {
+      "@id": "aws:deliveryFrequency",
+      "@type": "xsd:string"
+    },
+    "LambdaFunctionArn": {
+      "@id": "aws:LambdaFunctionArn",
+      "@type": "xsd:string"
+    },
+    "OrganizationConfigRuleTriggerTypes": {
+      "@id": "aws:OrganizationConfigRuleTriggerTypes",
+      "@type": "xsd:string"
+    },
+    "allSupported": {
+      "@id": "aws:allSupported",
+      "@type": "xsd:string"
+    },
+    "includeGlobalResourceTypes": {
+      "@id": "aws:includeGlobalResourceTypes",
+      "@type": "xsd:string"
+    },
+    "resourceTypes": {
+      "@id": "aws:resourceTypes",
+      "@type": "xsd:string"
+    },
+    "exclusionByResourceTypes": {
+      "@id": "aws:exclusionByResourceTypes",
+      "@type": "xsd:string"
+    },
+    "recordingStrategy": {
+      "@id": "aws:recordingStrategy",
+      "@type": "xsd:string"
+    },
+    "ConfigRuleState": {
+      "@id": "aws:ConfigRuleState",
+      "@type": "xsd:string"
+    },
+    "EvaluationModes": {
+      "@id": "aws:EvaluationModes",
+      "@type": "xsd:string"
+    },
+    "AccountIds": {
+      "@id": "aws:AccountIds",
+      "@type": "xsd:string"
+    },
+    "AllAwsRegions": {
+      "@id": "aws:AllAwsRegions",
+      "@type": "xsd:string"
+    },
+    "AwsRegions": {
+      "@id": "aws:AwsRegions",
+      "@type": "xsd:string"
+    },
+    "MemberAccountRuleStatus": {
+      "@id": "aws:MemberAccountRuleStatus",
+      "@type": "xsd:string"
+    },
+    "ErrorCode": {
+      "@id": "aws:ErrorCode",
+      "@type": "xsd:string"
+    },
+    "ErrorMessage": {
+      "@id": "aws:ErrorMessage",
+      "@type": "xsd:string"
+    },
+    "State": {
+      "@id": "aws:State",
+      "@type": "xsd:string"
+    },
+    "StepDetails": {
+      "@id": "aws:StepDetails",
+      "@type": "xsd:string"
+    },
+    "InvocationTime": {
+      "@id": "aws:InvocationTime",
+      "@type": "xsd:string"
+    },
+    "LastUpdatedTime": {
+      "@id": "aws:LastUpdatedTime",
+      "@type": "xsd:string"
+    },
+    "Mode": {
+      "@id": "aws:Mode",
+      "@type": "xsd:string"
+    },
+    "ComplianceByResources": {
+      "@id": "aws:ComplianceByResources",
+      "@type": "xsd:string"
+    },
+    "ResourceIds": {
+      "@id": "aws:ResourceIds",
+      "@type": "xsd:string"
+    },
+    "StartTime": {
+      "@id": "aws:StartTime",
+      "@type": "xsd:string"
+    },
+    "StopTime": {
+      "@id": "aws:StopTime",
+      "@type": "xsd:string"
+    },
+    "resourceId": {
+      "@id": "aws:resourceId",
+      "@type": "xsd:string"
+    },
+    "laterTime": {
+      "@id": "aws:laterTime",
+      "@type": "xsd:string"
+    },
+    "earlierTime": {
+      "@id": "aws:earlierTime",
+      "@type": "xsd:string"
+    },
+    "chronologicalOrder": {
+      "@id": "aws:chronologicalOrder",
+      "@type": "xsd:string"
+    },
+    "ResourceArn": {
+      "@id": "aws:ResourceArn",
+      "@type": "xsd:string"
+    },
+    "AggregateEvaluationResults": {
+      "@id": "aws:AggregateEvaluationResults",
+      "@type": "xsd:string"
+    },
+    "relationshipName": {
+      "@id": "aws:relationshipName",
+      "@type": "xsd:string"
+    },
+    "Controls": {
+      "@id": "aws:Controls",
+      "@type": "xsd:string"
+    },
+    "QueryArn": {
+      "@id": "aws:QueryArn",
+      "@type": "xsd:string"
+    },
+    "TotalDiscoveredResources": {
+      "@id": "aws:TotalDiscoveredResources",
+      "@type": "xsd:string"
+    },
+    "GroupedResourceCounts": {
+      "@id": "aws:GroupedResourceCounts",
+      "@type": "xsd:string"
+    },
+    "configurationItems": {
+      "@id": "aws:configurationItems",
+      "@type": "xsd:string"
+    },
+    "ConformancePackComplianceScores": {
+      "@id": "aws:ConformancePackComplianceScores",
+      "@type": "xsd:string"
+    },
+    "totalDiscoveredResources": {
+      "@id": "aws:totalDiscoveredResources",
+      "@type": "xsd:string"
+    },
+    "resourceCounts": {
+      "@id": "aws:resourceCounts",
+      "@type": "xsd:string"
+    },
+    "ConfigurationAggregators": {
+      "@id": "aws:ConfigurationAggregators",
+      "@type": "xsd:string"
+    },
+    "RetentionConfigurations": {
+      "@id": "aws:RetentionConfigurations",
+      "@type": "xsd:string"
+    },
+    "ConfigurationRecorderNames": {
+      "@id": "aws:ConfigurationRecorderNames",
+      "@type": "xsd:string"
+    },
+    "CappedCount": {
+      "@id": "aws:CappedCount",
+      "@type": "xsd:string"
+    },
+    "CapExceeded": {
+      "@id": "aws:CapExceeded",
+      "@type": "xsd:string"
+    },
+    "ConformancePackRuleComplianceList": {
+      "@id": "aws:ConformancePackRuleComplianceList",
+      "@type": "xsd:string"
+    },
+    "OrganizationConformancePacks": {
+      "@id": "aws:OrganizationConformancePacks",
+      "@type": "xsd:string"
+    },
+    "ResourceEvaluations": {
+      "@id": "aws:ResourceEvaluations",
+      "@type": "xsd:string"
+    },
+    "EvaluationTimeout": {
+      "@id": "aws:EvaluationTimeout",
+      "@type": "xsd:string"
+    },
+    "ClientToken": {
+      "@id": "aws:ClientToken",
+      "@type": "xsd:string"
+    },
+    "ResourceKeys": {
+      "@id": "aws:ResourceKeys",
+      "@type": "xsd:string"
+    },
+    "ConfigurationRecordersStatus": {
+      "@id": "aws:ConfigurationRecordersStatus",
+      "@type": "xsd:string"
+    },
+    "DeliveryChannelNames": {
+      "@id": "aws:DeliveryChannelNames",
+      "@type": "xsd:string"
+    },
+    "ResourceTypes": {
+      "@id": "aws:ResourceTypes",
+      "@type": "xsd:string"
+    },
+    "Score": {
+      "@id": "aws:Score",
+      "@type": "xsd:string"
+    },
+    "AggregatedSourceStatusList": {
+      "@id": "aws:AggregatedSourceStatusList",
+      "@type": "xsd:string"
+    },
+    "PolicyRuntime": {
+      "@id": "aws:PolicyRuntime",
+      "@type": "xsd:string"
+    },
+    "EnableDebugLogDelivery": {
+      "@id": "aws:EnableDebugLogDelivery",
+      "@type": "xsd:string"
+    },
+    "ParameterName": {
+      "@id": "aws:ParameterName",
+      "@type": "xsd:string"
+    },
+    "ParameterValue": {
+      "@id": "aws:ParameterValue",
+      "@type": "xsd:string"
+    },
+    "deliveryChannelName": {
+      "@id": "aws:deliveryChannelName",
+      "@type": "xsd:string"
+    },
+    "version": {
+      "@id": "aws:version",
+      "@type": "xsd:string"
+    },
+    "accountId": {
+      "@id": "aws:accountId",
+      "@type": "xsd:string"
+    },
+    "configurationItemCaptureTime": {
+      "@id": "aws:configurationItemCaptureTime",
+      "@type": "xsd:string"
+    },
+    "configurationItemStatus": {
+      "@id": "aws:configurationItemStatus",
+      "@type": "xsd:string"
+    },
+    "configurationStateId": {
+      "@id": "aws:configurationStateId",
+      "@type": "xsd:string"
+    },
+    "arn": {
+      "@id": "aws:arn",
+      "@type": "xsd:string"
+    },
+    "awsRegion": {
+      "@id": "aws:awsRegion",
+      "@type": "xsd:string"
+    },
+    "availabilityZone": {
+      "@id": "aws:availabilityZone",
+      "@type": "xsd:string"
+    },
+    "resourceCreationTime": {
+      "@id": "aws:resourceCreationTime",
+      "@type": "xsd:string"
+    },
+    "configuration": {
+      "@id": "aws:configuration",
+      "@type": "xsd:string"
+    },
+    "supplementaryConfiguration": {
+      "@id": "aws:supplementaryConfiguration",
+      "@type": "xsd:string"
+    },
+    "OrganizationConfigRuleStatuses": {
+      "@id": "aws:OrganizationConfigRuleStatuses",
+      "@type": "xsd:string"
+    },
+    "RoleArn": {
+      "@id": "aws:RoleArn",
+      "@type": "xsd:string"
+    },
+    "ConfigurationAggregatorArn": {
+      "@id": "aws:ConfigurationAggregatorArn",
+      "@type": "xsd:string"
+    },
+    "CreationTime": {
+      "@id": "aws:CreationTime",
+      "@type": "xsd:string"
+    },
+    "EndTime": {
+      "@id": "aws:EndTime",
+      "@type": "xsd:string"
+    },
+    "DeliveryChannelName": {
+      "@id": "aws:DeliveryChannelName",
+      "@type": "xsd:string"
+    },
+    "ConformancePackDetails": {
+      "@id": "aws:ConformancePackDetails",
+      "@type": "xsd:string"
+    },
+    "DebugLogDeliveryAccounts": {
+      "@id": "aws:DebugLogDeliveryAccounts",
+      "@type": "xsd:string"
+    },
+    "resourceDeletionTime": {
+      "@id": "aws:resourceDeletionTime",
+      "@type": "xsd:string"
+    },
+    "resourceIdentifiers": {
+      "@id": "aws:resourceIdentifiers",
+      "@type": "xsd:string"
+    },
+    "PendingAggregationRequests": {
+      "@id": "aws:PendingAggregationRequests",
+      "@type": "xsd:string"
+    },
+    "configurationItemMD5Hash": {
+      "@id": "aws:configurationItemMD5Hash",
+      "@type": "xsd:string"
+    },
+    "tags": {
+      "@id": "aws:tags",
+      "@type": "xsd:string"
+    },
+    "relatedEvents": {
+      "@id": "aws:relatedEvents",
+      "@type": "xsd:string"
+    },
+    "relationships": {
+      "@id": "aws:relationships",
+      "@type": "xsd:string"
+    },
+    "count": {
+      "@id": "aws:count",
+      "@type": "xsd:string"
+    },
+    "SourceId": {
+      "@id": "aws:SourceId",
+      "@type": "xsd:string"
+    },
+    "SourceType": {
+      "@id": "aws:SourceType",
+      "@type": "xsd:string"
+    },
+    "LastUpdateStatus": {
+      "@id": "aws:LastUpdateStatus",
+      "@type": "xsd:string"
+    },
+    "Evaluations": {
+      "@id": "aws:Evaluations",
+      "@type": "xsd:string"
+    },
+    "TestMode": {
+      "@id": "aws:TestMode",
+      "@type": "xsd:string"
+    },
+    "Values": {
+      "@id": "aws:Values",
+      "@type": "xsd:string"
+    },
+    "DocumentName": {
+      "@id": "aws:DocumentName",
+      "@type": "xsd:string"
+    },
+    "DocumentVersion": {
+      "@id": "aws:DocumentVersion",
+      "@type": "xsd:string"
+    },
+    "AggregateComplianceByConfigRules": {
+      "@id": "aws:AggregateComplianceByConfigRules",
+      "@type": "xsd:string"
+    },
+    "RetentionConfigurationNames": {
+      "@id": "aws:RetentionConfigurationNames",
+      "@type": "xsd:string"
+    },
+    "AggregationAuthorizationArn": {
+      "@id": "aws:AggregationAuthorizationArn",
+      "@type": "xsd:string"
+    },
+    "resourceKeys": {
+      "@id": "aws:resourceKeys",
+      "@type": "xsd:string"
+    },
+    "QueryId": {
+      "@id": "aws:QueryId",
+      "@type": "xsd:string"
+    },
+    "CompliantConformancePackCount": {
+      "@id": "aws:CompliantConformancePackCount",
+      "@type": "xsd:string"
+    },
+    "NonCompliantConformancePackCount": {
+      "@id": "aws:NonCompliantConformancePackCount",
+      "@type": "xsd:string"
+    },
+    "Key": {
+      "@id": "aws:Key",
+      "@type": "xsd:string"
+    },
+    "lastAttemptTime": {
+      "@id": "aws:lastAttemptTime",
+      "@type": "xsd:string"
+    },
+    "lastSuccessfulTime": {
+      "@id": "aws:lastSuccessfulTime",
+      "@type": "xsd:string"
+    },
+    "nextDeliveryTime": {
+      "@id": "aws:nextDeliveryTime",
+      "@type": "xsd:string"
+    },
+    "AggregationAuthorizations": {
+      "@id": "aws:AggregationAuthorizations",
+      "@type": "xsd:string"
+    },
+    "AggregateComplianceByConformancePacks": {
+      "@id": "aws:AggregateComplianceByConformancePacks",
+      "@type": "xsd:string"
+    },
+    "OrganizationRuleStatus": {
+      "@id": "aws:OrganizationRuleStatus",
+      "@type": "xsd:string"
+    },
+    "RetentionConfigurationName": {
+      "@id": "aws:RetentionConfigurationName",
+      "@type": "xsd:string"
+    },
+    "TargetType": {
+      "@id": "aws:TargetType",
+      "@type": "xsd:string"
+    },
+    "TargetId": {
+      "@id": "aws:TargetId",
+      "@type": "xsd:string"
+    },
+    "TargetVersion": {
+      "@id": "aws:TargetVersion",
+      "@type": "xsd:string"
+    },
+    "Parameters": {
+      "@id": "aws:Parameters",
+      "@type": "xsd:string"
+    },
+    "Automatic": {
+      "@id": "aws:Automatic",
+      "@type": "xsd:string"
+    },
+    "MaximumAutomaticAttempts": {
+      "@id": "aws:MaximumAutomaticAttempts",
+      "@type": "xsd:string"
+    },
+    "RetryAttemptSeconds": {
+      "@id": "aws:RetryAttemptSeconds",
+      "@type": "xsd:string"
+    },
+    "Arn": {
+      "@id": "aws:Arn",
+      "@type": "xsd:string"
+    },
+    "CreatedByService": {
+      "@id": "aws:CreatedByService",
+      "@type": "xsd:string"
+    },
+    "TagKeys": {
+      "@id": "aws:TagKeys",
+      "@type": "xsd:string"
+    },
+    "TemplateS3Uri": {
+      "@id": "aws:TemplateS3Uri",
+      "@type": "xsd:string"
+    },
+    "TemplateBody": {
+      "@id": "aws:TemplateBody",
+      "@type": "xsd:string"
+    },
+    "RemediationExecutionStatuses": {
+      "@id": "aws:RemediationExecutionStatuses",
+      "@type": "xsd:string"
+    },
+    "CompliantResourceCount": {
+      "@id": "aws:CompliantResourceCount",
+      "@type": "xsd:string"
+    },
+    "NonCompliantResourceCount": {
+      "@id": "aws:NonCompliantResourceCount",
+      "@type": "xsd:string"
+    },
+    "ComplianceSummaryTimestamp": {
+      "@id": "aws:ComplianceSummaryTimestamp",
+      "@type": "xsd:string"
+    },
+    "Owner": {
+      "@id": "aws:Owner",
+      "@type": "xsd:string"
+    },
+    "SourceIdentifier": {
+      "@id": "aws:SourceIdentifier",
+      "@type": "xsd:string"
+    },
+    "SourceDetails": {
+      "@id": "aws:SourceDetails",
+      "@type": "xsd:string"
+    }
   }
 }

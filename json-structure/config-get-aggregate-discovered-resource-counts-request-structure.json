@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-get-aggregate-discovered-resource-counts-request-structure.json",
+  "name": "GetAggregateDiscoveredResourceCountsRequest",
+  "description": "GetAggregateDiscoveredResourceCountsRequest schema",
+  "type": "object",
+  "properties": {
+    "ConfigurationAggregatorName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationAggregatorName"
+        },
+        {
+          "description": "The name of the configuration aggregator."
+        }
+      ]
+    },
+    "Filters": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceCountFilters"
+        },
+        {
+          "description": "Filters the results based on the <code>ResourceCountFilters</code> object."
+        }
+      ]
+    },
+    "GroupByKey": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceCountGroupKey"
+        },
+        {
+          "description": "The key to group the resource counts."
+        }
+      ]
+    },
+    "Limit": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GroupByAPILimit"
+        },
+        {
+          "description": "The maximum number of <a>GroupedResourceCount</a> objects returned on each page. The default is 1000. You cannot specify a number greater than 1000. If you specify 0, Config uses the default."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConfigurationAggregatorName"
+  ]
+}

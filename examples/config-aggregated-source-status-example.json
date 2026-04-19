@@ -1,0 +1,9 @@
+{
+  "SourceId": "example-string",
+  "SourceType": "example-string",
+  "AwsRegion": "us-east-1",
+  "LastUpdateStatus": "COMPLIANT",
+  "LastUpdateTime": "example-string",
+  "LastErrorCode": "example-string",
+  "LastErrorMessage": "example-string"
+}

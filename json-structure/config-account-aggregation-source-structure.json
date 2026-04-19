@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-account-aggregation-source-structure.json",
+  "name": "AccountAggregationSource",
+  "description": "A collection of accounts and regions.",
+  "type": "object",
+  "properties": {
+    "AccountIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountAggregationSourceAccountList"
+        },
+        {
+          "description": "The 12-digit account ID of the account being aggregated. "
+        }
+      ]
+    },
+    "AllAwsRegions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "If true, aggregate existing Config regions and future regions."
+        }
+      ]
+    },
+    "AwsRegions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AggregatorRegionList"
+        },
+        {
+          "description": "The source regions being aggregated."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AccountIds"
+  ]
+}

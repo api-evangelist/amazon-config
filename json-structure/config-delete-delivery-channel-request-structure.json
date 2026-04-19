@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-delete-delivery-channel-request-structure.json",
+  "name": "DeleteDeliveryChannelRequest",
+  "description": "The input for the <a>DeleteDeliveryChannel</a> action. The action accepts the following data, in JSON format. ",
+  "type": "object",
+  "properties": {
+    "DeliveryChannelName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ChannelName"
+        },
+        {
+          "description": "The name of the delivery channel to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "DeliveryChannelName"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "Description": "example-string",
+  "OrganizationConfigRuleTriggerTypes": "example-string",
+  "InputParameters": "example-string",
+  "MaximumExecutionFrequency": "example-string",
+  "ResourceTypesScope": "AWS::EC2::Instance",
+  "ResourceIdScope": "example-string",
+  "TagKeyScope": "example-string",
+  "TagValueScope": "example-string",
+  "PolicyRuntime": "example-string",
+  "PolicyText": "example-string",
+  "DebugLogDeliveryAccounts": "123456789012"
+}

@@ -1,0 +1,7 @@
+{
+  "ComplianceType": "example-string",
+  "EvaluationResultIdentifier": "example-string",
+  "ConfigRuleInvokedTime": "example-string",
+  "ResultRecordedTime": "example-string",
+  "Annotation": "example-string"
+}

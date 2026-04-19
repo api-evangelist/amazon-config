@@ -1,0 +1,5 @@
+{
+  "PolicyRuntime": "example-string",
+  "PolicyText": "example-string",
+  "EnableDebugLogDelivery": "example-string"
+}

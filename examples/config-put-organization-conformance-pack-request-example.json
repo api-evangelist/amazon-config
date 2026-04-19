@@ -1,0 +1,9 @@
+{
+  "OrganizationConformancePackName": "example-config-rule",
+  "TemplateS3Uri": "example-string",
+  "TemplateBody": "example-string",
+  "DeliveryS3Bucket": "example-string",
+  "DeliveryS3KeyPrefix": "example-string",
+  "ConformancePackInputParameters": "example-string",
+  "ExcludedAccounts": "123456789012"
+}

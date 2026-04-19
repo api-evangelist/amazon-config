@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-conformance-pack-input-parameters-schema.json",
+  "title": "ConformancePackInputParameters",
+  "description": "ConformancePackInputParameters schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ConformancePackInputParameter"
+  },
+  "minItems": 0,
+  "maxItems": 60
+}

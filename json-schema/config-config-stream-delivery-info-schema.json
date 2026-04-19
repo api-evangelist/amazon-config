@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-config-stream-delivery-info-schema.json",
+  "title": "ConfigStreamDeliveryInfo",
+  "description": "A list that contains the status of the delivery of the configuration stream notification to the Amazon SNS topic.",
+  "type": "object",
+  "properties": {
+    "lastStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeliveryStatus"
+        },
+        {
+          "description": "<p>Status of the last attempted delivery.</p> <p> <b>Note</b> Providing an SNS topic on a <a href=\"https://docs.aws.amazon.com/config/latest/APIReference/API_DeliveryChannel.html\">DeliveryChannel</a> for Config is optional. If the SNS delivery is turned off, the last status will be <b>Not_Applicable</b>.</p>"
+        }
+      ]
+    },
+    "lastErrorCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The error code from the last attempted delivery."
+        }
+      ]
+    },
+    "lastErrorMessage": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The error message from the last attempted delivery."
+        }
+      ]
+    },
+    "lastStatusChangeTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time from the last status change."
+        }
+      ]
+    }
+  }
+}

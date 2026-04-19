@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-compliance-by-resource-structure.json",
+  "name": "ComplianceByResource",
+  "description": "Indicates whether an Amazon Web Services resource that is evaluated according to one or more Config rules is compliant. A resource is compliant if it complies with all of the rules that evaluate it. A resource is noncompliant if it does not comply with one or more of these rules.",
+  "type": "object",
+  "properties": {
+    "ResourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "The type of the Amazon Web Services resource that was evaluated."
+        }
+      ]
+    },
+    "ResourceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BaseResourceId"
+        },
+        {
+          "description": "The ID of the Amazon Web Services resource that was evaluated."
+        }
+      ]
+    },
+    "Compliance": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Compliance"
+        },
+        {
+          "description": "Indicates whether the Amazon Web Services resource complies with all of the Config rules that evaluated it."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-get-aggregate-resource-config-response-structure.json",
+  "name": "GetAggregateResourceConfigResponse",
+  "description": "GetAggregateResourceConfigResponse schema",
+  "type": "object",
+  "properties": {
+    "ConfigurationItem": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationItem"
+        },
+        {
+          "description": "Returns a <code>ConfigurationItem</code> object."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-query-name-structure.json",
+  "name": "QueryName",
+  "description": "QueryName schema",
+  "type": "string",
+  "pattern": "^[a-zA-Z0-9-_]+$",
+  "minLength": 1,
+  "maxLength": 64
+}

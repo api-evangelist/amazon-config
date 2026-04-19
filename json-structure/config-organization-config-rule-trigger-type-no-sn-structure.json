@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-organization-config-rule-trigger-type-no-sn-structure.json",
+  "name": "OrganizationConfigRuleTriggerTypeNoSN",
+  "description": "OrganizationConfigRuleTriggerTypeNoSN schema",
+  "type": "string",
+  "enum": [
+    "ConfigurationItemChangeNotification",
+    "OversizedConfigurationItemChangeNotification"
+  ]
+}

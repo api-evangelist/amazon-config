@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-delete-evaluation-results-request-structure.json",
+  "name": "DeleteEvaluationResultsRequest",
+  "description": "<p/>",
+  "type": "object",
+  "properties": {
+    "ConfigRuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit64"
+        },
+        {
+          "description": "The name of the Config rule for which you want to delete the evaluation results."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConfigRuleName"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "resourceType": "AWS::EC2::Instance",
+  "resourceId": "example-string",
+  "laterTime": "example-string",
+  "earlierTime": "example-string",
+  "chronologicalOrder": "example-string",
+  "limit": "example-string",
+  "nextToken": "example-string"
+}

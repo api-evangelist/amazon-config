@@ -1,0 +1,7 @@
+{
+  "OrganizationConformancePackName": "example-config-rule",
+  "Status": "COMPLIANT",
+  "ErrorCode": "example-string",
+  "ErrorMessage": "example-string",
+  "LastUpdateTime": "example-string"
+}

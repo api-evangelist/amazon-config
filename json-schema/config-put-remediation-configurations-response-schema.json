@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-put-remediation-configurations-response-schema.json",
+  "title": "PutRemediationConfigurationsResponse",
+  "description": "PutRemediationConfigurationsResponse schema",
+  "type": "object",
+  "properties": {
+    "FailedBatches": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FailedRemediationBatches"
+        },
+        {
+          "description": "Returns a list of failed remediation batch objects."
+        }
+      ]
+    }
+  }
+}

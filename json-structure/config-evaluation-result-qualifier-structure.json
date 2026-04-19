@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-evaluation-result-qualifier-structure.json",
+  "name": "EvaluationResultQualifier",
+  "description": "Identifies an Config rule that evaluated an Amazon Web Services resource, and provides the type and ID of the resource that the rule evaluated.",
+  "type": "object",
+  "properties": {
+    "ConfigRuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigRuleName"
+        },
+        {
+          "description": "The name of the Config rule that was used in the evaluation."
+        }
+      ]
+    },
+    "ResourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "The type of Amazon Web Services resource that was evaluated."
+        }
+      ]
+    },
+    "ResourceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BaseResourceId"
+        },
+        {
+          "description": "The ID of the evaluated Amazon Web Services resource."
+        }
+      ]
+    },
+    "EvaluationMode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationMode"
+        },
+        {
+          "description": "The mode of an evaluation. The valid values are Detective or Proactive."
+        }
+      ]
+    }
+  }
+}

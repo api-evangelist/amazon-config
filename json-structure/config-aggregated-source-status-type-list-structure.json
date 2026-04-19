@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-aggregated-source-status-type-list-structure.json",
+  "name": "AggregatedSourceStatusTypeList",
+  "description": "AggregatedSourceStatusTypeList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/AggregatedSourceStatusType"
+  },
+  "minItems": 1
+}

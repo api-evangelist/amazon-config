@@ -1,0 +1,14 @@
+{
+  "ConfigRuleName": "example-config-rule",
+  "TargetType": "example-string",
+  "TargetId": "example-string",
+  "TargetVersion": "example-string",
+  "Parameters": "example-string",
+  "ResourceType": "AWS::EC2::Instance",
+  "Automatic": "example-string",
+  "ExecutionControls": "example-string",
+  "MaximumAutomaticAttempts": "example-string",
+  "RetryAttemptSeconds": "example-string",
+  "Arn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "CreatedByService": "example-string"
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-retention-configuration-schema.json",
+  "title": "RetentionConfiguration",
+  "description": "An object with the name of the retention configuration and the retention period in days. The object stores the configuration for data retention in Config.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RetentionConfigurationName"
+        },
+        {
+          "description": "The name of the retention configuration object."
+        }
+      ]
+    },
+    "RetentionPeriodInDays": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RetentionPeriodInDays"
+        },
+        {
+          "description": "<p>Number of days Config stores your historical information.</p> <note> <p>Currently, only applicable to the configuration item history.</p> </note>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "Name",
+    "RetentionPeriodInDays"
+  ]
+}

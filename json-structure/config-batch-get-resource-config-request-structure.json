@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-batch-get-resource-config-request-structure.json",
+  "name": "BatchGetResourceConfigRequest",
+  "description": "BatchGetResourceConfigRequest schema",
+  "type": "object",
+  "properties": {
+    "resourceKeys": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceKeys"
+        },
+        {
+          "description": "A list of resource keys to be processed with the current request. Each element in the list consists of the resource type and resource ID."
+        }
+      ]
+    }
+  },
+  "required": [
+    "resourceKeys"
+  ]
+}

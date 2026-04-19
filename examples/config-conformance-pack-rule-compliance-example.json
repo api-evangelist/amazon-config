@@ -1,0 +1,5 @@
+{
+  "ConfigRuleName": "example-config-rule",
+  "ComplianceType": "example-string",
+  "Controls": "example-string"
+}

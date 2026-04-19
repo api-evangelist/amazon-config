@@ -1,0 +1,7 @@
+{
+  "allSupported": "example-string",
+  "includeGlobalResourceTypes": "AWS::EC2::Instance",
+  "resourceTypes": "AWS::EC2::Instance",
+  "exclusionByResourceTypes": "AWS::EC2::Instance",
+  "recordingStrategy": "example-string"
+}

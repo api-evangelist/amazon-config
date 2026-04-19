@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-query-arn-structure.json",
+  "name": "QueryArn",
+  "description": "QueryArn schema",
+  "type": "string",
+  "pattern": "^arn:aws[a-z\\-]*:config:[a-z\\-\\d]+:\\d+:stored-query/[a-zA-Z0-9-_]+/query-[a-zA-Z\\d-_/]+$",
+  "minLength": 1,
+  "maxLength": 500
+}

@@ -1,0 +1,6 @@
+{
+  "OrganizationConfigRuleName": "example-config-rule",
+  "Filters": "example-string",
+  "Limit": "example-string",
+  "NextToken": "example-string"
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-grouped-resource-count-structure.json",
+  "name": "GroupedResourceCount",
+  "description": "The count of resources that are grouped by the group name.",
+  "type": "object",
+  "properties": {
+    "GroupName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "The name of the group that can be region, account ID, or resource type. For example, region1, region2 if the region was chosen as <code>GroupByKey</code>."
+        }
+      ]
+    },
+    "ResourceCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Long"
+        },
+        {
+          "description": "The number of resources in the group."
+        }
+      ]
+    }
+  },
+  "required": [
+    "GroupName",
+    "ResourceCount"
+  ]
+}

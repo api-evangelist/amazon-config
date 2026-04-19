@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-aggregated-source-type-structure.json",
+  "name": "AggregatedSourceType",
+  "description": "AggregatedSourceType schema",
+  "type": "string",
+  "enum": [
+    "ACCOUNT",
+    "ORGANIZATION"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "GroupByKey": "example-string",
+  "AggregateComplianceCounts": "example-string",
+  "NextToken": "example-string"
+}

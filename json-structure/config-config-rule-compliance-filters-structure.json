@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-config-rule-compliance-filters-structure.json",
+  "name": "ConfigRuleComplianceFilters",
+  "description": "Filters the compliance results based on account ID, region, compliance type, and rule name.",
+  "type": "object",
+  "properties": {
+    "ConfigRuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigRuleName"
+        },
+        {
+          "description": "The name of the Config rule."
+        }
+      ]
+    },
+    "ComplianceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComplianceType"
+        },
+        {
+          "description": "<p>The rule compliance status.</p> <p>For the <code>ConfigRuleComplianceFilters</code> data type, Config supports only <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and the <code>INSUFFICIENT_DATA</code> values.</p>"
+        }
+      ]
+    },
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "description": "The 12-digit account ID of the source account. "
+        }
+      ]
+    },
+    "AwsRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsRegion"
+        },
+        {
+          "description": "The source region where the data is aggregated. "
+        }
+      ]
+    }
+  }
+}

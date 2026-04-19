@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-get-compliance-details-by-resource-response-structure.json",
+  "name": "GetComplianceDetailsByResourceResponse",
+  "description": "<p/>",
+  "type": "object",
+  "properties": {
+    "EvaluationResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationResults"
+        },
+        {
+          "description": "Indicates whether the specified Amazon Web Services resource complies each Config rule."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The string that you use in a subsequent request to get the next page of results in a paginated response."
+        }
+      ]
+    }
+  }
+}

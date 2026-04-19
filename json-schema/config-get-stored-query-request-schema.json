@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-get-stored-query-request-schema.json",
+  "title": "GetStoredQueryRequest",
+  "description": "GetStoredQueryRequest schema",
+  "type": "object",
+  "properties": {
+    "QueryName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/QueryName"
+        },
+        {
+          "description": "The name of the query."
+        }
+      ]
+    }
+  },
+  "required": [
+    "QueryName"
+  ]
+}

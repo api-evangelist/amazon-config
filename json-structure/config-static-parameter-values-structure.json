@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-static-parameter-values-structure.json",
+  "name": "StaticParameterValues",
+  "description": "StaticParameterValues schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/StringWithCharLimit256"
+  },
+  "minItems": 0,
+  "maxItems": 25
+}

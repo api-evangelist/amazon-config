@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-conformance-pack-arn-schema.json",
+  "title": "ConformancePackArn",
+  "description": "ConformancePackArn schema",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 2048
+}

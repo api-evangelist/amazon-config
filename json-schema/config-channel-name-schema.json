@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-channel-name-schema.json",
+  "title": "ChannelName",
+  "description": "ChannelName schema",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 256
+}

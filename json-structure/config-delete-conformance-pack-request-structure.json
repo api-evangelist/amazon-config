@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-delete-conformance-pack-request-structure.json",
+  "name": "DeleteConformancePackRequest",
+  "description": "DeleteConformancePackRequest schema",
+  "type": "object",
+  "properties": {
+    "ConformancePackName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackName"
+        },
+        {
+          "description": "Name of the conformance pack you want to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConformancePackName"
+  ]
+}

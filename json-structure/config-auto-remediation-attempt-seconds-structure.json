@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-auto-remediation-attempt-seconds-structure.json",
+  "name": "AutoRemediationAttemptSeconds",
+  "description": "AutoRemediationAttemptSeconds schema",
+  "type": "integer",
+  "minimum": 1,
+  "maximum": 2678000
+}

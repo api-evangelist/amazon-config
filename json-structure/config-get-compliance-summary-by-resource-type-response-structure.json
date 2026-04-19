@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-get-compliance-summary-by-resource-type-response-structure.json",
+  "name": "GetComplianceSummaryByResourceTypeResponse",
+  "description": "<p/>",
+  "type": "object",
+  "properties": {
+    "ComplianceSummariesByResourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComplianceSummariesByResourceType"
+        },
+        {
+          "description": "The number of resources that are compliant and the number that are noncompliant. If one or more resource types were provided with the request, the numbers are returned for each resource type. The maximum number returned is 100."
+        }
+      ]
+    }
+  }
+}

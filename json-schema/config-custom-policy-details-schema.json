@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-custom-policy-details-schema.json",
+  "title": "CustomPolicyDetails",
+  "description": "Provides the runtime system, policy definition, and whether debug logging enabled. You can specify the following CustomPolicyDetails parameter values only for Config Custom Policy rules.",
+  "type": "object",
+  "properties": {
+    "PolicyRuntime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PolicyRuntime"
+        },
+        {
+          "description": "The runtime system for your Config Custom Policy rule. Guard is a policy-as-code language that allows you to write policies that are enforced by Config Custom Policy rules. For more information about Guard, see the <a href=\"https://github.com/aws-cloudformation/cloudformation-guard\">Guard GitHub Repository</a>."
+        }
+      ]
+    },
+    "PolicyText": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PolicyText"
+        },
+        {
+          "description": "The policy definition containing the logic for your Config Custom Policy rule."
+        }
+      ]
+    },
+    "EnableDebugLogDelivery": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "The boolean expression for enabling debug logging for your Config Custom Policy rule. The default value is <code>false</code>."
+        }
+      ]
+    }
+  },
+  "required": [
+    "PolicyRuntime",
+    "PolicyText"
+  ]
+}

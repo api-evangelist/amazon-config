@@ -1,0 +1,242 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: "Amazon Config API"
+  description: "Shared per-API capability definition for Amazon Config covering configuration recording, compliance rules, configuration history, remediation, and resource inventory."
+  tags:
+    - Amazon
+    - AWS
+    - Compliance
+    - Configuration Management
+    - Governance
+    - Security
+    - Auditing
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+binds:
+  - namespace: env
+    keys:
+      AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+      AWS_REGION: AWS_REGION
+
+capability:
+  consumes:
+    - type: http
+      namespace: config
+      baseUri: https://config.{region}.amazonaws.com
+      description: "Amazon Config API for resource configuration tracking and compliance evaluation."
+      authentication:
+        type: apikey
+        key: Authorization
+        value: "{{AWS_ACCESS_KEY_ID}}"
+        placement: header
+      resources:
+        - name: config-rules
+          path: /
+          description: "Config rule management for compliance evaluation."
+          operations:
+            - name: describe-config-rules
+              method: POST
+              description: "Returns details about your AWS Config rules."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+
+            - name: put-config-rule
+              method: POST
+              description: "Adds or updates an AWS Config rule for evaluating resource compliance."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  ConfigRule: "{{tools.config_rule}}"
+
+            - name: delete-config-rule
+              method: POST
+              description: "Deletes the specified AWS Config rule and all of its evaluation results."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  ConfigRuleName: "{{tools.rule_name}}"
+
+        - name: compliance
+          path: /
+          description: "Compliance evaluation and reporting."
+          operations:
+            - name: describe-compliance-by-resource
+              method: POST
+              description: "Indicates whether the specified AWS resources are compliant."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  ResourceType: "{{tools.resource_type}}"
+                  ResourceId: "{{tools.resource_id}}"
+
+            - name: describe-compliance-by-config-rule
+              method: POST
+              description: "Indicates whether each of the specified AWS Config rules is compliant."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+
+            - name: get-compliance-summary-by-resource-type
+              method: POST
+              description: "Returns the number of resources that are compliant and the number that are noncompliant."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+
+        - name: resources
+          path: /
+          description: "Resource configuration and inventory."
+          operations:
+            - name: list-discovered-resources
+              method: POST
+              description: "Accepts a resource type and returns a list of resource identifiers for the resources of that type."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  resourceType: "{{tools.resource_type}}"
+
+            - name: get-resource-config-history
+              method: POST
+              description: "Returns a list of configuration items for the specified resource."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  resourceType: "{{tools.resource_type}}"
+                  resourceId: "{{tools.resource_id}}"
+
+            - name: batch-get-resource-config
+              method: POST
+              description: "Returns the current configuration for one or more requested resources."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  resourceKeys: "{{tools.resource_keys}}"
+
+        - name: remediation
+          path: /
+          description: "Remediation configuration and execution."
+          operations:
+            - name: put-remediation-configurations
+              method: POST
+              description: "Adds or updates the remediation configuration with a specific AWS Config rule."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  RemediationConfigurations: "{{tools.remediation_configs}}"
+
+            - name: start-remediation-execution
+              method: POST
+              description: "Runs an on-demand remediation for the specified Config rules against the last known remediation configuration."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  ConfigRuleName: "{{tools.rule_name}}"
+                  ResourceKeys: "{{tools.resource_keys}}"
+
+  exposes:
+    - type: rest
+      port: 8100
+      namespace: config-rest
+      resources:
+        - path: /v1/config-rules
+          name: config-rules
+          description: "Config rule management."
+          operations:
+            - method: GET
+              name: list-config-rules
+              description: "List all Config rules."
+              call: "config.describe-config-rules"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/compliance/resources
+          name: resource-compliance
+          description: "Resource compliance status."
+          operations:
+            - method: GET
+              name: get-resource-compliance
+              description: "Get compliance status for resources."
+              call: "config.describe-compliance-by-resource"
+              with:
+                resource_type: "rest.resource_type"
+                resource_id: "rest.resource_id"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+    - type: mcp
+      port: 9100
+      namespace: config-mcp
+      transport: http
+      tools:
+        - name: list-config-rules
+          description: "List all AWS Config compliance rules."
+          hints:
+            readOnly: true
+          call: "config.describe-config-rules"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: get-resource-compliance
+          description: "Get compliance status for a specific AWS resource."
+          hints:
+            readOnly: true
+          call: "config.describe-compliance-by-resource"
+          with:
+            resource_type: "tools.resource_type"
+            resource_id: "tools.resource_id"
+          outputParameters:
+            - type: object
+              mapping: "$."

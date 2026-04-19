@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-put-evaluations-request-schema.json",
+  "title": "PutEvaluationsRequest",
+  "description": "<p/>",
+  "type": "object",
+  "properties": {
+    "Evaluations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Evaluations"
+        },
+        {
+          "description": "The assessments that the Lambda function performs. Each evaluation identifies an Amazon Web Services resource and indicates whether it complies with the Config rule that invokes the Lambda function."
+        }
+      ]
+    },
+    "ResultToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "An encrypted token that associates an evaluation with an Config rule. Identifies the rule and the event that triggered the evaluation."
+        }
+      ]
+    },
+    "TestMode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "<p>Use this parameter to specify a test run for <code>PutEvaluations</code>. You can verify whether your Lambda function will deliver evaluation results to Config. No updates occur to your existing evaluations, and evaluation results are not sent to Config.</p> <note> <p>When <code>TestMode</code> is <code>true</code>, <code>PutEvaluations</code> doesn't require a valid value for the <code>ResultToken</code> parameter, but the value cannot be null.</p> </note>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "ResultToken"
+  ]
+}

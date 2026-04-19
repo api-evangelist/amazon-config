@@ -1,0 +1,9 @@
+{
+  "ConfigurationAggregatorName": "example-config-rule",
+  "ConfigRuleName": "example-config-rule",
+  "AccountId": "123456789012",
+  "AwsRegion": "us-east-1",
+  "ComplianceType": "example-string",
+  "Limit": "example-string",
+  "NextToken": "example-string"
+}

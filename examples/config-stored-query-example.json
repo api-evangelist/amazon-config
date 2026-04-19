@@ -1,0 +1,7 @@
+{
+  "QueryId": "example-string",
+  "QueryArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "QueryName": "example-config-rule",
+  "Description": "example-string",
+  "Expression": "example-string"
+}

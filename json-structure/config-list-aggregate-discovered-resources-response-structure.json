@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-list-aggregate-discovered-resources-response-structure.json",
+  "name": "ListAggregateDiscoveredResourcesResponse",
+  "description": "ListAggregateDiscoveredResourcesResponse schema",
+  "type": "object",
+  "properties": {
+    "ResourceIdentifiers": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DiscoveredResourceIdentifierList"
+        },
+        {
+          "description": "Returns a list of <code>ResourceIdentifiers</code> objects."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response."
+        }
+      ]
+    }
+  }
+}

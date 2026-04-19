@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-put-stored-query-response-structure.json",
+  "name": "PutStoredQueryResponse",
+  "description": "PutStoredQueryResponse schema",
+  "type": "object",
+  "properties": {
+    "QueryArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/QueryArn"
+        },
+        {
+          "description": "Amazon Resource Name (ARN) of the query. For example, arn:partition:service:region:account-id:resource-type/resource-name/resource-id."
+        }
+      ]
+    }
+  }
+}

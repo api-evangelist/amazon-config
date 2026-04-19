@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-put-evaluations-response-schema.json",
+  "title": "PutEvaluationsResponse",
+  "description": "<p/>",
+  "type": "object",
+  "properties": {
+    "FailedEvaluations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Evaluations"
+        },
+        {
+          "description": "Requests that failed because of a client or server error."
+        }
+      ]
+    }
+  }
+}

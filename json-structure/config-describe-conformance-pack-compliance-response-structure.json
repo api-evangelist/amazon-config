@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-describe-conformance-pack-compliance-response-structure.json",
+  "name": "DescribeConformancePackComplianceResponse",
+  "description": "DescribeConformancePackComplianceResponse schema",
+  "type": "object",
+  "properties": {
+    "ConformancePackName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackName"
+        },
+        {
+          "description": "Name of the conformance pack."
+        }
+      ]
+    },
+    "ConformancePackRuleComplianceList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackRuleComplianceList"
+        },
+        {
+          "description": "Returns a list of <code>ConformancePackRuleCompliance</code> objects."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "The <code>nextToken</code> string returned in a previous request that you use to request the next page of results in a paginated response."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConformancePackName",
+    "ConformancePackRuleComplianceList"
+  ]
+}

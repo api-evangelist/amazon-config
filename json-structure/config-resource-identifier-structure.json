@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-resource-identifier-structure.json",
+  "name": "ResourceIdentifier",
+  "description": "The details that identify a resource that is discovered by Config, including the resource type, ID, and (if available) the custom resource name.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceType"
+        },
+        {
+          "description": "The type of resource."
+        }
+      ]
+    },
+    "resourceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceId"
+        },
+        {
+          "description": "The ID of the resource (for example, <code>sg-xxxxxx</code>)."
+        }
+      ]
+    },
+    "resourceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceName"
+        },
+        {
+          "description": "The custom name of the resource (if available)."
+        }
+      ]
+    },
+    "resourceDeletionTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceDeletionTime"
+        },
+        {
+          "description": "The time that the resource was deleted."
+        }
+      ]
+    }
+  }
+}

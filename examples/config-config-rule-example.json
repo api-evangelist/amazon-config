@@ -1,0 +1,13 @@
+{
+  "ConfigRuleName": "example-config-rule",
+  "ConfigRuleArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "ConfigRuleId": "example-string",
+  "Description": "example-string",
+  "Scope": "example-string",
+  "Source": "example-string",
+  "InputParameters": "example-string",
+  "MaximumExecutionFrequency": "example-string",
+  "ConfigRuleState": "example-string",
+  "CreatedBy": "example-string",
+  "EvaluationModes": "example-string"
+}

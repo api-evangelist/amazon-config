@@ -1,0 +1,9 @@
+{
+  "OrganizationConformancePackName": "example-config-rule",
+  "OrganizationConformancePackArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "DeliveryS3Bucket": "example-string",
+  "DeliveryS3KeyPrefix": "example-string",
+  "ConformancePackInputParameters": "example-string",
+  "ExcludedAccounts": "123456789012",
+  "LastUpdateTime": "example-string"
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-conformance-pack-input-parameter-schema.json",
+  "title": "ConformancePackInputParameter",
+  "description": "Input parameters in the form of key-value pairs for the conformance pack, both of which you define. Keys can have a maximum character length of 255 characters, and values can have a maximum length of 4096 characters.",
+  "type": "object",
+  "properties": {
+    "ParameterName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ParameterName"
+        },
+        {
+          "description": "One part of a key-value pair."
+        }
+      ]
+    },
+    "ParameterValue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ParameterValue"
+        },
+        {
+          "description": "Another part of the key-value pair. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "ParameterName",
+    "ParameterValue"
+  ]
+}

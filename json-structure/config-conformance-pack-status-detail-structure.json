@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-conformance-pack-status-detail-structure.json",
+  "name": "ConformancePackStatusDetail",
+  "description": "Status details of a conformance pack.",
+  "type": "object",
+  "properties": {
+    "ConformancePackName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackName"
+        },
+        {
+          "description": "Name of the conformance pack."
+        }
+      ]
+    },
+    "ConformancePackId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackId"
+        },
+        {
+          "description": "ID of the conformance pack."
+        }
+      ]
+    },
+    "ConformancePackArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackArn"
+        },
+        {
+          "description": "Amazon Resource Name (ARN) of comformance pack."
+        }
+      ]
+    },
+    "ConformancePackState": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackState"
+        },
+        {
+          "description": "<p>Indicates deployment status of conformance pack.</p> <p>Config sets the state of the conformance pack to:</p> <ul> <li> <p>CREATE_IN_PROGRESS when a conformance pack creation is in progress for an account.</p> </li> <li> <p>CREATE_COMPLETE when a conformance pack has been successfully created in your account.</p> </li> <li> <p>CREATE_FAILED when a conformance pack creation failed in your account.</p> </li> <li> <p>DELETE_IN_PROGRESS when a conformance pack deletion is in progress. </p> </li> <li> <p>DELETE_FAILED when a conformance pack deletion failed in your account.</p> </li> </ul>"
+        }
+      ]
+    },
+    "StackArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StackArn"
+        },
+        {
+          "description": "Amazon Resource Name (ARN) of CloudFormation stack. "
+        }
+      ]
+    },
+    "ConformancePackStatusReason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackStatusReason"
+        },
+        {
+          "description": "The reason of conformance pack creation failure."
+        }
+      ]
+    },
+    "LastUpdateRequestedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "Last time when conformation pack creation and update was requested."
+        }
+      ]
+    },
+    "LastUpdateCompletedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "Last time when conformation pack creation and update was successful."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConformancePackName",
+    "ConformancePackId",
+    "ConformancePackArn",
+    "ConformancePackState",
+    "StackArn",
+    "LastUpdateRequestedTime"
+  ]
+}

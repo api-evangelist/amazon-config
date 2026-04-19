@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-put-configuration-aggregator-request-schema.json",
+  "title": "PutConfigurationAggregatorRequest",
+  "description": "PutConfigurationAggregatorRequest schema",
+  "type": "object",
+  "properties": {
+    "ConfigurationAggregatorName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationAggregatorName"
+        },
+        {
+          "description": "The name of the configuration aggregator."
+        }
+      ]
+    },
+    "AccountAggregationSources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountAggregationSourceList"
+        },
+        {
+          "description": "A list of AccountAggregationSource object. "
+        }
+      ]
+    },
+    "OrganizationAggregationSource": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationAggregationSource"
+        },
+        {
+          "description": "An OrganizationAggregationSource object."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagsList"
+        },
+        {
+          "description": "An array of tag object."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConfigurationAggregatorName"
+  ]
+}

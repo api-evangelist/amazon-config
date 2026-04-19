@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-delete-retention-configuration-request-structure.json",
+  "name": "DeleteRetentionConfigurationRequest",
+  "description": "DeleteRetentionConfigurationRequest schema",
+  "type": "object",
+  "properties": {
+    "RetentionConfigurationName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RetentionConfigurationName"
+        },
+        {
+          "description": "The name of the retention configuration to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "RetentionConfigurationName"
+  ]
+}

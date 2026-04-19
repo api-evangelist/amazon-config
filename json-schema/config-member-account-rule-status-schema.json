@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-member-account-rule-status-schema.json",
+  "title": "MemberAccountRuleStatus",
+  "description": "MemberAccountRuleStatus schema",
+  "type": "string",
+  "enum": [
+    "CREATE_SUCCESSFUL",
+    "CREATE_IN_PROGRESS",
+    "CREATE_FAILED",
+    "DELETE_SUCCESSFUL",
+    "DELETE_FAILED",
+    "DELETE_IN_PROGRESS",
+    "UPDATE_SUCCESSFUL",
+    "UPDATE_IN_PROGRESS",
+    "UPDATE_FAILED"
+  ]
+}

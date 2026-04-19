@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-query-description-schema.json",
+  "title": "QueryDescription",
+  "description": "QueryDescription schema",
+  "type": "string",
+  "pattern": "[\\s\\S]*",
+  "minLength": 0,
+  "maxLength": 256
+}

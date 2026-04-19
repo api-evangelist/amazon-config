@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-configuration-recorder-status-structure.json",
+  "name": "ConfigurationRecorderStatus",
+  "description": "<p>The current status of the configuration recorder.</p> <note> <p>For a detailed status of recording events over time, add your Config events to CloudWatch metrics and use CloudWatch metrics.</p> </note>",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The name of the configuration recorder."
+        }
+      ]
+    },
+    "lastStartTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time the recorder was last started."
+        }
+      ]
+    },
+    "lastStopTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time the recorder was last stopped."
+        }
+      ]
+    },
+    "recording": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "Specifies whether or not the recorder is currently recording."
+        }
+      ]
+    },
+    "lastStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RecorderStatus"
+        },
+        {
+          "description": "The status of the latest recording event processed by the recorder."
+        }
+      ]
+    },
+    "lastErrorCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The latest error code from when the recorder last failed."
+        }
+      ]
+    },
+    "lastErrorMessage": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The latest error message from when the recorder last failed."
+        }
+      ]
+    },
+    "lastStatusChangeTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time of the latest change in status of an recording event processed by the recorder."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-evaluation-mode-configuration-schema.json",
+  "title": "EvaluationModeConfiguration",
+  "description": "The configuration object for Config rule evaluation mode. The Supported valid values are Detective or Proactive.",
+  "type": "object",
+  "properties": {
+    "Mode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationMode"
+        },
+        {
+          "description": "The mode of an evaluation. The valid values are Detective or Proactive."
+        }
+      ]
+    }
+  }
+}

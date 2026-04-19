@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-recorder-name-structure.json",
+  "name": "RecorderName",
+  "description": "RecorderName schema",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 256
+}

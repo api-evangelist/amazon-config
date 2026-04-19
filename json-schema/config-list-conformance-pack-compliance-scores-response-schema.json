@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-list-conformance-pack-compliance-scores-response-schema.json",
+  "title": "ListConformancePackComplianceScoresResponse",
+  "description": "ListConformancePackComplianceScoresResponse schema",
+  "type": "object",
+  "properties": {
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "The <code>nextToken</code> string that you can use to get the next page of results in a paginated response."
+        }
+      ]
+    },
+    "ConformancePackComplianceScores": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackComplianceScores"
+        },
+        {
+          "description": "A list of <code>ConformancePackComplianceScore</code> objects."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConformancePackComplianceScores"
+  ]
+}

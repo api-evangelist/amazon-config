@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-batch-get-aggregate-resource-config-request-structure.json",
+  "name": "BatchGetAggregateResourceConfigRequest",
+  "description": "BatchGetAggregateResourceConfigRequest schema",
+  "type": "object",
+  "properties": {
+    "ConfigurationAggregatorName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationAggregatorName"
+        },
+        {
+          "description": "The name of the configuration aggregator."
+        }
+      ]
+    },
+    "ResourceIdentifiers": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceIdentifiersList"
+        },
+        {
+          "description": "A list of aggregate ResourceIdentifiers objects. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConfigurationAggregatorName",
+    "ResourceIdentifiers"
+  ]
+}

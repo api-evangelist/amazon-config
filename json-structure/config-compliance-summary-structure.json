@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-compliance-summary-structure.json",
+  "name": "ComplianceSummary",
+  "description": "The number of Config rules or Amazon Web Services resources that are compliant and noncompliant.",
+  "type": "object",
+  "properties": {
+    "CompliantResourceCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComplianceContributorCount"
+        },
+        {
+          "description": "The number of Config rules or Amazon Web Services resources that are compliant, up to a maximum of 25 for rules and 100 for resources."
+        }
+      ]
+    },
+    "NonCompliantResourceCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComplianceContributorCount"
+        },
+        {
+          "description": "The number of Config rules or Amazon Web Services resources that are noncompliant, up to a maximum of 25 for rules and 100 for resources."
+        }
+      ]
+    },
+    "ComplianceSummaryTimestamp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time that Config created the compliance summary."
+        }
+      ]
+    }
+  }
+}

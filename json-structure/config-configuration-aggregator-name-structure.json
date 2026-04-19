@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-configuration-aggregator-name-structure.json",
+  "name": "ConfigurationAggregatorName",
+  "description": "ConfigurationAggregatorName schema",
+  "type": "string",
+  "pattern": "[\\w\\-]+",
+  "minLength": 1,
+  "maxLength": 256
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-get-compliance-details-by-config-rule-request-schema.json",
+  "title": "GetComplianceDetailsByConfigRuleRequest",
+  "description": "<p/>",
+  "type": "object",
+  "properties": {
+    "ConfigRuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit64"
+        },
+        {
+          "description": "The name of the Config rule for which you want compliance information."
+        }
+      ]
+    },
+    "ComplianceTypes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComplianceTypes"
+        },
+        {
+          "description": "<p>Filters the results by compliance.</p> <p> <code>INSUFFICIENT_DATA</code> is a valid <code>ComplianceType</code> that is returned when an Config rule cannot be evaluated. However, <code>INSUFFICIENT_DATA</code> cannot be used as a <code>ComplianceType</code> for filtering results.</p>"
+        }
+      ]
+    },
+    "Limit": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Limit"
+        },
+        {
+          "description": "The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a number greater than 100. If you specify 0, Config uses the default."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConfigRuleName"
+  ]
+}

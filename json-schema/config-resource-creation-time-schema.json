@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-resource-creation-time-schema.json",
+  "title": "ResourceCreationTime",
+  "description": "ResourceCreationTime schema",
+  "type": "string",
+  "format": "date-time"
+}

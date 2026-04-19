@@ -1,0 +1,6 @@
+{
+  "ComplianceResourceTypes": "AWS::EC2::Instance",
+  "TagKey": "example-string",
+  "TagValue": "example-string",
+  "ComplianceResourceId": "example-string"
+}

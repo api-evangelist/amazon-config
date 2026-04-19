@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-conformance-pack-status-details-list-structure.json",
+  "name": "ConformancePackStatusDetailsList",
+  "description": "ConformancePackStatusDetailsList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ConformancePackStatusDetail"
+  },
+  "minItems": 0,
+  "maxItems": 25
+}

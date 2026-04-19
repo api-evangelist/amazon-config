@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-ssm-document-version-schema.json",
+  "title": "SSMDocumentVersion",
+  "description": "SSMDocumentVersion schema",
+  "type": "string",
+  "pattern": "([$]LATEST|[$]DEFAULT|^[1-9][0-9]*$)"
+}

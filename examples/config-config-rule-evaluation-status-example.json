@@ -1,0 +1,17 @@
+{
+  "ConfigRuleName": "example-config-rule",
+  "ConfigRuleArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "ConfigRuleId": "example-string",
+  "LastSuccessfulInvocationTime": "example-string",
+  "LastFailedInvocationTime": "example-string",
+  "LastSuccessfulEvaluationTime": "example-string",
+  "LastFailedEvaluationTime": "example-string",
+  "FirstActivatedTime": "example-string",
+  "LastDeactivatedTime": "example-string",
+  "LastErrorCode": "example-string",
+  "LastErrorMessage": "example-string",
+  "FirstEvaluationStarted": "example-string",
+  "LastDebugLogDeliveryStatus": "COMPLIANT",
+  "LastDebugLogDeliveryStatusReason": "COMPLIANT",
+  "LastDebugLogDeliveryTime": "example-string"
+}

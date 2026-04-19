@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-resource-key-structure.json",
+  "name": "ResourceKey",
+  "description": "The details that identify a resource within Config, including the resource type and resource ID.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceType"
+        },
+        {
+          "description": "The resource type."
+        }
+      ]
+    },
+    "resourceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceId"
+        },
+        {
+          "description": "The ID of the resource (for example., sg-xxxxxx). "
+        }
+      ]
+    }
+  },
+  "required": [
+    "resourceType",
+    "resourceId"
+  ]
+}

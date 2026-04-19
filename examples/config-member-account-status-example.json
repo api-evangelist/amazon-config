@@ -1,0 +1,8 @@
+{
+  "AccountId": "123456789012",
+  "ConfigRuleName": "example-config-rule",
+  "MemberAccountRuleStatus": "COMPLIANT",
+  "ErrorCode": "example-string",
+  "ErrorMessage": "example-string",
+  "LastUpdateTime": "example-string"
+}

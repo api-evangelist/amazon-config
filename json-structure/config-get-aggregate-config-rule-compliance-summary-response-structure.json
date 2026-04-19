@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-get-aggregate-config-rule-compliance-summary-response-structure.json",
+  "name": "GetAggregateConfigRuleComplianceSummaryResponse",
+  "description": "GetAggregateConfigRuleComplianceSummaryResponse schema",
+  "type": "object",
+  "properties": {
+    "GroupByKey": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "Groups the result based on ACCOUNT_ID or AWS_REGION."
+        }
+      ]
+    },
+    "AggregateComplianceCounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AggregateComplianceCountList"
+        },
+        {
+          "description": "Returns a list of AggregateComplianceCounts object."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response."
+        }
+      ]
+    }
+  }
+}

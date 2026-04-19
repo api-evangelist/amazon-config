@@ -1,0 +1,5 @@
+{
+  "RoleArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "AwsRegions": "us-east-1",
+  "AllAwsRegions": "us-east-1"
+}

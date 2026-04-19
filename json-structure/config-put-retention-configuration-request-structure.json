@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-put-retention-configuration-request-structure.json",
+  "name": "PutRetentionConfigurationRequest",
+  "description": "PutRetentionConfigurationRequest schema",
+  "type": "object",
+  "properties": {
+    "RetentionPeriodInDays": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RetentionPeriodInDays"
+        },
+        {
+          "description": "<p>Number of days Config stores your historical information.</p> <note> <p>Currently, only applicable to the configuration item history.</p> </note>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "RetentionPeriodInDays"
+  ]
+}

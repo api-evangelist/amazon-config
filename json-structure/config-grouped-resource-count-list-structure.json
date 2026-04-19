@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-grouped-resource-count-list-structure.json",
+  "name": "GroupedResourceCountList",
+  "description": "GroupedResourceCountList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/GroupedResourceCount"
+  }
+}

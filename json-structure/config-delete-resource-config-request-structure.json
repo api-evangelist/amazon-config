@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-delete-resource-config-request-structure.json",
+  "name": "DeleteResourceConfigRequest",
+  "description": "DeleteResourceConfigRequest schema",
+  "type": "object",
+  "properties": {
+    "ResourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceTypeString"
+        },
+        {
+          "description": "The type of the resource."
+        }
+      ]
+    },
+    "ResourceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceId"
+        },
+        {
+          "description": "Unique identifier of the resource."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ResourceType",
+    "ResourceId"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-compliance-by-config-rule-structure.json",
+  "name": "ComplianceByConfigRule",
+  "description": "Indicates whether an Config rule is compliant. A rule is compliant if all of the resources that the rule evaluated comply with it. A rule is noncompliant if any of these resources do not comply.",
+  "type": "object",
+  "properties": {
+    "ConfigRuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit64"
+        },
+        {
+          "description": "The name of the Config rule."
+        }
+      ]
+    },
+    "Compliance": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Compliance"
+        },
+        {
+          "description": "Indicates whether the Config rule is compliant."
+        }
+      ]
+    }
+  }
+}

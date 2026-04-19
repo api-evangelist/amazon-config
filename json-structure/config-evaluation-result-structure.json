@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-evaluation-result-structure.json",
+  "name": "EvaluationResult",
+  "description": "The details of an Config evaluation. Provides the Amazon Web Services resource that was evaluated, the compliance of the resource, related time stamps, and supplementary information.",
+  "type": "object",
+  "properties": {
+    "EvaluationResultIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationResultIdentifier"
+        },
+        {
+          "description": "Uniquely identifies the evaluation result."
+        }
+      ]
+    },
+    "ComplianceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComplianceType"
+        },
+        {
+          "description": "<p>Indicates whether the Amazon Web Services resource complies with the Config rule that evaluated it.</p> <p>For the <code>EvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the <code>INSUFFICIENT_DATA</code> value for the <code>EvaluationResult</code> data type.</p>"
+        }
+      ]
+    },
+    "ResultRecordedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time when Config recorded the evaluation result."
+        }
+      ]
+    },
+    "ConfigRuleInvokedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time when the Config rule evaluated the Amazon Web Services resource."
+        }
+      ]
+    },
+    "Annotation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "Supplementary information about how the evaluation determined the compliance."
+        }
+      ]
+    },
+    "ResultToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "An encrypted token that associates an evaluation with an Config rule. The token identifies the rule, the Amazon Web Services resource being evaluated, and the event that triggered the evaluation."
+        }
+      ]
+    }
+  }
+}

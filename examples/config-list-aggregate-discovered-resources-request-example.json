@@ -1,0 +1,7 @@
+{
+  "ConfigurationAggregatorName": "example-config-rule",
+  "ResourceType": "AWS::EC2::Instance",
+  "Filters": "example-string",
+  "Limit": "example-string",
+  "NextToken": "example-string"
+}

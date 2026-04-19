@@ -1,0 +1,5 @@
+{
+  "resourceTypes": "AWS::EC2::Instance",
+  "limit": "example-string",
+  "nextToken": "example-string"
+}

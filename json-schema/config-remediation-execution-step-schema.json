@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-remediation-execution-step-schema.json",
+  "title": "RemediationExecutionStep",
+  "description": "Name of the step from the SSM document.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The details of the step."
+        }
+      ]
+    },
+    "State": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RemediationExecutionStepState"
+        },
+        {
+          "description": "The valid status of the step."
+        }
+      ]
+    },
+    "ErrorMessage": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "An error message if the step was interrupted during execution."
+        }
+      ]
+    },
+    "StartTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time when the step started."
+        }
+      ]
+    },
+    "StopTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time when the step stopped."
+        }
+      ]
+    }
+  }
+}

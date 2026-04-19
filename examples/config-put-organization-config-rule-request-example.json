@@ -1,0 +1,7 @@
+{
+  "OrganizationConfigRuleName": "example-config-rule",
+  "OrganizationManagedRuleMetadata": "example-string",
+  "OrganizationCustomRuleMetadata": "example-string",
+  "ExcludedAccounts": "123456789012",
+  "OrganizationCustomPolicyRuleMetadata": "example-string"
+}

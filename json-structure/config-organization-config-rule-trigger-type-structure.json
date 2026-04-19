@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-organization-config-rule-trigger-type-structure.json",
+  "name": "OrganizationConfigRuleTriggerType",
+  "description": "OrganizationConfigRuleTriggerType schema",
+  "type": "string",
+  "enum": [
+    "ConfigurationItemChangeNotification",
+    "OversizedConfigurationItemChangeNotification",
+    "ScheduledNotification"
+  ]
+}

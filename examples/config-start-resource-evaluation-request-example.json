@@ -1,0 +1,7 @@
+{
+  "ResourceDetails": "example-string",
+  "EvaluationContext": "example-string",
+  "EvaluationMode": "example-string",
+  "EvaluationTimeout": "example-string",
+  "ClientToken": "example-string"
+}

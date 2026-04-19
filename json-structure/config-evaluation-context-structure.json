@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-evaluation-context-structure.json",
+  "name": "EvaluationContext",
+  "description": "Use EvaluationContext to group independently initiated proactive resource evaluations. For example, CFN Stack. If you want to check just a resource definition, you do not need to provide evaluation context.",
+  "type": "object",
+  "properties": {
+    "EvaluationContextIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationContextIdentifier"
+        },
+        {
+          "description": "A unique EvaluationContextIdentifier ID for an EvaluationContext."
+        }
+      ]
+    }
+  }
+}

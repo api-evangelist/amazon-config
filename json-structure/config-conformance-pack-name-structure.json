@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-conformance-pack-name-structure.json",
+  "name": "ConformancePackName",
+  "description": "ConformancePackName schema",
+  "type": "string",
+  "pattern": "[a-zA-Z][-a-zA-Z0-9]*",
+  "minLength": 1,
+  "maxLength": 256
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-describe-conformance-pack-compliance-request-schema.json",
+  "title": "DescribeConformancePackComplianceRequest",
+  "description": "DescribeConformancePackComplianceRequest schema",
+  "type": "object",
+  "properties": {
+    "ConformancePackName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackName"
+        },
+        {
+          "description": "Name of the conformance pack."
+        }
+      ]
+    },
+    "Filters": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackComplianceFilters"
+        },
+        {
+          "description": "A <code>ConformancePackComplianceFilters</code> object."
+        }
+      ]
+    },
+    "Limit": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DescribeConformancePackComplianceLimit"
+        },
+        {
+          "description": "The maximum number of Config rules within a conformance pack are returned on each page."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "The <code>nextToken</code> string returned in a previous request that you use to request the next page of results in a paginated response."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConformancePackName"
+  ]
+}

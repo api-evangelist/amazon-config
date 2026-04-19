@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-configuration-item-capture-time-structure.json",
+  "name": "ConfigurationItemCaptureTime",
+  "description": "ConfigurationItemCaptureTime schema",
+  "type": "datetime"
+}

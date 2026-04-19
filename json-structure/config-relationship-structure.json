@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-relationship-structure.json",
+  "name": "Relationship",
+  "description": "The relationship of the related resource to the main resource.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceType"
+        },
+        {
+          "description": "The resource type of the related resource."
+        }
+      ]
+    },
+    "resourceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceId"
+        },
+        {
+          "description": "The ID of the related resource (for example, <code>sg-xxxxxx</code>)."
+        }
+      ]
+    },
+    "resourceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceName"
+        },
+        {
+          "description": "The custom name of the related resource, if available."
+        }
+      ]
+    },
+    "relationshipName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RelationshipName"
+        },
+        {
+          "description": "The type of relationship with the related resource."
+        }
+      ]
+    }
+  }
+}

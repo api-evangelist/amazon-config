@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-list-resource-evaluations-page-item-limit-schema.json",
+  "title": "ListResourceEvaluationsPageItemLimit",
+  "description": "ListResourceEvaluationsPageItemLimit schema",
+  "type": "integer",
+  "minimum": 0,
+  "maximum": 100
+}

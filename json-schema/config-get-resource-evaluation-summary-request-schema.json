@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-get-resource-evaluation-summary-request-schema.json",
+  "title": "GetResourceEvaluationSummaryRequest",
+  "description": "GetResourceEvaluationSummaryRequest schema",
+  "type": "object",
+  "properties": {
+    "ResourceEvaluationId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceEvaluationId"
+        },
+        {
+          "description": "The unique <code>ResourceEvaluationId</code> of Amazon Web Services resource execution for which you want to retrieve the evaluation summary."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ResourceEvaluationId"
+  ]
+}

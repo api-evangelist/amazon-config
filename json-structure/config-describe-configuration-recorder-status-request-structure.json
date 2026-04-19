@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-describe-configuration-recorder-status-request-structure.json",
+  "name": "DescribeConfigurationRecorderStatusRequest",
+  "description": "The input for the <a>DescribeConfigurationRecorderStatus</a> action.",
+  "type": "object",
+  "properties": {
+    "ConfigurationRecorderNames": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationRecorderNameList"
+        },
+        {
+          "description": "The name(s) of the configuration recorder. If the name is not specified, the action returns the current status of all the configuration recorders associated with the account."
+        }
+      ]
+    }
+  }
+}

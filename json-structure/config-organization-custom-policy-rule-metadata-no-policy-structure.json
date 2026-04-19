@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-organization-custom-policy-rule-metadata-no-policy-structure.json",
+  "name": "OrganizationCustomPolicyRuleMetadataNoPolicy",
+  "description": " metadata for your organization Config Custom Policy rule including the runtime system in use, which accounts have debug logging enabled, and other custom rule metadata such as resource type, resource ID of Amazon Web Services resource, and organization trigger types that trigger Config to evaluate Amazon Web Services resources against a rule.",
+  "type": "object",
+  "properties": {
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256Min0"
+        },
+        {
+          "description": "The description that you provide for your organization Config Custom Policy rule."
+        }
+      ]
+    },
+    "OrganizationConfigRuleTriggerTypes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationConfigRuleTriggerTypeNoSNs"
+        },
+        {
+          "description": "<p>The type of notification that triggers Config to run an evaluation for a rule. For Config Custom Policy rules, Config supports change triggered notification types:</p> <ul> <li> <p> <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers a configuration item as a result of a resource change.</p> </li> <li> <p> <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers an oversized configuration item. Config may generate this notification type when a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.</p> </li> </ul>"
+        }
+      ]
+    },
+    "InputParameters": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit2048"
+        },
+        {
+          "description": "A string, in JSON format, that is passed to your organization Config Custom Policy rule."
+        }
+      ]
+    },
+    "MaximumExecutionFrequency": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaximumExecutionFrequency"
+        },
+        {
+          "description": "The maximum frequency with which Config runs evaluations for a rule. Your Config Custom Policy rule is triggered when Config delivers the configuration snapshot. For more information, see <a>ConfigSnapshotDeliveryProperties</a>."
+        }
+      ]
+    },
+    "ResourceTypesScope": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceTypesScope"
+        },
+        {
+          "description": "The type of the Amazon Web Services resource that was evaluated."
+        }
+      ]
+    },
+    "ResourceIdScope": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit768"
+        },
+        {
+          "description": "The ID of the Amazon Web Services resource that was evaluated."
+        }
+      ]
+    },
+    "TagKeyScope": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit128"
+        },
+        {
+          "description": "One part of a key-value pair that make up a tag. A key is a general label that acts like a category for more specific tag values."
+        }
+      ]
+    },
+    "TagValueScope": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "The optional part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key)."
+        }
+      ]
+    },
+    "PolicyRuntime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PolicyRuntime"
+        },
+        {
+          "description": "The runtime system for your organization Config Custom Policy rules. Guard is a policy-as-code language that allows you to write policies that are enforced by Config Custom Policy rules. For more information about Guard, see the <a href=\"https://github.com/aws-cloudformation/cloudformation-guard\">Guard GitHub Repository</a>."
+        }
+      ]
+    },
+    "DebugLogDeliveryAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DebugLogDeliveryAccounts"
+        },
+        {
+          "description": "A list of accounts that you can enable debug logging for your organization Config Custom Policy rule. List is null when debug logging is enabled for all accounts."
+        }
+      ]
+    }
+  }
+}

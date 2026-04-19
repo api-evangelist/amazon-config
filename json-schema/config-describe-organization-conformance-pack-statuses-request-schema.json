@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-describe-organization-conformance-pack-statuses-request-schema.json",
+  "title": "DescribeOrganizationConformancePackStatusesRequest",
+  "description": "DescribeOrganizationConformancePackStatusesRequest schema",
+  "type": "object",
+  "properties": {
+    "OrganizationConformancePackNames": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationConformancePackNames"
+        },
+        {
+          "description": "The names of organization conformance packs for which you want status details. If you do not specify any names, Config returns details for all your organization conformance packs. "
+        }
+      ]
+    },
+    "Limit": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CosmosPageLimit"
+        },
+        {
+          "description": "The maximum number of OrganizationConformancePackStatuses returned on each page. If you do no specify a number, Config uses the default. The default is 100. "
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The nextToken string returned on a previous page that you use to get the next page of results in a paginated response. "
+        }
+      ]
+    }
+  }
+}

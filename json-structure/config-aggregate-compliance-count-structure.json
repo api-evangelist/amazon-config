@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-aggregate-compliance-count-structure.json",
+  "name": "AggregateComplianceCount",
+  "description": "Returns the number of compliant and noncompliant rules for one or more accounts and regions in an aggregator.",
+  "type": "object",
+  "properties": {
+    "GroupName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "The 12-digit account ID or region based on the GroupByKey value."
+        }
+      ]
+    },
+    "ComplianceSummary": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComplianceSummary"
+        },
+        {
+          "description": "The number of compliant and noncompliant Config rules."
+        }
+      ]
+    }
+  }
+}

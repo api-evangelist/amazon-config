@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-conformance-pack-evaluation-result-schema.json",
+  "title": "ConformancePackEvaluationResult",
+  "description": "The details of a conformance pack evaluation. Provides Config rule and Amazon Web Services resource type that was evaluated, the compliance of the conformance pack, related time stamps, and supplementary information. ",
+  "type": "object",
+  "properties": {
+    "ComplianceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackComplianceType"
+        },
+        {
+          "description": "The compliance type. The allowed values are <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. <code>INSUFFICIENT_DATA</code> is not supported."
+        }
+      ]
+    },
+    "EvaluationResultIdentifier": {
+      "$ref": "#/components/schemas/EvaluationResultIdentifier"
+    },
+    "ConfigRuleInvokedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time when Config rule evaluated Amazon Web Services resource."
+        }
+      ]
+    },
+    "ResultRecordedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time when Config recorded the evaluation result. "
+        }
+      ]
+    },
+    "Annotation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Annotation"
+        },
+        {
+          "description": "Supplementary information about how the evaluation determined the compliance. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "ComplianceType",
+    "EvaluationResultIdentifier",
+    "ConfigRuleInvokedTime",
+    "ResultRecordedTime"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-conformance-pack-rule-compliance-structure.json",
+  "name": "ConformancePackRuleCompliance",
+  "description": "Compliance information of one or more Config rules within a conformance pack. You can filter using Config rule names and compliance types.",
+  "type": "object",
+  "properties": {
+    "ConfigRuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigRuleName"
+        },
+        {
+          "description": "Name of the Config rule."
+        }
+      ]
+    },
+    "ComplianceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackComplianceType"
+        },
+        {
+          "description": "Compliance of the Config rule."
+        }
+      ]
+    },
+    "Controls": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ControlsList"
+        },
+        {
+          "description": "Controls for the conformance pack. A control is a process to prevent or detect problems while meeting objectives. A control can align with a specific compliance regime or map to internal controls defined by an organization."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-delete-aggregation-authorization-request-structure.json",
+  "name": "DeleteAggregationAuthorizationRequest",
+  "description": "DeleteAggregationAuthorizationRequest schema",
+  "type": "object",
+  "properties": {
+    "AuthorizedAccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "description": "The 12-digit account ID of the account authorized to aggregate data."
+        }
+      ]
+    },
+    "AuthorizedAwsRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsRegion"
+        },
+        {
+          "description": "The region authorized to collect aggregated data."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AuthorizedAccountId",
+    "AuthorizedAwsRegion"
+  ]
+}

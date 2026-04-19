@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-delete-organization-conformance-pack-request-structure.json",
+  "name": "DeleteOrganizationConformancePackRequest",
+  "description": "DeleteOrganizationConformancePackRequest schema",
+  "type": "object",
+  "properties": {
+    "OrganizationConformancePackName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationConformancePackName"
+        },
+        {
+          "description": "The name of organization conformance pack that you want to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "OrganizationConformancePackName"
+  ]
+}

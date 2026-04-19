@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-resource-keys-schema.json",
+  "title": "ResourceKeys",
+  "description": "ResourceKeys schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ResourceKey"
+  },
+  "minItems": 1,
+  "maxItems": 100
+}

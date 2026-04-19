@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-string-with-char-limit256-min0-structure.json",
+  "name": "StringWithCharLimit256Min0",
+  "description": "StringWithCharLimit256Min0 schema",
+  "type": "string",
+  "minLength": 0,
+  "maxLength": 256
+}

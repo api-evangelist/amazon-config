@@ -1,0 +1,6 @@
+{
+  "ConfigRuleName": "example-config-rule",
+  "ResourceType": "AWS::EC2::Instance",
+  "ResourceId": "example-string",
+  "EvaluationMode": "example-string"
+}

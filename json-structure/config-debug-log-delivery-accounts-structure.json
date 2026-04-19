@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-debug-log-delivery-accounts-structure.json",
+  "name": "DebugLogDeliveryAccounts",
+  "description": "DebugLogDeliveryAccounts schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/AccountId"
+  },
+  "minItems": 0,
+  "maxItems": 1000
+}

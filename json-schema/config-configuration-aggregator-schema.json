@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-configuration-aggregator-schema.json",
+  "title": "ConfigurationAggregator",
+  "description": "The details about the configuration aggregator, including information about source accounts, regions, and metadata of the aggregator. ",
+  "type": "object",
+  "properties": {
+    "ConfigurationAggregatorName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationAggregatorName"
+        },
+        {
+          "description": "The name of the aggregator."
+        }
+      ]
+    },
+    "ConfigurationAggregatorArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationAggregatorArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the aggregator."
+        }
+      ]
+    },
+    "AccountAggregationSources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountAggregationSourceList"
+        },
+        {
+          "description": "Provides a list of source accounts and regions to be aggregated."
+        }
+      ]
+    },
+    "OrganizationAggregationSource": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationAggregationSource"
+        },
+        {
+          "description": "Provides an organization and list of regions to be aggregated."
+        }
+      ]
+    },
+    "CreationTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time stamp when the configuration aggregator was created."
+        }
+      ]
+    },
+    "LastUpdatedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time of the last update."
+        }
+      ]
+    },
+    "CreatedBy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "Amazon Web Services service that created the configuration aggregator."
+        }
+      ]
+    }
+  }
+}

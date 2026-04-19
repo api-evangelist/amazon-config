@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-delete-pending-aggregation-request-request-structure.json",
+  "name": "DeletePendingAggregationRequestRequest",
+  "description": "DeletePendingAggregationRequestRequest schema",
+  "type": "object",
+  "properties": {
+    "RequesterAccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "description": "The 12-digit account ID of the account requesting to aggregate data."
+        }
+      ]
+    },
+    "RequesterAwsRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsRegion"
+        },
+        {
+          "description": "The region requesting to aggregate data."
+        }
+      ]
+    }
+  },
+  "required": [
+    "RequesterAccountId",
+    "RequesterAwsRegion"
+  ]
+}

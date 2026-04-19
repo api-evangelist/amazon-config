@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-start-config-rules-evaluation-response-structure.json",
+  "name": "StartConfigRulesEvaluationResponse",
+  "description": "The output when you start the evaluation for the specified Config rule.",
+  "type": "object",
+  "properties": {}
+}

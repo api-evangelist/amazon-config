@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-resource-evaluation-filters-structure.json",
+  "name": "ResourceEvaluationFilters",
+  "description": "Returns details of a resource evaluation based on the selected filter.",
+  "type": "object",
+  "properties": {
+    "EvaluationMode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationMode"
+        },
+        {
+          "description": "Filters all resource evaluations results based on an evaluation mode. the valid value for this API is <code>Proactive</code>."
+        }
+      ]
+    },
+    "TimeWindow": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TimeWindow"
+        },
+        {
+          "description": "Returns a <code>TimeWindow</code> object."
+        }
+      ]
+    },
+    "EvaluationContextIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationContextIdentifier"
+        },
+        {
+          "description": "Filters evaluations for a given infrastructure deployment. For example: CFN Stack."
+        }
+      ]
+    }
+  }
+}

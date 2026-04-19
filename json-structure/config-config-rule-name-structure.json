@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-config-rule-name-structure.json",
+  "name": "ConfigRuleName",
+  "description": "ConfigRuleName schema",
+  "type": "string",
+  "pattern": ".*\\S.*",
+  "minLength": 1,
+  "maxLength": 128
+}

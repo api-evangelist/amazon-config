@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-compliance-type-structure.json",
+  "name": "ComplianceType",
+  "description": "ComplianceType schema",
+  "type": "string",
+  "enum": [
+    "COMPLIANT",
+    "NON_COMPLIANT",
+    "NOT_APPLICABLE",
+    "INSUFFICIENT_DATA"
+  ]
+}

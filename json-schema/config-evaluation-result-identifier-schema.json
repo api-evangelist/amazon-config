@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-evaluation-result-identifier-schema.json",
+  "title": "EvaluationResultIdentifier",
+  "description": "Uniquely identifies an evaluation result.",
+  "type": "object",
+  "properties": {
+    "EvaluationResultQualifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationResultQualifier"
+        },
+        {
+          "description": "Identifies an Config rule used to evaluate an Amazon Web Services resource, and provides the type and ID of the evaluated resource."
+        }
+      ]
+    },
+    "OrderingTimestamp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time of the event that triggered the evaluation of your Amazon Web Services resources. The time can indicate when Config delivered a configuration item change notification, or it can indicate when Config delivered the configuration snapshot, depending on which event triggered the evaluation."
+        }
+      ]
+    },
+    "ResourceEvaluationId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceEvaluationId"
+        },
+        {
+          "description": "A Unique ID for an evaluation result."
+        }
+      ]
+    }
+  }
+}

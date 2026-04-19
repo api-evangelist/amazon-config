@@ -1,0 +1,5 @@
+{
+  "ConformancePackName": "example-config-rule",
+  "ConformancePackRuleEvaluationResults": "example-string",
+  "NextToken": "example-string"
+}

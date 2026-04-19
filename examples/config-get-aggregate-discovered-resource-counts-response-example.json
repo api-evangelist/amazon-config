@@ -1,0 +1,6 @@
+{
+  "TotalDiscoveredResources": "example-string",
+  "GroupByKey": "example-string",
+  "GroupedResourceCounts": "example-string",
+  "NextToken": "example-string"
+}

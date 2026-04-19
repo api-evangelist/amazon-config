@@ -1,0 +1,8 @@
+{
+  "ResourceType": "AWS::EC2::Instance",
+  "SchemaVersionId": "example-string",
+  "ResourceId": "example-string",
+  "ResourceName": "example-config-rule",
+  "Configuration": "example-string",
+  "Tags": "example-string"
+}

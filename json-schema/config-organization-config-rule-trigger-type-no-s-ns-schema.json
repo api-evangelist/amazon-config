@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-organization-config-rule-trigger-type-no-s-ns-schema.json",
+  "title": "OrganizationConfigRuleTriggerTypeNoSNs",
+  "description": "OrganizationConfigRuleTriggerTypeNoSNs schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/OrganizationConfigRuleTriggerTypeNoSN"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-put-external-evaluation-response-structure.json",
+  "name": "PutExternalEvaluationResponse",
+  "description": "PutExternalEvaluationResponse schema",
+  "type": "object",
+  "properties": {}
+}

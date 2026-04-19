@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-failed-remediation-batch-schema.json",
+  "title": "FailedRemediationBatch",
+  "description": "List of each of the failed remediations with specific reasons.",
+  "type": "object",
+  "properties": {
+    "FailureMessage": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Returns a failure message. For example, the resource is already compliant."
+        }
+      ]
+    },
+    "FailedItems": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RemediationConfigurations"
+        },
+        {
+          "description": "Returns remediation configurations of the failed items."
+        }
+      ]
+    }
+  }
+}

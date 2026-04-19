@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-organization-managed-rule-metadata-schema.json",
+  "title": "OrganizationManagedRuleMetadata",
+  "description": " organization managed rule metadata such as resource type and ID of Amazon Web Services resource along with the rule identifier. It also provides the frequency with which you want Config to run evaluations for the rule if the trigger type is periodic.",
+  "type": "object",
+  "properties": {
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256Min0"
+        },
+        {
+          "description": "The description that you provide for your organization Config rule."
+        }
+      ]
+    },
+    "RuleIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "For organization config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a href=\"https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html\">Using Config managed rules</a>."
+        }
+      ]
+    },
+    "InputParameters": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit2048"
+        },
+        {
+          "description": "A string, in JSON format, that is passed to your organization Config rule Lambda function."
+        }
+      ]
+    },
+    "MaximumExecutionFrequency": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaximumExecutionFrequency"
+        },
+        {
+          "description": "<p>The maximum frequency with which Config runs evaluations for a rule. This is for an Config managed rule that is triggered at a periodic frequency.</p> <note> <p>By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a valid value for the <code>MaximumExecutionFrequency</code> parameter.</p> </note>"
+        }
+      ]
+    },
+    "ResourceTypesScope": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceTypesScope"
+        },
+        {
+          "description": "The type of the Amazon Web Services resource that was evaluated."
+        }
+      ]
+    },
+    "ResourceIdScope": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit768"
+        },
+        {
+          "description": "The ID of the Amazon Web Services resource that was evaluated."
+        }
+      ]
+    },
+    "TagKeyScope": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit128"
+        },
+        {
+          "description": "One part of a key-value pair that make up a tag. A key is a general label that acts like a category for more specific tag values. "
+        }
+      ]
+    },
+    "TagValueScope": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "The optional part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key)."
+        }
+      ]
+    }
+  },
+  "required": [
+    "RuleIdentifier"
+  ]
+}

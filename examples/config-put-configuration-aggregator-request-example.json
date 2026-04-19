@@ -1,0 +1,6 @@
+{
+  "ConfigurationAggregatorName": "example-config-rule",
+  "AccountAggregationSources": "123456789012",
+  "OrganizationAggregationSource": "example-string",
+  "Tags": "example-string"
+}

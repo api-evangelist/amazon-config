@@ -1,0 +1,4 @@
+{
+  "ResourceArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "TagKeys": "example-string"
+}

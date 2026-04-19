@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-last-updated-time-schema.json",
+  "title": "LastUpdatedTime",
+  "description": "LastUpdatedTime schema",
+  "type": "string",
+  "format": "date-time"
+}

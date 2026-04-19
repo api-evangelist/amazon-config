@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-delete-organization-config-rule-request-schema.json",
+  "title": "DeleteOrganizationConfigRuleRequest",
+  "description": "DeleteOrganizationConfigRuleRequest schema",
+  "type": "object",
+  "properties": {
+    "OrganizationConfigRuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationConfigRuleName"
+        },
+        {
+          "description": "The name of organization Config rule that you want to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "OrganizationConfigRuleName"
+  ]
+}

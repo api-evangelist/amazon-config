@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-external-evaluation-structure.json",
+  "name": "ExternalEvaluation",
+  "description": "Identifies an Amazon Web Services resource and indicates whether it complies with the Config rule that it was evaluated against.",
+  "type": "object",
+  "properties": {
+    "ComplianceResourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "The evaluated compliance resource type. Config accepts <code>AWS::::Account</code> resource type."
+        }
+      ]
+    },
+    "ComplianceResourceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BaseResourceId"
+        },
+        {
+          "description": "The evaluated compliance resource ID. Config accepts only Amazon Web Services account ID."
+        }
+      ]
+    },
+    "ComplianceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComplianceType"
+        },
+        {
+          "description": "The compliance of the Amazon Web Services resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code> and <code>NOT_APPLICABLE</code>."
+        }
+      ]
+    },
+    "Annotation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "Supplementary information about the reason of compliance. For example, this task was completed on a specific date."
+        }
+      ]
+    },
+    "OrderingTimestamp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrderingTimestamp"
+        },
+        {
+          "description": "The time when the compliance was recorded. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "ComplianceResourceType",
+    "ComplianceResourceId",
+    "ComplianceType",
+    "OrderingTimestamp"
+  ]
+}

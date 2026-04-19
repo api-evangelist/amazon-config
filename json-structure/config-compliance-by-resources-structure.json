@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-compliance-by-resources-structure.json",
+  "name": "ComplianceByResources",
+  "description": "ComplianceByResources schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ComplianceByResource"
+  }
+}

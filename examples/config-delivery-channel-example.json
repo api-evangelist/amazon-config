@@ -1,0 +1,8 @@
+{
+  "name": "example-config-rule",
+  "s3BucketName": "example-config-rule",
+  "s3KeyPrefix": "example-string",
+  "s3KmsKeyArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "snsTopicARN": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "configSnapshotDeliveryProperties": "example-string"
+}

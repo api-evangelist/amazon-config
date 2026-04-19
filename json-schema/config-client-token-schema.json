@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-client-token-schema.json",
+  "title": "ClientToken",
+  "description": "ClientToken schema",
+  "type": "string",
+  "minLength": 64,
+  "maxLength": 256
+}

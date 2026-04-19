@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-organization-config-rule-schema.json",
+  "title": "OrganizationConfigRule",
+  "description": "An organization Config rule that has information about Config rules that Config creates in member accounts.",
+  "type": "object",
+  "properties": {
+    "OrganizationConfigRuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationConfigRuleName"
+        },
+        {
+          "description": "The name that you assign to organization Config rule."
+        }
+      ]
+    },
+    "OrganizationConfigRuleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "Amazon Resource Name (ARN) of organization Config rule."
+        }
+      ]
+    },
+    "OrganizationManagedRuleMetadata": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationManagedRuleMetadata"
+        },
+        {
+          "description": "An <code>OrganizationManagedRuleMetadata</code> object."
+        }
+      ]
+    },
+    "OrganizationCustomRuleMetadata": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationCustomRuleMetadata"
+        },
+        {
+          "description": "An <code>OrganizationCustomRuleMetadata</code> object."
+        }
+      ]
+    },
+    "ExcludedAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExcludedAccounts"
+        },
+        {
+          "description": "A comma-separated list of accounts excluded from organization Config rule."
+        }
+      ]
+    },
+    "LastUpdateTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The timestamp of the last update."
+        }
+      ]
+    },
+    "OrganizationCustomPolicyRuleMetadata": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationCustomPolicyRuleMetadataNoPolicy"
+        },
+        {
+          "description": "An object that specifies metadata for your organization's Config Custom Policy rule. The metadata includes the runtime system in use, which accounts have debug logging enabled, and other custom rule metadata, such as resource type, resource ID of Amazon Web Services resource, and organization trigger types that initiate Config to evaluate Amazon Web Services resources against a rule."
+        }
+      ]
+    }
+  },
+  "required": [
+    "OrganizationConfigRuleName",
+    "OrganizationConfigRuleArn"
+  ]
+}

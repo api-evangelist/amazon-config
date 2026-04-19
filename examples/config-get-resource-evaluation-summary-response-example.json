@@ -1,0 +1,9 @@
+{
+  "ResourceEvaluationId": "example-string",
+  "EvaluationMode": "example-string",
+  "EvaluationStatus": "COMPLIANT",
+  "EvaluationStartTimestamp": "example-string",
+  "Compliance": "example-string",
+  "EvaluationContext": "example-string",
+  "ResourceDetails": "example-string"
+}

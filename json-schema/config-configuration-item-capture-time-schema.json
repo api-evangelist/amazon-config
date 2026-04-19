@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-configuration-item-capture-time-schema.json",
+  "title": "ConfigurationItemCaptureTime",
+  "description": "ConfigurationItemCaptureTime schema",
+  "type": "string",
+  "format": "date-time"
+}

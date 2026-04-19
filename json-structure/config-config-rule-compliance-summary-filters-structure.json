@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-config-rule-compliance-summary-filters-structure.json",
+  "name": "ConfigRuleComplianceSummaryFilters",
+  "description": "Filters the results based on the account IDs and regions.",
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "description": "The 12-digit account ID of the source account."
+        }
+      ]
+    },
+    "AwsRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsRegion"
+        },
+        {
+          "description": "The source region where the data is aggregated."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-config-rule-evaluation-status-structure.json",
+  "name": "ConfigRuleEvaluationStatus",
+  "description": "<p>Status information for your Config Managed rules and Config Custom Policy rules. The status includes information such as the last time the rule ran, the last time it failed, and the related error for the last failure.</p> <p>This action does not return status information about Config Custom Lambda rules.</p>",
+  "type": "object",
+  "properties": {
+    "ConfigRuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigRuleName"
+        },
+        {
+          "description": "The name of the Config rule."
+        }
+      ]
+    },
+    "ConfigRuleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the Config rule."
+        }
+      ]
+    },
+    "ConfigRuleId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The ID of the Config rule."
+        }
+      ]
+    },
+    "LastSuccessfulInvocationTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time that Config last successfully invoked the Config rule to evaluate your Amazon Web Services resources."
+        }
+      ]
+    },
+    "LastFailedInvocationTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time that Config last failed to invoke the Config rule to evaluate your Amazon Web Services resources."
+        }
+      ]
+    },
+    "LastSuccessfulEvaluationTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time that Config last successfully evaluated your Amazon Web Services resources against the rule."
+        }
+      ]
+    },
+    "LastFailedEvaluationTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time that Config last failed to evaluate your Amazon Web Services resources against the rule."
+        }
+      ]
+    },
+    "FirstActivatedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time that you first activated the Config rule."
+        }
+      ]
+    },
+    "LastDeactivatedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time that you last turned off the Config rule."
+        }
+      ]
+    },
+    "LastErrorCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The error code that Config returned when the rule last failed."
+        }
+      ]
+    },
+    "LastErrorMessage": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The error message that Config returned when the rule last failed."
+        }
+      ]
+    },
+    "FirstEvaluationStarted": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "<p>Indicates whether Config has evaluated your resources against the rule at least once.</p> <ul> <li> <p> <code>true</code> - Config has evaluated your Amazon Web Services resources against the rule at least once.</p> </li> <li> <p> <code>false</code> - Config has not finished evaluating your Amazon Web Services resources against the rule at least once.</p> </li> </ul>"
+        }
+      ]
+    },
+    "LastDebugLogDeliveryStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The status of the last attempted delivery of a debug log for your Config Custom Policy rules. Either <code>Successful</code> or <code>Failed</code>."
+        }
+      ]
+    },
+    "LastDebugLogDeliveryStatusReason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The reason Config was not able to deliver a debug log. This is for the last failed attempt to retrieve a debug log for your Config Custom Policy rules."
+        }
+      ]
+    },
+    "LastDebugLogDeliveryTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time Config last attempted to deliver a debug log for your Config Custom Policy rules."
+        }
+      ]
+    }
+  }
+}

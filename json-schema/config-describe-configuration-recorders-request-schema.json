@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-describe-configuration-recorders-request-schema.json",
+  "title": "DescribeConfigurationRecordersRequest",
+  "description": "The input for the <a>DescribeConfigurationRecorders</a> action.",
+  "type": "object",
+  "properties": {
+    "ConfigurationRecorderNames": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationRecorderNameList"
+        },
+        {
+          "description": "A list of configuration recorder names."
+        }
+      ]
+    }
+  }
+}

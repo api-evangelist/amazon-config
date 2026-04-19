@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-start-config-rules-evaluation-request-structure.json",
+  "name": "StartConfigRulesEvaluationRequest",
+  "description": "<p/>",
+  "type": "object",
+  "properties": {
+    "ConfigRuleNames": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ReevaluateConfigRuleNames"
+        },
+        {
+          "description": "The list of names of Config rules that you want to run evaluations for."
+        }
+      ]
+    }
+  }
+}

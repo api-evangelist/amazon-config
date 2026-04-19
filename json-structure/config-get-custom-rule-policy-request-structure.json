@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-get-custom-rule-policy-request-structure.json",
+  "name": "GetCustomRulePolicyRequest",
+  "description": "GetCustomRulePolicyRequest schema",
+  "type": "object",
+  "properties": {
+    "ConfigRuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigRuleName"
+        },
+        {
+          "description": "The name of your Config Custom Policy rule."
+        }
+      ]
+    }
+  }
+}

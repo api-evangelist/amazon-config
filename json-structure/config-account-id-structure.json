@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-account-id-structure.json",
+  "name": "AccountId",
+  "description": "AccountId schema",
+  "type": "string",
+  "pattern": "\\d{12}"
+}

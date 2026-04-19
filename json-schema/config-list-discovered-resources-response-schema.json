@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-list-discovered-resources-response-schema.json",
+  "title": "ListDiscoveredResourcesResponse",
+  "description": "<p/>",
+  "type": "object",
+  "properties": {
+    "resourceIdentifiers": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceIdentifierList"
+        },
+        {
+          "description": "The details that identify a resource that is discovered by Config, including the resource type, ID, and (if available) the custom resource name."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "The string that you use in a subsequent request to get the next page of results in a paginated response."
+        }
+      ]
+    }
+  }
+}

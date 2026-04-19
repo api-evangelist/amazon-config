@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-retention-configuration-name-structure.json",
+  "name": "RetentionConfigurationName",
+  "description": "RetentionConfigurationName schema",
+  "type": "string",
+  "pattern": "[\\w\\-]+",
+  "minLength": 1,
+  "maxLength": 256
+}

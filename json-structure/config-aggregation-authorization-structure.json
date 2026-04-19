@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-aggregation-authorization-structure.json",
+  "name": "AggregationAuthorization",
+  "description": "An object that represents the authorizations granted to aggregator accounts and regions.",
+  "type": "object",
+  "properties": {
+    "AggregationAuthorizationArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the aggregation object."
+        }
+      ]
+    },
+    "AuthorizedAccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "description": "The 12-digit account ID of the account authorized to aggregate data."
+        }
+      ]
+    },
+    "AuthorizedAwsRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsRegion"
+        },
+        {
+          "description": "The region authorized to collect aggregated data."
+        }
+      ]
+    },
+    "CreationTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time stamp when the aggregation authorization was created."
+        }
+      ]
+    }
+  }
+}

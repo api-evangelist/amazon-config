@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-put-resource-config-request-schema.json",
+  "title": "PutResourceConfigRequest",
+  "description": "PutResourceConfigRequest schema",
+  "type": "object",
+  "properties": {
+    "ResourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceTypeString"
+        },
+        {
+          "description": "<p>The type of the resource. The custom resource type must be registered with CloudFormation. </p> <note> <p>You cannot use the organization names \u201camzn\u201d, \u201camazon\u201d, \u201calexa\u201d, \u201ccustom\u201d with custom resource types. It is the first part of the ResourceType up to the first ::.</p> </note>"
+        }
+      ]
+    },
+    "SchemaVersionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SchemaVersionId"
+        },
+        {
+          "description": "Version of the schema registered for the ResourceType in CloudFormation."
+        }
+      ]
+    },
+    "ResourceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceId"
+        },
+        {
+          "description": "Unique identifier of the resource."
+        }
+      ]
+    },
+    "ResourceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceName"
+        },
+        {
+          "description": "Name of the resource."
+        }
+      ]
+    },
+    "Configuration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Configuration"
+        },
+        {
+          "description": "<p>The configuration object of the resource in valid JSON format. It must match the schema registered with CloudFormation.</p> <note> <p>The configuration JSON must not exceed 64 KB.</p> </note>"
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tags"
+        },
+        {
+          "description": "<p>Tags associated with the resource.</p> <note> <p>This field is not to be confused with the Amazon Web Services-wide tag feature for Amazon Web Services resources. Tags for <code>PutResourceConfig</code> are tags that you supply for the configuration items of your custom resources.</p> </note>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "ResourceType",
+    "SchemaVersionId",
+    "ResourceId",
+    "Configuration"
+  ]
+}

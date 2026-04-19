@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-describe-pending-aggregation-requests-response-schema.json",
+  "title": "DescribePendingAggregationRequestsResponse",
+  "description": "DescribePendingAggregationRequestsResponse schema",
+  "type": "object",
+  "properties": {
+    "PendingAggregationRequests": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PendingAggregationRequestList"
+        },
+        {
+          "description": "Returns a PendingAggregationRequests object."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response."
+        }
+      ]
+    }
+  }
+}

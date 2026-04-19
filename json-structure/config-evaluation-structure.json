@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-evaluation-structure.json",
+  "name": "Evaluation",
+  "description": "Identifies an Amazon Web Services resource and indicates whether it complies with the Config rule that it was evaluated against.",
+  "type": "object",
+  "properties": {
+    "ComplianceResourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "The type of Amazon Web Services resource that was evaluated."
+        }
+      ]
+    },
+    "ComplianceResourceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BaseResourceId"
+        },
+        {
+          "description": "The ID of the Amazon Web Services resource that was evaluated."
+        }
+      ]
+    },
+    "ComplianceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComplianceType"
+        },
+        {
+          "description": "<p>Indicates whether the Amazon Web Services resource complies with the Config rule that it was evaluated against.</p> <p>For the <code>Evaluation</code> data type, Config supports only the <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the <code>INSUFFICIENT_DATA</code> value for this data type.</p> <p>Similarly, Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code> from a <code>PutEvaluations</code> request. For example, an Lambda function for a custom Config rule cannot pass an <code>INSUFFICIENT_DATA</code> value to Config.</p>"
+        }
+      ]
+    },
+    "Annotation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "Supplementary information about how the evaluation determined the compliance."
+        }
+      ]
+    },
+    "OrderingTimestamp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrderingTimestamp"
+        },
+        {
+          "description": "The time of the event in Config that triggered the evaluation. For event-based evaluations, the time indicates when Config created the configuration item that triggered the evaluation. For periodic evaluations, the time indicates when Config triggered the evaluation at the frequency that you specified (for example, every 24 hours)."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ComplianceResourceType",
+    "ComplianceResourceId",
+    "ComplianceType",
+    "OrderingTimestamp"
+  ]
+}

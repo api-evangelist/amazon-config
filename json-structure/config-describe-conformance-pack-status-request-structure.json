@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-describe-conformance-pack-status-request-structure.json",
+  "name": "DescribeConformancePackStatusRequest",
+  "description": "DescribeConformancePackStatusRequest schema",
+  "type": "object",
+  "properties": {
+    "ConformancePackNames": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackNamesList"
+        },
+        {
+          "description": "Comma-separated list of conformance pack names."
+        }
+      ]
+    },
+    "Limit": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PageSizeLimit"
+        },
+        {
+          "description": "The maximum number of conformance packs status returned on each page."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "The <code>nextToken</code> string returned in a previous request that you use to request the next page of results in a paginated response."
+        }
+      ]
+    }
+  }
+}

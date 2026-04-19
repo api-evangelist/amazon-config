@@ -1,0 +1,8 @@
+{
+  "lastStatus": "COMPLIANT",
+  "lastErrorCode": "example-string",
+  "lastErrorMessage": "example-string",
+  "lastAttemptTime": "example-string",
+  "lastSuccessfulTime": "example-string",
+  "nextDeliveryTime": "example-string"
+}

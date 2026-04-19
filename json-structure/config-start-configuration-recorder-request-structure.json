@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-start-configuration-recorder-request-structure.json",
+  "name": "StartConfigurationRecorderRequest",
+  "description": "The input for the <a>StartConfigurationRecorder</a> action.",
+  "type": "object",
+  "properties": {
+    "ConfigurationRecorderName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RecorderName"
+        },
+        {
+          "description": "The name of the recorder object that records each configuration change made to the resources."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConfigurationRecorderName"
+  ]
+}

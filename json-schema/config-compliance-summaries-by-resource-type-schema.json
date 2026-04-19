@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-compliance-summaries-by-resource-type-schema.json",
+  "title": "ComplianceSummariesByResourceType",
+  "description": "ComplianceSummariesByResourceType schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ComplianceSummaryByResourceType"
+  }
+}

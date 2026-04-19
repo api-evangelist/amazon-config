@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-delete-stored-query-request-schema.json",
+  "title": "DeleteStoredQueryRequest",
+  "description": "DeleteStoredQueryRequest schema",
+  "type": "object",
+  "properties": {
+    "QueryName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/QueryName"
+        },
+        {
+          "description": "The name of the query that you want to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "QueryName"
+  ]
+}

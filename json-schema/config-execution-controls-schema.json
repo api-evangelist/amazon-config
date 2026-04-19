@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-execution-controls-schema.json",
+  "title": "ExecutionControls",
+  "description": "The controls that Config uses for executing remediations.",
+  "type": "object",
+  "properties": {
+    "SsmControls": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SsmControls"
+        },
+        {
+          "description": "A SsmControls object."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-select-aggregate-resource-config-response-schema.json",
+  "title": "SelectAggregateResourceConfigResponse",
+  "description": "SelectAggregateResourceConfigResponse schema",
+  "type": "object",
+  "properties": {
+    "Results": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Results"
+        },
+        {
+          "description": "Returns the results for the SQL query."
+        }
+      ]
+    },
+    "QueryInfo": {
+      "$ref": "#/components/schemas/QueryInfo"
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "The nextToken string returned in a previous request that you use to request the next page of results in a paginated response. "
+        }
+      ]
+    }
+  }
+}

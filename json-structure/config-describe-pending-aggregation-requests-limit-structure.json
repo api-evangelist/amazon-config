@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-describe-pending-aggregation-requests-limit-structure.json",
+  "name": "DescribePendingAggregationRequestsLimit",
+  "description": "DescribePendingAggregationRequestsLimit schema",
+  "type": "integer",
+  "minimum": 0,
+  "maximum": 20
+}

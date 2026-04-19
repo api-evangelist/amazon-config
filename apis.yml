@@ -9,87 +9,140 @@ description: >-
   AWS Config provides a detailed view of the configuration of AWS resources in
   your AWS account. This includes how the resources are related to one another
   and how they were configured in the past, enabling assessment, auditing, and
-  evaluation of configurations for compliance and security governance.
+  evaluation of configurations for compliance and security governance. It
+  records configuration changes continuously, evaluates compliance against
+  rules, and supports automated remediation of noncompliant resources.
 created: '2024-01-15'
-modified: '2026-03-16'
+modified: '2026-04-19'
 tags:
   - Auditing
   - AWS
   - Compliance
-  - Configuration
+  - Configuration Management
   - Governance
+  - Security
 apis:
   - name: Amazon Config API
     description: >-
-      The AWS Config API provides programmatic access to manage configuration
-      recording, evaluate resource compliance against rules, query resource
-      configurations, and track configuration changes across your AWS
-      infrastructure.
+      The AWS Config API provides 92 operations for managing configuration
+      recording, evaluating resource compliance against rules, querying resource
+      configurations, tracking configuration history, managing conformance packs,
+      configuring remediation, and aggregating configuration data across accounts
+      and regions for comprehensive governance.
     image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-    url: https://aws.amazon.com/config/
+    humanURL: https://aws.amazon.com/config/
     baseURL: https://config.amazonaws.com
+    tags:
+      - Auditing
+      - AWS
+      - Compliance
+      - Configuration Management
+      - Governance
     properties:
       - type: Documentation
-        url: https://docs.aws.amazon.com/config/latest/APIReference/
+        url: https://docs.aws.amazon.com/config/latest/developerguide/
       - type: OpenAPI
         url: openapi/amazon-config-openapi.yml
-      - type: OpenAPI
-        url: https://api.apis.guru/v2/specs/amazonaws.com/config/2014-11-12/openapi.yaml
-      - type: JSONSchema
-        url: json-schema/amazon-config-rule-schema.json
-      - type: JSONLD
-        url: json-ld/amazon-config-context.jsonld
+      - type: APIReference
+        url: https://docs.aws.amazon.com/config/latest/APIReference/
       - type: Pricing
         url: https://aws.amazon.com/config/pricing/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://aws.amazon.com/config/getting-started/
       - type: FAQ
         url: https://aws.amazon.com/config/faq/
-      - type: User Guide
-        url: https://docs.aws.amazon.com/config/latest/developerguide/
-      - type: API Reference
-        url: https://docs.aws.amazon.com/config/latest/APIReference/
-      - type: CLI Reference
-        url: https://docs.aws.amazon.com/cli/latest/reference/configservice/
-      - type: Security
-        url: https://docs.aws.amazon.com/config/latest/developerguide/security.html
+      - type: JSONSchema
+        url: json-schema/config-config-rule-schema.json
+      - type: JSONStructure
+        url: json-structure/config-config-rule-structure.json
+      - type: JSON-LD
+        url: json-ld/amazon-config-context.jsonld
 common:
   - type: Portal
     url: https://aws.amazon.com/
   - type: Website
     url: https://aws.amazon.com/config/
   - type: Documentation
-    url: https://docs.aws.amazon.com/
-  - type: Terms of Service
+    url: https://docs.aws.amazon.com/config/
+  - type: TermsOfService
     url: https://aws.amazon.com/service-terms/
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://aws.amazon.com/privacy/
   - type: Support
     url: https://aws.amazon.com/support/
   - type: Blog
     url: https://aws.amazon.com/blogs/mt/
-  - type: GitHub
+  - type: GitHubOrganization
     url: https://github.com/aws
   - type: Console
     url: https://console.aws.amazon.com/config/
-  - type: Sign Up
+  - type: SignUp
     url: https://portal.aws.amazon.com/billing/signup
   - type: Login
     url: https://signin.aws.amazon.com/
-  - type: Status
+  - type: StatusPage
     url: https://health.aws.amazon.com/health/status
-  - type: Knowledge Center
-    url: https://repost.aws/knowledge-center
   - type: YouTube
     url: https://www.youtube.com/user/AmazonWebServices
-  - type: Stack Overflow
+  - type: StackOverflow
     url: https://stackoverflow.com/questions/tagged/aws-config
   - type: Contact
     url: https://aws.amazon.com/contact-us/
-  - type: Security
-    url: https://aws.amazon.com/security/
-  - type: Compliance
-    url: https://aws.amazon.com/compliance/
-maintainer:
-  name: Kin Lane
-  email: kin@apievangelist.com
+  - type: SpectralRules
+    url: rules/amazon-config-spectral-rules.yml
+  - type: NaftikoCapability
+    url: capabilities/compliance-governance.yaml
+  - type: Vocabulary
+    url: vocabulary/amazon-config-vocabulary.yaml
+  - type: Features
+    data:
+      - name: Configuration Recording
+        description: Continuously record configuration changes to all supported AWS resources in your account with detailed configuration items.
+      - name: Config Rules
+        description: Evaluate AWS resource configurations against desired settings using AWS-managed or custom Lambda-based rules.
+      - name: Conformance Packs
+        description: Deploy collections of Config rules and remediation actions as a single unit across an AWS Organization.
+      - name: Configuration History
+        description: View detailed configuration history for any AWS resource including who changed what and when.
+      - name: Resource Inventory
+        description: Maintain a complete inventory of all AWS resources in your account with current and past configurations.
+      - name: Automated Remediation
+        description: Automatically remediate noncompliant resources using SSM Automation documents triggered by Config rules.
+      - name: Multi-Account Aggregation
+        description: Aggregate configuration and compliance data from multiple accounts and regions into a single view.
+      - name: Advanced Query
+        description: Use SQL-like queries to search across resource configurations and compliance states.
+  - type: UseCases
+    data:
+      - name: Security and Compliance Auditing
+        description: Continuously audit AWS resource configurations against security benchmarks like CIS, PCI DSS, and HIPAA.
+      - name: Change Management
+        description: Track who changed what configuration on which resource and when for change management and troubleshooting.
+      - name: Resource Inventory
+        description: Maintain an always-current inventory of all AWS resources for asset management and CMDB purposes.
+      - name: Drift Detection
+        description: Detect configuration drift from approved baselines and trigger alerts or automated remediation.
+      - name: Incident Investigation
+        description: Reconstruct the configuration state of resources at any point in time to aid incident investigation.
+      - name: Governance at Scale
+        description: Enforce organization-wide governance policies using conformance packs deployed across all accounts.
+  - type: Integrations
+    data:
+      - name: AWS CloudTrail
+        description: Correlate Config configuration items with CloudTrail API activity to understand who made changes.
+      - name: AWS Security Hub
+        description: Send Config compliance findings to Security Hub for centralized security posture management.
+      - name: Amazon S3
+        description: Deliver configuration snapshots and history to S3 for long-term storage and analysis.
+      - name: Amazon SNS
+        description: Send notifications for compliance changes and configuration changes via SNS topics.
+      - name: AWS Systems Manager
+        description: Use SSM Automation documents as remediation targets for Config rules.
+      - name: AWS Organizations
+        description: Deploy Config rules and conformance packs across entire AWS Organizations for governance at scale.
+      - name: AWS Lambda
+        description: Create custom Config rules using Lambda functions for organization-specific compliance requirements.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+    url: https://apievangelist.com

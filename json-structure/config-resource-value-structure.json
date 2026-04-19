@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-resource-value-structure.json",
+  "name": "ResourceValue",
+  "description": "The dynamic value of the resource.",
+  "type": "object",
+  "properties": {
+    "Value": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceValueType"
+        },
+        {
+          "description": "The value is a resource ID."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Value"
+  ]
+}

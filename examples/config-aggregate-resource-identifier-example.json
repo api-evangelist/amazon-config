@@ -1,0 +1,7 @@
+{
+  "SourceAccountId": "123456789012",
+  "SourceRegion": "us-east-1",
+  "ResourceId": "example-string",
+  "ResourceType": "AWS::EC2::Instance",
+  "ResourceName": "example-config-rule"
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-put-organization-conformance-pack-request-schema.json",
+  "title": "PutOrganizationConformancePackRequest",
+  "description": "PutOrganizationConformancePackRequest schema",
+  "type": "object",
+  "properties": {
+    "OrganizationConformancePackName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationConformancePackName"
+        },
+        {
+          "description": "Name of the organization conformance pack you want to create."
+        }
+      ]
+    },
+    "TemplateS3Uri": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TemplateS3Uri"
+        },
+        {
+          "description": "<p>Location of file containing the template body. The uri must point to the conformance pack template (max size: 300 KB).</p> <note> <p>You must have access to read Amazon S3 bucket.</p> </note>"
+        }
+      ]
+    },
+    "TemplateBody": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TemplateBody"
+        },
+        {
+          "description": "A string containing full conformance pack template body. Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes."
+        }
+      ]
+    },
+    "DeliveryS3Bucket": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeliveryS3Bucket"
+        },
+        {
+          "description": "<p>The name of the Amazon S3 bucket where Config stores conformance pack templates.</p> <note> <p>This field is optional. If used, it must be prefixed with <code>awsconfigconforms</code>.</p> </note>"
+        }
+      ]
+    },
+    "DeliveryS3KeyPrefix": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeliveryS3KeyPrefix"
+        },
+        {
+          "description": "<p>The prefix for the Amazon S3 bucket.</p> <note> <p>This field is optional.</p> </note>"
+        }
+      ]
+    },
+    "ConformancePackInputParameters": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackInputParameters"
+        },
+        {
+          "description": "A list of <code>ConformancePackInputParameter</code> objects."
+        }
+      ]
+    },
+    "ExcludedAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExcludedAccounts"
+        },
+        {
+          "description": "A list of Amazon Web Services accounts to be excluded from an organization conformance pack while deploying a conformance pack."
+        }
+      ]
+    }
+  },
+  "required": [
+    "OrganizationConformancePackName"
+  ]
+}

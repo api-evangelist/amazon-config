@@ -1,0 +1,6 @@
+{
+  "ConfigRuleName": "example-config-rule",
+  "ResourceKeys": "example-string",
+  "Limit": "example-string",
+  "NextToken": "example-string"
+}

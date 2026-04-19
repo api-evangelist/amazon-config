@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-delivery-s3-key-prefix-schema.json",
+  "title": "DeliveryS3KeyPrefix",
+  "description": "DeliveryS3KeyPrefix schema",
+  "type": "string",
+  "minLength": 0,
+  "maxLength": 1024
+}

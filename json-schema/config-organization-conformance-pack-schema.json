@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-organization-conformance-pack-schema.json",
+  "title": "OrganizationConformancePack",
+  "description": "An organization conformance pack that has information about conformance packs that Config creates in member accounts. ",
+  "type": "object",
+  "properties": {
+    "OrganizationConformancePackName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationConformancePackName"
+        },
+        {
+          "description": "The name you assign to an organization conformance pack."
+        }
+      ]
+    },
+    "OrganizationConformancePackArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "Amazon Resource Name (ARN) of organization conformance pack."
+        }
+      ]
+    },
+    "DeliveryS3Bucket": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeliveryS3Bucket"
+        },
+        {
+          "description": "<p>The name of the Amazon S3 bucket where Config stores conformance pack templates. </p> <note> <p>This field is optional.</p> </note>"
+        }
+      ]
+    },
+    "DeliveryS3KeyPrefix": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeliveryS3KeyPrefix"
+        },
+        {
+          "description": "<p>Any folder structure you want to add to an Amazon S3 bucket.</p> <note> <p>This field is optional.</p> </note>"
+        }
+      ]
+    },
+    "ConformancePackInputParameters": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConformancePackInputParameters"
+        },
+        {
+          "description": "A list of <code>ConformancePackInputParameter</code> objects."
+        }
+      ]
+    },
+    "ExcludedAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExcludedAccounts"
+        },
+        {
+          "description": "A comma-separated list of accounts excluded from organization conformance pack."
+        }
+      ]
+    },
+    "LastUpdateTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "Last time when organization conformation pack was updated."
+        }
+      ]
+    }
+  },
+  "required": [
+    "OrganizationConformancePackName",
+    "OrganizationConformancePackArn",
+    "LastUpdateTime"
+  ]
+}

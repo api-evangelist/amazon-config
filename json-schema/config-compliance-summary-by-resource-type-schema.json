@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-compliance-summary-by-resource-type-schema.json",
+  "title": "ComplianceSummaryByResourceType",
+  "description": "The number of Amazon Web Services resources of a specific type that are compliant or noncompliant, up to a maximum of 100 for each.",
+  "type": "object",
+  "properties": {
+    "ResourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "The type of Amazon Web Services resource."
+        }
+      ]
+    },
+    "ComplianceSummary": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComplianceSummary"
+        },
+        {
+          "description": "The number of Amazon Web Services resources that are compliant or noncompliant, up to a maximum of 100 for each."
+        }
+      ]
+    }
+  }
+}

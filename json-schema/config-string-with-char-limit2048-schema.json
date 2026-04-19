@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-string-with-char-limit2048-schema.json",
+  "title": "StringWithCharLimit2048",
+  "description": "StringWithCharLimit2048 schema",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 2048
+}

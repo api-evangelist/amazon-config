@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-resource-type-list-schema.json",
+  "title": "ResourceTypeList",
+  "description": "ResourceTypeList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ResourceType"
+  }
+}

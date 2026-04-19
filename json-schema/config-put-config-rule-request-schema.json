@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-put-config-rule-request-schema.json",
+  "title": "PutConfigRuleRequest",
+  "description": "PutConfigRuleRequest schema",
+  "type": "object",
+  "properties": {
+    "ConfigRule": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigRule"
+        },
+        {
+          "description": "The rule that you want to add to your account."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagsList"
+        },
+        {
+          "description": "An array of tag object."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConfigRule"
+  ]
+}

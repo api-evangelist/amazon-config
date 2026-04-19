@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-config-export-delivery-info-structure.json",
+  "name": "ConfigExportDeliveryInfo",
+  "description": "Provides status of the delivery of the snapshot or the configuration history to the specified Amazon S3 bucket. Also provides the status of notifications about the Amazon S3 delivery to the specified Amazon SNS topic.",
+  "type": "object",
+  "properties": {
+    "lastStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeliveryStatus"
+        },
+        {
+          "description": "Status of the last attempted delivery."
+        }
+      ]
+    },
+    "lastErrorCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The error code from the last attempted delivery."
+        }
+      ]
+    },
+    "lastErrorMessage": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The error message from the last attempted delivery."
+        }
+      ]
+    },
+    "lastAttemptTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time of the last attempted delivery."
+        }
+      ]
+    },
+    "lastSuccessfulTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time of the last successful delivery."
+        }
+      ]
+    },
+    "nextDeliveryTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time that the next delivery occurs."
+        }
+      ]
+    }
+  }
+}

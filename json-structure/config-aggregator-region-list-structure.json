@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-aggregator-region-list-structure.json",
+  "name": "AggregatorRegionList",
+  "description": "AggregatorRegionList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/String"
+  },
+  "minItems": 1
+}

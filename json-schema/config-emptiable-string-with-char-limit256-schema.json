@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-emptiable-string-with-char-limit256-schema.json",
+  "title": "EmptiableStringWithCharLimit256",
+  "description": "EmptiableStringWithCharLimit256 schema",
+  "type": "string",
+  "minLength": 0,
+  "maxLength": 256
+}

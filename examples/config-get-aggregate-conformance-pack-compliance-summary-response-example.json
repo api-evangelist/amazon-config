@@ -1,0 +1,5 @@
+{
+  "AggregateConformancePackComplianceSummaries": "example-string",
+  "GroupByKey": "example-string",
+  "NextToken": "example-string"
+}

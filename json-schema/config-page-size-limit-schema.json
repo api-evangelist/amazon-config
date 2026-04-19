@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-page-size-limit-schema.json",
+  "title": "PageSizeLimit",
+  "description": "PageSizeLimit schema",
+  "type": "integer",
+  "minimum": 0,
+  "maximum": 20
+}

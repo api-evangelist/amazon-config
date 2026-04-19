@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-evaluation-status-structure.json",
+  "name": "EvaluationStatus",
+  "description": "Returns status details of an evaluation.",
+  "type": "object",
+  "properties": {
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceEvaluationStatus"
+        },
+        {
+          "description": "The status of an execution. The valid values are In_Progress, Succeeded or Failed. "
+        }
+      ]
+    },
+    "FailureReason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit1024"
+        },
+        {
+          "description": "An explanation for failed execution status."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Status"
+  ]
+}

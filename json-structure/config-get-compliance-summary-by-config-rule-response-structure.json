@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-get-compliance-summary-by-config-rule-response-structure.json",
+  "name": "GetComplianceSummaryByConfigRuleResponse",
+  "description": "<p/>",
+  "type": "object",
+  "properties": {
+    "ComplianceSummary": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComplianceSummary"
+        },
+        {
+          "description": "The number of Config rules that are compliant and the number that are noncompliant, up to a maximum of 25 for each."
+        }
+      ]
+    }
+  }
+}

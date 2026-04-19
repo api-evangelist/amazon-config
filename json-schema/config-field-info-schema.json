@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-field-info-schema.json",
+  "title": "FieldInfo",
+  "description": "Details about the fields such as name of the field.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FieldName"
+        },
+        {
+          "description": "Name of the field."
+        }
+      ]
+    }
+  }
+}

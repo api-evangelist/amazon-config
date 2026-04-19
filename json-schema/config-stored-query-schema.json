@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-stored-query-schema.json",
+  "title": "StoredQuery",
+  "description": "Provides the details of a stored query.",
+  "type": "object",
+  "properties": {
+    "QueryId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/QueryId"
+        },
+        {
+          "description": "The ID of the query."
+        }
+      ]
+    },
+    "QueryArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/QueryArn"
+        },
+        {
+          "description": "Amazon Resource Name (ARN) of the query. For example, arn:partition:service:region:account-id:resource-type/resource-name/resource-id."
+        }
+      ]
+    },
+    "QueryName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/QueryName"
+        },
+        {
+          "description": "The name of the query."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/QueryDescription"
+        },
+        {
+          "description": "A unique description for the query."
+        }
+      ]
+    },
+    "Expression": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/QueryExpression"
+        },
+        {
+          "description": "The expression of the query. For example, <code>SELECT resourceId, resourceType, supplementaryConfiguration.BucketVersioningConfiguration.status WHERE resourceType = 'AWS::S3::Bucket' AND supplementaryConfiguration.BucketVersioningConfiguration.status = 'Off'.</code> "
+        }
+      ]
+    }
+  },
+  "required": [
+    "QueryName"
+  ]
+}

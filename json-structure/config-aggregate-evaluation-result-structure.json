@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-aggregate-evaluation-result-structure.json",
+  "name": "AggregateEvaluationResult",
+  "description": "The details of an Config evaluation for an account ID and region in an aggregator. Provides the Amazon Web Services resource that was evaluated, the compliance of the resource, related time stamps, and supplementary information. ",
+  "type": "object",
+  "properties": {
+    "EvaluationResultIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EvaluationResultIdentifier"
+        },
+        {
+          "description": "Uniquely identifies the evaluation result."
+        }
+      ]
+    },
+    "ComplianceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComplianceType"
+        },
+        {
+          "description": "<p>The resource compliance status.</p> <p>For the <code>AggregationEvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> value.</p>"
+        }
+      ]
+    },
+    "ResultRecordedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time when Config recorded the aggregate evaluation result."
+        }
+      ]
+    },
+    "ConfigRuleInvokedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time when the Config rule evaluated the Amazon Web Services resource."
+        }
+      ]
+    },
+    "Annotation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringWithCharLimit256"
+        },
+        {
+          "description": "Supplementary information about how the agrregate evaluation determined the compliance."
+        }
+      ]
+    },
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "description": "The 12-digit account ID of the source account."
+        }
+      ]
+    },
+    "AwsRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsRegion"
+        },
+        {
+          "description": "The source region from where the data is aggregated."
+        }
+      ]
+    }
+  }
+}

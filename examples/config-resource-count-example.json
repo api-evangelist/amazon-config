@@ -1,0 +1,4 @@
+{
+  "resourceType": "AWS::EC2::Instance",
+  "count": "example-string"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-organization-conformance-pack-detailed-statuses-schema.json",
+  "title": "OrganizationConformancePackDetailedStatuses",
+  "description": "OrganizationConformancePackDetailedStatuses schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/OrganizationConformancePackDetailedStatus"
+  }
+}

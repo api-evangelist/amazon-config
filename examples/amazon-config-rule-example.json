@@ -1,0 +1,28 @@
+{
+  "ConfigRuleName": "example-config-rule",
+  "ConfigRuleArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "ConfigRuleId": "example-string",
+  "Description": "example-string",
+  "Scope": {
+    "ComplianceResourceTypes": [
+      "AWS::EC2::Instance"
+    ],
+    "TagKey": "example-string",
+    "TagValue": "example-string",
+    "ComplianceResourceId": "example-string"
+  },
+  "Source": {
+    "Owner": "CUSTOM_LAMBDA",
+    "SourceIdentifier": "example-string",
+    "SourceDetails": [
+      {
+        "EventSource": "aws.config",
+        "MessageType": "ConfigurationItemChangeNotification",
+        "MaximumExecutionFrequency": "One_Hour"
+      }
+    ]
+  },
+  "InputParameters": "example-string",
+  "MaximumExecutionFrequency": "One_Hour",
+  "ConfigRuleState": "ACTIVE"
+}

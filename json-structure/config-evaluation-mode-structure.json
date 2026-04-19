@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-evaluation-mode-structure.json",
+  "name": "EvaluationMode",
+  "description": "EvaluationMode schema",
+  "type": "string",
+  "enum": [
+    "DETECTIVE",
+    "PROACTIVE"
+  ]
+}

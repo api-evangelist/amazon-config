@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-discovered-resource-identifier-list-schema.json",
+  "title": "DiscoveredResourceIdentifierList",
+  "description": "DiscoveredResourceIdentifierList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/AggregateResourceIdentifier"
+  }
+}

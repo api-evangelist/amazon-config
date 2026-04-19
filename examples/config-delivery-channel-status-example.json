@@ -1,0 +1,6 @@
+{
+  "name": "example-config-rule",
+  "configSnapshotDeliveryInfo": "example-string",
+  "configHistoryDeliveryInfo": "example-string",
+  "configStreamDeliveryInfo": "example-string"
+}

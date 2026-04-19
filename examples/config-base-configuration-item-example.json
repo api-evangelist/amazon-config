@@ -1,0 +1,16 @@
+{
+  "version": "example-string",
+  "accountId": "123456789012",
+  "configurationItemCaptureTime": "example-string",
+  "configurationItemStatus": "COMPLIANT",
+  "configurationStateId": "example-string",
+  "arn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "resourceType": "AWS::EC2::Instance",
+  "resourceId": "example-string",
+  "resourceName": "example-config-rule",
+  "awsRegion": "us-east-1",
+  "availabilityZone": "example-string",
+  "resourceCreationTime": "example-string",
+  "configuration": "example-string",
+  "supplementaryConfiguration": "example-string"
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-list-stored-queries-request-structure.json",
+  "name": "ListStoredQueriesRequest",
+  "description": "ListStoredQueriesRequest schema",
+  "type": "object",
+  "properties": {
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The nextToken string returned in a previous request that you use to request the next page of results in a paginated response."
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Limit"
+        },
+        {
+          "description": "The maximum number of results to be returned with a single call."
+        }
+      ]
+    }
+  }
+}

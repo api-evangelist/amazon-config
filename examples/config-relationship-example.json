@@ -1,0 +1,6 @@
+{
+  "resourceType": "AWS::EC2::Instance",
+  "resourceId": "example-string",
+  "resourceName": "example-config-rule",
+  "relationshipName": "example-config-rule"
+}

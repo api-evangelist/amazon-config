@@ -1,0 +1,4 @@
+{
+  "Name": "example-config-rule",
+  "RetentionPeriodInDays": "example-string"
+}

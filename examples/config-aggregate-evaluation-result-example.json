@@ -1,0 +1,9 @@
+{
+  "EvaluationResultIdentifier": "example-string",
+  "ComplianceType": "example-string",
+  "ResultRecordedTime": "example-string",
+  "ConfigRuleInvokedTime": "example-string",
+  "Annotation": "example-string",
+  "AccountId": "123456789012",
+  "AwsRegion": "us-east-1"
+}

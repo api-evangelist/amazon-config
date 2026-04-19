@@ -1,0 +1,10 @@
+{
+  "ConformancePackName": "example-config-rule",
+  "ConformancePackId": "example-string",
+  "ConformancePackArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "ConformancePackState": "example-string",
+  "StackArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "ConformancePackStatusReason": "COMPLIANT",
+  "LastUpdateRequestedTime": "example-string",
+  "LastUpdateCompletedTime": "example-string"
+}

@@ -1,0 +1,6 @@
+{
+  "ConfigRuleName": "example-config-rule",
+  "Compliance": "example-string",
+  "AccountId": "123456789012",
+  "AwsRegion": "us-east-1"
+}

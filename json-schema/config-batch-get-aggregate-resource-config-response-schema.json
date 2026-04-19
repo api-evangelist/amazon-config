@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-batch-get-aggregate-resource-config-response-schema.json",
+  "title": "BatchGetAggregateResourceConfigResponse",
+  "description": "BatchGetAggregateResourceConfigResponse schema",
+  "type": "object",
+  "properties": {
+    "BaseConfigurationItems": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BaseConfigurationItems"
+        },
+        {
+          "description": "A list that contains the current configuration of one or more resources."
+        }
+      ]
+    },
+    "UnprocessedResourceIdentifiers": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UnprocessedResourceIdentifierList"
+        },
+        {
+          "description": "A list of resource identifiers that were not processed with current scope. The list is empty if all the resources are processed."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "ConfigurationAggregatorNames": "example-config-rule",
+  "NextToken": "example-string",
+  "Limit": "example-string"
+}

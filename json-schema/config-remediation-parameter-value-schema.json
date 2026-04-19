@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-remediation-parameter-value-schema.json",
+  "title": "RemediationParameterValue",
+  "description": "The value is either a dynamic (resource) value or a static value. You must select either a dynamic value or a static value.",
+  "type": "object",
+  "properties": {
+    "ResourceValue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceValue"
+        },
+        {
+          "description": "The value is dynamic and changes at run-time."
+        }
+      ]
+    },
+    "StaticValue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StaticValue"
+        },
+        {
+          "description": "The value is static and does not change at run-time."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "EventSource": "example-string",
+  "MessageType": "example-string",
+  "MaximumExecutionFrequency": "example-string"
+}

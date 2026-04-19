@@ -1,0 +1,5 @@
+{
+  "totalDiscoveredResources": "example-string",
+  "resourceCounts": "example-string",
+  "nextToken": "example-string"
+}

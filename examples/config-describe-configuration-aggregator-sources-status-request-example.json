@@ -1,0 +1,6 @@
+{
+  "ConfigurationAggregatorName": "example-config-rule",
+  "UpdateStatus": "COMPLIANT",
+  "NextToken": "example-string",
+  "Limit": "example-string"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-chronological-order-structure.json",
+  "name": "ChronologicalOrder",
+  "description": "ChronologicalOrder schema",
+  "type": "string",
+  "enum": [
+    "Reverse",
+    "Forward"
+  ]
+}

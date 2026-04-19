@@ -1,0 +1,10 @@
+{
+  "Description": "example-string",
+  "RuleIdentifier": "example-string",
+  "InputParameters": "example-string",
+  "MaximumExecutionFrequency": "example-string",
+  "ResourceTypesScope": "AWS::EC2::Instance",
+  "ResourceIdScope": "example-string",
+  "TagKeyScope": "example-string",
+  "TagValueScope": "example-string"
+}

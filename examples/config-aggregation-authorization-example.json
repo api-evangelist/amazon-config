@@ -1,0 +1,6 @@
+{
+  "AggregationAuthorizationArn": "arn:aws:config:us-east-1:123456789012:config-rule/config-rule-example",
+  "AuthorizedAccountId": "123456789012",
+  "AuthorizedAwsRegion": "us-east-1",
+  "CreationTime": "example-string"
+}

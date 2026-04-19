@@ -1,0 +1,5 @@
+{
+  "OrganizationConformancePackNames": "example-config-rule",
+  "Limit": "example-string",
+  "NextToken": "example-string"
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-remediation-execution-state-schema.json",
+  "title": "RemediationExecutionState",
+  "description": "RemediationExecutionState schema",
+  "type": "string",
+  "enum": [
+    "QUEUED",
+    "IN_PROGRESS",
+    "SUCCEEDED",
+    "FAILED"
+  ]
+}

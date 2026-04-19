@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-get-aggregate-resource-config-request-schema.json",
+  "title": "GetAggregateResourceConfigRequest",
+  "description": "GetAggregateResourceConfigRequest schema",
+  "type": "object",
+  "properties": {
+    "ConfigurationAggregatorName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigurationAggregatorName"
+        },
+        {
+          "description": "The name of the configuration aggregator."
+        }
+      ]
+    },
+    "ResourceIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AggregateResourceIdentifier"
+        },
+        {
+          "description": "An object that identifies aggregate resource."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConfigurationAggregatorName",
+    "ResourceIdentifier"
+  ]
+}

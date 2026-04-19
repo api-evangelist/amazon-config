@@ -1,0 +1,8 @@
+{
+  "resourceType": "AWS::EC2::Instance",
+  "resourceIds": "example-string",
+  "resourceName": "example-config-rule",
+  "limit": "example-string",
+  "includeDeletedResources": "example-string",
+  "nextToken": "example-string"
+}

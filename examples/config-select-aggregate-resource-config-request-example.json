@@ -1,0 +1,7 @@
+{
+  "Expression": "example-string",
+  "ConfigurationAggregatorName": "example-config-rule",
+  "Limit": "example-string",
+  "MaxResults": "example-string",
+  "NextToken": "example-string"
+}

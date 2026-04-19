@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-start-resource-evaluation-response-structure.json",
+  "name": "StartResourceEvaluationResponse",
+  "description": "StartResourceEvaluationResponse schema",
+  "type": "object",
+  "properties": {
+    "ResourceEvaluationId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceEvaluationId"
+        },
+        {
+          "description": "A unique ResourceEvaluationId that is associated with a single execution."
+        }
+      ]
+    }
+  }
+}

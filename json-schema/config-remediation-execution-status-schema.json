@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-remediation-execution-status-schema.json",
+  "title": "RemediationExecutionStatus",
+  "description": "Provides details of the current status of the invoked remediation action for that resource.",
+  "type": "object",
+  "properties": {
+    "ResourceKey": {
+      "$ref": "#/components/schemas/ResourceKey"
+    },
+    "State": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RemediationExecutionState"
+        },
+        {
+          "description": "ENUM of the values."
+        }
+      ]
+    },
+    "StepDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RemediationExecutionSteps"
+        },
+        {
+          "description": "Details of every step."
+        }
+      ]
+    },
+    "InvocationTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "Start time when the remediation was executed."
+        }
+      ]
+    },
+    "LastUpdatedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Date"
+        },
+        {
+          "description": "The time when the remediation execution was last updated."
+        }
+      ]
+    }
+  }
+}

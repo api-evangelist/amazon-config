@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-put-delivery-channel-request-schema.json",
+  "title": "PutDeliveryChannelRequest",
+  "description": "The input for the <a>PutDeliveryChannel</a> action.",
+  "type": "object",
+  "properties": {
+    "DeliveryChannel": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeliveryChannel"
+        },
+        {
+          "description": "The configuration delivery channel object that delivers the configuration information to an Amazon S3 bucket and to an Amazon SNS topic."
+        }
+      ]
+    }
+  },
+  "required": [
+    "DeliveryChannel"
+  ]
+}

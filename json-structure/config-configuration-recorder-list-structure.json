@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-configuration-recorder-list-structure.json",
+  "name": "ConfigurationRecorderList",
+  "description": "ConfigurationRecorderList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ConfigurationRecorder"
+  }
+}

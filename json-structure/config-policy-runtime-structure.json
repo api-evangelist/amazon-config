@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-policy-runtime-structure.json",
+  "name": "PolicyRuntime",
+  "description": "PolicyRuntime schema",
+  "type": "string",
+  "pattern": "guard\\-2\\.x\\.x",
+  "minLength": 1,
+  "maxLength": 64
+}

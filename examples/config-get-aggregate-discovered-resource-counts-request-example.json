@@ -1,0 +1,7 @@
+{
+  "ConfigurationAggregatorName": "example-config-rule",
+  "Filters": "example-string",
+  "GroupByKey": "example-string",
+  "Limit": "example-string",
+  "NextToken": "example-string"
+}

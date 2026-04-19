@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-schema/config-describe-remediation-configurations-request-schema.json",
+  "title": "DescribeRemediationConfigurationsRequest",
+  "description": "DescribeRemediationConfigurationsRequest schema",
+  "type": "object",
+  "properties": {
+    "ConfigRuleNames": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConfigRuleNames"
+        },
+        {
+          "description": "A list of Config rule names of remediation configurations for which you want details. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "ConfigRuleNames"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/json-structure/config-recorder-status-structure.json",
+  "name": "RecorderStatus",
+  "description": "RecorderStatus schema",
+  "type": "string",
+  "enum": [
+    "Pending",
+    "Success",
+    "Failure"
+  ]
+}
