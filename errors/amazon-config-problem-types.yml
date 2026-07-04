@@ -1,0 +1,240 @@
+generated: '2026-06-20'
+method: derived
+format: aws-json
+source: >-
+  Derived from the error response schemas in openapi/amazon-config-openapi.yml. The
+  AWS Config API does not use RFC 9457 problem+json; errors are returned over the AWS
+  JSON 1.1 protocol as HTTP 400 with a body of the form {"__type":"<Exception>","message":"..."}.
+  The synthetic 48x codes in the OpenAPI are the aws2openapi convention for distinct exception shapes.
+  See https://docs.aws.amazon.com/config/latest/APIReference/CommonErrors.html
+docs: https://docs.aws.amazon.com/config/latest/APIReference/CommonErrors.html
+count: 57
+problems:
+  - type: ConformancePackTemplateValidationException
+    title: Conformance Pack Template Validation
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/ConformancePackTemplateValidationException
+  - type: DeleteRemediationException
+    title: Delete Remediation
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/DeleteRemediationException
+  - type: DescribeRemediationException
+    title: Describe Remediation
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/DescribeRemediationException
+  - type: FailedDeleteRemediationException
+    title: Failed Delete Remediation
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/FailedDeleteRemediationException
+  - type: FailedRemediationException
+    title: Failed Remediation
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/FailedRemediationException
+  - type: InsufficientDeliveryPolicyException
+    title: Insufficient Delivery Policy
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/InsufficientDeliveryPolicyException
+  - type: InsufficientPermissionsException
+    title: Insufficient Permissions
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/InsufficientPermissionsException
+  - type: InvalidConfigurationRecorderNameException
+    title: Invalid Configuration Recorder Name
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/InvalidConfigurationRecorderNameException
+  - type: InvalidDeliveryChannelNameException
+    title: Invalid Delivery Channel Name
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/InvalidDeliveryChannelNameException
+  - type: InvalidExpressionException
+    title: Invalid Expression
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/InvalidExpressionException
+  - type: InvalidLimitException
+    title: Invalid Limit
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/InvalidLimitException
+  - type: InvalidNextTokenException
+    title: Invalid Next Token
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/InvalidNextTokenException
+  - type: InvalidParameterValueException
+    title: Invalid Parameter Value
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/InvalidParameterValueException
+  - type: InvalidRecordingGroupException
+    title: Invalid Recording Group
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/InvalidRecordingGroupException
+  - type: InvalidResultTokenException
+    title: Invalid Result Token
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/InvalidResultTokenException
+  - type: InvalidRoleException
+    title: Invalid Role
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/InvalidRoleException
+  - type: InvalidSNSTopicARNException
+    title: Invalid S N S Topic A R N
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/InvalidSNSTopicARNException
+  - type: InvalidTimeRangeException
+    title: Invalid Time Range
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/InvalidTimeRangeException
+  - type: LastDeliveryChannelDeleteFailedException
+    title: Last Delivery Channel Delete Failed
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/LastDeliveryChannelDeleteFailedException
+  - type: LimitExceededException
+    title: Limit Exceeded
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/LimitExceededException
+  - type: MaxActiveResourcesExceededException
+    title: Max Active Resources Exceeded
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/MaxActiveResourcesExceededException
+  - type: MaxNumberOfConfigRulesExceededException
+    title: Max Number Of Config Rules Exceeded
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/MaxNumberOfConfigRulesExceededException
+  - type: MaxNumberOfConfigurationRecordersExceededException
+    title: Max Number Of Configuration Recorders Exceeded
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/MaxNumberOfConfigurationRecordersExceededException
+  - type: MaxNumberOfConformancePacksExceededException
+    title: Max Number Of Conformance Packs Exceeded
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/MaxNumberOfConformancePacksExceededException
+  - type: MaxNumberOfDeliveryChannelsExceededException
+    title: Max Number Of Delivery Channels Exceeded
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/MaxNumberOfDeliveryChannelsExceededException
+  - type: MaxNumberOfOrganizationConfigRulesExceededException
+    title: Max Number Of Organization Config Rules Exceeded
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/MaxNumberOfOrganizationConfigRulesExceededException
+  - type: MaxNumberOfOrganizationConformancePacksExceededException
+    title: Max Number Of Organization Conformance Packs Exceeded
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/MaxNumberOfOrganizationConformancePacksExceededException
+  - type: MaxNumberOfRetentionConfigurationsExceededException
+    title: Max Number Of Retention Configurations Exceeded
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/MaxNumberOfRetentionConfigurationsExceededException
+  - type: NoAvailableConfigurationRecorderException
+    title: No Available Configuration Recorder
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoAvailableConfigurationRecorderException
+  - type: NoAvailableDeliveryChannelException
+    title: No Available Delivery Channel
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoAvailableDeliveryChannelException
+  - type: NoAvailableOrganizationException
+    title: No Available Organization
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoAvailableOrganizationException
+  - type: NoRunningConfigurationRecorderException
+    title: No Running Configuration Recorder
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoRunningConfigurationRecorderException
+  - type: NoSuchBucketException
+    title: No Such Bucket
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoSuchBucketException
+  - type: NoSuchConfigRuleException
+    title: No Such Config Rule
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoSuchConfigRuleException
+  - type: NoSuchConfigRuleInConformancePackException
+    title: No Such Config Rule In Conformance Pack
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoSuchConfigRuleInConformancePackException
+  - type: NoSuchConfigurationAggregatorException
+    title: No Such Configuration Aggregator
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoSuchConfigurationAggregatorException
+  - type: NoSuchConfigurationRecorderException
+    title: No Such Configuration Recorder
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoSuchConfigurationRecorderException
+  - type: NoSuchConformancePackException
+    title: No Such Conformance Pack
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoSuchConformancePackException
+  - type: NoSuchDeliveryChannelException
+    title: No Such Delivery Channel
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoSuchDeliveryChannelException
+  - type: NoSuchOrganizationConfigRuleException
+    title: No Such Organization Config Rule
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoSuchOrganizationConfigRuleException
+  - type: NoSuchOrganizationConformancePackException
+    title: No Such Organization Conformance Pack
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoSuchOrganizationConformancePackException
+  - type: NoSuchRemediationConfigurationException
+    title: No Such Remediation Configuration
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoSuchRemediationConfigurationException
+  - type: NoSuchRemediationExceptionException
+    title: No Such Remediation Exception
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoSuchRemediationExceptionException
+  - type: NoSuchRetentionConfigurationException
+    title: No Such Retention Configuration
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/NoSuchRetentionConfigurationException
+  - type: OrganizationAccessDeniedException
+    title: Organization Access Denied
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/OrganizationAccessDeniedException
+  - type: OrganizationAllFeaturesNotEnabledException
+    title: Organization All Features Not Enabled
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/OrganizationAllFeaturesNotEnabledException
+  - type: OrganizationConformancePackTemplateValidationException
+    title: Organization Conformance Pack Template Validation
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/OrganizationConformancePackTemplateValidationException
+  - type: OversizedConfigurationItemException
+    title: Oversized Configuration Item
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/OversizedConfigurationItemException
+  - type: PutRemediationException
+    title: Put Remediation
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/PutRemediationException
+  - type: RemediationException
+    title: Remediation
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/RemediationException
+  - type: RemediationInProgressException
+    title: Remediation In Progress
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/RemediationInProgressException
+  - type: ResourceConcurrentModificationException
+    title: Resource Concurrent Modification
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/ResourceConcurrentModificationException
+  - type: ResourceInUseException
+    title: Resource In Use
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/ResourceInUseException
+  - type: ResourceNotDiscoveredException
+    title: Resource Not Discovered
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/ResourceNotDiscoveredException
+  - type: ResourceNotFoundException
+    title: Resource Not Found
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/ResourceNotFoundException
+  - type: TooManyTagsException
+    title: Too Many Tags
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/TooManyTagsException
+  - type: ValidationException
+    title: Validation
+    http_status: 400
+    schema: openapi/amazon-config-openapi.yml#/components/schemas/ValidationException

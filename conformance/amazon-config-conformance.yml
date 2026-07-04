@@ -1,0 +1,51 @@
+generated: '2026-06-20'
+method: derived
+source: >-
+  Derived from openapi/amazon-config-openapi.yml (auth parameters, error shapes,
+  pagination tokens) plus the AWS Config API reference. AWS Config uses the AWS
+  JSON 1.1 protocol signed with Signature Version 4, not OAuth/OIDC/OData/FHIR.
+standards:
+  - id: aws-sigv4
+    conforms: true
+    evidence: >-
+      Requests are signed with AWS Signature Version 4; OpenAPI defines
+      X-Amz-Date, X-Amz-Credential, X-Amz-Signature, X-Amz-Security-Token,
+      X-Amz-Algorithm and X-Amz-Content-Sha256 parameters.
+  - id: tls
+    conforms: true
+    evidence: Endpoints are HTTPS (config.{region}.amazonaws.com).
+  - id: oauth2
+    conforms: false
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: >-
+      Errors use the AWS JSON protocol ({"__type","message"}), not
+      application/problem+json.
+  - id: json-api
+    conforms: false
+  - id: odata
+    conforms: false
+  - id: fhir-r4
+    conforms: false
+  - id: fapi
+    conforms: false
+  - id: scim2
+    conforms: false
+  - id: psd2
+    conforms: false
+  - id: pagination
+    conforms: true
+    evidence: >-
+      Cursor pagination via a NextToken request/response field across the
+      Describe*, List* and Get* operations.
+  - id: idempotency
+    conforms: partial
+    evidence: >-
+      No idempotency-key header; however the declarative Put* operations
+      (PutConfigRule, PutConfigurationRecorder, PutDeliveryChannel, etc.) are
+      idempotent by design.
+  - id: rfc9116-security-txt
+    conforms: true
+    evidence: https://aws.amazon.com/.well-known/security.txt returns 200.

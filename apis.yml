@@ -13,7 +13,7 @@ description: >-
   records configuration changes continuously, evaluates compliance against
   rules, and supports automated remediation of noncompliant resources.
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-06-20'
 tags:
   - Auditing
   - AWS
@@ -57,6 +57,10 @@ apis:
         url: json-structure/config-config-rule-structure.json
       - type: JSON-LD
         url: json-ld/amazon-config-context.jsonld
+      - type: Overlay
+        url: overlays/amazon-config-openapi-overlay.yaml
+      - type: ErrorCatalog
+        url: errors/amazon-config-problem-types.yml
 common:
   - type: Portal
     url: https://aws.amazon.com/
@@ -94,6 +98,20 @@ common:
     url: capabilities/compliance-governance.yaml
   - type: Vocabulary
     url: vocabulary/amazon-config-vocabulary.yaml
+  - type: Packages
+    url: packages/amazon-config-packages.yml
+  - type: WellKnown
+    url: well-known/amazon-config-well-known.yml
+  - type: SecurityTxt
+    url: well-known/amazon-config-security.txt
+  - type: MCPServer
+    url: mcp/amazon-config-mcp.yml
+  - type: LLMsTxt
+    url: llms/amazon-config-llms.txt
+  - type: Conformance
+    url: conformance/amazon-config-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-config-lifecycle.yml
   - type: Features
     data:
       - name: Configuration Recording

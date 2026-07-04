@@ -1,0 +1,27 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  AWS Config API reference and AWS service pages. AWS Config uses a dated API
+  version (2014-11-12) rather than a URI version segment; individual actions are
+  deprecated in-place and documented in the API reference.
+versioning:
+  scheme: api-version-date
+  current: '2014-11-12'
+  target_header: X-Amz-Target (StarlingDoveService.<Action>)
+  docs: https://docs.aws.amazon.com/config/latest/APIReference/Welcome.html
+deprecation:
+  policy_url: https://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html
+  sunset_header: false
+  deprecation_header: false
+  notes: >-
+    AWS announces deprecations through the Config Document History and AWS
+    service announcements; the JSON protocol does not emit RFC 8594
+    Sunset/Deprecation headers.
+sla:
+  url: https://aws.amazon.com/config/sla/
+  uptime_target: "99.9%"
+status_page: https://health.aws.amazon.com/health/status
+support: https://aws.amazon.com/support/
+deprecated_operations: []
+notes: >-
+  No operations in openapi/amazon-config-openapi.yml carry deprecated: true.

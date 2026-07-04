@@ -1,0 +1,292 @@
+generated: '2026-06-20'
+method: derived
+status: candidate
+source: >-
+  Derived from openapi/amazon-config-openapi.yml operations. AWS publishes no
+  Config-specific hosted MCP server; the awslabs/mcp suite (AWS Documentation and
+  Cloud Control API servers) can reach Config indirectly. One candidate tool per operation.
+related_servers:
+  - name: awslabs-cloud-control-api-mcp-server
+    url: https://awslabs.github.io/mcp/servers/ccapi-mcp-server
+  - name: awslabs-aws-documentation-mcp-server
+    url: https://awslabs.github.io/mcp/servers/aws-documentation-mcp-server
+server:
+  name: amazon-config
+  transport: stdio
+tools:
+  - name: batch_get_aggregate_resource_config
+    description: "Returns the current configuration items for resources that are present in your Config aggregator. The operation also returns a list of resources that are not..."
+    source_operation: openapi/amazon-config-openapi.yml#BatchGetAggregateResourceConfig
+  - name: batch_get_resource_config
+    description: "Returns the BaseConfigurationItem for one or more requested resources. The operation also returns a list of resources that are not processed in the current r..."
+    source_operation: openapi/amazon-config-openapi.yml#BatchGetResourceConfig
+  - name: delete_aggregation_authorization
+    description: "Deletes the authorization granted to the specified configuration aggregator account in a specified region."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteAggregationAuthorization
+  - name: delete_config_rule
+    description: "Deletes the specified Config rule and all of its evaluation results. Config sets the state of a rule to DELETING until the deletion is complete. You cannot u..."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteConfigRule
+  - name: delete_configuration_aggregator
+    description: "Deletes the specified configuration aggregator and the aggregated data associated with the aggregator."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteConfigurationAggregator
+  - name: delete_configuration_recorder
+    description: "Deletes the configuration recorder. After the configuration recorder is deleted, Config will not record resource configuration changes until you create a new..."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteConfigurationRecorder
+  - name: delete_conformance_pack
+    description: "Deletes the specified conformance pack and all the Config rules, remediation actions, and all evaluation results within that conformance pack. Config sets th..."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteConformancePack
+  - name: delete_delivery_channel
+    description: "Deletes the delivery channel. Before you can delete the delivery channel, you must stop the configuration recorder by using the StopConfigurationRecorder act..."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteDeliveryChannel
+  - name: delete_evaluation_results
+    description: "Deletes the evaluation results for the specified Config rule. You can specify one Config rule per request. After you delete the evaluation results, you can c..."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteEvaluationResults
+  - name: delete_organization_config_rule
+    description: "Deletes the specified organization Config rule and all of its evaluation results from all member accounts in that organization. Only a management account and..."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteOrganizationConfigRule
+  - name: delete_organization_conformance_pack
+    description: "Deletes the specified organization conformance pack and all of the Config rules and remediation actions from all member accounts in that organization. Only a..."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteOrganizationConformancePack
+  - name: delete_pending_aggregation_request
+    description: "Deletes pending authorization requests for a specified aggregator account in a specified region."
+    source_operation: openapi/amazon-config-openapi.yml#DeletePendingAggregationRequest
+  - name: delete_remediation_configuration
+    description: "Deletes the remediation configuration."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteRemediationConfiguration
+  - name: delete_remediation_exceptions
+    description: "Deletes one or more remediation exceptions mentioned in the resource keys. Config generates a remediation exception when a problem occurs executing a remedia..."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteRemediationExceptions
+  - name: delete_resource_config
+    description: "Records the configuration state for a custom resource that has been deleted. This API records a new ConfigurationItem with a ResourceDeleted status. You can..."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteResourceConfig
+  - name: delete_retention_configuration
+    description: "Deletes the retention configuration."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteRetentionConfiguration
+  - name: delete_stored_query
+    description: "Deletes the stored query for a single Amazon Web Services account and a single Amazon Web Services Region."
+    source_operation: openapi/amazon-config-openapi.yml#DeleteStoredQuery
+  - name: deliver_config_snapshot
+    description: "Schedules delivery of a configuration snapshot to the Amazon S3 bucket in the specified delivery channel. After the delivery has started, Config sends the fo..."
+    source_operation: openapi/amazon-config-openapi.yml#DeliverConfigSnapshot
+  - name: describe_aggregate_compliance_by_config_rules
+    description: "Returns a list of compliant and noncompliant rules with the number of resources for compliant and noncompliant rules. Does not display rules that do not have..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeAggregateComplianceByConfigRules
+  - name: describe_aggregate_compliance_by_conformance_packs
+    description: "Returns a list of the conformance packs and their associated compliance status with the count of compliant and noncompliant Config rules within each conforma..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeAggregateComplianceByConformancePacks
+  - name: describe_aggregation_authorizations
+    description: "Returns a list of authorizations granted to various aggregator accounts and regions."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeAggregationAuthorizations
+  - name: describe_compliance_by_config_rule
+    description: "Indicates whether the specified Config rules are compliant. If a rule is noncompliant, this action returns the number of Amazon Web Services resources that d..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeComplianceByConfigRule
+  - name: describe_compliance_by_resource
+    description: "Indicates whether the specified Amazon Web Services resources are compliant. If a resource is noncompliant, this action returns the number of Config rules th..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeComplianceByResource
+  - name: describe_config_rule_evaluation_status
+    description: "Returns status information for each of your Config managed rules. The status includes information such as the last time Config invoked the rule, the last tim..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeConfigRuleEvaluationStatus
+  - name: describe_config_rules
+    description: "Returns details about your Config rules."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeConfigRules
+  - name: describe_configuration_aggregator_sources_status
+    description: "Returns status information for sources within an aggregator. The status includes information about the last time Config verified authorization between the so..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeConfigurationAggregatorSourcesStatus
+  - name: describe_configuration_aggregators
+    description: "Returns the details of one or more configuration aggregators. If the configuration aggregator is not specified, this action returns the details for all the c..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeConfigurationAggregators
+  - name: describe_configuration_recorder_status
+    description: "Returns the current status of the specified configuration recorder as well as the status of the last recording event for the recorder. If a configuration rec..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeConfigurationRecorderStatus
+  - name: describe_configuration_recorders
+    description: "Returns the details for the specified configuration recorders. If the configuration recorder is not specified, this action returns the details for all config..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeConfigurationRecorders
+  - name: describe_conformance_pack_compliance
+    description: "Returns compliance details for each rule in that conformance pack. You must provide exact rule names."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeConformancePackCompliance
+  - name: describe_conformance_pack_status
+    description: "Provides one or more conformance packs deployment status. If there are no conformance packs then you will see an empty result."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeConformancePackStatus
+  - name: describe_conformance_packs
+    description: "Returns a list of one or more conformance packs."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeConformancePacks
+  - name: describe_delivery_channel_status
+    description: "Returns the current status of the specified delivery channel. If a delivery channel is not specified, this action returns the current status of all delivery..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeDeliveryChannelStatus
+  - name: describe_delivery_channels
+    description: "Returns details about the specified delivery channel. If a delivery channel is not specified, this action returns the details of all delivery channels associ..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeDeliveryChannels
+  - name: describe_organization_config_rule_statuses
+    description: "Provides organization Config rule deployment status for an organization. The status is not considered successful until organization Config rule is successful..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeOrganizationConfigRuleStatuses
+  - name: describe_organization_config_rules
+    description: "Returns a list of organization Config rules. When you specify the limit and the next token, you receive a paginated response. Limit and next token are not ap..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeOrganizationConfigRules
+  - name: describe_organization_conformance_pack_statuses
+    description: "Provides organization conformance pack deployment status for an organization. The status is not considered successful until organization conformance pack is..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeOrganizationConformancePackStatuses
+  - name: describe_organization_conformance_packs
+    description: "Returns a list of organization conformance packs. When you specify the limit and the next token, you receive a paginated response. Limit and next token are"
+    source_operation: openapi/amazon-config-openapi.yml#DescribeOrganizationConformancePacks
+  - name: describe_pending_aggregation_requests
+    description: "Returns a list of all pending aggregation requests."
+    source_operation: openapi/amazon-config-openapi.yml#DescribePendingAggregationRequests
+  - name: describe_remediation_configurations
+    description: "Returns the details of one or more remediation configurations."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeRemediationConfigurations
+  - name: describe_remediation_exceptions
+    description: "Returns the details of one or more remediation exceptions. A detailed view of a remediation exception for a set of resources that includes an explanation of..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeRemediationExceptions
+  - name: describe_remediation_execution_status
+    description: "Provides a detailed view of a Remediation Execution for a set of resources including state, timestamps for when steps for the remediation execution occur, an..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeRemediationExecutionStatus
+  - name: describe_retention_configurations
+    description: "Returns the details of one or more retention configurations. If the retention configuration name is not specified, this action returns the details for all th..."
+    source_operation: openapi/amazon-config-openapi.yml#DescribeRetentionConfigurations
+  - name: get_aggregate_compliance_details_by_config_rule
+    description: "Returns the evaluation results for the specified Config rule for a specific resource in a rule. The results indicate which Amazon Web Services resources were..."
+    source_operation: openapi/amazon-config-openapi.yml#GetAggregateComplianceDetailsByConfigRule
+  - name: get_aggregate_config_rule_compliance_summary
+    description: "Returns the number of compliant and noncompliant rules for one or more accounts and regions in an aggregator. The results can return an empty result page, bu..."
+    source_operation: openapi/amazon-config-openapi.yml#GetAggregateConfigRuleComplianceSummary
+  - name: get_aggregate_conformance_pack_compliance_summary
+    description: "Returns the count of compliant and noncompliant conformance packs across all Amazon Web Services accounts and Amazon Web Services Regions in an aggregator. Y..."
+    source_operation: openapi/amazon-config-openapi.yml#GetAggregateConformancePackComplianceSummary
+  - name: get_aggregate_discovered_resource_counts
+    description: "Returns the resource counts across accounts and regions that are present in your Config aggregator. You can request the resource counts by providing filters..."
+    source_operation: openapi/amazon-config-openapi.yml#GetAggregateDiscoveredResourceCounts
+  - name: get_aggregate_resource_config
+    description: "Returns configuration item that is aggregated for your specific resource in a specific source account and region."
+    source_operation: openapi/amazon-config-openapi.yml#GetAggregateResourceConfig
+  - name: get_compliance_details_by_config_rule
+    description: "Returns the evaluation results for the specified Config rule. The results indicate which Amazon Web Services resources were evaluated by the rule, when each..."
+    source_operation: openapi/amazon-config-openapi.yml#GetComplianceDetailsByConfigRule
+  - name: get_compliance_details_by_resource
+    description: "Returns the evaluation results for the specified Amazon Web Services resource. The results indicate which Config rules were used to evaluate the resource, wh..."
+    source_operation: openapi/amazon-config-openapi.yml#GetComplianceDetailsByResource
+  - name: get_compliance_summary_by_config_rule
+    description: "Returns the number of Config rules that are compliant and noncompliant, up to a maximum of 25 for each."
+    source_operation: openapi/amazon-config-openapi.yml#GetComplianceSummaryByConfigRule
+  - name: get_compliance_summary_by_resource_type
+    description: "Returns the number of resources that are compliant and the number that are noncompliant. You can specify one or more resource types to get these numbers for..."
+    source_operation: openapi/amazon-config-openapi.yml#GetComplianceSummaryByResourceType
+  - name: get_conformance_pack_compliance_details
+    description: "Returns compliance details of a conformance pack for all Amazon Web Services resources that are monitered by conformance pack."
+    source_operation: openapi/amazon-config-openapi.yml#GetConformancePackComplianceDetails
+  - name: get_conformance_pack_compliance_summary
+    description: "Returns compliance details for the conformance pack based on the cumulative compliance results of all the rules in that conformance pack."
+    source_operation: openapi/amazon-config-openapi.yml#GetConformancePackComplianceSummary
+  - name: get_custom_rule_policy
+    description: "Returns the policy definition containing the logic for your Config Custom Policy rule."
+    source_operation: openapi/amazon-config-openapi.yml#GetCustomRulePolicy
+  - name: get_discovered_resource_counts
+    description: "Returns the resource types, the number of each resource type, and the total number of resources that Config is recording in this region for your Amazon Web S..."
+    source_operation: openapi/amazon-config-openapi.yml#GetDiscoveredResourceCounts
+  - name: get_organization_config_rule_detailed_status
+    description: "Returns detailed status for each member account within an organization for a given organization Config rule."
+    source_operation: openapi/amazon-config-openapi.yml#GetOrganizationConfigRuleDetailedStatus
+  - name: get_organization_conformance_pack_detailed_status
+    description: "Returns detailed status for each member account within an organization for a given organization conformance pack."
+    source_operation: openapi/amazon-config-openapi.yml#GetOrganizationConformancePackDetailedStatus
+  - name: get_organization_custom_rule_policy
+    description: "Returns the policy definition containing the logic for your organization Config Custom Policy rule."
+    source_operation: openapi/amazon-config-openapi.yml#GetOrganizationCustomRulePolicy
+  - name: get_resource_config_history
+    description: "Returns a list of ConfigurationItems for the specified resource. The list contains details about each state of the resource during the specified time interva..."
+    source_operation: openapi/amazon-config-openapi.yml#GetResourceConfigHistory
+  - name: get_resource_evaluation_summary
+    description: "Returns a summary of resource evaluation for the specified resource evaluation ID from the proactive rules that were run. The results indicate which evaluati..."
+    source_operation: openapi/amazon-config-openapi.yml#GetResourceEvaluationSummary
+  - name: get_stored_query
+    description: "Returns the details of a specific stored query."
+    source_operation: openapi/amazon-config-openapi.yml#GetStoredQuery
+  - name: list_aggregate_discovered_resources
+    description: "Accepts a resource type and returns a list of resource identifiers that are aggregated for a specific resource type across accounts and regions. A resource i..."
+    source_operation: openapi/amazon-config-openapi.yml#ListAggregateDiscoveredResources
+  - name: list_conformance_pack_compliance_scores
+    description: "Returns a list of conformance pack compliance scores. A compliance score is the percentage of the number of compliant rule-resource combinations in a conform..."
+    source_operation: openapi/amazon-config-openapi.yml#ListConformancePackComplianceScores
+  - name: list_discovered_resources
+    description: "Accepts a resource type and returns a list of resource identifiers for the resources of that type. A resource identifier includes the resource type, ID, and..."
+    source_operation: openapi/amazon-config-openapi.yml#ListDiscoveredResources
+  - name: list_resource_evaluations
+    description: "Returns a list of proactive resource evaluations."
+    source_operation: openapi/amazon-config-openapi.yml#ListResourceEvaluations
+  - name: list_stored_queries
+    description: "Lists the stored queries for a single Amazon Web Services account and a single Amazon Web Services Region. The default is 100."
+    source_operation: openapi/amazon-config-openapi.yml#ListStoredQueries
+  - name: list_tags_for_resource
+    description: "List the tags for Config resource."
+    source_operation: openapi/amazon-config-openapi.yml#ListTagsForResource
+  - name: put_aggregation_authorization
+    description: "Authorizes the aggregator account and region to collect data from the source account and region. PutAggregationAuthorization is an idempotent API. Subsequent"
+    source_operation: openapi/amazon-config-openapi.yml#PutAggregationAuthorization
+  - name: put_config_rule
+    description: "Adds or updates an Config rule to evaluate if your Amazon Web Services resources comply with your desired configurations. For information on how many Config..."
+    source_operation: openapi/amazon-config-openapi.yml#PutConfigRule
+  - name: put_configuration_aggregator
+    description: "Creates and updates the configuration aggregator with the selected source accounts and regions. The source account can be individual account(s) or an organiz..."
+    source_operation: openapi/amazon-config-openapi.yml#PutConfigurationAggregator
+  - name: put_configuration_recorder
+    description: "Creates a new configuration recorder to record configuration changes for specified resource types. You can also use this action to change the roleARN or the..."
+    source_operation: openapi/amazon-config-openapi.yml#PutConfigurationRecorder
+  - name: put_conformance_pack
+    description: "Creates or updates a conformance pack. A conformance pack is a collection of Config rules that can be easily deployed in an account and a region and across a..."
+    source_operation: openapi/amazon-config-openapi.yml#PutConformancePack
+  - name: put_delivery_channel
+    description: "Creates a delivery channel object to deliver configuration information to an Amazon S3 bucket and Amazon SNS topic. Before you can create a delivery channel,..."
+    source_operation: openapi/amazon-config-openapi.yml#PutDeliveryChannel
+  - name: put_evaluations
+    description: "Used by an Lambda function to deliver evaluation results to Config. This action is required in every Lambda function that is invoked by an Config rule."
+    source_operation: openapi/amazon-config-openapi.yml#PutEvaluations
+  - name: put_external_evaluation
+    description: "Add or updates the evaluations for process checks. This API checks if the rule is a process check when the name of the Config rule is provided."
+    source_operation: openapi/amazon-config-openapi.yml#PutExternalEvaluation
+  - name: put_organization_config_rule
+    description: "Adds or updates an Config rule for your entire organization to evaluate if your Amazon Web Services resources comply with your desired configurations. For in..."
+    source_operation: openapi/amazon-config-openapi.yml#PutOrganizationConfigRule
+  - name: put_organization_conformance_pack
+    description: "Deploys conformance packs across member accounts in an Amazon Web Services Organization. For information on how many organization conformance packs and how m..."
+    source_operation: openapi/amazon-config-openapi.yml#PutOrganizationConformancePack
+  - name: put_remediation_configurations
+    description: "Adds or updates the remediation configuration with a specific Config rule with the selected target or action. The API creates the RemediationConfiguration ob..."
+    source_operation: openapi/amazon-config-openapi.yml#PutRemediationConfigurations
+  - name: put_remediation_exceptions
+    description: "A remediation exception is when a specified resource is no longer considered for auto-remediation. This API adds a new exception or updates an existing excep..."
+    source_operation: openapi/amazon-config-openapi.yml#PutRemediationExceptions
+  - name: put_resource_config
+    description: "Records the configuration state for the resource provided in the request. The configuration state of a resource is represented in Config as Configuration Ite..."
+    source_operation: openapi/amazon-config-openapi.yml#PutResourceConfig
+  - name: put_retention_configuration
+    description: "Creates and updates the retention configuration with details about retention period (number of days) that Config stores your historical information. The API..."
+    source_operation: openapi/amazon-config-openapi.yml#PutRetentionConfiguration
+  - name: put_stored_query
+    description: "Saves a new query or updates an existing saved query. The QueryName must be unique for a single Amazon Web Services account and a single Amazon Web Services..."
+    source_operation: openapi/amazon-config-openapi.yml#PutStoredQuery
+  - name: select_aggregate_resource_config
+    description: "Accepts a structured query language (SQL) SELECT command and an aggregator to query configuration state of Amazon Web Services resources across multiple acco..."
+    source_operation: openapi/amazon-config-openapi.yml#SelectAggregateResourceConfig
+  - name: select_resource_config
+    description: "Accepts a structured query language (SQL) SELECT command, performs the corresponding search, and returns resource configurations matching the properties. For..."
+    source_operation: openapi/amazon-config-openapi.yml#SelectResourceConfig
+  - name: start_config_rules_evaluation
+    description: "Runs an on-demand evaluation for the specified Config rules against the last known configuration state of the resources. Use StartConfigRulesEvaluation when..."
+    source_operation: openapi/amazon-config-openapi.yml#StartConfigRulesEvaluation
+  - name: start_configuration_recorder
+    description: "Starts recording configurations of the Amazon Web Services resources you have selected to record in your Amazon Web Services account. You must have created a..."
+    source_operation: openapi/amazon-config-openapi.yml#StartConfigurationRecorder
+  - name: start_remediation_execution
+    description: "Runs an on-demand remediation for the specified Config rules against the last known remediation configuration. It runs an execution against the current state..."
+    source_operation: openapi/amazon-config-openapi.yml#StartRemediationExecution
+  - name: start_resource_evaluation
+    description: "Runs an on-demand evaluation for the specified resource to determine whether the resource details will comply with configured Config rules. You can also use..."
+    source_operation: openapi/amazon-config-openapi.yml#StartResourceEvaluation
+  - name: stop_configuration_recorder
+    description: "Stops recording configurations of the Amazon Web Services resources you have selected to record in your Amazon Web Services account."
+    source_operation: openapi/amazon-config-openapi.yml#StopConfigurationRecorder
+  - name: tag_resource
+    description: "Associates the specified tags to a resource with the specified resourceArn. If existing tags on a resource are not specified in the request parameters, they..."
+    source_operation: openapi/amazon-config-openapi.yml#TagResource
+  - name: untag_resource
+    description: "Deletes specified tags from a resource."
+    source_operation: openapi/amazon-config-openapi.yml#UntagResource

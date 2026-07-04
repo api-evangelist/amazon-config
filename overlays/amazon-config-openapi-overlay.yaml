@@ -1,0 +1,38 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Amazon Config API
+  version: 1.0.0
+# generated: '2026-06-20'
+# method: generated
+# source: openapi/amazon-config-openapi.yml
+extends: openapi/amazon-config-openapi.yml
+actions:
+  - target: $.info
+    description: Attach API Evangelist rating and provenance metadata.
+    update:
+      x-apievangelist-rating: 4
+      x-apievangelist-slug: amazon-config
+      x-apievangelist-tags:
+        - Auditing
+        - AWS
+        - Compliance
+        - Configuration Management
+        - Governance
+        - Security
+      x-authentication: AWS Signature Version 4 (SigV4) over HTTPS.
+  - target: $.externalDocs
+    description: Point external docs at the AWS Config developer guide.
+    update:
+      description: AWS Config developer guide and API reference
+      url: https://docs.aws.amazon.com/config/latest/developerguide/
+  - target: $.info
+    description: Record companion artifacts produced by the enrichment pipeline.
+    update:
+      x-apievangelist-artifacts:
+        packages: packages/amazon-config-packages.yml
+        llms: llms/amazon-config-llms.txt
+        conformance: conformance/amazon-config-conformance.yml
+        errors: errors/amazon-config-problem-types.yml
+        lifecycle: lifecycle/amazon-config-lifecycle.yml
+        mcp: mcp/amazon-config-mcp.yml
+        well_known: well-known/amazon-config-well-known.yml

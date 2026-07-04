@@ -1,0 +1,26 @@
+generated: '2026-06-20'
+method: searched
+source: Live probes of /.well-known/ paths on the Config API host and the AWS marketing/portal host.
+hosts:
+  - host: https://config.us-east-1.amazonaws.com
+    note: Regional AWS Config API endpoint (from OpenAPI servers[]).
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+  - host: https://aws.amazon.com
+    note: AWS portal / marketing host (apis.yml Portal + Website).
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: amazon-config-security.txt
+        format: rfc9116
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404

@@ -1,0 +1,76 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  AWS Config is accessed through the multi-language AWS SDKs and the AWS CLI;
+  each first-party client library was verified live on its public registry.
+packages:
+  - language: python
+    registry: pypi
+    name: boto3
+    url: https://pypi.org/project/boto3/
+    install: pip install boto3
+    official: true
+    notes: AWS SDK for Python; Config via boto3.client('config')
+  - language: python
+    registry: pypi
+    name: botocore
+    url: https://pypi.org/project/botocore/
+    install: pip install botocore
+    official: true
+    notes: Low-level core powering boto3 and the AWS CLI
+  - language: python
+    registry: pypi
+    name: awscli
+    url: https://pypi.org/project/awscli/
+    install: pip install awscli
+    official: true
+    notes: AWS Command Line Interface (`aws configservice ...`)
+  - language: javascript
+    registry: npm
+    name: "@aws-sdk/client-config-service"
+    url: https://www.npmjs.com/package/@aws-sdk/client-config-service
+    install: npm install @aws-sdk/client-config-service
+    official: true
+    notes: AWS SDK for JavaScript v3, dedicated Config client
+  - language: java
+    registry: maven
+    name: software.amazon.awssdk:config
+    url: https://central.sonatype.com/artifact/software.amazon.awssdk/config
+    install: "implementation 'software.amazon.awssdk:config'"
+    official: true
+    notes: AWS SDK for Java v2 Config module
+  - language: dotnet
+    registry: nuget
+    name: AWSSDK.ConfigService
+    url: https://www.nuget.org/packages/AWSSDK.ConfigService
+    install: dotnet add package AWSSDK.ConfigService
+    official: true
+    notes: AWS SDK for .NET Config service client
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/aws/aws-sdk-go-v2/service/configservice
+    url: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/configservice
+    install: go get github.com/aws/aws-sdk-go-v2/service/configservice
+    official: true
+    notes: AWS SDK for Go v2 Config service client
+  - language: ruby
+    registry: rubygems
+    name: aws-sdk-configservice
+    url: https://rubygems.org/gems/aws-sdk-configservice
+    install: gem install aws-sdk-configservice
+    official: true
+    notes: AWS SDK for Ruby Config service client
+  - language: php
+    registry: packagist
+    name: aws/aws-sdk-php
+    url: https://packagist.org/packages/aws/aws-sdk-php
+    install: composer require aws/aws-sdk-php
+    official: true
+    notes: AWS SDK for PHP (monolithic); Config via ConfigServiceClient
+  - language: rust
+    registry: crates.io
+    name: aws-sdk-config
+    url: https://crates.io/crates/aws-sdk-config
+    install: cargo add aws-sdk-config
+    official: true
+    notes: AWS SDK for Rust Config service client
