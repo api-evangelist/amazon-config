@@ -62,6 +62,14 @@ apis:
       - type: ErrorCatalog
         url: errors/amazon-config-problem-types.yml
 common:
+  - type: TrustCenter
+    url: security/amazon-config-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-config-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-config-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-config-authentication.yml
   - type: Portal
     url: https://aws.amazon.com/
   - type: Website
