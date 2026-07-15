@@ -1,0 +1,1498 @@
+generated: '2026-07-15'
+method: generated
+source: openapi/amazon-config-openapi.yml
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 92
+  by_action_class:
+    acting: 92
+  by_consequence:
+    write: 86
+    physical: 5
+    safety-critical: 1
+  human_in_the_loop_required: 1
+operations:
+- path: /#X-Amz-Target=StarlingDoveService.BatchGetAggregateResourceConfig
+  method: post
+  operationId: BatchGetAggregateResourceConfig
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.BatchGetResourceConfig
+  method: post
+  operationId: BatchGetResourceConfig
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteAggregationAuthorization
+  method: post
+  operationId: DeleteAggregationAuthorization
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteConfigRule
+  method: post
+  operationId: DeleteConfigRule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteConfigurationAggregator
+  method: post
+  operationId: DeleteConfigurationAggregator
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteConfigurationRecorder
+  method: post
+  operationId: DeleteConfigurationRecorder
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteConformancePack
+  method: post
+  operationId: DeleteConformancePack
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteDeliveryChannel
+  method: post
+  operationId: DeleteDeliveryChannel
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteEvaluationResults
+  method: post
+  operationId: DeleteEvaluationResults
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteOrganizationConfigRule
+  method: post
+  operationId: DeleteOrganizationConfigRule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteOrganizationConformancePack
+  method: post
+  operationId: DeleteOrganizationConformancePack
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeletePendingAggregationRequest
+  method: post
+  operationId: DeletePendingAggregationRequest
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteRemediationConfiguration
+  method: post
+  operationId: DeleteRemediationConfiguration
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteRemediationExceptions
+  method: post
+  operationId: DeleteRemediationExceptions
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteResourceConfig
+  method: post
+  operationId: DeleteResourceConfig
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteRetentionConfiguration
+  method: post
+  operationId: DeleteRetentionConfiguration
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeleteStoredQuery
+  method: post
+  operationId: DeleteStoredQuery
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DeliverConfigSnapshot
+  method: post
+  operationId: DeliverConfigSnapshot
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeAggregateComplianceByConfigRules
+  method: post
+  operationId: DescribeAggregateComplianceByConfigRules
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeAggregateComplianceByConformancePacks
+  method: post
+  operationId: DescribeAggregateComplianceByConformancePacks
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeAggregationAuthorizations
+  method: post
+  operationId: DescribeAggregationAuthorizations
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeComplianceByConfigRule
+  method: post
+  operationId: DescribeComplianceByConfigRule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeComplianceByResource
+  method: post
+  operationId: DescribeComplianceByResource
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeConfigRuleEvaluationStatus
+  method: post
+  operationId: DescribeConfigRuleEvaluationStatus
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeConfigRules
+  method: post
+  operationId: DescribeConfigRules
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeConfigurationAggregatorSourcesStatus
+  method: post
+  operationId: DescribeConfigurationAggregatorSourcesStatus
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeConfigurationAggregators
+  method: post
+  operationId: DescribeConfigurationAggregators
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeConfigurationRecorderStatus
+  method: post
+  operationId: DescribeConfigurationRecorderStatus
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeConfigurationRecorders
+  method: post
+  operationId: DescribeConfigurationRecorders
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeConformancePackCompliance
+  method: post
+  operationId: DescribeConformancePackCompliance
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeConformancePackStatus
+  method: post
+  operationId: DescribeConformancePackStatus
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeConformancePacks
+  method: post
+  operationId: DescribeConformancePacks
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeDeliveryChannelStatus
+  method: post
+  operationId: DescribeDeliveryChannelStatus
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeDeliveryChannels
+  method: post
+  operationId: DescribeDeliveryChannels
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeOrganizationConfigRuleStatuses
+  method: post
+  operationId: DescribeOrganizationConfigRuleStatuses
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeOrganizationConfigRules
+  method: post
+  operationId: DescribeOrganizationConfigRules
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeOrganizationConformancePackStatuses
+  method: post
+  operationId: DescribeOrganizationConformancePackStatuses
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeOrganizationConformancePacks
+  method: post
+  operationId: DescribeOrganizationConformancePacks
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribePendingAggregationRequests
+  method: post
+  operationId: DescribePendingAggregationRequests
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeRemediationConfigurations
+  method: post
+  operationId: DescribeRemediationConfigurations
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeRemediationExceptions
+  method: post
+  operationId: DescribeRemediationExceptions
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeRemediationExecutionStatus
+  method: post
+  operationId: DescribeRemediationExecutionStatus
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.DescribeRetentionConfigurations
+  method: post
+  operationId: DescribeRetentionConfigurations
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetAggregateComplianceDetailsByConfigRule
+  method: post
+  operationId: GetAggregateComplianceDetailsByConfigRule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetAggregateConfigRuleComplianceSummary
+  method: post
+  operationId: GetAggregateConfigRuleComplianceSummary
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetAggregateConformancePackComplianceSummary
+  method: post
+  operationId: GetAggregateConformancePackComplianceSummary
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetAggregateDiscoveredResourceCounts
+  method: post
+  operationId: GetAggregateDiscoveredResourceCounts
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetAggregateResourceConfig
+  method: post
+  operationId: GetAggregateResourceConfig
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetComplianceDetailsByConfigRule
+  method: post
+  operationId: GetComplianceDetailsByConfigRule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetComplianceDetailsByResource
+  method: post
+  operationId: GetComplianceDetailsByResource
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetComplianceSummaryByConfigRule
+  method: post
+  operationId: GetComplianceSummaryByConfigRule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetComplianceSummaryByResourceType
+  method: post
+  operationId: GetComplianceSummaryByResourceType
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetConformancePackComplianceDetails
+  method: post
+  operationId: GetConformancePackComplianceDetails
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetConformancePackComplianceSummary
+  method: post
+  operationId: GetConformancePackComplianceSummary
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetCustomRulePolicy
+  method: post
+  operationId: GetCustomRulePolicy
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetDiscoveredResourceCounts
+  method: post
+  operationId: GetDiscoveredResourceCounts
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetOrganizationConfigRuleDetailedStatus
+  method: post
+  operationId: GetOrganizationConfigRuleDetailedStatus
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetOrganizationConformancePackDetailedStatus
+  method: post
+  operationId: GetOrganizationConformancePackDetailedStatus
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetOrganizationCustomRulePolicy
+  method: post
+  operationId: GetOrganizationCustomRulePolicy
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetResourceConfigHistory
+  method: post
+  operationId: GetResourceConfigHistory
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetResourceEvaluationSummary
+  method: post
+  operationId: GetResourceEvaluationSummary
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.GetStoredQuery
+  method: post
+  operationId: GetStoredQuery
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.ListAggregateDiscoveredResources
+  method: post
+  operationId: ListAggregateDiscoveredResources
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.ListConformancePackComplianceScores
+  method: post
+  operationId: ListConformancePackComplianceScores
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.ListDiscoveredResources
+  method: post
+  operationId: ListDiscoveredResources
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.ListResourceEvaluations
+  method: post
+  operationId: ListResourceEvaluations
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.ListStoredQueries
+  method: post
+  operationId: ListStoredQueries
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.ListTagsForResource
+  method: post
+  operationId: ListTagsForResource
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutAggregationAuthorization
+  method: post
+  operationId: PutAggregationAuthorization
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutConfigRule
+  method: post
+  operationId: PutConfigRule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutConfigurationAggregator
+  method: post
+  operationId: PutConfigurationAggregator
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutConfigurationRecorder
+  method: post
+  operationId: PutConfigurationRecorder
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutConformancePack
+  method: post
+  operationId: PutConformancePack
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutDeliveryChannel
+  method: post
+  operationId: PutDeliveryChannel
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutEvaluations
+  method: post
+  operationId: PutEvaluations
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutExternalEvaluation
+  method: post
+  operationId: PutExternalEvaluation
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutOrganizationConfigRule
+  method: post
+  operationId: PutOrganizationConfigRule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutOrganizationConformancePack
+  method: post
+  operationId: PutOrganizationConformancePack
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutRemediationConfigurations
+  method: post
+  operationId: PutRemediationConfigurations
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutRemediationExceptions
+  method: post
+  operationId: PutRemediationExceptions
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutResourceConfig
+  method: post
+  operationId: PutResourceConfig
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutRetentionConfiguration
+  method: post
+  operationId: PutRetentionConfiguration
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.PutStoredQuery
+  method: post
+  operationId: PutStoredQuery
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.SelectAggregateResourceConfig
+  method: post
+  operationId: SelectAggregateResourceConfig
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.SelectResourceConfig
+  method: post
+  operationId: SelectResourceConfig
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.StartConfigRulesEvaluation
+  method: post
+  operationId: StartConfigRulesEvaluation
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.StartConfigurationRecorder
+  method: post
+  operationId: StartConfigurationRecorder
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.StartRemediationExecution
+  method: post
+  operationId: StartRemediationExecution
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.StartResourceEvaluation
+  method: post
+  operationId: StartResourceEvaluation
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.StopConfigurationRecorder
+  method: post
+  operationId: StopConfigurationRecorder
+  x-agentic-access:
+    action-class: acting
+    consequence: safety-critical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 120
+      exchange: true
+      purpose-required: true
+      proof-of-possession: true
+    escalation:
+      human-in-the-loop: required
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.TagResource
+  method: post
+  operationId: TagResource
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#X-Amz-Target=StarlingDoveService.UntagResource
+  method: post
+  operationId: UntagResource
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required

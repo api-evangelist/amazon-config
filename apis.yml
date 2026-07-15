@@ -62,6 +62,8 @@ apis:
       - type: ErrorCatalog
         url: errors/amazon-config-problem-types.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-config-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-config-trust-center.yml
   - type: VulnerabilityDisclosure
