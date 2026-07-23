@@ -1,0 +1,363 @@
+openapi: 3.0.0
+info:
+  version: '2014-11-12'
+  x-release: v4
+  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DescribeComplianceByConfigRule API'
+  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: config
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: https://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: http://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+- url: https://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=StarlingDoveService.DescribeComplianceByConfigRule'
+paths:
+  /#X-Amz-Target=StarlingDoveService.DescribeComplianceByConfigRule:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeComplianceByConfigRule
+      description: <p>Indicates whether the specified Config rules are compliant. If a rule is noncompliant, this action returns the number of Amazon Web Services resources that do not comply with the rule.</p> <p>A rule is compliant if all of the evaluated resources comply with it. It is noncompliant if any of these resources do not comply.</p> <p>If Config has no current evaluation results for the rule, it returns <code>INSUFFICIENT_DATA</code>. This result might indicate one of the following conditions:</p> <ul> <li> <p>Config has never invoked an evaluation for the rule. To check whether it has, use the <code>DescribeConfigRuleEvaluationStatus</code> action to get the <code>LastSuccessfulInvocationTime</code> and <code>LastFailedInvocationTime</code>.</p> </li> <li> <p>The rule's Lambda function is failing to send evaluation results to Config. Verify that the role you assigned to your configuration recorder includes the <code>config:PutEvaluations</code> permission. If the rule is a custom rule, verify that the Lambda execution role includes the <code>config:PutEvaluations</code> permission.</p> </li> <li> <p>The rule's Lambda function has returned <code>NOT_APPLICABLE</code> for all evaluation results. This can occur if the resources were deleted or removed from the rule's scope.</p> </li> </ul>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeComplianceByConfigRuleResponse'
+              examples:
+                DescribeComplianceByConfigRule200Example:
+                  summary: Default DescribeComplianceByConfigRule 200
+                  x-microcks-default: true
+                  value:
+                    ComplianceByConfigRules: example
+                    NextToken: example
+        '480':
+          description: InvalidParameterValueException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidParameterValueException'
+              examples:
+                DescribeComplianceByConfigRule480Example:
+                  summary: Default DescribeComplianceByConfigRule 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: NoSuchConfigRuleException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NoSuchConfigRuleException'
+              examples:
+                DescribeComplianceByConfigRule481Example:
+                  summary: Default DescribeComplianceByConfigRule 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: InvalidNextTokenException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidNextTokenException'
+              examples:
+                DescribeComplianceByConfigRule482Example:
+                  summary: Default DescribeComplianceByConfigRule 482
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeComplianceByConfigRuleRequest'
+      parameters:
+      - name: NextToken
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StarlingDoveService.DescribeComplianceByConfigRule
+      summary: Amazon Config Describe Compliance by Config Rule
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=StarlingDoveService.DescribeComplianceByConfigRule'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    ComplianceTypes:
+      type: array
+      items:
+        $ref: '#/components/schemas/ComplianceType'
+      minItems: 0
+      maxItems: 3
+    StringWithCharLimit64:
+      type: string
+      minLength: 1
+      maxLength: 64
+    Integer:
+      type: integer
+    InvalidNextTokenException: {}
+    InvalidParameterValueException: {}
+    DescribeComplianceByConfigRuleRequest:
+      type: object
+      title: DescribeComplianceByConfigRuleRequest
+      properties:
+        ConfigRuleNames:
+          allOf:
+          - $ref: '#/components/schemas/ConfigRuleNames'
+          - description: Specify one or more Config rule names to filter the results by rule.
+        ComplianceTypes:
+          allOf:
+          - $ref: '#/components/schemas/ComplianceTypes'
+          - description: Filters the results by compliance.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.
+      description: <p/>
+    ConfigRuleNames:
+      type: array
+      items:
+        $ref: '#/components/schemas/ConfigRuleName'
+      minItems: 0
+      maxItems: 25
+    DescribeComplianceByConfigRuleResponse:
+      type: object
+      properties:
+        ComplianceByConfigRules:
+          allOf:
+          - $ref: '#/components/schemas/ComplianceByConfigRules'
+          - description: Indicates whether each of the specified Config rules is compliant.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The string that you use in a subsequent request to get the next page of results in a paginated response.
+      description: <p/>
+    ComplianceByConfigRules:
+      type: array
+      items:
+        $ref: '#/components/schemas/ComplianceByConfigRule'
+    ComplianceContributorCount:
+      type: object
+      properties:
+        CappedCount:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The number of Amazon Web Services resources or Config rules responsible for the current compliance of the item.
+        CapExceeded:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Indicates whether the maximum count is reached.
+      description: The number of Amazon Web Services resources or Config rules responsible for the current compliance of the item, up to a maximum number.
+    ComplianceType:
+      type: string
+      enum:
+      - COMPLIANT
+      - NON_COMPLIANT
+      - NOT_APPLICABLE
+      - INSUFFICIENT_DATA
+    ConfigRuleName:
+      type: string
+      pattern: .*\S.*
+      minLength: 1
+      maxLength: 128
+    ComplianceByConfigRule:
+      type: object
+      properties:
+        ConfigRuleName:
+          allOf:
+          - $ref: '#/components/schemas/StringWithCharLimit64'
+          - description: The name of the Config rule.
+        Compliance:
+          allOf:
+          - $ref: '#/components/schemas/Compliance'
+          - description: Indicates whether the Config rule is compliant.
+      description: Indicates whether an Config rule is compliant. A rule is compliant if all of the resources that the rule evaluated comply with it. A rule is noncompliant if any of these resources do not comply.
+    NoSuchConfigRuleException: {}
+    String:
+      type: string
+    Boolean:
+      type: boolean
+    Compliance:
+      type: object
+      properties:
+        ComplianceType:
+          allOf:
+          - $ref: '#/components/schemas/ComplianceType'
+          - description: <p>Indicates whether an Amazon Web Services resource or Config rule is compliant.</p> <p>A resource is compliant if it complies with all of the Config rules that evaluate it. A resource is noncompliant if it does not comply with one or more of these rules.</p> <p>A rule is compliant if all of the resources that the rule evaluates comply with it. A rule is noncompliant if any of these resources do not comply.</p> <p>Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the Amazon Web Services resource or Config rule.</p> <p>For the <code>Compliance</code> data type, Config supports only <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. Config does not support the <code>NOT_APPLICABLE</code> value for the <code>Compliance</code> data type.</p>
+        ComplianceContributorCount:
+          allOf:
+          - $ref: '#/components/schemas/ComplianceContributorCount'
+          - description: The number of Amazon Web Services resources or Config rules that cause a result of <code>NON_COMPLIANT</code>, up to a maximum number.
+      description: Indicates whether an Amazon Web Services resource or Config rule is compliant and provides the number of contributors that affect the compliance.
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/config/
+x-hasEquivalentPaths: true

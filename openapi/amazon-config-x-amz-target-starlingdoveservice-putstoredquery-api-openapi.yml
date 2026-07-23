@@ -1,0 +1,351 @@
+openapi: 3.0.0
+info:
+  version: '2014-11-12'
+  x-release: v4
+  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.PutStoredQuery API'
+  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: config
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: https://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: http://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+- url: https://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=StarlingDoveService.PutStoredQuery'
+paths:
+  /#X-Amz-Target=StarlingDoveService.PutStoredQuery:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: PutStoredQuery
+      description: <p>Saves a new query or updates an existing saved query. The <code>QueryName</code> must be unique for a single Amazon Web Services account and a single Amazon Web Services Region. You can create upto 300 queries in a single Amazon Web Services account and a single Amazon Web Services Region.</p> <note> <p> <code>PutStoredQuery</code> is an idempotent API. Subsequent requests won’t create a duplicate resource if one was already created. If a following request has different <code>tags</code> values, Config will ignore these differences and treat it as an idempotent request of the previous. In this case, <code>tags</code> will not be updated, even if they are different.</p> </note>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutStoredQueryResponse'
+              examples:
+                PutStoredQuery200Example:
+                  summary: Default PutStoredQuery 200
+                  x-microcks-default: true
+                  value:
+                    QueryArn: example
+        '480':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+              examples:
+                PutStoredQuery480Example:
+                  summary: Default PutStoredQuery 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: TooManyTagsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyTagsException'
+              examples:
+                PutStoredQuery481Example:
+                  summary: Default PutStoredQuery 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: ResourceConcurrentModificationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceConcurrentModificationException'
+              examples:
+                PutStoredQuery482Example:
+                  summary: Default PutStoredQuery 482
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutStoredQueryRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StarlingDoveService.PutStoredQuery
+      summary: Amazon Config Put Stored Query
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=StarlingDoveService.PutStoredQuery'
+components:
+  schemas:
+    Tag:
+      type: object
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: One part of a key-value pair that make up a tag. A key is a general label that acts like a category for more specific tag values.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The optional part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key).
+      description: The tags for the resource. The metadata that you apply to a resource to help you categorize and organize them. Each tag consists of a key and an optional value, both of which you define. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters.
+    PutStoredQueryResponse:
+      type: object
+      properties:
+        QueryArn:
+          allOf:
+          - $ref: '#/components/schemas/QueryArn'
+          - description: Amazon Resource Name (ARN) of the query. For example, arn:partition:service:region:account-id:resource-type/resource-name/resource-id.
+    QueryArn:
+      type: string
+      pattern: ^arn:aws[a-z\-]*:config:[a-z\-\d]+:\d+:stored-query/[a-zA-Z0-9-_]+/query-[a-zA-Z\d-_/]+$
+      minLength: 1
+      maxLength: 500
+    QueryExpression:
+      type: string
+      pattern: '[\s\S]*'
+      minLength: 1
+      maxLength: 4096
+    TagValue:
+      type: string
+      minLength: 0
+      maxLength: 256
+    TagsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+      minItems: 0
+      maxItems: 50
+    TooManyTagsException: {}
+    TagKey:
+      type: string
+      minLength: 1
+      maxLength: 128
+    ResourceConcurrentModificationException: {}
+    PutStoredQueryRequest:
+      type: object
+      required:
+      - StoredQuery
+      title: PutStoredQueryRequest
+      properties:
+        StoredQuery:
+          allOf:
+          - $ref: '#/components/schemas/StoredQuery'
+          - description: <p>A list of <code>StoredQuery</code> objects. The mandatory fields are <code>QueryName</code> and <code>Expression</code>.</p> <note> <p>When you are creating a query, you must provide a query name and an expression. When you are updating a query, you must provide a query name but updating the description is optional.</p> </note>
+        Tags:
+          allOf:
+          - $ref: '#/components/schemas/TagsList'
+          - description: A list of <code>Tags</code> object.
+    QueryDescription:
+      type: string
+      pattern: '[\s\S]*'
+      minLength: 0
+      maxLength: 256
+    QueryId:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 36
+    StoredQuery:
+      type: object
+      required:
+      - QueryName
+      properties:
+        QueryId:
+          allOf:
+          - $ref: '#/components/schemas/QueryId'
+          - description: The ID of the query.
+        QueryArn:
+          allOf:
+          - $ref: '#/components/schemas/QueryArn'
+          - description: Amazon Resource Name (ARN) of the query. For example, arn:partition:service:region:account-id:resource-type/resource-name/resource-id.
+        QueryName:
+          allOf:
+          - $ref: '#/components/schemas/QueryName'
+          - description: The name of the query.
+        Description:
+          allOf:
+          - $ref: '#/components/schemas/QueryDescription'
+          - description: A unique description for the query.
+        Expression:
+          allOf:
+          - $ref: '#/components/schemas/QueryExpression'
+          - description: 'The expression of the query. For example, <code>SELECT resourceId, resourceType, supplementaryConfiguration.BucketVersioningConfiguration.status WHERE resourceType = ''AWS::S3::Bucket'' AND supplementaryConfiguration.BucketVersioningConfiguration.status = ''Off''.</code> '
+      description: Provides the details of a stored query.
+    QueryName:
+      type: string
+      pattern: ^[a-zA-Z0-9-_]+$
+      minLength: 1
+      maxLength: 64
+    ValidationException: {}
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/config/
+x-hasEquivalentPaths: true

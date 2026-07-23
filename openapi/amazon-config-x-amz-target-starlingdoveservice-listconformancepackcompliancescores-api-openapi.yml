@@ -1,0 +1,364 @@
+openapi: 3.0.0
+info:
+  version: '2014-11-12'
+  x-release: v4
+  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.ListConformancePackComplianceScores API'
+  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: config
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: https://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: http://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+- url: https://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=StarlingDoveService.ListConformancePackComplianceScores'
+paths:
+  /#X-Amz-Target=StarlingDoveService.ListConformancePackComplianceScores:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: ListConformancePackComplianceScores
+      description: <p>Returns a list of conformance pack compliance scores. A compliance score is the percentage of the number of compliant rule-resource combinations in a conformance pack compared to the number of total possible rule-resource combinations in the conformance pack. This metric provides you with a high-level view of the compliance state of your conformance packs. You can use it to identify, investigate, and understand the level of compliance in your conformance packs.</p> <note> <p>Conformance packs with no evaluation results will have a compliance score of <code>INSUFFICIENT_DATA</code>.</p> </note>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListConformancePackComplianceScoresResponse'
+              examples:
+                ListConformancePackComplianceScores200Example:
+                  summary: Default ListConformancePackComplianceScores 200
+                  x-microcks-default: true
+                  value:
+                    NextToken: example
+                    ConformancePackComplianceScores: example
+        '480':
+          description: InvalidParameterValueException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidParameterValueException'
+              examples:
+                ListConformancePackComplianceScores480Example:
+                  summary: Default ListConformancePackComplianceScores 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: InvalidLimitException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidLimitException'
+              examples:
+                ListConformancePackComplianceScores481Example:
+                  summary: Default ListConformancePackComplianceScores 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: InvalidNextTokenException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidNextTokenException'
+              examples:
+                ListConformancePackComplianceScores482Example:
+                  summary: Default ListConformancePackComplianceScores 482
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ListConformancePackComplianceScoresRequest'
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: NextToken
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StarlingDoveService.ListConformancePackComplianceScores
+      summary: Amazon Config List Conformance Pack Compliance Scores
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=StarlingDoveService.ListConformancePackComplianceScores'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    ConformancePackComplianceScore:
+      type: object
+      properties:
+        Score:
+          allOf:
+          - $ref: '#/components/schemas/ComplianceScore'
+          - description: Compliance score for the conformance pack. Conformance packs with no evaluation results will have a compliance score of <code>INSUFFICIENT_DATA</code>.
+        ConformancePackName:
+          allOf:
+          - $ref: '#/components/schemas/ConformancePackName'
+          - description: The name of the conformance pack.
+        LastUpdatedTime:
+          allOf:
+          - $ref: '#/components/schemas/LastUpdatedTime'
+          - description: The time that the conformance pack compliance score was last updated.
+      description: A compliance score is the percentage of the number of compliant rule-resource combinations in a conformance pack compared to the number of total possible rule-resource combinations in the conformance pack. This metric provides you with a high-level view of the compliance state of your conformance packs. You can use it to identify, investigate, and understand the level of compliance in your conformance packs.
+    ConformancePackComplianceScores:
+      type: array
+      items:
+        $ref: '#/components/schemas/ConformancePackComplianceScore'
+    ListConformancePackComplianceScoresRequest:
+      type: object
+      title: ListConformancePackComplianceScoresRequest
+      properties:
+        Filters:
+          allOf:
+          - $ref: '#/components/schemas/ConformancePackComplianceScoresFilters'
+          - description: Filters the results based on the <code>ConformancePackComplianceScoresFilters</code>.
+        SortOrder:
+          allOf:
+          - $ref: '#/components/schemas/SortOrder'
+          - description: <p>Determines the order in which conformance pack compliance scores are sorted. Either in ascending or descending order.</p> <p>By default, conformance pack compliance scores are sorted in alphabetical order by name of the conformance pack. Conformance pack compliance scores are sorted in reverse alphabetical order if you enter <code>DESCENDING</code>.</p> <p>You can sort conformance pack compliance scores by the numerical value of the compliance score by entering <code>SCORE</code> in the <code>SortBy</code> action. When compliance scores are sorted by <code>SCORE</code>, conformance packs with a compliance score of <code>INSUFFICIENT_DATA</code> will be last when sorting by ascending order and first when sorting by descending order.</p>
+        SortBy:
+          allOf:
+          - $ref: '#/components/schemas/SortBy'
+          - description: <p>Sorts your conformance pack compliance scores in either ascending or descending order, depending on <code>SortOrder</code>.</p> <p>By default, conformance pack compliance scores are sorted in alphabetical order by name of the conformance pack. Enter <code>SCORE</code>, to sort conformance pack compliance scores by the numerical value of the compliance score.</p>
+        Limit:
+          allOf:
+          - $ref: '#/components/schemas/PageSizeLimit'
+          - description: The maximum number of conformance pack compliance scores returned on each page.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/NextToken'
+          - description: The <code>nextToken</code> string in a prior request that you can use to get the paginated response for the next set of conformance pack compliance scores.
+    ConformancePackNameFilter:
+      type: array
+      items:
+        $ref: '#/components/schemas/ConformancePackName'
+      minItems: 1
+      maxItems: 25
+    ListConformancePackComplianceScoresResponse:
+      type: object
+      required:
+      - ConformancePackComplianceScores
+      properties:
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/NextToken'
+          - description: The <code>nextToken</code> string that you can use to get the next page of results in a paginated response.
+        ConformancePackComplianceScores:
+          allOf:
+          - $ref: '#/components/schemas/ConformancePackComplianceScores'
+          - description: A list of <code>ConformancePackComplianceScore</code> objects.
+    LastUpdatedTime:
+      type: string
+      format: date-time
+    InvalidNextTokenException: {}
+    SortOrder:
+      type: string
+      enum:
+      - ASCENDING
+      - DESCENDING
+    InvalidParameterValueException: {}
+    ConformancePackName:
+      type: string
+      pattern: '[a-zA-Z][-a-zA-Z0-9]*'
+      minLength: 1
+      maxLength: 256
+    InvalidLimitException: {}
+    ConformancePackComplianceScoresFilters:
+      type: object
+      required:
+      - ConformancePackNames
+      properties:
+        ConformancePackNames:
+          allOf:
+          - $ref: '#/components/schemas/ConformancePackNameFilter'
+          - description: The names of the conformance packs whose compliance scores you want to include in the conformance pack compliance score result set. You can include up to 25 conformance packs in the <code>ConformancePackNames</code> array of strings, each with a character limit of 256 characters for the conformance pack name.
+      description: 'A list of filters to apply to the conformance pack compliance score result set. '
+    ComplianceScore:
+      type: string
+    SortBy:
+      type: string
+      enum:
+      - SCORE
+    PageSizeLimit:
+      type: integer
+      minimum: 0
+      maximum: 20
+    NextToken:
+      type: string
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/config/
+x-hasEquivalentPaths: true

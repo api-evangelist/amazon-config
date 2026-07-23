@@ -1,0 +1,307 @@
+openapi: 3.0.0
+info:
+  version: '2014-11-12'
+  x-release: v4
+  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.GetComplianceSummaryByResourceType API'
+  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: config
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: https://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: http://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+- url: https://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=StarlingDoveService.GetComplianceSummaryByResourceType'
+paths:
+  /#X-Amz-Target=StarlingDoveService.GetComplianceSummaryByResourceType:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: GetComplianceSummaryByResourceType
+      description: Returns the number of resources that are compliant and the number that are noncompliant. You can specify one or more resource types to get these numbers for each resource type. The maximum number returned is 100.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetComplianceSummaryByResourceTypeResponse'
+              examples:
+                GetComplianceSummaryByResourceType200Example:
+                  summary: Default GetComplianceSummaryByResourceType 200
+                  x-microcks-default: true
+                  value:
+                    ComplianceSummariesByResourceType: example
+        '480':
+          description: InvalidParameterValueException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidParameterValueException'
+              examples:
+                GetComplianceSummaryByResourceType480Example:
+                  summary: Default GetComplianceSummaryByResourceType 480
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetComplianceSummaryByResourceTypeRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StarlingDoveService.GetComplianceSummaryByResourceType
+      summary: Amazon Config Get Compliance Summary by Resource Type
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=StarlingDoveService.GetComplianceSummaryByResourceType'
+components:
+  schemas:
+    ComplianceSummariesByResourceType:
+      type: array
+      items:
+        $ref: '#/components/schemas/ComplianceSummaryByResourceType'
+    ComplianceSummaryByResourceType:
+      type: object
+      properties:
+        ResourceType:
+          allOf:
+          - $ref: '#/components/schemas/StringWithCharLimit256'
+          - description: The type of Amazon Web Services resource.
+        ComplianceSummary:
+          allOf:
+          - $ref: '#/components/schemas/ComplianceSummary'
+          - description: The number of Amazon Web Services resources that are compliant or noncompliant, up to a maximum of 100 for each.
+      description: The number of Amazon Web Services resources of a specific type that are compliant or noncompliant, up to a maximum of 100 for each.
+    StringWithCharLimit256:
+      type: string
+      minLength: 1
+      maxLength: 256
+    Date:
+      type: string
+      format: date-time
+    ResourceTypes:
+      type: array
+      items:
+        $ref: '#/components/schemas/StringWithCharLimit256'
+      minItems: 0
+      maxItems: 20
+    ComplianceSummary:
+      type: object
+      properties:
+        CompliantResourceCount:
+          allOf:
+          - $ref: '#/components/schemas/ComplianceContributorCount'
+          - description: The number of Config rules or Amazon Web Services resources that are compliant, up to a maximum of 25 for rules and 100 for resources.
+        NonCompliantResourceCount:
+          allOf:
+          - $ref: '#/components/schemas/ComplianceContributorCount'
+          - description: The number of Config rules or Amazon Web Services resources that are noncompliant, up to a maximum of 25 for rules and 100 for resources.
+        ComplianceSummaryTimestamp:
+          allOf:
+          - $ref: '#/components/schemas/Date'
+          - description: The time that Config created the compliance summary.
+      description: The number of Config rules or Amazon Web Services resources that are compliant and noncompliant.
+    Integer:
+      type: integer
+    GetComplianceSummaryByResourceTypeRequest:
+      type: object
+      title: GetComplianceSummaryByResourceTypeRequest
+      properties:
+        ResourceTypes:
+          allOf:
+          - $ref: '#/components/schemas/ResourceTypes'
+          - description: <p>Specify one or more resource types to get the number of resources that are compliant and the number that are noncompliant for each resource type.</p> <p>For this request, you can specify an Amazon Web Services resource type such as <code>AWS::EC2::Instance</code>. You can specify that the resource type is an Amazon Web Services account by specifying <code>AWS::::Account</code>.</p>
+      description: <p/>
+    InvalidParameterValueException: {}
+    ComplianceContributorCount:
+      type: object
+      properties:
+        CappedCount:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The number of Amazon Web Services resources or Config rules responsible for the current compliance of the item.
+        CapExceeded:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Indicates whether the maximum count is reached.
+      description: The number of Amazon Web Services resources or Config rules responsible for the current compliance of the item, up to a maximum number.
+    Boolean:
+      type: boolean
+    GetComplianceSummaryByResourceTypeResponse:
+      type: object
+      properties:
+        ComplianceSummariesByResourceType:
+          allOf:
+          - $ref: '#/components/schemas/ComplianceSummariesByResourceType'
+          - description: The number of resources that are compliant and the number that are noncompliant. If one or more resource types were provided with the request, the numbers are returned for each resource type. The maximum number returned is 100.
+      description: <p/>
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/config/
+x-hasEquivalentPaths: true

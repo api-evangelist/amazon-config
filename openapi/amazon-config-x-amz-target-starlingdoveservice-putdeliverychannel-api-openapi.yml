@@ -1,0 +1,364 @@
+openapi: 3.0.0
+info:
+  version: '2014-11-12'
+  x-release: v4
+  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.PutDeliveryChannel API'
+  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: config
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: https://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: http://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+- url: https://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=StarlingDoveService.PutDeliveryChannel'
+paths:
+  /#X-Amz-Target=StarlingDoveService.PutDeliveryChannel:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: PutDeliveryChannel
+      description: <p>Creates a delivery channel object to deliver configuration information to an Amazon S3 bucket and Amazon SNS topic.</p> <p>Before you can create a delivery channel, you must create a configuration recorder.</p> <p>You can use this action to change the Amazon S3 bucket or an Amazon SNS topic of the existing delivery channel. To change the Amazon S3 bucket or an Amazon SNS topic, call this action and specify the changed values for the S3 bucket and the SNS topic. If you specify a different value for either the S3 bucket or the SNS topic, this action will keep the existing value for the parameter that is not changed.</p> <note> <p>You can have only one delivery channel per region in your account.</p> </note>
+      responses:
+        '200':
+          description: Success
+        '480':
+          description: MaxNumberOfDeliveryChannelsExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MaxNumberOfDeliveryChannelsExceededException'
+              examples:
+                PutDeliveryChannel480Example:
+                  summary: Default PutDeliveryChannel 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: NoAvailableConfigurationRecorderException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NoAvailableConfigurationRecorderException'
+              examples:
+                PutDeliveryChannel481Example:
+                  summary: Default PutDeliveryChannel 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: InvalidDeliveryChannelNameException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidDeliveryChannelNameException'
+              examples:
+                PutDeliveryChannel482Example:
+                  summary: Default PutDeliveryChannel 482
+                  x-microcks-default: true
+                  value: example
+        '483':
+          description: NoSuchBucketException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NoSuchBucketException'
+              examples:
+                PutDeliveryChannel483Example:
+                  summary: Default PutDeliveryChannel 483
+                  x-microcks-default: true
+                  value: example
+        '484':
+          description: InvalidS3KeyPrefixException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidS3KeyPrefixException'
+              examples:
+                PutDeliveryChannel484Example:
+                  summary: Default PutDeliveryChannel 484
+                  x-microcks-default: true
+                  value: example
+        '485':
+          description: InvalidS3KmsKeyArnException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidS3KmsKeyArnException'
+              examples:
+                PutDeliveryChannel485Example:
+                  summary: Default PutDeliveryChannel 485
+                  x-microcks-default: true
+                  value: example
+        '486':
+          description: InvalidSNSTopicARNException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidSNSTopicARNException'
+              examples:
+                PutDeliveryChannel486Example:
+                  summary: Default PutDeliveryChannel 486
+                  x-microcks-default: true
+                  value: example
+        '487':
+          description: InsufficientDeliveryPolicyException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InsufficientDeliveryPolicyException'
+              examples:
+                PutDeliveryChannel487Example:
+                  summary: Default PutDeliveryChannel 487
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutDeliveryChannelRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StarlingDoveService.PutDeliveryChannel
+      summary: Amazon Config Put Delivery Channel
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=StarlingDoveService.PutDeliveryChannel'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    InvalidS3KmsKeyArnException: {}
+    MaximumExecutionFrequency:
+      type: string
+      enum:
+      - One_Hour
+      - Three_Hours
+      - Six_Hours
+      - Twelve_Hours
+      - TwentyFour_Hours
+    ConfigSnapshotDeliveryProperties:
+      type: object
+      properties:
+        deliveryFrequency:
+          allOf:
+          - $ref: '#/components/schemas/MaximumExecutionFrequency'
+          - description: The frequency with which Config delivers configuration snapshots.
+      description: <p>Provides options for how often Config delivers configuration snapshots to the Amazon S3 bucket in your delivery channel.</p> <p>The frequency for a rule that triggers evaluations for your resources when Config delivers the configuration snapshot is set by one of two values, depending on which is less frequent:</p> <ul> <li> <p>The value for the <code>deliveryFrequency</code> parameter within the delivery channel configuration, which sets how often Config delivers configuration snapshots. This value also sets how often Config invokes evaluations for Config rules.</p> </li> <li> <p>The value for the <code>MaximumExecutionFrequency</code> parameter, which sets the maximum frequency with which Config invokes evaluations for the rule. For more information, see <a>ConfigRule</a>.</p> </li> </ul> <p>If the <code>deliveryFrequency</code> value is less frequent than the <code>MaximumExecutionFrequency</code> value for a rule, Config invokes the rule only as often as the <code>deliveryFrequency</code> value.</p> <ol> <li> <p>For example, you want your rule to run evaluations when Config delivers the configuration snapshot.</p> </li> <li> <p>You specify the <code>MaximumExecutionFrequency</code> value for <code>Six_Hours</code>. </p> </li> <li> <p>You then specify the delivery channel <code>deliveryFrequency</code> value for <code>TwentyFour_Hours</code>.</p> </li> <li> <p>Because the value for <code>deliveryFrequency</code> is less frequent than <code>MaximumExecutionFrequency</code>, Config invokes evaluations for the rule every 24 hours. </p> </li> </ol> <p>You should set the <code>MaximumExecutionFrequency</code> value to be at least as frequent as the <code>deliveryFrequency</code> value. You can view the <code>deliveryFrequency</code> value by using the <code>DescribeDeliveryChannnels</code> action.</p> <p>To update the <code>deliveryFrequency</code> with which Config delivers your configuration snapshots, use the <code>PutDeliveryChannel</code> action.</p>
+    PutDeliveryChannelRequest:
+      type: object
+      required:
+      - DeliveryChannel
+      title: PutDeliveryChannelRequest
+      properties:
+        DeliveryChannel:
+          allOf:
+          - $ref: '#/components/schemas/DeliveryChannel'
+          - description: The configuration delivery channel object that delivers the configuration information to an Amazon S3 bucket and to an Amazon SNS topic.
+      description: The input for the <a>PutDeliveryChannel</a> action.
+    NoAvailableConfigurationRecorderException: {}
+    InsufficientDeliveryPolicyException: {}
+    InvalidSNSTopicARNException: {}
+    ChannelName:
+      type: string
+      minLength: 1
+      maxLength: 256
+    DeliveryChannel:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/ChannelName'
+          - description: The name of the delivery channel. By default, Config assigns the name "default" when creating the delivery channel. To change the delivery channel name, you must use the DeleteDeliveryChannel action to delete your current delivery channel, and then you must use the PutDeliveryChannel command to create a delivery channel that has the desired name.
+        s3BucketName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: <p>The name of the Amazon S3 bucket to which Config delivers configuration snapshots and configuration history files.</p> <p>If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the Amazon S3 Bucket</a> in the <i>Config Developer Guide</i>.</p>
+        s3KeyPrefix:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The prefix for the specified Amazon S3 bucket.
+        s3KmsKeyArn:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The Amazon Resource Name (ARN) of the Key Management Service (KMS ) KMS key (KMS key) used to encrypt objects delivered by Config. Must belong to the same Region as the destination S3 bucket.
+        snsTopicARN:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: <p>The Amazon Resource Name (ARN) of the Amazon SNS topic to which Config sends notifications about configuration changes.</p> <p>If you choose a topic from another account, the topic must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the Amazon SNS Topic</a> in the <i>Config Developer Guide</i>.</p>
+        configSnapshotDeliveryProperties:
+          allOf:
+          - $ref: '#/components/schemas/ConfigSnapshotDeliveryProperties'
+          - description: The options for how often Config delivers configuration snapshots to the Amazon S3 bucket.
+      description: The channel through which Config delivers notifications and updated configuration states.
+    InvalidDeliveryChannelNameException: {}
+    NoSuchBucketException: {}
+    String:
+      type: string
+    InvalidS3KeyPrefixException: {}
+    MaxNumberOfDeliveryChannelsExceededException: {}
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/config/
+x-hasEquivalentPaths: true

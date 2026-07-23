@@ -1,0 +1,712 @@
+openapi: 3.0.0
+info:
+  version: '2014-11-12'
+  x-release: v4
+  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetResourceConfig API'
+  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: config
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: https://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: http://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+- url: https://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=StarlingDoveService.BatchGetResourceConfig'
+paths:
+  /#X-Amz-Target=StarlingDoveService.BatchGetResourceConfig:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: BatchGetResourceConfig
+      description: <p>Returns the <code>BaseConfigurationItem</code> for one or more requested resources. The operation also returns a list of resources that are not processed in the current request. If there are no unprocessed resources, the operation returns an empty unprocessedResourceKeys list. </p> <note> <ul> <li> <p>The API does not return results for deleted resources.</p> </li> <li> <p> The API does not return any tags for the requested resources. This information is filtered out of the supplementaryConfiguration section of the API response.</p> </li> </ul> </note>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BatchGetResourceConfigResponse'
+              examples:
+                BatchGetResourceConfig200Example:
+                  summary: Default BatchGetResourceConfig 200
+                  x-microcks-default: true
+                  value:
+                    baseConfigurationItems: example
+                    unprocessedResourceKeys: example
+        '480':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+              examples:
+                BatchGetResourceConfig480Example:
+                  summary: Default BatchGetResourceConfig 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: NoAvailableConfigurationRecorderException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NoAvailableConfigurationRecorderException'
+              examples:
+                BatchGetResourceConfig481Example:
+                  summary: Default BatchGetResourceConfig 481
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchGetResourceConfigRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StarlingDoveService.BatchGetResourceConfig
+      summary: Amazon Config Batch Get Resource Config
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=StarlingDoveService.BatchGetResourceConfig'
+components:
+  schemas:
+    AvailabilityZone:
+      type: string
+    SupplementaryConfiguration:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/SupplementaryConfigurationValue'
+    NoAvailableConfigurationRecorderException: {}
+    BaseConfigurationItem:
+      type: object
+      properties:
+        version:
+          allOf:
+          - $ref: '#/components/schemas/Version'
+          - description: The version number of the resource configuration.
+        accountId:
+          allOf:
+          - $ref: '#/components/schemas/AccountId'
+          - description: The 12-digit Amazon Web Services account ID associated with the resource.
+        configurationItemCaptureTime:
+          allOf:
+          - $ref: '#/components/schemas/ConfigurationItemCaptureTime'
+          - description: The time when the configuration recording was initiated.
+        configurationItemStatus:
+          allOf:
+          - $ref: '#/components/schemas/ConfigurationItemStatus'
+          - description: <p>The configuration item status. The valid values are:</p> <ul> <li> <p>OK – The resource configuration has been updated</p> </li> <li> <p>ResourceDiscovered – The resource was newly discovered</p> </li> <li> <p>ResourceNotRecorded – The resource was discovered but its configuration was not recorded since the recorder excludes the recording of resources of this type</p> </li> <li> <p>ResourceDeleted – The resource was deleted</p> </li> <li> <p>ResourceDeletedNotRecorded – The resource was deleted but its configuration was not recorded since the recorder excludes the recording of resources of this type</p> </li> </ul> <note> <p>The CIs do not incur any cost.</p> </note>
+        configurationStateId:
+          allOf:
+          - $ref: '#/components/schemas/ConfigurationStateId'
+          - description: An identifier that indicates the ordering of the configuration items of a resource.
+        arn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The Amazon Resource Name (ARN) of the resource.
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/ResourceType'
+          - description: The type of Amazon Web Services resource.
+        resourceId:
+          allOf:
+          - $ref: '#/components/schemas/ResourceId'
+          - description: The ID of the resource (for example., sg-xxxxxx).
+        resourceName:
+          allOf:
+          - $ref: '#/components/schemas/ResourceName'
+          - description: The custom name of the resource, if available.
+        awsRegion:
+          allOf:
+          - $ref: '#/components/schemas/AwsRegion'
+          - description: The region where the resource resides.
+        availabilityZone:
+          allOf:
+          - $ref: '#/components/schemas/AvailabilityZone'
+          - description: The Availability Zone associated with the resource.
+        resourceCreationTime:
+          allOf:
+          - $ref: '#/components/schemas/ResourceCreationTime'
+          - description: The time stamp when the resource was created.
+        configuration:
+          allOf:
+          - $ref: '#/components/schemas/Configuration'
+          - description: The description of the resource configuration.
+        supplementaryConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/SupplementaryConfiguration'
+          - description: Configuration attributes that Config returns for certain resource types to supplement the information returned for the configuration parameter.
+      description: The detailed configuration of a specified resource.
+    BatchGetResourceConfigResponse:
+      type: object
+      properties:
+        baseConfigurationItems:
+          allOf:
+          - $ref: '#/components/schemas/BaseConfigurationItems'
+          - description: A list that contains the current configuration of one or more resources.
+        unprocessedResourceKeys:
+          allOf:
+          - $ref: '#/components/schemas/ResourceKeys'
+          - description: 'A list of resource keys that were not processed with the current response. The unprocessesResourceKeys value is in the same form as ResourceKeys, so the value can be directly provided to a subsequent BatchGetResourceConfig operation. If there are no unprocessed resource keys, the response contains an empty unprocessedResourceKeys list. '
+    BaseConfigurationItems:
+      type: array
+      items:
+        $ref: '#/components/schemas/BaseConfigurationItem'
+    Configuration:
+      type: string
+    ConfigurationStateId:
+      type: string
+    ConfigurationItemStatus:
+      type: string
+      enum:
+      - OK
+      - ResourceDiscovered
+      - ResourceNotRecorded
+      - ResourceDeleted
+      - ResourceDeletedNotRecorded
+    BatchGetResourceConfigRequest:
+      type: object
+      required:
+      - resourceKeys
+      title: BatchGetResourceConfigRequest
+      properties:
+        resourceKeys:
+          allOf:
+          - $ref: '#/components/schemas/ResourceKeys'
+          - description: A list of resource keys to be processed with the current request. Each element in the list consists of the resource type and resource ID.
+    ResourceCreationTime:
+      type: string
+      format: date-time
+    ResourceType:
+      type: string
+      enum:
+      - AWS::EC2::CustomerGateway
+      - AWS::EC2::EIP
+      - AWS::EC2::Host
+      - AWS::EC2::Instance
+      - AWS::EC2::InternetGateway
+      - AWS::EC2::NetworkAcl
+      - AWS::EC2::NetworkInterface
+      - AWS::EC2::RouteTable
+      - AWS::EC2::SecurityGroup
+      - AWS::EC2::Subnet
+      - AWS::CloudTrail::Trail
+      - AWS::EC2::Volume
+      - AWS::EC2::VPC
+      - AWS::EC2::VPNConnection
+      - AWS::EC2::VPNGateway
+      - AWS::EC2::RegisteredHAInstance
+      - AWS::EC2::NatGateway
+      - AWS::EC2::EgressOnlyInternetGateway
+      - AWS::EC2::VPCEndpoint
+      - AWS::EC2::VPCEndpointService
+      - AWS::EC2::FlowLog
+      - AWS::EC2::VPCPeeringConnection
+      - AWS::Elasticsearch::Domain
+      - AWS::IAM::Group
+      - AWS::IAM::Policy
+      - AWS::IAM::Role
+      - AWS::IAM::User
+      - AWS::ElasticLoadBalancingV2::LoadBalancer
+      - AWS::ACM::Certificate
+      - AWS::RDS::DBInstance
+      - AWS::RDS::DBSubnetGroup
+      - AWS::RDS::DBSecurityGroup
+      - AWS::RDS::DBSnapshot
+      - AWS::RDS::DBCluster
+      - AWS::RDS::DBClusterSnapshot
+      - AWS::RDS::EventSubscription
+      - AWS::S3::Bucket
+      - AWS::S3::AccountPublicAccessBlock
+      - AWS::Redshift::Cluster
+      - AWS::Redshift::ClusterSnapshot
+      - AWS::Redshift::ClusterParameterGroup
+      - AWS::Redshift::ClusterSecurityGroup
+      - AWS::Redshift::ClusterSubnetGroup
+      - AWS::Redshift::EventSubscription
+      - AWS::SSM::ManagedInstanceInventory
+      - AWS::CloudWatch::Alarm
+      - AWS::CloudFormation::Stack
+      - AWS::ElasticLoadBalancing::LoadBalancer
+      - AWS::AutoScaling::AutoScalingGroup
+      - AWS::AutoScaling::LaunchConfiguration
+      - AWS::AutoScaling::ScalingPolicy
+      - AWS::AutoScaling::ScheduledAction
+      - AWS::DynamoDB::Table
+      - AWS::CodeBuild::Project
+      - AWS::WAF::RateBasedRule
+      - AWS::WAF::Rule
+      - AWS::WAF::RuleGroup
+      - AWS::WAF::WebACL
+      - AWS::WAFRegional::RateBasedRule
+      - AWS::WAFRegional::Rule
+      - AWS::WAFRegional::RuleGroup
+      - AWS::WAFRegional::WebACL
+      - AWS::CloudFront::Distribution
+      - AWS::CloudFront::StreamingDistribution
+      - AWS::Lambda::Function
+      - AWS::NetworkFirewall::Firewall
+      - AWS::NetworkFirewall::FirewallPolicy
+      - AWS::NetworkFirewall::RuleGroup
+      - AWS::ElasticBeanstalk::Application
+      - AWS::ElasticBeanstalk::ApplicationVersion
+      - AWS::ElasticBeanstalk::Environment
+      - AWS::WAFv2::WebACL
+      - AWS::WAFv2::RuleGroup
+      - AWS::WAFv2::IPSet
+      - AWS::WAFv2::RegexPatternSet
+      - AWS::WAFv2::ManagedRuleSet
+      - AWS::XRay::EncryptionConfig
+      - AWS::SSM::AssociationCompliance
+      - AWS::SSM::PatchCompliance
+      - AWS::Shield::Protection
+      - AWS::ShieldRegional::Protection
+      - AWS::Config::ConformancePackCompliance
+      - AWS::Config::ResourceCompliance
+      - AWS::ApiGateway::Stage
+      - AWS::ApiGateway::RestApi
+      - AWS::ApiGatewayV2::Stage
+      - AWS::ApiGatewayV2::Api
+      - AWS::CodePipeline::Pipeline
+      - AWS::ServiceCatalog::CloudFormationProvisionedProduct
+      - AWS::ServiceCatalog::CloudFormationProduct
+      - AWS::ServiceCatalog::Portfolio
+      - AWS::SQS::Queue
+      - AWS::KMS::Key
+      - AWS::QLDB::Ledger
+      - AWS::SecretsManager::Secret
+      - AWS::SNS::Topic
+      - AWS::SSM::FileData
+      - AWS::Backup::BackupPlan
+      - AWS::Backup::BackupSelection
+      - AWS::Backup::BackupVault
+      - AWS::Backup::RecoveryPoint
+      - AWS::ECR::Repository
+      - AWS::ECS::Cluster
+      - AWS::ECS::Service
+      - AWS::ECS::TaskDefinition
+      - AWS::EFS::AccessPoint
+      - AWS::EFS::FileSystem
+      - AWS::EKS::Cluster
+      - AWS::OpenSearch::Domain
+      - AWS::EC2::TransitGateway
+      - AWS::Kinesis::Stream
+      - AWS::Kinesis::StreamConsumer
+      - AWS::CodeDeploy::Application
+      - AWS::CodeDeploy::DeploymentConfig
+      - AWS::CodeDeploy::DeploymentGroup
+      - AWS::EC2::LaunchTemplate
+      - AWS::ECR::PublicRepository
+      - AWS::GuardDuty::Detector
+      - AWS::EMR::SecurityConfiguration
+      - AWS::SageMaker::CodeRepository
+      - AWS::Route53Resolver::ResolverEndpoint
+      - AWS::Route53Resolver::ResolverRule
+      - AWS::Route53Resolver::ResolverRuleAssociation
+      - AWS::DMS::ReplicationSubnetGroup
+      - AWS::DMS::EventSubscription
+      - AWS::MSK::Cluster
+      - AWS::StepFunctions::Activity
+      - AWS::WorkSpaces::Workspace
+      - AWS::WorkSpaces::ConnectionAlias
+      - AWS::SageMaker::Model
+      - AWS::ElasticLoadBalancingV2::Listener
+      - AWS::StepFunctions::StateMachine
+      - AWS::Batch::JobQueue
+      - AWS::Batch::ComputeEnvironment
+      - AWS::AccessAnalyzer::Analyzer
+      - AWS::Athena::WorkGroup
+      - AWS::Athena::DataCatalog
+      - AWS::Detective::Graph
+      - AWS::GlobalAccelerator::Accelerator
+      - AWS::GlobalAccelerator::EndpointGroup
+      - AWS::GlobalAccelerator::Listener
+      - AWS::EC2::TransitGatewayAttachment
+      - AWS::EC2::TransitGatewayRouteTable
+      - AWS::DMS::Certificate
+      - AWS::AppConfig::Application
+      - AWS::AppSync::GraphQLApi
+      - AWS::DataSync::LocationSMB
+      - AWS::DataSync::LocationFSxLustre
+      - AWS::DataSync::LocationS3
+      - AWS::DataSync::LocationEFS
+      - AWS::DataSync::Task
+      - AWS::DataSync::LocationNFS
+      - AWS::EC2::NetworkInsightsAccessScopeAnalysis
+      - AWS::EKS::FargateProfile
+      - AWS::Glue::Job
+      - AWS::GuardDuty::ThreatIntelSet
+      - AWS::GuardDuty::IPSet
+      - AWS::SageMaker::Workteam
+      - AWS::SageMaker::NotebookInstanceLifecycleConfig
+      - AWS::ServiceDiscovery::Service
+      - AWS::ServiceDiscovery::PublicDnsNamespace
+      - AWS::SES::ContactList
+      - AWS::SES::ConfigurationSet
+      - AWS::Route53::HostedZone
+      - AWS::IoTEvents::Input
+      - AWS::IoTEvents::DetectorModel
+      - AWS::IoTEvents::AlarmModel
+      - AWS::ServiceDiscovery::HttpNamespace
+      - AWS::Events::EventBus
+      - AWS::ImageBuilder::ContainerRecipe
+      - AWS::ImageBuilder::DistributionConfiguration
+      - AWS::ImageBuilder::InfrastructureConfiguration
+      - AWS::DataSync::LocationObjectStorage
+      - AWS::DataSync::LocationHDFS
+      - AWS::Glue::Classifier
+      - AWS::Route53RecoveryReadiness::Cell
+      - AWS::Route53RecoveryReadiness::ReadinessCheck
+      - AWS::ECR::RegistryPolicy
+      - AWS::Backup::ReportPlan
+      - AWS::Lightsail::Certificate
+      - AWS::RUM::AppMonitor
+      - AWS::Events::Endpoint
+      - AWS::SES::ReceiptRuleSet
+      - AWS::Events::Archive
+      - AWS::Events::ApiDestination
+      - AWS::Lightsail::Disk
+      - AWS::FIS::ExperimentTemplate
+      - AWS::DataSync::LocationFSxWindows
+      - AWS::SES::ReceiptFilter
+      - AWS::GuardDuty::Filter
+      - AWS::SES::Template
+      - AWS::AmazonMQ::Broker
+      - AWS::AppConfig::Environment
+      - AWS::AppConfig::ConfigurationProfile
+      - AWS::Cloud9::EnvironmentEC2
+      - AWS::EventSchemas::Registry
+      - AWS::EventSchemas::RegistryPolicy
+      - AWS::EventSchemas::Discoverer
+      - AWS::FraudDetector::Label
+      - AWS::FraudDetector::EntityType
+      - AWS::FraudDetector::Variable
+      - AWS::FraudDetector::Outcome
+      - AWS::IoT::Authorizer
+      - AWS::IoT::SecurityProfile
+      - AWS::IoT::RoleAlias
+      - AWS::IoT::Dimension
+      - AWS::IoTAnalytics::Datastore
+      - AWS::Lightsail::Bucket
+      - AWS::Lightsail::StaticIp
+      - AWS::MediaPackage::PackagingGroup
+      - AWS::Route53RecoveryReadiness::RecoveryGroup
+      - AWS::ResilienceHub::ResiliencyPolicy
+      - AWS::Transfer::Workflow
+      - AWS::EKS::IdentityProviderConfig
+      - AWS::EKS::Addon
+      - AWS::Glue::MLTransform
+      - AWS::IoT::Policy
+      - AWS::IoT::MitigationAction
+      - AWS::IoTTwinMaker::Workspace
+      - AWS::IoTTwinMaker::Entity
+      - AWS::IoTAnalytics::Dataset
+      - AWS::IoTAnalytics::Pipeline
+      - AWS::IoTAnalytics::Channel
+      - AWS::IoTSiteWise::Dashboard
+      - AWS::IoTSiteWise::Project
+      - AWS::IoTSiteWise::Portal
+      - AWS::IoTSiteWise::AssetModel
+      - AWS::IVS::Channel
+      - AWS::IVS::RecordingConfiguration
+      - AWS::IVS::PlaybackKeyPair
+      - AWS::KinesisAnalyticsV2::Application
+      - AWS::RDS::GlobalCluster
+      - AWS::S3::MultiRegionAccessPoint
+      - AWS::DeviceFarm::TestGridProject
+      - AWS::Budgets::BudgetsAction
+      - AWS::Lex::Bot
+      - AWS::CodeGuruReviewer::RepositoryAssociation
+      - AWS::IoT::CustomMetric
+      - AWS::Route53Resolver::FirewallDomainList
+      - AWS::RoboMaker::RobotApplicationVersion
+      - AWS::EC2::TrafficMirrorSession
+      - AWS::IoTSiteWise::Gateway
+      - AWS::Lex::BotAlias
+      - AWS::LookoutMetrics::Alert
+      - AWS::IoT::AccountAuditConfiguration
+      - AWS::EC2::TrafficMirrorTarget
+      - AWS::S3::StorageLens
+      - AWS::IoT::ScheduledAudit
+      - AWS::Events::Connection
+      - AWS::EventSchemas::Schema
+      - AWS::MediaPackage::PackagingConfiguration
+      - AWS::KinesisVideo::SignalingChannel
+      - AWS::AppStream::DirectoryConfig
+      - AWS::LookoutVision::Project
+      - AWS::Route53RecoveryControl::Cluster
+      - AWS::Route53RecoveryControl::SafetyRule
+      - AWS::Route53RecoveryControl::ControlPanel
+      - AWS::Route53RecoveryControl::RoutingControl
+      - AWS::Route53RecoveryReadiness::ResourceSet
+      - AWS::RoboMaker::SimulationApplication
+      - AWS::RoboMaker::RobotApplication
+      - AWS::HealthLake::FHIRDatastore
+      - AWS::Pinpoint::Segment
+      - AWS::Pinpoint::ApplicationSettings
+      - AWS::Events::Rule
+      - AWS::EC2::DHCPOptions
+      - AWS::EC2::NetworkInsightsPath
+      - AWS::EC2::TrafficMirrorFilter
+      - AWS::EC2::IPAM
+      - AWS::IoTTwinMaker::Scene
+      - AWS::NetworkManager::TransitGatewayRegistration
+      - AWS::CustomerProfiles::Domain
+      - AWS::AutoScaling::WarmPool
+      - AWS::Connect::PhoneNumber
+      - AWS::AppConfig::DeploymentStrategy
+      - AWS::AppFlow::Flow
+      - AWS::AuditManager::Assessment
+      - AWS::CloudWatch::MetricStream
+      - AWS::DeviceFarm::InstanceProfile
+      - AWS::DeviceFarm::Project
+      - AWS::EC2::EC2Fleet
+      - AWS::EC2::SubnetRouteTableAssociation
+      - AWS::ECR::PullThroughCacheRule
+      - AWS::GroundStation::Config
+      - AWS::ImageBuilder::ImagePipeline
+      - AWS::IoT::FleetMetric
+      - AWS::IoTWireless::ServiceProfile
+      - AWS::NetworkManager::Device
+      - AWS::NetworkManager::GlobalNetwork
+      - AWS::NetworkManager::Link
+      - AWS::NetworkManager::Site
+      - AWS::Panorama::Package
+      - AWS::Pinpoint::App
+      - AWS::Redshift::ScheduledAction
+      - AWS::Route53Resolver::FirewallRuleGroupAssociation
+      - AWS::SageMaker::AppImageConfig
+      - AWS::SageMaker::Image
+      - AWS::ECS::TaskSet
+      - AWS::Cassandra::Keyspace
+      - AWS::Signer::SigningProfile
+      - AWS::Amplify::App
+      - AWS::AppMesh::VirtualNode
+      - AWS::AppMesh::VirtualService
+      - AWS::AppRunner::VpcConnector
+      - AWS::AppStream::Application
+      - AWS::CodeArtifact::Repository
+      - AWS::EC2::PrefixList
+      - AWS::EC2::SpotFleet
+      - AWS::Evidently::Project
+      - AWS::Forecast::Dataset
+      - AWS::IAM::SAMLProvider
+      - AWS::IAM::ServerCertificate
+      - AWS::Pinpoint::Campaign
+      - AWS::Pinpoint::InAppTemplate
+      - AWS::SageMaker::Domain
+      - AWS::Transfer::Agreement
+      - AWS::Transfer::Connector
+      - AWS::KinesisFirehose::DeliveryStream
+    ResourceKey:
+      type: object
+      required:
+      - resourceType
+      - resourceId
+      properties:
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/ResourceType'
+          - description: The resource type.
+        resourceId:
+          allOf:
+          - $ref: '#/components/schemas/ResourceId'
+          - description: 'The ID of the resource (for example., sg-xxxxxx). '
+      description: The details that identify a resource within Config, including the resource type and resource ID.
+    ConfigurationItemCaptureTime:
+      type: string
+      format: date-time
+    SupplementaryConfigurationValue:
+      type: string
+    ResourceKeys:
+      type: array
+      items:
+        $ref: '#/components/schemas/ResourceKey'
+      minItems: 1
+      maxItems: 100
+    ResourceName:
+      type: string
+    ResourceId:
+      type: string
+      minLength: 1
+      maxLength: 768
+    Version:
+      type: string
+    ValidationException: {}
+    AccountId:
+      type: string
+      pattern: \d{12}
+    AwsRegion:
+      type: string
+      minLength: 1
+      maxLength: 64
+    ARN:
+      type: string
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/config/
+x-hasEquivalentPaths: true

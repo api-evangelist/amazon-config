@@ -1,0 +1,385 @@
+openapi: 3.0.0
+info:
+  version: '2014-11-12'
+  x-release: v4
+  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DescribeConfigRuleEvaluationStatus API'
+  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: config
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: https://config.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Config Service multi-region endpoint
+- url: http://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+- url: https://config.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Config Service endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=StarlingDoveService.DescribeConfigRuleEvaluationStatus'
+paths:
+  /#X-Amz-Target=StarlingDoveService.DescribeConfigRuleEvaluationStatus:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeConfigRuleEvaluationStatus
+      description: Returns status information for each of your Config managed rules. The status includes information such as the last time Config invoked the rule, the last time Config failed to invoke the rule, and the related error for the last failure.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeConfigRuleEvaluationStatusResponse'
+              examples:
+                DescribeConfigRuleEvaluationStatus200Example:
+                  summary: Default DescribeConfigRuleEvaluationStatus 200
+                  x-microcks-default: true
+                  value:
+                    ConfigRulesEvaluationStatus: example
+                    NextToken: example
+        '480':
+          description: NoSuchConfigRuleException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NoSuchConfigRuleException'
+              examples:
+                DescribeConfigRuleEvaluationStatus480Example:
+                  summary: Default DescribeConfigRuleEvaluationStatus 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: InvalidParameterValueException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidParameterValueException'
+              examples:
+                DescribeConfigRuleEvaluationStatus481Example:
+                  summary: Default DescribeConfigRuleEvaluationStatus 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: InvalidNextTokenException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidNextTokenException'
+              examples:
+                DescribeConfigRuleEvaluationStatus482Example:
+                  summary: Default DescribeConfigRuleEvaluationStatus 482
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeConfigRuleEvaluationStatusRequest'
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: NextToken
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - StarlingDoveService.DescribeConfigRuleEvaluationStatus
+      summary: Amazon Config Describe Config Rule Evaluation Status
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=StarlingDoveService.DescribeConfigRuleEvaluationStatus'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    DescribeConfigRuleEvaluationStatusRequest:
+      type: object
+      title: DescribeConfigRuleEvaluationStatusRequest
+      properties:
+        ConfigRuleNames:
+          allOf:
+          - $ref: '#/components/schemas/ConfigRuleNames'
+          - description: The name of the Config managed rules for which you want status information. If you do not specify any names, Config returns status information for all Config managed rules that you use.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.
+        Limit:
+          allOf:
+          - $ref: '#/components/schemas/RuleLimit'
+          - description: <p>The number of rule evaluation results that you want returned.</p> <p>This parameter is required if the rule limit for your account is more than the default of 150 rules.</p> <p>For information about requesting a rule limit increase, see <a href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">Config Limits</a> in the <i>Amazon Web Services General Reference Guide</i>.</p>
+      description: <p/>
+    DescribeConfigRuleEvaluationStatusResponse:
+      type: object
+      properties:
+        ConfigRulesEvaluationStatus:
+          allOf:
+          - $ref: '#/components/schemas/ConfigRuleEvaluationStatusList'
+          - description: Status information about your Config managed rules.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The string that you use in a subsequent request to get the next page of results in a paginated response.
+      description: <p/>
+    Date:
+      type: string
+      format: date-time
+    ConfigRuleEvaluationStatusList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ConfigRuleEvaluationStatus'
+    InvalidNextTokenException: {}
+    RuleLimit:
+      type: integer
+      minimum: 0
+      maximum: 50
+    InvalidParameterValueException: {}
+    ConfigRuleNames:
+      type: array
+      items:
+        $ref: '#/components/schemas/ConfigRuleName'
+      minItems: 0
+      maxItems: 25
+    ConfigRuleName:
+      type: string
+      pattern: .*\S.*
+      minLength: 1
+      maxLength: 128
+    ConfigRuleEvaluationStatus:
+      type: object
+      properties:
+        ConfigRuleName:
+          allOf:
+          - $ref: '#/components/schemas/ConfigRuleName'
+          - description: The name of the Config rule.
+        ConfigRuleArn:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The Amazon Resource Name (ARN) of the Config rule.
+        ConfigRuleId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The ID of the Config rule.
+        LastSuccessfulInvocationTime:
+          allOf:
+          - $ref: '#/components/schemas/Date'
+          - description: The time that Config last successfully invoked the Config rule to evaluate your Amazon Web Services resources.
+        LastFailedInvocationTime:
+          allOf:
+          - $ref: '#/components/schemas/Date'
+          - description: The time that Config last failed to invoke the Config rule to evaluate your Amazon Web Services resources.
+        LastSuccessfulEvaluationTime:
+          allOf:
+          - $ref: '#/components/schemas/Date'
+          - description: The time that Config last successfully evaluated your Amazon Web Services resources against the rule.
+        LastFailedEvaluationTime:
+          allOf:
+          - $ref: '#/components/schemas/Date'
+          - description: The time that Config last failed to evaluate your Amazon Web Services resources against the rule.
+        FirstActivatedTime:
+          allOf:
+          - $ref: '#/components/schemas/Date'
+          - description: The time that you first activated the Config rule.
+        LastDeactivatedTime:
+          allOf:
+          - $ref: '#/components/schemas/Date'
+          - description: The time that you last turned off the Config rule.
+        LastErrorCode:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The error code that Config returned when the rule last failed.
+        LastErrorMessage:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The error message that Config returned when the rule last failed.
+        FirstEvaluationStarted:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: <p>Indicates whether Config has evaluated your resources against the rule at least once.</p> <ul> <li> <p> <code>true</code> - Config has evaluated your Amazon Web Services resources against the rule at least once.</p> </li> <li> <p> <code>false</code> - Config has not finished evaluating your Amazon Web Services resources against the rule at least once.</p> </li> </ul>
+        LastDebugLogDeliveryStatus:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The status of the last attempted delivery of a debug log for your Config Custom Policy rules. Either <code>Successful</code> or <code>Failed</code>.
+        LastDebugLogDeliveryStatusReason:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The reason Config was not able to deliver a debug log. This is for the last failed attempt to retrieve a debug log for your Config Custom Policy rules.
+        LastDebugLogDeliveryTime:
+          allOf:
+          - $ref: '#/components/schemas/Date'
+          - description: The time Config last attempted to deliver a debug log for your Config Custom Policy rules.
+      description: <p>Status information for your Config Managed rules and Config Custom Policy rules. The status includes information such as the last time the rule ran, the last time it failed, and the related error for the last failure.</p> <p>This action does not return status information about Config Custom Lambda rules.</p>
+    NoSuchConfigRuleException: {}
+    String:
+      type: string
+    Boolean:
+      type: boolean
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/config/
+x-hasEquivalentPaths: true
