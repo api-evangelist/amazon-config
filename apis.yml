@@ -2953,6 +2953,8 @@ apis:
   - type: ErrorCatalog
     url: errors/amazon-config-problem-types.yml
 common:
+  - type: Overlay
+    url: overlays/amazon-config-openapi-overlay.yaml
   - type: AgenticAccess
     url: agentic-access/amazon-config-agentic-access.yml
   - type: TrustCenter
