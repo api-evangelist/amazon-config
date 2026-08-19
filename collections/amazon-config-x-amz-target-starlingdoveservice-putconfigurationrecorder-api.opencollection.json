@@ -1,0 +1,75 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.PutConfigurationRecorder API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "#X Amz Target=StarlingDoveService.PutConfigurationRecorder",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Config Put Configuration Recorder",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://config.{region}.amazonaws.com/#X-Amz-Target=StarlingDoveService.PutConfigurationRecorder",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Target",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Creates a new configuration recorder to record configuration changes for specified resource types.</p> <p>You can also use this action to change the <code>roleARN</code> or the <code>recordingGroup</code> of an existing recorder. For more information, see <a href=\"https://docs.aws.amazon.com/config/latest/developerguide/stop-start-recorder.html\"> <b>Managing the Configuration Recorder</b> </a> in the <i>Config Developer Guide</i>.</p> <note> <p>You can specify only one configuration recorder "
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
