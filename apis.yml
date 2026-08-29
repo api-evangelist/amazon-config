@@ -2864,6 +2864,9 @@ apis:
       - type: ErrorCatalog
         url: errors/amazon-config-problem-types.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/amazon-config-capability-edges.yml
+    name: Amazon Config Business Capability Map
   - type: Overlay
     url: overlays/amazon-config-openapi-overlay.yaml
   - type: AgenticAccess

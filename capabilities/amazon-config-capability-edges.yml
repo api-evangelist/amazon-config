@@ -1,0 +1,44 @@
+slug: amazon-config
+provider: Amazon Config
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: '#X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig'
+  spec_file: amazon-config-x-amz-target-starlingdoveservice-batchgetaggregateresourceconfig-api-openapi.yml
+  capability_id: BC-600.40
+  capability_id_l1: BC-600
+  capability_name: IT Operations Management
+  confidence: 0.7
+  evidence: BatchGetAggregateResourceConfig ... Config provides a way to keep track of the configurations
+    of all the Amazon Web Services resources
+  reason: Retrieval of cloud resource configuration inventory across accounts — IT operations/configuration
+    visibility of infrastructure.
+- tag: '#X Amz Target=StarlingDoveService.BatchGetResourceConfig'
+  spec_file: amazon-config-x-amz-target-starlingdoveservice-batchgetresourceconfig-api-openapi.yml
+  capability_id: BC-600.40
+  capability_id_l1: BC-600
+  capability_name: IT Operations Management
+  confidence: 0.7
+  evidence: BatchGetResourceConfig  Amazon Config Batch Get Resource Config ... BaseConfigurationItem
+  reason: Reads current configuration items of AWS resources — IT operations monitoring/configuration
+    management of infrastructure.
+- tag: '#X Amz Target=StarlingDoveService.DeliverConfigSnapshot'
+  spec_file: amazon-config-x-amz-target-starlingdoveservice-deliverconfigsnapshot-api-openapi.yml
+  capability_id: BC-600.40
+  capability_id_l1: BC-600
+  capability_name: IT Operations Management
+  confidence: 0.7
+  evidence: DeliverConfigSnapshot  Amazon Config Deliver Config Snapshot; schemas NoAvailableConfigurationRecorderException,
+    NoSuchDeliveryChannelException
+  reason: Delivers a snapshot of recorded AWS resource configurations to a delivery channel — day-to-day
+    IT operations/monitoring of cloud infrastructure configuration state.
