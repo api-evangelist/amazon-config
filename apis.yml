@@ -52,7 +52,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig'
+    - '#X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-batchgetaggregateresourceconfig-api-openapi.yml
@@ -113,7 +113,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DeleteAggregationAuthorization'
+    - '#X Amz Target=StarlingDoveService.DeleteAggregationAuthorization'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteaggregationauthorization-api-openapi.yml
@@ -174,7 +174,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DeleteConfigurationAggregator'
+    - '#X Amz Target=StarlingDoveService.DeleteConfigurationAggregator'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationaggregator-api-openapi.yml
@@ -205,7 +205,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DeleteConfigurationRecorder'
+    - '#X Amz Target=StarlingDoveService.DeleteConfigurationRecorder'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationrecorder-api-openapi.yml
@@ -326,7 +326,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DeleteOrganizationConfigRule'
+    - '#X Amz Target=StarlingDoveService.DeleteOrganizationConfigRule'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconfigrule-api-openapi.yml
@@ -357,7 +357,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DeleteOrganizationConformancePack'
+    - '#X Amz Target=StarlingDoveService.DeleteOrganizationConformancePack'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconformancepack-api-openapi.yml
@@ -388,7 +388,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DeletePendingAggregationRequest'
+    - '#X Amz Target=StarlingDoveService.DeletePendingAggregationRequest'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-deletependingaggregationrequest-api-openapi.yml
@@ -419,7 +419,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DeleteRemediationConfiguration'
+    - '#X Amz Target=StarlingDoveService.DeleteRemediationConfiguration'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteremediationconfiguration-api-openapi.yml
@@ -450,7 +450,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DeleteRemediationExceptions'
+    - '#X Amz Target=StarlingDoveService.DeleteRemediationExceptions'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteremediationexceptions-api-openapi.yml
@@ -511,7 +511,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DeleteRetentionConfiguration'
+    - '#X Amz Target=StarlingDoveService.DeleteRetentionConfiguration'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteretentionconfiguration-api-openapi.yml
@@ -602,7 +602,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeAggregateComplianceByConfigRules'
+    - '#X Amz Target=StarlingDoveService.DescribeAggregateComplianceByConfigRules'
     properties:
       - type: OpenAPI
         url: >-
@@ -634,7 +634,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeAggregateComplianceByConformancePacks'
+    - '#X Amz Target=StarlingDoveService.DescribeAggregateComplianceByConformancePacks'
     properties:
       - type: OpenAPI
         url: >-
@@ -666,7 +666,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeAggregationAuthorizations'
+    - '#X Amz Target=StarlingDoveService.DescribeAggregationAuthorizations'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeaggregationauthorizations-api-openapi.yml
@@ -697,7 +697,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeComplianceByConfigRule'
+    - '#X Amz Target=StarlingDoveService.DescribeComplianceByConfigRule'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describecompliancebyconfigrule-api-openapi.yml
@@ -728,7 +728,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeComplianceByResource'
+    - '#X Amz Target=StarlingDoveService.DescribeComplianceByResource'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describecompliancebyresource-api-openapi.yml
@@ -759,7 +759,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeConfigRuleEvaluationStatus'
+    - '#X Amz Target=StarlingDoveService.DescribeConfigRuleEvaluationStatus'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigruleevaluationstatus-api-openapi.yml
@@ -820,7 +820,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeConfigurationAggregators'
+    - '#X Amz Target=StarlingDoveService.DescribeConfigurationAggregators'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationaggregators-api-openapi.yml
@@ -851,7 +851,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeConfigurationAggregatorSourcesStatus'
+    - '#X Amz Target=StarlingDoveService.DescribeConfigurationAggregatorSourcesStatus'
     properties:
       - type: OpenAPI
         url: >-
@@ -883,7 +883,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeConfigurationRecorders'
+    - '#X Amz Target=StarlingDoveService.DescribeConfigurationRecorders'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationrecorders-api-openapi.yml
@@ -914,7 +914,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeConfigurationRecorderStatus'
+    - '#X Amz Target=StarlingDoveService.DescribeConfigurationRecorderStatus'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationrecorderstatus-api-openapi.yml
@@ -945,7 +945,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeConformancePackCompliance'
+    - '#X Amz Target=StarlingDoveService.DescribeConformancePackCompliance'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconformancepackcompliance-api-openapi.yml
@@ -1006,7 +1006,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeConformancePackStatus'
+    - '#X Amz Target=StarlingDoveService.DescribeConformancePackStatus'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconformancepackstatus-api-openapi.yml
@@ -1067,7 +1067,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeDeliveryChannelStatus'
+    - '#X Amz Target=StarlingDoveService.DescribeDeliveryChannelStatus'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describedeliverychannelstatus-api-openapi.yml
@@ -1098,7 +1098,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeOrganizationConfigRules'
+    - '#X Amz Target=StarlingDoveService.DescribeOrganizationConfigRules'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconfigrules-api-openapi.yml
@@ -1129,7 +1129,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeOrganizationConfigRuleStatuses'
+    - '#X Amz Target=StarlingDoveService.DescribeOrganizationConfigRuleStatuses'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconfigrulestatuses-api-openapi.yml
@@ -1160,7 +1160,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeOrganizationConformancePacks'
+    - '#X Amz Target=StarlingDoveService.DescribeOrganizationConformancePacks'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconformancepacks-api-openapi.yml
@@ -1191,7 +1191,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeOrganizationConformancePackStatuses'
+    - '#X Amz Target=StarlingDoveService.DescribeOrganizationConformancePackStatuses'
     properties:
       - type: OpenAPI
         url: >-
@@ -1223,7 +1223,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribePendingAggregationRequests'
+    - '#X Amz Target=StarlingDoveService.DescribePendingAggregationRequests'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describependingaggregationrequests-api-openapi.yml
@@ -1254,7 +1254,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeRemediationConfigurations'
+    - '#X Amz Target=StarlingDoveService.DescribeRemediationConfigurations'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeremediationconfigurations-api-openapi.yml
@@ -1285,7 +1285,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeRemediationExceptions'
+    - '#X Amz Target=StarlingDoveService.DescribeRemediationExceptions'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeremediationexceptions-api-openapi.yml
@@ -1316,7 +1316,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeRemediationExecutionStatus'
+    - '#X Amz Target=StarlingDoveService.DescribeRemediationExecutionStatus'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeremediationexecutionstatus-api-openapi.yml
@@ -1347,7 +1347,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.DescribeRetentionConfigurations'
+    - '#X Amz Target=StarlingDoveService.DescribeRetentionConfigurations'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-describeretentionconfigurations-api-openapi.yml
@@ -1378,7 +1378,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetAggregateComplianceDetailsByConfigRule'
+    - '#X Amz Target=StarlingDoveService.GetAggregateComplianceDetailsByConfigRule'
     properties:
       - type: OpenAPI
         url: >-
@@ -1410,7 +1410,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetAggregateConfigRuleComplianceSummary'
+    - '#X Amz Target=StarlingDoveService.GetAggregateConfigRuleComplianceSummary'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregateconfigrulecompliancesummary-api-openapi.yml
@@ -1441,7 +1441,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetAggregateConformancePackComplianceSummary'
+    - '#X Amz Target=StarlingDoveService.GetAggregateConformancePackComplianceSummary'
     properties:
       - type: OpenAPI
         url: >-
@@ -1473,7 +1473,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetAggregateDiscoveredResourceCounts'
+    - '#X Amz Target=StarlingDoveService.GetAggregateDiscoveredResourceCounts'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregatediscoveredresourcecounts-api-openapi.yml
@@ -1534,7 +1534,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetComplianceDetailsByConfigRule'
+    - '#X Amz Target=StarlingDoveService.GetComplianceDetailsByConfigRule'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancedetailsbyconfigrule-api-openapi.yml
@@ -1565,7 +1565,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetComplianceDetailsByResource'
+    - '#X Amz Target=StarlingDoveService.GetComplianceDetailsByResource'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancedetailsbyresource-api-openapi.yml
@@ -1596,7 +1596,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetComplianceSummaryByConfigRule'
+    - '#X Amz Target=StarlingDoveService.GetComplianceSummaryByConfigRule'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancesummarybyconfigrule-api-openapi.yml
@@ -1627,7 +1627,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetComplianceSummaryByResourceType'
+    - '#X Amz Target=StarlingDoveService.GetComplianceSummaryByResourceType'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancesummarybyresourcetype-api-openapi.yml
@@ -1658,7 +1658,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetConformancePackComplianceDetails'
+    - '#X Amz Target=StarlingDoveService.GetConformancePackComplianceDetails'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-getconformancepackcompliancedetails-api-openapi.yml
@@ -1689,7 +1689,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetConformancePackComplianceSummary'
+    - '#X Amz Target=StarlingDoveService.GetConformancePackComplianceSummary'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-getconformancepackcompliancesummary-api-openapi.yml
@@ -1750,7 +1750,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetDiscoveredResourceCounts'
+    - '#X Amz Target=StarlingDoveService.GetDiscoveredResourceCounts'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-getdiscoveredresourcecounts-api-openapi.yml
@@ -1781,7 +1781,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetOrganizationConfigRuleDetailedStatus'
+    - '#X Amz Target=StarlingDoveService.GetOrganizationConfigRuleDetailedStatus'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-getorganizationconfigruledetailedstatus-api-openapi.yml
@@ -1812,7 +1812,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetOrganizationConformancePackDetailedStatus'
+    - '#X Amz Target=StarlingDoveService.GetOrganizationConformancePackDetailedStatus'
     properties:
       - type: OpenAPI
         url: >-
@@ -1844,7 +1844,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetOrganizationCustomRulePolicy'
+    - '#X Amz Target=StarlingDoveService.GetOrganizationCustomRulePolicy'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-getorganizationcustomrulepolicy-api-openapi.yml
@@ -1905,7 +1905,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.GetResourceEvaluationSummary'
+    - '#X Amz Target=StarlingDoveService.GetResourceEvaluationSummary'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-getresourceevaluationsummary-api-openapi.yml
@@ -1966,7 +1966,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.ListAggregateDiscoveredResources'
+    - '#X Amz Target=StarlingDoveService.ListAggregateDiscoveredResources'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-listaggregatediscoveredresources-api-openapi.yml
@@ -1997,7 +1997,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.ListConformancePackComplianceScores'
+    - '#X Amz Target=StarlingDoveService.ListConformancePackComplianceScores'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-listconformancepackcompliancescores-api-openapi.yml
@@ -2148,7 +2148,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.PutAggregationAuthorization'
+    - '#X Amz Target=StarlingDoveService.PutAggregationAuthorization'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-putaggregationauthorization-api-openapi.yml
@@ -2419,7 +2419,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.PutOrganizationConformancePack'
+    - '#X Amz Target=StarlingDoveService.PutOrganizationConformancePack'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-putorganizationconformancepack-api-openapi.yml
@@ -2450,7 +2450,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.PutRemediationConfigurations'
+    - '#X Amz Target=StarlingDoveService.PutRemediationConfigurations'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-putremediationconfigurations-api-openapi.yml
@@ -2601,7 +2601,7 @@ apis:
     baseURL: https://config.amazonaws.com
     tags: []
     tags_raw:
-      - '#X Amz Target=StarlingDoveService.SelectAggregateResourceConfig'
+    - '#X Amz Target=StarlingDoveService.SelectAggregateResourceConfig'
     properties:
       - type: OpenAPI
         url: openapi/amazon-config-x-amz-target-starlingdoveservice-selectaggregateresourceconfig-api-openapi.yml
