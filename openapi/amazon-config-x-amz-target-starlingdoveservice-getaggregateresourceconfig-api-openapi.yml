@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.GetAggregateResourceConfig API'
+  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.GetAggregateResourceConfig #X Amz Target=StarlingDoveService.GetAggregateResourceConfig #X Amz Target=StarlingDoveService.GetAggregateResourceConfig API'
   description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -204,44 +204,10 @@ paths:
       - '#X Amz Target=StarlingDoveService.GetAggregateResourceConfig'
 components:
   schemas:
-    RelatedEvent:
-      type: string
-    NoSuchConfigurationAggregatorException: {}
-    AvailabilityZone:
-      type: string
-    RelatedEventList:
-      type: array
-      items:
-        $ref: '#/components/schemas/RelatedEvent'
-    SupplementaryConfiguration:
-      type: object
-      additionalProperties:
-        $ref: '#/components/schemas/SupplementaryConfigurationValue'
-    RelationshipList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Relationship'
     RelationshipName:
       type: string
-    Tags:
-      type: object
-      additionalProperties:
-        $ref: '#/components/schemas/Value'
-    ResourceNotDiscoveredException: {}
-    Configuration:
+    ARN:
       type: string
-    ConfigurationStateId:
-      type: string
-    Value:
-      type: string
-    ConfigurationItemStatus:
-      type: string
-      enum:
-      - OK
-      - ResourceDiscovered
-      - ResourceNotRecorded
-      - ResourceDeleted
-      - ResourceDeletedNotRecorded
     AggregateResourceIdentifier:
       type: object
       required:
@@ -271,16 +237,119 @@ components:
           - $ref: '#/components/schemas/ResourceName'
           - description: The name of the Amazon Web Services resource.
       description: The details that identify a resource that is collected by Config aggregator, including the resource type, ID, (if available) the custom resource name, the source account, and source region.
-    ResourceCreationTime:
+    AvailabilityZone:
+      type: string
+    ValidationException: {}
+    Value:
+      type: string
+    ConfigurationItemCaptureTime:
       type: string
       format: date-time
-    GetAggregateResourceConfigResponse:
+    Version:
+      type: string
+    ConfigurationItemStatus:
+      type: string
+      enum:
+      - OK
+      - ResourceDiscovered
+      - ResourceNotRecorded
+      - ResourceDeleted
+      - ResourceDeletedNotRecorded
+    SupplementaryConfigurationValue:
+      type: string
+    ResourceId:
+      type: string
+      minLength: 1
+      maxLength: 768
+    AwsRegion:
+      type: string
+      minLength: 1
+      maxLength: 64
+    Tags:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/Value'
+    ConfigurationItemMD5Hash:
+      type: string
+    ConfigurationItem:
       type: object
       properties:
-        ConfigurationItem:
+        version:
           allOf:
-          - $ref: '#/components/schemas/ConfigurationItem'
-          - description: Returns a <code>ConfigurationItem</code> object.
+          - $ref: '#/components/schemas/Version'
+          - description: The version number of the resource configuration.
+        accountId:
+          allOf:
+          - $ref: '#/components/schemas/AccountId'
+          - description: The 12-digit Amazon Web Services account ID associated with the resource.
+        configurationItemCaptureTime:
+          allOf:
+          - $ref: '#/components/schemas/ConfigurationItemCaptureTime'
+          - description: The time when the configuration recording was initiated.
+        configurationItemStatus:
+          allOf:
+          - $ref: '#/components/schemas/ConfigurationItemStatus'
+          - description: <p>The configuration item status. The valid values are:</p> <ul> <li> <p>OK – The resource configuration has been updated</p> </li> <li> <p>ResourceDiscovered – The resource was newly discovered</p> </li> <li> <p>ResourceNotRecorded – The resource was discovered but its configuration was not recorded since the recorder excludes the recording of resources of this type</p> </li> <li> <p>ResourceDeleted – The resource was deleted</p> </li> <li> <p>ResourceDeletedNotRecorded – The resource was deleted but its configuration was not recorded since the recorder excludes the recording of resources of this type</p> </li> </ul> <note> <p>The CIs do not incur any cost.</p> </note>
+        configurationStateId:
+          allOf:
+          - $ref: '#/components/schemas/ConfigurationStateId'
+          - description: An identifier that indicates the ordering of the configuration items of a resource.
+        configurationItemMD5Hash:
+          allOf:
+          - $ref: '#/components/schemas/ConfigurationItemMD5Hash'
+          - description: <p>Unique MD5 hash that represents the configuration item's state.</p> <p>You can use MD5 hash to compare the states of two or more configuration items that are associated with the same resource.</p>
+        arn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: Amazon Resource Name (ARN) associated with the resource.
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/ResourceType'
+          - description: The type of Amazon Web Services resource.
+        resourceId:
+          allOf:
+          - $ref: '#/components/schemas/ResourceId'
+          - description: The ID of the resource (for example, <code>sg-xxxxxx</code>).
+        resourceName:
+          allOf:
+          - $ref: '#/components/schemas/ResourceName'
+          - description: The custom name of the resource, if available.
+        awsRegion:
+          allOf:
+          - $ref: '#/components/schemas/AwsRegion'
+          - description: The region where the resource resides.
+        availabilityZone:
+          allOf:
+          - $ref: '#/components/schemas/AvailabilityZone'
+          - description: The Availability Zone associated with the resource.
+        resourceCreationTime:
+          allOf:
+          - $ref: '#/components/schemas/ResourceCreationTime'
+          - description: The time stamp when the resource was created.
+        tags:
+          allOf:
+          - $ref: '#/components/schemas/Tags'
+          - description: A mapping of key value tags associated with the resource.
+        relatedEvents:
+          allOf:
+          - $ref: '#/components/schemas/RelatedEventList'
+          - description: <p>A list of CloudTrail event IDs.</p> <p>A populated field indicates that the current configuration was initiated by the events recorded in the CloudTrail log. For more information about CloudTrail, see <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What Is CloudTrail</a>.</p> <p>An empty field indicates that the current configuration was not initiated by any event. As of Version 1.3, the relatedEvents field is empty. You can access the <a href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html">LookupEvents API</a> in the <i>CloudTrail API Reference</i> to retrieve the events for the resource.</p>
+        relationships:
+          allOf:
+          - $ref: '#/components/schemas/RelationshipList'
+          - description: A list of related Amazon Web Services resources.
+        configuration:
+          allOf:
+          - $ref: '#/components/schemas/Configuration'
+          - description: The description of the resource configuration.
+        supplementaryConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/SupplementaryConfiguration'
+          - description: Configuration attributes that Config returns for certain resource types to supplement the information returned for the <code>configuration</code> parameter.
+      description: A list that contains detailed configurations of a specified resource.
+    AccountId:
+      type: string
+      pattern: \d{12}
     ResourceType:
       type: string
       enum:
@@ -602,33 +671,17 @@ components:
       - AWS::Transfer::Agreement
       - AWS::Transfer::Connector
       - AWS::KinesisFirehose::DeliveryStream
-    GetAggregateResourceConfigRequest:
-      type: object
-      required:
-      - ConfigurationAggregatorName
-      - ResourceIdentifier
-      title: GetAggregateResourceConfigRequest
-      properties:
-        ConfigurationAggregatorName:
-          allOf:
-          - $ref: '#/components/schemas/ConfigurationAggregatorName'
-          - description: The name of the configuration aggregator.
-        ResourceIdentifier:
-          allOf:
-          - $ref: '#/components/schemas/AggregateResourceIdentifier'
-          - description: An object that identifies aggregate resource.
-    ConfigurationItemCaptureTime:
+    RelatedEventList:
+      type: array
+      items:
+        $ref: '#/components/schemas/RelatedEvent'
+    ConfigurationStateId:
       type: string
-      format: date-time
-    ConfigurationAggregatorName:
+    Configuration:
       type: string
-      pattern: '[\w\-]+'
-      minLength: 1
-      maxLength: 256
-    SupplementaryConfigurationValue:
+    RelatedEvent:
       type: string
-    ResourceName:
-      type: string
+    NoSuchConfigurationAggregatorException: {}
     Relationship:
       type: object
       properties:
@@ -649,110 +702,51 @@ components:
           - $ref: '#/components/schemas/RelationshipName'
           - description: The type of relationship with the related resource.
       description: The relationship of the related resource to the main resource.
-    OversizedConfigurationItemException: {}
-    ResourceId:
+    ConfigurationAggregatorName:
       type: string
+      pattern: '[\w\-]+'
       minLength: 1
-      maxLength: 768
-    ConfigurationItem:
+      maxLength: 256
+    ResourceCreationTime:
+      type: string
+      format: date-time
+    ResourceName:
+      type: string
+    SupplementaryConfiguration:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/SupplementaryConfigurationValue'
+    OversizedConfigurationItemException: {}
+    GetAggregateResourceConfigResponse:
       type: object
       properties:
-        version:
+        ConfigurationItem:
           allOf:
-          - $ref: '#/components/schemas/Version'
-          - description: The version number of the resource configuration.
-        accountId:
+          - $ref: '#/components/schemas/ConfigurationItem'
+          - description: Returns a <code>ConfigurationItem</code> object.
+    RelationshipList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Relationship'
+    ResourceNotDiscoveredException: {}
+    GetAggregateResourceConfigRequest:
+      type: object
+      required:
+      - ConfigurationAggregatorName
+      - ResourceIdentifier
+      title: GetAggregateResourceConfigRequest
+      properties:
+        ConfigurationAggregatorName:
           allOf:
-          - $ref: '#/components/schemas/AccountId'
-          - description: The 12-digit Amazon Web Services account ID associated with the resource.
-        configurationItemCaptureTime:
+          - $ref: '#/components/schemas/ConfigurationAggregatorName'
+          - description: The name of the configuration aggregator.
+        ResourceIdentifier:
           allOf:
-          - $ref: '#/components/schemas/ConfigurationItemCaptureTime'
-          - description: The time when the configuration recording was initiated.
-        configurationItemStatus:
-          allOf:
-          - $ref: '#/components/schemas/ConfigurationItemStatus'
-          - description: <p>The configuration item status. The valid values are:</p> <ul> <li> <p>OK – The resource configuration has been updated</p> </li> <li> <p>ResourceDiscovered – The resource was newly discovered</p> </li> <li> <p>ResourceNotRecorded – The resource was discovered but its configuration was not recorded since the recorder excludes the recording of resources of this type</p> </li> <li> <p>ResourceDeleted – The resource was deleted</p> </li> <li> <p>ResourceDeletedNotRecorded – The resource was deleted but its configuration was not recorded since the recorder excludes the recording of resources of this type</p> </li> </ul> <note> <p>The CIs do not incur any cost.</p> </note>
-        configurationStateId:
-          allOf:
-          - $ref: '#/components/schemas/ConfigurationStateId'
-          - description: An identifier that indicates the ordering of the configuration items of a resource.
-        configurationItemMD5Hash:
-          allOf:
-          - $ref: '#/components/schemas/ConfigurationItemMD5Hash'
-          - description: <p>Unique MD5 hash that represents the configuration item's state.</p> <p>You can use MD5 hash to compare the states of two or more configuration items that are associated with the same resource.</p>
-        arn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: Amazon Resource Name (ARN) associated with the resource.
-        resourceType:
-          allOf:
-          - $ref: '#/components/schemas/ResourceType'
-          - description: The type of Amazon Web Services resource.
-        resourceId:
-          allOf:
-          - $ref: '#/components/schemas/ResourceId'
-          - description: The ID of the resource (for example, <code>sg-xxxxxx</code>).
-        resourceName:
-          allOf:
-          - $ref: '#/components/schemas/ResourceName'
-          - description: The custom name of the resource, if available.
-        awsRegion:
-          allOf:
-          - $ref: '#/components/schemas/AwsRegion'
-          - description: The region where the resource resides.
-        availabilityZone:
-          allOf:
-          - $ref: '#/components/schemas/AvailabilityZone'
-          - description: The Availability Zone associated with the resource.
-        resourceCreationTime:
-          allOf:
-          - $ref: '#/components/schemas/ResourceCreationTime'
-          - description: The time stamp when the resource was created.
-        tags:
-          allOf:
-          - $ref: '#/components/schemas/Tags'
-          - description: A mapping of key value tags associated with the resource.
-        relatedEvents:
-          allOf:
-          - $ref: '#/components/schemas/RelatedEventList'
-          - description: <p>A list of CloudTrail event IDs.</p> <p>A populated field indicates that the current configuration was initiated by the events recorded in the CloudTrail log. For more information about CloudTrail, see <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What Is CloudTrail</a>.</p> <p>An empty field indicates that the current configuration was not initiated by any event. As of Version 1.3, the relatedEvents field is empty. You can access the <a href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html">LookupEvents API</a> in the <i>CloudTrail API Reference</i> to retrieve the events for the resource.</p>
-        relationships:
-          allOf:
-          - $ref: '#/components/schemas/RelationshipList'
-          - description: A list of related Amazon Web Services resources.
-        configuration:
-          allOf:
-          - $ref: '#/components/schemas/Configuration'
-          - description: The description of the resource configuration.
-        supplementaryConfiguration:
-          allOf:
-          - $ref: '#/components/schemas/SupplementaryConfiguration'
-          - description: Configuration attributes that Config returns for certain resource types to supplement the information returned for the <code>configuration</code> parameter.
-      description: A list that contains detailed configurations of a specified resource.
-    Version:
-      type: string
-    ValidationException: {}
-    AccountId:
-      type: string
-      pattern: \d{12}
-    ConfigurationItemMD5Hash:
-      type: string
-    AwsRegion:
-      type: string
-      minLength: 1
-      maxLength: 64
-    ARN:
-      type: string
+          - $ref: '#/components/schemas/AggregateResourceIdentifier'
+          - description: An object that identifies aggregate resource.
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -763,14 +757,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -781,8 +775,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
