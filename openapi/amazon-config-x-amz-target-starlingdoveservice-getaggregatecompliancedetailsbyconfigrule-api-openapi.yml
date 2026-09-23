@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2014-11-12'
   x-release: v4
-  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.GetAggregateComplianceDetailsByConfigRule #X Amz Target=StarlingDoveService.GetAggregateComplianceDetailsByConfigRule #X Amz Target=StarlingDoveService.GetAggregateComplianceDetailsByConfigRule API'
-  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  title: 'AWS Config #X Amz Target=StarlingDoveService.GetAggregateCom…'
+  description: 'Config
+
+    Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account.'
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -23,6 +25,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +127,10 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: GetAggregateComplianceDetailsByConfigRule
-      description: <p>Returns the evaluation results for the specified Config rule for a specific resource in a rule. The results indicate which Amazon Web Services resources were evaluated by the rule, when each resource was last evaluated, and whether each resource complies with the rule. </p> <note> <p>The results can return an empty result page. But if you have a <code>nextToken</code>, the results are displayed on the next page.</p> </note>
+      description: 'Returns the evaluation results for the specified Config rule for a specific resource in a rule. The results indicate which Amazon Web Services resources were evaluated by the rule, when each resource was last evaluated, and whether each resource complies with the rule.
+
+
+        The results can return an empty result page. But if you have a nextToken, the results are displayed on the next page.'
       responses:
         '200':
           description: Success
@@ -217,23 +223,9 @@ paths:
       - '#X Amz Target=StarlingDoveService.GetAggregateComplianceDetailsByConfigRule'
 components:
   schemas:
-    EvaluationMode:
+    AccountId:
       type: string
-      enum:
-      - DETECTIVE
-      - PROACTIVE
-    ValidationException: {}
-    GetAggregateComplianceDetailsByConfigRuleResponse:
-      type: object
-      properties:
-        AggregateEvaluationResults:
-          allOf:
-          - $ref: '#/components/schemas/AggregateEvaluationResultList'
-          - description: Returns an AggregateEvaluationResults object.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/NextToken'
-          - description: The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.
+      pattern: \d{12}
     AggregateEvaluationResult:
       type: object
       properties:
@@ -266,68 +258,7 @@ components:
           - $ref: '#/components/schemas/AwsRegion'
           - description: The source region from where the data is aggregated.
       description: 'The details of an Config evaluation for an account ID and region in an aggregator. Provides the Amazon Web Services resource that was evaluated, the compliance of the resource, related time stamps, and supplementary information. '
-    EvaluationResultIdentifier:
-      type: object
-      properties:
-        EvaluationResultQualifier:
-          allOf:
-          - $ref: '#/components/schemas/EvaluationResultQualifier'
-          - description: Identifies an Config rule used to evaluate an Amazon Web Services resource, and provides the type and ID of the evaluated resource.
-        OrderingTimestamp:
-          allOf:
-          - $ref: '#/components/schemas/Date'
-          - description: The time of the event that triggered the evaluation of your Amazon Web Services resources. The time can indicate when Config delivered a configuration item change notification, or it can indicate when Config delivered the configuration snapshot, depending on which event triggered the evaluation.
-        ResourceEvaluationId:
-          allOf:
-          - $ref: '#/components/schemas/ResourceEvaluationId'
-          - description: A Unique ID for an evaluation result.
-      description: Uniquely identifies an evaluation result.
-    ResourceEvaluationId:
-      type: string
-      minLength: 1
-      maxLength: 128
-    InvalidNextTokenException: {}
-    AwsRegion:
-      type: string
-      minLength: 1
-      maxLength: 64
-    EvaluationResultQualifier:
-      type: object
-      properties:
-        ConfigRuleName:
-          allOf:
-          - $ref: '#/components/schemas/ConfigRuleName'
-          - description: The name of the Config rule that was used in the evaluation.
-        ResourceType:
-          allOf:
-          - $ref: '#/components/schemas/StringWithCharLimit256'
-          - description: The type of Amazon Web Services resource that was evaluated.
-        ResourceId:
-          allOf:
-          - $ref: '#/components/schemas/BaseResourceId'
-          - description: The ID of the evaluated Amazon Web Services resource.
-        EvaluationMode:
-          allOf:
-          - $ref: '#/components/schemas/EvaluationMode'
-          - description: The mode of an evaluation. The valid values are Detective or Proactive.
-      description: Identifies an Config rule that evaluated an Amazon Web Services resource, and provides the type and ID of the resource that the rule evaluated.
-    ConfigRuleName:
-      type: string
-      pattern: .*\S.*
-      minLength: 1
-      maxLength: 128
-    AccountId:
-      type: string
-      pattern: \d{12}
-    BaseResourceId:
-      type: string
-      minLength: 1
-      maxLength: 768
     NoSuchConfigurationAggregatorException: {}
-    Limit:
-      type: integer
-      minimum: 0
-      maximum: 100
     GetAggregateComplianceDetailsByConfigRuleRequest:
       type: object
       required:
@@ -365,14 +296,73 @@ components:
           allOf:
           - $ref: '#/components/schemas/NextToken'
           - description: The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.
+    NextToken:
+      type: string
+    ValidationException: {}
+    EvaluationMode:
+      type: string
+      enum:
+      - DETECTIVE
+      - PROACTIVE
+    ConfigRuleName:
+      type: string
+      pattern: .*\S.*
+      minLength: 1
+      maxLength: 128
+    InvalidNextTokenException: {}
+    EvaluationResultQualifier:
+      type: object
+      properties:
+        ConfigRuleName:
+          allOf:
+          - $ref: '#/components/schemas/ConfigRuleName'
+          - description: The name of the Config rule that was used in the evaluation.
+        ResourceType:
+          allOf:
+          - $ref: '#/components/schemas/StringWithCharLimit256'
+          - description: The type of Amazon Web Services resource that was evaluated.
+        ResourceId:
+          allOf:
+          - $ref: '#/components/schemas/BaseResourceId'
+          - description: The ID of the evaluated Amazon Web Services resource.
+        EvaluationMode:
+          allOf:
+          - $ref: '#/components/schemas/EvaluationMode'
+          - description: The mode of an evaluation. The valid values are Detective or Proactive.
+      description: Identifies an Config rule that evaluated an Amazon Web Services resource, and provides the type and ID of the resource that the rule evaluated.
+    BaseResourceId:
+      type: string
+      minLength: 1
+      maxLength: 768
+    AwsRegion:
+      type: string
+      minLength: 1
+      maxLength: 64
+    Limit:
+      type: integer
+      minimum: 0
+      maximum: 100
     StringWithCharLimit256:
       type: string
       minLength: 1
       maxLength: 256
-    AggregateEvaluationResultList:
-      type: array
-      items:
-        $ref: '#/components/schemas/AggregateEvaluationResult'
+    EvaluationResultIdentifier:
+      type: object
+      properties:
+        EvaluationResultQualifier:
+          allOf:
+          - $ref: '#/components/schemas/EvaluationResultQualifier'
+          - description: Identifies an Config rule used to evaluate an Amazon Web Services resource, and provides the type and ID of the evaluated resource.
+        OrderingTimestamp:
+          allOf:
+          - $ref: '#/components/schemas/Date'
+          - description: The time of the event that triggered the evaluation of your Amazon Web Services resources. The time can indicate when Config delivered a configuration item change notification, or it can indicate when Config delivered the configuration snapshot, depending on which event triggered the evaluation.
+        ResourceEvaluationId:
+          allOf:
+          - $ref: '#/components/schemas/ResourceEvaluationId'
+          - description: A Unique ID for an evaluation result.
+      description: Uniquely identifies an evaluation result.
+    InvalidLimitException: {}
     ConfigurationAggregatorName:
       type: string
       pattern: '[\w\-]+'
@@ -385,21 +375,31 @@ components:
       - NON_COMPLIANT
       - NOT_APPLICABLE
       - INSUFFICIENT_DATA
+    ResourceEvaluationId:
+      type: string
+      minLength: 1
+      maxLength: 128
     Date:
       type: string
       format: date-time
-    NextToken:
-      type: string
-    InvalidLimitException: {}
+    GetAggregateComplianceDetailsByConfigRuleResponse:
+      type: object
+      properties:
+        AggregateEvaluationResults:
+          allOf:
+          - $ref: '#/components/schemas/AggregateEvaluationResultList'
+          - description: Returns an AggregateEvaluationResults object.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/NextToken'
+          - description: The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.
+    AggregateEvaluationResultList:
+      type: array
+      items:
+        $ref: '#/components/schemas/AggregateEvaluationResult'
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -410,14 +410,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -428,8 +428,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2014-11-12'
   x-release: v4
-  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.PutConfigurationAggregator #X Amz Target=StarlingDoveService.PutConfigurationAggregator #X Amz Target=StarlingDoveService.PutConfigurationAggregator API'
-  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  title: 'AWS Config #X Amz Target=StarlingDoveService.PutConfiguratio…'
+  description: 'Config
+
+    Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account.'
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -23,6 +25,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +127,22 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: PutConfigurationAggregator
-      description: <p>Creates and updates the configuration aggregator with the selected source accounts and regions. The source account can be individual account(s) or an organization.</p> <p> <code>accountIds</code> that are passed will be replaced with existing accounts. If you want to add additional accounts into the aggregator, call <code>DescribeConfigurationAggregators</code> to get the previous accounts and then append new ones.</p> <note> <p>Config should be enabled in source accounts and regions you want to aggregate.</p> <p>If your source type is an organization, you must be signed in to the management account or a registered delegated administrator and all the features must be enabled in your organization. If the caller is a management account, Config calls <code>EnableAwsServiceAccess</code> API to enable integration between Config and Organizations. If the caller is a registered delegated administrator, Config calls <code>ListDelegatedAdministrators</code> API to verify whether the caller is a valid delegated administrator.</p> <p>To register a delegated administrator, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/set-up-aggregator-cli.html#register-a-delegated-administrator-cli">Register a Delegated Administrator</a> in the <i>Config developer guide</i>. </p> </note> <note> <p> <code>PutConfigurationAggregator</code> is an idempotent API. Subsequent requests won’t create a duplicate resource if one was already created. If a following request has different <code>tags</code> values, Config will ignore these differences and treat it as an idempotent request of the previous. In this case, <code>tags</code> will not be updated, even if they are different.</p> </note>
+      description: 'Creates and updates the configuration aggregator with the selected source accounts and regions. The source account can be individual account(s) or an organization.
+
+
+        accountIds that are passed will be replaced with existing accounts. If you want to add additional accounts into the aggregator, call DescribeConfigurationAggregators to get the previous accounts and then append new ones.
+
+
+        Config should be enabled in source accounts and regions you want to aggregate.
+
+
+        If your source type is an organization, you must be signed in to the management account or a registered delegated administrator and all the features must be enabled in your organization. If the caller is a management account, Config calls EnableAwsServiceAccess API to enable integration between Config and Organizations. If the caller is a registered delegated administrator, Config calls ListDelegatedAdministrators API to verify whether the caller is a valid delegated administrator.
+
+
+        To register a delegated administrator, see Register a Delegated Administrator in the Config developer guide.
+
+
+        PutConfigurationAggregator is an idempotent API. Subsequent requests won’t create a duplicate resource if one was already created. If a following request has different tags values, Config will ignore these differences and treat it as an idempotent request of the previous. In this case, tags will not be updated, even if they are different.'
       responses:
         '200':
           description: Success
@@ -226,102 +244,7 @@ paths:
       - '#X Amz Target=StarlingDoveService.PutConfigurationAggregator'
 components:
   schemas:
-    InvalidRoleException: {}
-    PutConfigurationAggregatorResponse:
-      type: object
-      properties:
-        ConfigurationAggregator:
-          allOf:
-          - $ref: '#/components/schemas/ConfigurationAggregator'
-          - description: Returns a ConfigurationAggregator object.
-    Boolean:
-      type: boolean
-    InvalidParameterValueException: {}
-    ConfigurationAggregatorArn:
-      type: string
-      pattern: arn:aws[a-z\-]*:config:[a-z\-\d]+:\d+:config-aggregator/config-aggregator-[a-z\d]+
-    AggregatorRegionList:
-      type: array
-      items:
-        $ref: '#/components/schemas/String'
-      minItems: 1
     LimitExceededException: {}
-    OrganizationAllFeaturesNotEnabledException: {}
-    OrganizationAccessDeniedException: {}
-    Tag:
-      type: object
-      properties:
-        Key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: One part of a key-value pair that make up a tag. A key is a general label that acts like a category for more specific tag values.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The optional part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key).
-      description: The tags for the resource. The metadata that you apply to a resource to help you categorize and organize them. Each tag consists of a key and an optional value, both of which you define. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters.
-    AccountAggregationSource:
-      type: object
-      required:
-      - AccountIds
-      properties:
-        AccountIds:
-          allOf:
-          - $ref: '#/components/schemas/AccountAggregationSourceAccountList'
-          - description: 'The 12-digit account ID of the account being aggregated. '
-        AllAwsRegions:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: If true, aggregate existing Config regions and future regions.
-        AwsRegions:
-          allOf:
-          - $ref: '#/components/schemas/AggregatorRegionList'
-          - description: The source regions being aggregated.
-      description: A collection of accounts and regions.
-    String:
-      type: string
-    TagKey:
-      type: string
-      minLength: 1
-      maxLength: 128
-    AccountId:
-      type: string
-      pattern: \d{12}
-    AccountAggregationSourceList:
-      type: array
-      items:
-        $ref: '#/components/schemas/AccountAggregationSource'
-      minItems: 0
-      maxItems: 1
-    OrganizationAggregationSource:
-      type: object
-      required:
-      - RoleArn
-      properties:
-        RoleArn:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: ARN of the IAM role used to retrieve Amazon Web Services Organization details associated with the aggregator account.
-        AwsRegions:
-          allOf:
-          - $ref: '#/components/schemas/AggregatorRegionList'
-          - description: The source regions being aggregated.
-        AllAwsRegions:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: If true, aggregate existing Config regions and future regions.
-      description: This object contains regions to set up the aggregator and an IAM role to retrieve organization details.
-    NoAvailableOrganizationException: {}
-    TagsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Tag'
-      minItems: 0
-      maxItems: 50
-    StringWithCharLimit256:
-      type: string
-      minLength: 1
-      maxLength: 256
     ConfigurationAggregator:
       type: object
       properties:
@@ -354,19 +277,6 @@ components:
           - $ref: '#/components/schemas/StringWithCharLimit256'
           - description: Amazon Web Services service that created the configuration aggregator.
       description: 'The details about the configuration aggregator, including information about source accounts, regions, and metadata of the aggregator. '
-    ConfigurationAggregatorName:
-      type: string
-      pattern: '[\w\-]+'
-      minLength: 1
-      maxLength: 256
-    AccountAggregationSourceAccountList:
-      type: array
-      items:
-        $ref: '#/components/schemas/AccountId'
-      minItems: 1
-    Date:
-      type: string
-      format: date-time
     PutConfigurationAggregatorRequest:
       type: object
       required:
@@ -389,19 +299,121 @@ components:
           allOf:
           - $ref: '#/components/schemas/TagsList'
           - description: An array of tag object.
+    AccountId:
+      type: string
+      pattern: \d{12}
+    AccountAggregationSource:
+      type: object
+      required:
+      - AccountIds
+      properties:
+        AccountIds:
+          allOf:
+          - $ref: '#/components/schemas/AccountAggregationSourceAccountList'
+          - description: 'The 12-digit account ID of the account being aggregated. '
+        AllAwsRegions:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: If true, aggregate existing Config regions and future regions.
+        AwsRegions:
+          allOf:
+          - $ref: '#/components/schemas/AggregatorRegionList'
+          - description: The source regions being aggregated.
+      description: A collection of accounts and regions.
+    AggregatorRegionList:
+      type: array
+      items:
+        $ref: '#/components/schemas/String'
+      minItems: 1
+    StringWithCharLimit256:
+      type: string
+      minLength: 1
+      maxLength: 256
+    Boolean:
+      type: boolean
+    InvalidRoleException: {}
+    TagsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+      minItems: 0
+      maxItems: 50
+    PutConfigurationAggregatorResponse:
+      type: object
+      properties:
+        ConfigurationAggregator:
+          allOf:
+          - $ref: '#/components/schemas/ConfigurationAggregator'
+          - description: Returns a ConfigurationAggregator object.
+    OrganizationAggregationSource:
+      type: object
+      required:
+      - RoleArn
+      properties:
+        RoleArn:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: ARN of the IAM role used to retrieve Amazon Web Services Organization details associated with the aggregator account.
+        AwsRegions:
+          allOf:
+          - $ref: '#/components/schemas/AggregatorRegionList'
+          - description: The source regions being aggregated.
+        AllAwsRegions:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: If true, aggregate existing Config regions and future regions.
+      description: This object contains regions to set up the aggregator and an IAM role to retrieve organization details.
+    OrganizationAccessDeniedException: {}
+    ConfigurationAggregatorArn:
+      type: string
+      pattern: arn:aws[a-z\-]*:config:[a-z\-\d]+:\d+:config-aggregator/config-aggregator-[a-z\d]+
+    Tag:
+      type: object
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: One part of a key-value pair that make up a tag. A key is a general label that acts like a category for more specific tag values.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The optional part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key).
+      description: The tags for the resource. The metadata that you apply to a resource to help you categorize and organize them. Each tag consists of a key and an optional value, both of which you define. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters.
+    InvalidParameterValueException: {}
+    ConfigurationAggregatorName:
+      type: string
+      pattern: '[\w\-]+'
+      minLength: 1
+      maxLength: 256
     TagValue:
       type: string
       minLength: 0
       maxLength: 256
+    String:
+      type: string
+    AccountAggregationSourceAccountList:
+      type: array
+      items:
+        $ref: '#/components/schemas/AccountId'
+      minItems: 1
+    TagKey:
+      type: string
+      minLength: 1
+      maxLength: 128
+    Date:
+      type: string
+      format: date-time
+    OrganizationAllFeaturesNotEnabledException: {}
+    AccountAggregationSourceList:
+      type: array
+      items:
+        $ref: '#/components/schemas/AccountAggregationSource'
+      minItems: 0
+      maxItems: 1
+    NoAvailableOrganizationException: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -412,26 +424,32 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

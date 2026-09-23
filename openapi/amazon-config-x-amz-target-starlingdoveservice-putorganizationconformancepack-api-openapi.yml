@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2014-11-12'
   x-release: v4
-  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.PutOrganizationConformancePack #X Amz Target=StarlingDoveService.PutOrganizationConformancePack #X Amz Target=StarlingDoveService.PutOrganizationConformancePack API'
-  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  title: 'AWS Config #X Amz Target=StarlingDoveService.PutOrganization…'
+  description: 'Config
+
+    Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account.'
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -23,6 +25,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +127,22 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: PutOrganizationConformancePack
-      description: '<p>Deploys conformance packs across member accounts in an Amazon Web Services Organization. For information on how many organization conformance packs and how many Config rules you can have per account, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html"> <b>Service Limits</b> </a> in the <i>Config Developer Guide</i>.</p> <p>Only a management account and a delegated administrator can call this API. When calling this API with a delegated administrator, you must ensure Organizations <code>ListDelegatedAdministrator</code> permissions are added. An organization can have up to 3 delegated administrators.</p> <p>This API enables organization service access for <code>config-multiaccountsetup.amazonaws.com</code> through the <code>EnableAWSServiceAccess</code> action and creates a service-linked role <code>AWSServiceRoleForConfigMultiAccountSetup</code> in the management or delegated administrator account of your organization. The service-linked role is created only when the role does not exist in the caller account. To use this API with delegated administrator, register a delegated administrator by calling Amazon Web Services Organization <code>register-delegate-admin</code> for <code>config-multiaccountsetup.amazonaws.com</code>.</p> <note> <p>Prerequisite: Ensure you call <code>EnableAllFeatures</code> API to enable all features in an organization.</p> <p>You must specify either the <code>TemplateS3Uri</code> or the <code>TemplateBody</code> parameter, but not both. If you provide both Config uses the <code>TemplateS3Uri</code> parameter and ignores the <code>TemplateBody</code> parameter.</p> <p>Config sets the state of a conformance pack to CREATE_IN_PROGRESS and UPDATE_IN_PROGRESS until the conformance pack is created or updated. You cannot update a conformance pack while it is in this state.</p> </note>'
+      description: 'Deploys conformance packs across member accounts in an Amazon Web Services Organization. For information on how many organization conformance packs and how many Config rules you can have per account, see Service Limits in the Config Developer Guide.
+
+
+        Only a management account and a delegated administrator can call this API. When calling this API with a delegated administrator, you must ensure Organizations ListDelegatedAdministrator permissions are added. An organization can have up to 3 delegated administrators.
+
+
+        This API enables organization service access for config-multiaccountsetup.amazonaws.com through the EnableAWSServiceAccess action and creates a service-linked role AWSServiceRoleForConfigMultiAccountSetup in the management or delegated administrator account of your organization. The service-linked role is created only when the role does not exist in the caller account. To use this API with delegated administrator, register a delegated administrator by calling Amazon Web Services Organization register-delegate-admin for config-multiaccountsetup.amazonaws.com.
+
+
+        Prerequisite: Ensure you call EnableAllFeatures API to enable all features in an organization.
+
+
+        You must specify either the TemplateS3Uri or the TemplateBody parameter, but not both. If you provide both Config uses the TemplateS3Uri parameter and ignores the TemplateBody parameter.
+
+
+        Config sets the state of a conformance pack to CREATE_IN_PROGRESS and UPDATE_IN_PROGRESS until the conformance pack is created or updated. You cannot update a conformance pack while it is in this state.'
       responses:
         '200':
           description: Success
@@ -248,62 +266,46 @@ paths:
       - '#X Amz Target=StarlingDoveService.PutOrganizationConformancePack'
 components:
   schemas:
-    ValidationException: {}
+    DeliveryS3KeyPrefix:
+      type: string
+      minLength: 0
+      maxLength: 1024
+    MaxNumberOfOrganizationConformancePacksExceededException: {}
+    ParameterName:
+      type: string
+      minLength: 0
+      maxLength: 255
     OrganizationConformancePackName:
       type: string
       pattern: '[a-zA-Z][-a-zA-Z0-9]*'
       minLength: 1
       maxLength: 128
-    DeliveryS3KeyPrefix:
-      type: string
-      minLength: 0
-      maxLength: 1024
-    TemplateS3Uri:
-      type: string
-      pattern: s3://.*
-      minLength: 1
-      maxLength: 1024
-    InsufficientPermissionsException: {}
-    ExcludedAccounts:
-      type: array
-      items:
-        $ref: '#/components/schemas/AccountId'
-      minItems: 0
-      maxItems: 1000
-    OrganizationAllFeaturesNotEnabledException: {}
-    OrganizationAccessDeniedException: {}
-    PutOrganizationConformancePackResponse:
-      type: object
-      properties:
-        OrganizationConformancePackArn:
-          allOf:
-          - $ref: '#/components/schemas/StringWithCharLimit256'
-          - description: ARN of the organization conformance pack.
-    ParameterValue:
-      type: string
-      minLength: 0
-      maxLength: 4096
-    OrganizationConformancePackTemplateValidationException: {}
     AccountId:
       type: string
       pattern: \d{12}
-    NoAvailableOrganizationException: {}
-    ResourceInUseException: {}
+    OrganizationConformancePackTemplateValidationException: {}
+    ValidationException: {}
+    InsufficientPermissionsException: {}
+    TemplateBody:
+      type: string
+      minLength: 1
+      maxLength: 51200
     StringWithCharLimit256:
       type: string
       minLength: 1
       maxLength: 256
+    OrganizationAccessDeniedException: {}
     ConformancePackInputParameters:
       type: array
       items:
         $ref: '#/components/schemas/ConformancePackInputParameter'
       minItems: 0
       maxItems: 60
-    MaxNumberOfOrganizationConformancePacksExceededException: {}
-    DeliveryS3Bucket:
+    TemplateS3Uri:
       type: string
-      minLength: 0
-      maxLength: 63
+      pattern: s3://.*
+      minLength: 1
+      maxLength: 1024
     PutOrganizationConformancePackRequest:
       type: object
       required:
@@ -338,6 +340,30 @@ components:
           allOf:
           - $ref: '#/components/schemas/ExcludedAccounts'
           - description: A list of Amazon Web Services accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+    ExcludedAccounts:
+      type: array
+      items:
+        $ref: '#/components/schemas/AccountId'
+      minItems: 0
+      maxItems: 1000
+    ParameterValue:
+      type: string
+      minLength: 0
+      maxLength: 4096
+    DeliveryS3Bucket:
+      type: string
+      minLength: 0
+      maxLength: 63
+    PutOrganizationConformancePackResponse:
+      type: object
+      properties:
+        OrganizationConformancePackArn:
+          allOf:
+          - $ref: '#/components/schemas/StringWithCharLimit256'
+          - description: ARN of the organization conformance pack.
+    OrganizationAllFeaturesNotEnabledException: {}
+    ResourceInUseException: {}
+    NoAvailableOrganizationException: {}
     ConformancePackInputParameter:
       type: object
       required:
@@ -353,23 +379,9 @@ components:
           - $ref: '#/components/schemas/ParameterValue'
           - description: 'Another part of the key-value pair. '
       description: Input parameters in the form of key-value pairs for the conformance pack, both of which you define. Keys can have a maximum character length of 255 characters, and values can have a maximum length of 4096 characters.
-    ParameterName:
-      type: string
-      minLength: 0
-      maxLength: 255
-    TemplateBody:
-      type: string
-      minLength: 1
-      maxLength: 51200
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -380,14 +392,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -398,8 +410,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

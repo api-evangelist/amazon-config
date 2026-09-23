@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2014-11-12'
   x-release: v4
-  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.GetDiscoveredResourceCounts #X Amz Target=StarlingDoveService.GetDiscoveredResourceCounts #X Amz Target=StarlingDoveService.GetDiscoveredResourceCounts API'
-  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  title: 'AWS Config #X Amz Target=StarlingDoveService.GetDiscoveredRe…'
+  description: 'Config
+
+    Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account.'
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -23,6 +25,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +127,43 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: GetDiscoveredResourceCounts
-      description: '<p>Returns the resource types, the number of each resource type, and the total number of resources that Config is recording in this region for your Amazon Web Services account. </p> <p class="title"> <b>Example</b> </p> <ol> <li> <p>Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances, 20 IAM users, and 15 S3 buckets.</p> </li> <li> <p>You make a call to the <code>GetDiscoveredResourceCounts</code> action and specify that you want all resource types. </p> </li> <li> <p>Config returns the following:</p> <ul> <li> <p>The resource types (EC2 instances, IAM users, and S3 buckets).</p> </li> <li> <p>The number of each resource type (25, 20, and 15).</p> </li> <li> <p>The total number of all resources (60).</p> </li> </ul> </li> </ol> <p>The response is paginated. By default, Config lists 100 <a>ResourceCount</a> objects on each page. You can customize this number with the <code>limit</code> parameter. The response includes a <code>nextToken</code> string. To get the next page of results, run the request again and specify the string for the <code>nextToken</code> parameter.</p> <note> <p>If you make a call to the <a>GetDiscoveredResourceCounts</a> action, you might not immediately receive resource counts in the following situations:</p> <ul> <li> <p>You are a new Config customer.</p> </li> <li> <p>You just enabled resource recording.</p> </li> </ul> <p>It might take a few minutes for Config to record and count your resources. Wait a few minutes and then retry the <a>GetDiscoveredResourceCounts</a> action. </p> </note>'
+      description: 'Returns the resource types, the number of each resource type, and the total number of resources that Config is recording in this region for your Amazon Web Services account.
+
+
+        Example
+
+
+        Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances, 20 IAM users, and 15 S3 buckets.
+
+
+        You make a call to the GetDiscoveredResourceCounts action and specify that you want all resource types.
+
+
+        Config returns the following:
+
+
+        The resource types (EC2 instances, IAM users, and S3 buckets).
+
+
+        The number of each resource type (25, 20, and 15).
+
+
+        The total number of all resources (60).
+
+
+        The response is paginated. By default, Config lists 100 ResourceCount objects on each page. You can customize this number with the limit parameter. The response includes a nextToken string. To get the next page of results, run the request again and specify the string for the nextToken parameter.
+
+
+        If you make a call to the GetDiscoveredResourceCounts action, you might not immediately receive resource counts in the following situations:
+
+
+        You are a new Config customer.
+
+
+        You just enabled resource recording.
+
+
+        It might take a few minutes for Config to record and count your resources. Wait a few minutes and then retry the GetDiscoveredResourceCounts action.'
       responses:
         '200':
           description: Success
@@ -207,28 +246,38 @@ paths:
       - '#X Amz Target=StarlingDoveService.GetDiscoveredResourceCounts'
 components:
   schemas:
+    Long:
+      type: integer
+    ResourceCounts:
+      type: array
+      items:
+        $ref: '#/components/schemas/ResourceCount'
+    ResourceCount:
+      type: object
+      properties:
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/ResourceType'
+          - description: The resource type (for example, <code>"AWS::EC2::Instance"</code>).
+        count:
+          allOf:
+          - $ref: '#/components/schemas/Long'
+          - description: The number of resources.
+      description: An object that contains the resource type and the number of resources.
+    NextToken:
+      type: string
     ValidationException: {}
+    InvalidNextTokenException: {}
     ResourceTypes:
       type: array
       items:
         $ref: '#/components/schemas/StringWithCharLimit256'
       minItems: 0
       maxItems: 20
-    GetDiscoveredResourceCountsResponse:
-      type: object
-      properties:
-        totalDiscoveredResources:
-          allOf:
-          - $ref: '#/components/schemas/Long'
-          - description: '<p>The total number of resources that Config is recording in the region for your account. If you specify resource types in the request, Config returns only the total number of resources for those resource types.</p> <p class="title"> <b>Example</b> </p> <ol> <li> <p>Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances, 20 IAM users, and 15 S3 buckets, for a total of 60 resources.</p> </li> <li> <p>You make a call to the <code>GetDiscoveredResourceCounts</code> action and specify the resource type, <code>"AWS::EC2::Instances"</code>, in the request.</p> </li> <li> <p>Config returns 25 for <code>totalDiscoveredResources</code>.</p> </li> </ol>'
-        resourceCounts:
-          allOf:
-          - $ref: '#/components/schemas/ResourceCounts'
-          - description: The list of <code>ResourceCount</code> objects. Each object is listed in descending order by the number of resources.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/NextToken'
-          - description: The string that you use in a subsequent request to get the next page of results in a paginated response.
+    Limit:
+      type: integer
+      minimum: 0
+      maximum: 100
     GetDiscoveredResourceCountsRequest:
       type: object
       title: GetDiscoveredResourceCountsRequest
@@ -245,21 +294,26 @@ components:
           allOf:
           - $ref: '#/components/schemas/NextToken'
           - description: The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.
-    ResourceCount:
+    StringWithCharLimit256:
+      type: string
+      minLength: 1
+      maxLength: 256
+    InvalidLimitException: {}
+    GetDiscoveredResourceCountsResponse:
       type: object
       properties:
-        resourceType:
-          allOf:
-          - $ref: '#/components/schemas/ResourceType'
-          - description: The resource type (for example, <code>"AWS::EC2::Instance"</code>).
-        count:
+        totalDiscoveredResources:
           allOf:
           - $ref: '#/components/schemas/Long'
-          - description: The number of resources.
-      description: An object that contains the resource type and the number of resources.
-    InvalidNextTokenException: {}
-    Long:
-      type: integer
+          - description: '<p>The total number of resources that Config is recording in the region for your account. If you specify resource types in the request, Config returns only the total number of resources for those resource types.</p> <p class="title"> <b>Example</b> </p> <ol> <li> <p>Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances, 20 IAM users, and 15 S3 buckets, for a total of 60 resources.</p> </li> <li> <p>You make a call to the <code>GetDiscoveredResourceCounts</code> action and specify the resource type, <code>"AWS::EC2::Instances"</code>, in the request.</p> </li> <li> <p>Config returns 25 for <code>totalDiscoveredResources</code>.</p> </li> </ol>'
+        resourceCounts:
+          allOf:
+          - $ref: '#/components/schemas/ResourceCounts'
+          - description: The list of <code>ResourceCount</code> objects. Each object is listed in descending order by the number of resources.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/NextToken'
+          - description: The string that you use in a subsequent request to get the next page of results in a paginated response.
     ResourceType:
       type: string
       enum:
@@ -581,30 +635,9 @@ components:
       - AWS::Transfer::Agreement
       - AWS::Transfer::Connector
       - AWS::KinesisFirehose::DeliveryStream
-    Limit:
-      type: integer
-      minimum: 0
-      maximum: 100
-    StringWithCharLimit256:
-      type: string
-      minLength: 1
-      maxLength: 256
-    NextToken:
-      type: string
-    InvalidLimitException: {}
-    ResourceCounts:
-      type: array
-      items:
-        $ref: '#/components/schemas/ResourceCount'
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -615,14 +648,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -633,8 +666,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2014-11-12'
   x-release: v4
-  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.GetComplianceDetailsByConfigRule #X Amz Target=StarlingDoveService.GetComplianceDetailsByConfigRule #X Amz Target=StarlingDoveService.GetComplianceDetailsByConfigRule API'
-  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  title: 'AWS Config #X Amz Target=StarlingDoveService.GetComplianceDe…'
+  description: 'Config
+
+    Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account.'
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -23,6 +25,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -205,18 +208,111 @@ paths:
       tags:
       - '#X Amz Target=StarlingDoveService.GetComplianceDetailsByConfigRule'
 components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
+    GetComplianceDetailsByConfigRuleResponse:
+      type: object
+      properties:
+        EvaluationResults:
+          allOf:
+          - $ref: '#/components/schemas/EvaluationResults'
+          - description: Indicates whether the Amazon Web Services resource complies with the specified Config rule.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/NextToken'
+          - description: The string that you use in a subsequent request to get the next page of results in a paginated response.
+      description: <p/>
+    NextToken:
+      type: string
+    EvaluationResults:
+      type: array
+      items:
+        $ref: '#/components/schemas/EvaluationResult'
     EvaluationMode:
       type: string
       enum:
       - DETECTIVE
       - PROACTIVE
-    NoSuchConfigRuleException: {}
-    EvaluationResults:
-      type: array
-      items:
-        $ref: '#/components/schemas/EvaluationResult'
-    InvalidParameterValueException: {}
+    ConfigRuleName:
+      type: string
+      pattern: .*\S.*
+      minLength: 1
+      maxLength: 128
+    InvalidNextTokenException: {}
+    EvaluationResultQualifier:
+      type: object
+      properties:
+        ConfigRuleName:
+          allOf:
+          - $ref: '#/components/schemas/ConfigRuleName'
+          - description: The name of the Config rule that was used in the evaluation.
+        ResourceType:
+          allOf:
+          - $ref: '#/components/schemas/StringWithCharLimit256'
+          - description: The type of Amazon Web Services resource that was evaluated.
+        ResourceId:
+          allOf:
+          - $ref: '#/components/schemas/BaseResourceId'
+          - description: The ID of the evaluated Amazon Web Services resource.
+        EvaluationMode:
+          allOf:
+          - $ref: '#/components/schemas/EvaluationMode'
+          - description: The mode of an evaluation. The valid values are Detective or Proactive.
+      description: Identifies an Config rule that evaluated an Amazon Web Services resource, and provides the type and ID of the resource that the rule evaluated.
+    BaseResourceId:
+      type: string
+      minLength: 1
+      maxLength: 768
+    Limit:
+      type: integer
+      minimum: 0
+      maximum: 100
+    StringWithCharLimit256:
+      type: string
+      minLength: 1
+      maxLength: 256
     EvaluationResultIdentifier:
       type: object
       properties:
@@ -233,11 +329,26 @@ components:
           - $ref: '#/components/schemas/ResourceEvaluationId'
           - description: A Unique ID for an evaluation result.
       description: Uniquely identifies an evaluation result.
+    ComplianceTypes:
+      type: array
+      items:
+        $ref: '#/components/schemas/ComplianceType'
+      minItems: 0
+      maxItems: 3
+    InvalidParameterValueException: {}
+    ComplianceType:
+      type: string
+      enum:
+      - COMPLIANT
+      - NON_COMPLIANT
+      - NOT_APPLICABLE
+      - INSUFFICIENT_DATA
+    String:
+      type: string
     ResourceEvaluationId:
       type: string
       minLength: 1
       maxLength: 128
-    InvalidNextTokenException: {}
     EvaluationResult:
       type: object
       properties:
@@ -266,28 +377,14 @@ components:
           - $ref: '#/components/schemas/String'
           - description: An encrypted token that associates an evaluation with an Config rule. The token identifies the rule, the Amazon Web Services resource being evaluated, and the event that triggered the evaluation.
       description: The details of an Config evaluation. Provides the Amazon Web Services resource that was evaluated, the compliance of the resource, related time stamps, and supplementary information.
-    String:
+    NoSuchConfigRuleException: {}
+    Date:
       type: string
-    EvaluationResultQualifier:
-      type: object
-      properties:
-        ConfigRuleName:
-          allOf:
-          - $ref: '#/components/schemas/ConfigRuleName'
-          - description: The name of the Config rule that was used in the evaluation.
-        ResourceType:
-          allOf:
-          - $ref: '#/components/schemas/StringWithCharLimit256'
-          - description: The type of Amazon Web Services resource that was evaluated.
-        ResourceId:
-          allOf:
-          - $ref: '#/components/schemas/BaseResourceId'
-          - description: The ID of the evaluated Amazon Web Services resource.
-        EvaluationMode:
-          allOf:
-          - $ref: '#/components/schemas/EvaluationMode'
-          - description: The mode of an evaluation. The valid values are Detective or Proactive.
-      description: Identifies an Config rule that evaluated an Amazon Web Services resource, and provides the type and ID of the resource that the rule evaluated.
+      format: date-time
+    StringWithCharLimit64:
+      type: string
+      minLength: 1
+      maxLength: 64
     GetComplianceDetailsByConfigRuleRequest:
       type: object
       required:
@@ -311,100 +408,6 @@ components:
           - $ref: '#/components/schemas/NextToken'
           - description: The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.
       description: <p/>
-    ComplianceTypes:
-      type: array
-      items:
-        $ref: '#/components/schemas/ComplianceType'
-      minItems: 0
-      maxItems: 3
-    GetComplianceDetailsByConfigRuleResponse:
-      type: object
-      properties:
-        EvaluationResults:
-          allOf:
-          - $ref: '#/components/schemas/EvaluationResults'
-          - description: Indicates whether the Amazon Web Services resource complies with the specified Config rule.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/NextToken'
-          - description: The string that you use in a subsequent request to get the next page of results in a paginated response.
-      description: <p/>
-    ConfigRuleName:
-      type: string
-      pattern: .*\S.*
-      minLength: 1
-      maxLength: 128
-    BaseResourceId:
-      type: string
-      minLength: 1
-      maxLength: 768
-    Limit:
-      type: integer
-      minimum: 0
-      maximum: 100
-    StringWithCharLimit256:
-      type: string
-      minLength: 1
-      maxLength: 256
-    ComplianceType:
-      type: string
-      enum:
-      - COMPLIANT
-      - NON_COMPLIANT
-      - NOT_APPLICABLE
-      - INSUFFICIENT_DATA
-    Date:
-      type: string
-      format: date-time
-    NextToken:
-      type: string
-    StringWithCharLimit64:
-      type: string
-      minLength: 1
-      maxLength: 64
-  parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
   securitySchemes:
     hmac:
       type: apiKey

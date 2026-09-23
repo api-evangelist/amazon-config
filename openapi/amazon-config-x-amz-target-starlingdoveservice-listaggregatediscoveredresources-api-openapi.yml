@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2014-11-12'
   x-release: v4
-  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.ListAggregateDiscoveredResources #X Amz Target=StarlingDoveService.ListAggregateDiscoveredResources #X Amz Target=StarlingDoveService.ListAggregateDiscoveredResources API'
-  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  title: 'AWS Config #X Amz Target=StarlingDoveService.ListAggregateDi…'
+  description: 'Config
+
+    Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account.'
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -23,6 +25,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +127,10 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: ListAggregateDiscoveredResources
-      description: <p>Accepts a resource type and returns a list of resource identifiers that are aggregated for a specific resource type across accounts and regions. A resource identifier includes the resource type, ID, (if available) the custom resource name, source account, and source region. You can narrow the results to include only resources that have specific resource IDs, or a resource name, or source account ID, or source region.</p> <p>For example, if the input consists of accountID 12345678910 and the region is us-east-1 for resource type <code>AWS::EC2::Instance</code> then the API returns all the EC2 instance identifiers of accountID 12345678910 and region us-east-1.</p>
+      description: 'Accepts a resource type and returns a list of resource identifiers that are aggregated for a specific resource type across accounts and regions. A resource identifier includes the resource type, ID, (if available) the custom resource name, source account, and source region. You can narrow the results to include only resources that have specific resource IDs, or a resource name, or source account ID, or source region.
+
+
+        For example, if the input consists of accountID 12345678910 and the region is us-east-1 for resource type AWS::EC2::Instance then the API returns all the EC2 instance identifiers of accountID 12345678910 and region us-east-1.'
       responses:
         '200':
           description: Success
@@ -217,47 +223,11 @@ paths:
       - '#X Amz Target=StarlingDoveService.ListAggregateDiscoveredResources'
 components:
   schemas:
-    ListAggregateDiscoveredResourcesResponse:
-      type: object
-      properties:
-        ResourceIdentifiers:
-          allOf:
-          - $ref: '#/components/schemas/DiscoveredResourceIdentifierList'
-          - description: Returns a list of <code>ResourceIdentifiers</code> objects.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/NextToken'
-          - description: The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.
-    ValidationException: {}
-    AggregateResourceIdentifier:
-      type: object
-      required:
-      - SourceAccountId
-      - SourceRegion
-      - ResourceId
-      - ResourceType
-      properties:
-        SourceAccountId:
-          allOf:
-          - $ref: '#/components/schemas/AccountId'
-          - description: The 12-digit account ID of the source account.
-        SourceRegion:
-          allOf:
-          - $ref: '#/components/schemas/AwsRegion'
-          - description: The source region where data is aggregated.
-        ResourceId:
-          allOf:
-          - $ref: '#/components/schemas/ResourceId'
-          - description: The ID of the Amazon Web Services resource.
-        ResourceType:
-          allOf:
-          - $ref: '#/components/schemas/ResourceType'
-          - description: The type of the Amazon Web Services resource.
-        ResourceName:
-          allOf:
-          - $ref: '#/components/schemas/ResourceName'
-          - description: The name of the Amazon Web Services resource.
-      description: The details that identify a resource that is collected by Config aggregator, including the resource type, ID, (if available) the custom resource name, the source account, and source region.
+    ResourceName:
+      type: string
+    AccountId:
+      type: string
+      pattern: \d{12}
     ListAggregateDiscoveredResourcesRequest:
       type: object
       required:
@@ -305,18 +275,73 @@ components:
           - $ref: '#/components/schemas/AwsRegion'
           - description: The source region.
       description: Filters the results by resource account ID, region, resource ID, and resource name.
+    NoSuchConfigurationAggregatorException: {}
+    NextToken:
+      type: string
+    ListAggregateDiscoveredResourcesResponse:
+      type: object
+      properties:
+        ResourceIdentifiers:
+          allOf:
+          - $ref: '#/components/schemas/DiscoveredResourceIdentifierList'
+          - description: Returns a list of <code>ResourceIdentifiers</code> objects.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/NextToken'
+          - description: The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.
+    DiscoveredResourceIdentifierList:
+      type: array
+      items:
+        $ref: '#/components/schemas/AggregateResourceIdentifier'
+    ValidationException: {}
+    AggregateResourceIdentifier:
+      type: object
+      required:
+      - SourceAccountId
+      - SourceRegion
+      - ResourceId
+      - ResourceType
+      properties:
+        SourceAccountId:
+          allOf:
+          - $ref: '#/components/schemas/AccountId'
+          - description: The 12-digit account ID of the source account.
+        SourceRegion:
+          allOf:
+          - $ref: '#/components/schemas/AwsRegion'
+          - description: The source region where data is aggregated.
+        ResourceId:
+          allOf:
+          - $ref: '#/components/schemas/ResourceId'
+          - description: The ID of the Amazon Web Services resource.
+        ResourceType:
+          allOf:
+          - $ref: '#/components/schemas/ResourceType'
+          - description: The type of the Amazon Web Services resource.
+        ResourceName:
+          allOf:
+          - $ref: '#/components/schemas/ResourceName'
+          - description: The name of the Amazon Web Services resource.
+      description: The details that identify a resource that is collected by Config aggregator, including the resource type, ID, (if available) the custom resource name, the source account, and source region.
     InvalidNextTokenException: {}
     AwsRegion:
       type: string
       minLength: 1
       maxLength: 64
+    Limit:
+      type: integer
+      minimum: 0
+      maximum: 100
+    InvalidLimitException: {}
+    ConfigurationAggregatorName:
+      type: string
+      pattern: '[\w\-]+'
+      minLength: 1
+      maxLength: 256
     ResourceId:
       type: string
       minLength: 1
       maxLength: 768
-    AccountId:
-      type: string
-      pattern: \d{12}
     ResourceType:
       type: string
       enum:
@@ -638,34 +663,9 @@ components:
       - AWS::Transfer::Agreement
       - AWS::Transfer::Connector
       - AWS::KinesisFirehose::DeliveryStream
-    NoSuchConfigurationAggregatorException: {}
-    Limit:
-      type: integer
-      minimum: 0
-      maximum: 100
-    ConfigurationAggregatorName:
-      type: string
-      pattern: '[\w\-]+'
-      minLength: 1
-      maxLength: 256
-    ResourceName:
-      type: string
-    InvalidLimitException: {}
-    NextToken:
-      type: string
-    DiscoveredResourceIdentifierList:
-      type: array
-      items:
-        $ref: '#/components/schemas/AggregateResourceIdentifier'
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -676,14 +676,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -694,8 +694,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

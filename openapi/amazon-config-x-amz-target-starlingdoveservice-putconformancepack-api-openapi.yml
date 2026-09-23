@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2014-11-12'
   x-release: v4
-  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.PutConformancePack #X Amz Target=StarlingDoveService.PutConformancePack #X Amz Target=StarlingDoveService.PutConformancePack API'
-  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  title: 'AWS Config #X Amz Target=StarlingDoveService.PutConformanceP…'
+  description: 'Config
+
+    Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account.'
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -23,6 +25,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +127,13 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: PutConformancePack
-      description: '<p>Creates or updates a conformance pack. A conformance pack is a collection of Config rules that can be easily deployed in an account and a region and across an organization. For information on how many conformance packs you can have per account, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html"> <b>Service Limits</b> </a> in the <i>Config Developer Guide</i>.</p> <p>This API creates a service-linked role <code>AWSServiceRoleForConfigConforms</code> in your account. The service-linked role is created only when the role does not exist in your account. </p> <note> <p>You must specify only one of the follow parameters: <code>TemplateS3Uri</code>, <code>TemplateBody</code> or <code>TemplateSSMDocumentDetails</code>.</p> </note>'
+      description: 'Creates or updates a conformance pack. A conformance pack is a collection of Config rules that can be easily deployed in an account and a region and across an organization. For information on how many conformance packs you can have per account, see Service Limits in the Config Developer Guide.
+
+
+        This API creates a service-linked role AWSServiceRoleForConfigConforms in your account. The service-linked role is created only when the role does not exist in your account.
+
+
+        You must specify only one of the follow parameters: TemplateS3Uri, TemplateBody or TemplateSSMDocumentDetails.'
       responses:
         '200':
           description: Success
@@ -215,6 +224,24 @@ paths:
       - '#X Amz Target=StarlingDoveService.PutConformancePack'
 components:
   schemas:
+    TemplateSSMDocumentDetails:
+      type: object
+      required:
+      - DocumentName
+      properties:
+        DocumentName:
+          allOf:
+          - $ref: '#/components/schemas/SSMDocumentName'
+          - description: The name or Amazon Resource Name (ARN) of the SSM document to use to create a conformance pack. If you use the document name, Config checks only your account and Amazon Web Services Region for the SSM document. If you want to use an SSM document from another Region or account, you must provide the ARN.
+        DocumentVersion:
+          allOf:
+          - $ref: '#/components/schemas/SSMDocumentVersion'
+          - description: <p>The version of the SSM document to use to create a conformance pack. By default, Config uses the latest version.</p> <note> <p>This field is optional.</p> </note>
+      description: <p>This API allows you to create a conformance pack template with an Amazon Web Services Systems Manager document (SSM document). To deploy a conformance pack using an SSM document, first create an SSM document with conformance pack content, and then provide the <code>DocumentName</code> in the <a href="https://docs.aws.amazon.com/config/latest/APIReference/API_PutConformancePack.html">PutConformancePack API</a>. You can also provide the <code>DocumentVersion</code>.</p> <p>The <code>TemplateSSMDocumentDetails</code> object contains the name of the SSM document and the version of the SSM document.</p>
+    DeliveryS3KeyPrefix:
+      type: string
+      minLength: 0
+      maxLength: 1024
     PutConformancePackRequest:
       type: object
       required:
@@ -249,59 +276,60 @@ components:
           allOf:
           - $ref: '#/components/schemas/TemplateSSMDocumentDetails'
           - description: An object of type <code>TemplateSSMDocumentDetails</code>, which contains the name or the Amazon Resource Name (ARN) of the Amazon Web Services Systems Manager document (SSM document) and the version of the SSM document that is used to create a conformance pack.
-    InvalidParameterValueException: {}
-    DeliveryS3KeyPrefix:
-      type: string
-      minLength: 0
-      maxLength: 1024
-    ConformancePackTemplateValidationException: {}
-    SSMDocumentVersion:
-      type: string
-      pattern: ([$]LATEST|[$]DEFAULT|^[1-9][0-9]*$)
-    TemplateS3Uri:
-      type: string
-      pattern: s3://.*
-      minLength: 1
-      maxLength: 1024
-    InsufficientPermissionsException: {}
-    ParameterValue:
-      type: string
-      minLength: 0
-      maxLength: 4096
-    SSMDocumentName:
-      type: string
-      pattern: ^[a-zA-Z0-9_\-.:/]{3,200}$
-    TemplateSSMDocumentDetails:
-      type: object
-      required:
-      - DocumentName
-      properties:
-        DocumentName:
-          allOf:
-          - $ref: '#/components/schemas/SSMDocumentName'
-          - description: The name or Amazon Resource Name (ARN) of the SSM document to use to create a conformance pack. If you use the document name, Config checks only your account and Amazon Web Services Region for the SSM document. If you want to use an SSM document from another Region or account, you must provide the ARN.
-        DocumentVersion:
-          allOf:
-          - $ref: '#/components/schemas/SSMDocumentVersion'
-          - description: <p>The version of the SSM document to use to create a conformance pack. By default, Config uses the latest version.</p> <note> <p>This field is optional.</p> </note>
-      description: <p>This API allows you to create a conformance pack template with an Amazon Web Services Systems Manager document (SSM document). To deploy a conformance pack using an SSM document, first create an SSM document with conformance pack content, and then provide the <code>DocumentName</code> in the <a href="https://docs.aws.amazon.com/config/latest/APIReference/API_PutConformancePack.html">PutConformancePack API</a>. You can also provide the <code>DocumentVersion</code>.</p> <p>The <code>TemplateSSMDocumentDetails</code> object contains the name of the SSM document and the version of the SSM document.</p>
     ConformancePackName:
       type: string
       pattern: '[a-zA-Z][-a-zA-Z0-9]*'
       minLength: 1
       maxLength: 256
-    ResourceInUseException: {}
-    MaxNumberOfConformancePacksExceededException: {}
+    ParameterName:
+      type: string
+      minLength: 0
+      maxLength: 255
+    SSMDocumentVersion:
+      type: string
+      pattern: ([$]LATEST|[$]DEFAULT|^[1-9][0-9]*$)
+    ConformancePackArn:
+      type: string
+      minLength: 1
+      maxLength: 2048
+    InsufficientPermissionsException: {}
+    SSMDocumentName:
+      type: string
+      pattern: ^[a-zA-Z0-9_\-.:/]{3,200}$
+    TemplateBody:
+      type: string
+      minLength: 1
+      maxLength: 51200
+    ConformancePackTemplateValidationException: {}
     ConformancePackInputParameters:
       type: array
       items:
         $ref: '#/components/schemas/ConformancePackInputParameter'
       minItems: 0
       maxItems: 60
+    TemplateS3Uri:
+      type: string
+      pattern: s3://.*
+      minLength: 1
+      maxLength: 1024
+    InvalidParameterValueException: {}
+    ParameterValue:
+      type: string
+      minLength: 0
+      maxLength: 4096
     DeliveryS3Bucket:
       type: string
       minLength: 0
       maxLength: 63
+    MaxNumberOfConformancePacksExceededException: {}
+    PutConformancePackResponse:
+      type: object
+      properties:
+        ConformancePackArn:
+          allOf:
+          - $ref: '#/components/schemas/ConformancePackArn'
+          - description: ARN of the conformance pack.
+    ResourceInUseException: {}
     ConformancePackInputParameter:
       type: object
       required:
@@ -317,34 +345,9 @@ components:
           - $ref: '#/components/schemas/ParameterValue'
           - description: 'Another part of the key-value pair. '
       description: Input parameters in the form of key-value pairs for the conformance pack, both of which you define. Keys can have a maximum character length of 255 characters, and values can have a maximum length of 4096 characters.
-    PutConformancePackResponse:
-      type: object
-      properties:
-        ConformancePackArn:
-          allOf:
-          - $ref: '#/components/schemas/ConformancePackArn'
-          - description: ARN of the conformance pack.
-    ConformancePackArn:
-      type: string
-      minLength: 1
-      maxLength: 2048
-    ParameterName:
-      type: string
-      minLength: 0
-      maxLength: 255
-    TemplateBody:
-      type: string
-      minLength: 1
-      maxLength: 51200
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -355,14 +358,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -373,8 +376,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

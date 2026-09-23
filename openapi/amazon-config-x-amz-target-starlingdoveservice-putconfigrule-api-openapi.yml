@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2014-11-12'
   x-release: v4
-  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.PutConfigRule #X Amz Target=StarlingDoveService.PutConfigRule #X Amz Target=StarlingDoveService.PutConfigRule API'
-  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  title: 'AWS Config #X Amz Target=StarlingDoveService.PutConfigRule…'
+  description: 'Config
+
+    Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account.'
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -23,6 +25,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +127,31 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: PutConfigRule
-      description: '<p>Adds or updates an Config rule to evaluate if your Amazon Web Services resources comply with your desired configurations. For information on how many Config rules you can have per account, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html"> <b>Service Limits</b> </a> in the <i>Config Developer Guide</i>.</p> <p>There are two types of rules: <i>Config Managed Rules</i> and <i>Config Custom Rules</i>. You can use <code>PutConfigRule</code> to create both Config Managed Rules and Config Custom Rules.</p> <p>Config Managed Rules are predefined, customizable rules created by Config. For a list of managed rules, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config Managed Rules</a>. If you are adding an Config managed rule, you must specify the rule''s identifier for the <code>SourceIdentifier</code> key.</p> <p>Config Custom Rules are rules that you create from scratch. There are two ways to create Config custom rules: with Lambda functions (<a href="https://docs.aws.amazon.com/config/latest/developerguide/gettingstarted-concepts.html#gettingstarted-concepts-function"> Lambda Developer Guide</a>) and with Guard (<a href="https://github.com/aws-cloudformation/cloudformation-guard">Guard GitHub Repository</a>), a policy-as-code language. Config custom rules created with Lambda are called <i>Config Custom Lambda Rules</i> and Config custom rules created with Guard are called <i>Config Custom Policy Rules</i>.</p> <p>If you are adding a new Config Custom Lambda rule, you first need to create an Lambda function that the rule invokes to evaluate your resources. When you use <code>PutConfigRule</code> to add a Custom Lambda rule to Config, you must specify the Amazon Resource Name (ARN) that Lambda assigns to the function. You specify the ARN in the <code>SourceIdentifier</code> key. This key is part of the <code>Source</code> object, which is part of the <code>ConfigRule</code> object. </p> <p>For any new Config rule that you add, specify the <code>ConfigRuleName</code> in the <code>ConfigRule</code> object. Do not specify the <code>ConfigRuleArn</code> or the <code>ConfigRuleId</code>. These values are generated by Config for new rules.</p> <p>If you are updating a rule that you added previously, you can specify the rule by <code>ConfigRuleName</code>, <code>ConfigRuleId</code>, or <code>ConfigRuleArn</code> in the <code>ConfigRule</code> data type that you use in this request.</p> <p>For more information about developing and using Config rules, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html">Evaluating Resources with Config Rules</a> in the <i>Config Developer Guide</i>.</p> <note> <p> <code>PutConfigRule</code> is an idempotent API. Subsequent requests won’t create a duplicate resource if one was already created. If a following request has different <code>tags</code> values, Config will ignore these differences and treat it as an idempotent request of the previous. In this case, <code>tags</code> will not be updated, even if they are different.</p> </note>'
+      description: 'Adds or updates an Config rule to evaluate if your Amazon Web Services resources comply with your desired configurations. For information on how many Config rules you can have per account, see Service Limits in the Config Developer Guide.
+
+
+        There are two types of rules: Config Managed Rules and Config Custom Rules. You can use PutConfigRule to create both Config Managed Rules and Config Custom Rules.
+
+
+        Config Managed Rules are predefined, customizable rules created by Config. For a list of managed rules, see List of Config Managed Rules. If you are adding an Config managed rule, you must specify the rule''s identifier for the SourceIdentifier key.
+
+
+        Config Custom Rules are rules that you create from scratch. There are two ways to create Config custom rules: with Lambda functions ( Lambda Developer Guide) and with Guard (Guard GitHub Repository), a policy-as-code language. Config custom rules created with Lambda are called Config Custom Lambda Rules and Config custom rules created with Guard are called Config Custom Policy Rules.
+
+
+        If you are adding a new Config Custom Lambda rule, you first need to create an Lambda function that the rule invokes to evaluate your resources. When you use PutConfigRule to add a Custom Lambda rule to Config, you must specify the Amazon Resource Name (ARN) that Lambda assigns to the function. You specify the ARN in the SourceIdentifier key. This key is part of the Source object, which is part of the ConfigRule object.
+
+
+        For any new Config rule that you add, specify the ConfigRuleName in the ConfigRule object. Do not specify the ConfigRuleArn or the ConfigRuleId. These values are generated by Config for new rules.
+
+
+        If you are updating a rule that you added previously, you can specify the rule by ConfigRuleName, ConfigRuleId, or ConfigRuleArn in the ConfigRule data type that you use in this request.
+
+
+        For more information about developing and using Config rules, see Evaluating Resources with Config Rules in the Config Developer Guide.
+
+
+        PutConfigRule is an idempotent API. Subsequent requests won’t create a duplicate resource if one was already created. If a following request has different tags values, Config will ignore these differences and treat it as an idempotent request of the previous. In this case, tags will not be updated, even if they are different.'
       responses:
         '200':
           description: Success
@@ -205,166 +232,6 @@ paths:
       - '#X Amz Target=StarlingDoveService.PutConfigRule'
 components:
   schemas:
-    MaximumExecutionFrequency:
-      type: string
-      enum:
-      - One_Hour
-      - Three_Hours
-      - Six_Hours
-      - Twelve_Hours
-      - TwentyFour_Hours
-    EvaluationMode:
-      type: string
-      enum:
-      - DETECTIVE
-      - PROACTIVE
-    MaxNumberOfConfigRulesExceededException: {}
-    Boolean:
-      type: boolean
-    PutConfigRuleRequest:
-      type: object
-      required:
-      - ConfigRule
-      title: PutConfigRuleRequest
-      properties:
-        ConfigRule:
-          allOf:
-          - $ref: '#/components/schemas/ConfigRule'
-          - description: The rule that you want to add to your account.
-        Tags:
-          allOf:
-          - $ref: '#/components/schemas/TagsList'
-          - description: An array of tag object.
-    InvalidParameterValueException: {}
-    MessageType:
-      type: string
-      enum:
-      - ConfigurationItemChangeNotification
-      - ConfigurationSnapshotDeliveryCompleted
-      - ScheduledNotification
-      - OversizedConfigurationItemChangeNotification
-    PolicyText:
-      type: string
-      minLength: 0
-      maxLength: 10000
-    Owner:
-      type: string
-      enum:
-      - CUSTOM_LAMBDA
-      - AWS
-      - CUSTOM_POLICY
-    PolicyRuntime:
-      type: string
-      pattern: guard\-2\.x\.x
-      minLength: 1
-      maxLength: 64
-    InsufficientPermissionsException: {}
-    Source:
-      type: object
-      required:
-      - Owner
-      properties:
-        Owner:
-          allOf:
-          - $ref: '#/components/schemas/Owner'
-          - description: <p>Indicates whether Amazon Web Services or the customer owns and manages the Config rule.</p> <p>Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config Managed Rules</a> in the <i>Config developer guide</i>.</p> <p>Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom Rules </a> in the <i>Config developer guide</i>.</p>
-        SourceIdentifier:
-          allOf:
-          - $ref: '#/components/schemas/StringWithCharLimit256'
-          - description: <p>For Config Managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config Managed Rules</a>.</p> <p>For Config Custom Lambda rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.</p> <p>For Config Custom Policy rules, this field will be ignored.</p>
-        SourceDetails:
-          allOf:
-          - $ref: '#/components/schemas/SourceDetails'
-          - description: <p>Provides the source and the message types that cause Config to evaluate your Amazon Web Services resources against a rule. It also provides the frequency with which you want Config to run evaluations for the rule if the trigger type is periodic.</p> <p>If the owner is set to <code>CUSTOM_POLICY</code>, the only acceptable values for the Config rule trigger message type are <code>ConfigurationItemChangeNotification</code> and <code>OversizedConfigurationItemChangeNotification</code>.</p>
-        CustomPolicyDetails:
-          allOf:
-          - $ref: '#/components/schemas/CustomPolicyDetails'
-          - description: Provides the runtime system, policy definition, and whether debug logging is enabled. Required when owner is set to <code>CUSTOM_POLICY</code>.
-      description: Provides the CustomPolicyDetails, the rule owner (<code>Amazon Web Services</code> for managed rules, <code>CUSTOM_POLICY</code> for Custom Policy rules, and <code>CUSTOM_LAMBDA</code> for Custom Lambda rules), the rule identifier, and the events that cause the evaluation of your Amazon Web Services resources.
-    NoAvailableConfigurationRecorderException: {}
-    SourceDetails:
-      type: array
-      items:
-        $ref: '#/components/schemas/SourceDetail'
-      minItems: 0
-      maxItems: 25
-    ConfigRuleState:
-      type: string
-      enum:
-      - ACTIVE
-      - DELETING
-      - DELETING_RESULTS
-      - EVALUATING
-    Tag:
-      type: object
-      properties:
-        Key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: One part of a key-value pair that make up a tag. A key is a general label that acts like a category for more specific tag values.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The optional part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key).
-      description: The tags for the resource. The metadata that you apply to a resource to help you categorize and organize them. Each tag consists of a key and an optional value, both of which you define. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters.
-    EventSource:
-      type: string
-      enum:
-      - aws.config
-    StringWithCharLimit1024:
-      type: string
-      minLength: 1
-      maxLength: 1024
-    TagKey:
-      type: string
-      minLength: 1
-      maxLength: 128
-    ConfigRuleName:
-      type: string
-      pattern: .*\S.*
-      minLength: 1
-      maxLength: 128
-    EvaluationModeConfiguration:
-      type: object
-      properties:
-        Mode:
-          allOf:
-          - $ref: '#/components/schemas/EvaluationMode'
-          - description: The mode of an evaluation. The valid values are Detective or Proactive.
-      description: The configuration object for Config rule evaluation mode. The Supported valid values are Detective or Proactive.
-    EvaluationModes:
-      type: array
-      items:
-        $ref: '#/components/schemas/EvaluationModeConfiguration'
-    ResourceInUseException: {}
-    ComplianceResourceTypes:
-      type: array
-      items:
-        $ref: '#/components/schemas/StringWithCharLimit256'
-      minItems: 0
-      maxItems: 100
-    EmptiableStringWithCharLimit256:
-      type: string
-      minLength: 0
-      maxLength: 256
-    BaseResourceId:
-      type: string
-      minLength: 1
-      maxLength: 768
-    TagsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Tag'
-      minItems: 0
-      maxItems: 50
-    StringWithCharLimit256:
-      type: string
-      minLength: 1
-      maxLength: 256
-    TagValue:
-      type: string
-      minLength: 0
-      maxLength: 256
     Scope:
       type: object
       properties:
@@ -385,10 +252,7 @@ components:
           - $ref: '#/components/schemas/BaseResourceId'
           - description: The ID of the only Amazon Web Services resource that you want to trigger an evaluation for the rule. If you specify a resource ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.
       description: Defines which resources trigger an evaluation for an Config rule. The scope can include one or more resource types, a combination of a tag key and value, or a combination of one resource type and one resource ID. Specify a scope to constrain which resources trigger an evaluation for a rule. Otherwise, evaluations for the rule are triggered when any resource in your recording group changes in configuration.
-    StringWithCharLimit128:
-      type: string
-      minLength: 1
-      maxLength: 128
+    MaxNumberOfConfigRulesExceededException: {}
     ConfigRule:
       type: object
       required:
@@ -439,6 +303,25 @@ components:
           - $ref: '#/components/schemas/EvaluationModes'
           - description: The modes the Config rule can be evaluated in. The valid values are distinct objects. By default, the value is Detective evaluation mode only.
       description: '<p>Config rules evaluate the configuration settings of your Amazon Web Services resources. A rule can run when Config detects a configuration change to an Amazon Web Services resource or at a periodic frequency that you choose (for example, every 24 hours). There are two types of rules: <i>Config Managed Rules</i> and <i>Config Custom Rules</i>.</p> <p>Config Managed Rules are predefined, customizable rules created by Config. For a list of managed rules, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config Managed Rules</a>.</p> <p>Config Custom Rules are rules that you create from scratch. There are two ways to create Config custom rules: with Lambda functions (<a href="https://docs.aws.amazon.com/config/latest/developerguide/gettingstarted-concepts.html#gettingstarted-concepts-function"> Lambda Developer Guide</a>) and with Guard (<a href="https://github.com/aws-cloudformation/cloudformation-guard">Guard GitHub Repository</a>), a policy-as-code language. Config custom rules created with Lambda are called <i>Config Custom Lambda Rules</i> and Config custom rules created with Guard are called <i>Config Custom Policy Rules</i>.</p> <p>For more information about developing and using Config rules, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html">Evaluating Resource with Config Rules</a> in the <i>Config Developer Guide</i>.</p> <note> <p>You can use the Amazon Web Services CLI and Amazon Web Services SDKs if you want to create a rule that triggers evaluations for your resources when Config delivers the configuration snapshot. For more information, see <a>ConfigSnapshotDeliveryProperties</a>.</p> </note>'
+    PutConfigRuleRequest:
+      type: object
+      required:
+      - ConfigRule
+      title: PutConfigRuleRequest
+      properties:
+        ConfigRule:
+          allOf:
+          - $ref: '#/components/schemas/ConfigRule'
+          - description: The rule that you want to add to your account.
+        Tags:
+          allOf:
+          - $ref: '#/components/schemas/TagsList'
+          - description: An array of tag object.
+    NoAvailableConfigurationRecorderException: {}
+    PolicyText:
+      type: string
+      minLength: 0
+      maxLength: 10000
     CustomPolicyDetails:
       type: object
       required:
@@ -458,10 +341,44 @@ components:
           - $ref: '#/components/schemas/Boolean'
           - description: The boolean expression for enabling debug logging for your Config Custom Policy rule. The default value is <code>false</code>.
       description: Provides the runtime system, policy definition, and whether debug logging enabled. You can specify the following CustomPolicyDetails parameter values only for Config Custom Policy rules.
-    StringWithCharLimit64:
+    SourceDetails:
+      type: array
+      items:
+        $ref: '#/components/schemas/SourceDetail'
+      minItems: 0
+      maxItems: 25
+    StringWithCharLimit128:
       type: string
       minLength: 1
-      maxLength: 64
+      maxLength: 128
+    EvaluationModes:
+      type: array
+      items:
+        $ref: '#/components/schemas/EvaluationModeConfiguration'
+    Owner:
+      type: string
+      enum:
+      - CUSTOM_LAMBDA
+      - AWS
+      - CUSTOM_POLICY
+    EvaluationMode:
+      type: string
+      enum:
+      - DETECTIVE
+      - PROACTIVE
+    StringWithCharLimit1024:
+      type: string
+      minLength: 1
+      maxLength: 1024
+    EmptiableStringWithCharLimit256:
+      type: string
+      minLength: 0
+      maxLength: 256
+    ConfigRuleName:
+      type: string
+      pattern: .*\S.*
+      minLength: 1
+      maxLength: 128
     SourceDetail:
       type: object
       properties:
@@ -478,15 +395,119 @@ components:
           - $ref: '#/components/schemas/MaximumExecutionFrequency'
           - description: <p>The frequency at which you want Config to run evaluations for a custom rule with a periodic trigger. If you specify a value for <code>MaximumExecutionFrequency</code>, then <code>MessageType</code> must use the <code>ScheduledNotification</code> value.</p> <note> <p>By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a valid value for the <code>MaximumExecutionFrequency</code> parameter.</p> <p>Based on the valid value you choose, Config runs evaluations once for each valid value. For example, if you choose <code>Three_Hours</code>, Config runs evaluations once every three hours. In this case, <code>Three_Hours</code> is the frequency of this rule. </p> </note>
       description: 'Provides the source and the message types that trigger Config to evaluate your Amazon Web Services resources against a rule. It also provides the frequency with which you want Config to run evaluations for the rule if the trigger type is periodic. You can specify the parameter values for <code>SourceDetail</code> only for custom rules. '
+    InsufficientPermissionsException: {}
+    Source:
+      type: object
+      required:
+      - Owner
+      properties:
+        Owner:
+          allOf:
+          - $ref: '#/components/schemas/Owner'
+          - description: <p>Indicates whether Amazon Web Services or the customer owns and manages the Config rule.</p> <p>Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config Managed Rules</a> in the <i>Config developer guide</i>.</p> <p>Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom Rules </a> in the <i>Config developer guide</i>.</p>
+        SourceIdentifier:
+          allOf:
+          - $ref: '#/components/schemas/StringWithCharLimit256'
+          - description: <p>For Config Managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config Managed Rules</a>.</p> <p>For Config Custom Lambda rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.</p> <p>For Config Custom Policy rules, this field will be ignored.</p>
+        SourceDetails:
+          allOf:
+          - $ref: '#/components/schemas/SourceDetails'
+          - description: <p>Provides the source and the message types that cause Config to evaluate your Amazon Web Services resources against a rule. It also provides the frequency with which you want Config to run evaluations for the rule if the trigger type is periodic.</p> <p>If the owner is set to <code>CUSTOM_POLICY</code>, the only acceptable values for the Config rule trigger message type are <code>ConfigurationItemChangeNotification</code> and <code>OversizedConfigurationItemChangeNotification</code>.</p>
+        CustomPolicyDetails:
+          allOf:
+          - $ref: '#/components/schemas/CustomPolicyDetails'
+          - description: Provides the runtime system, policy definition, and whether debug logging is enabled. Required when owner is set to <code>CUSTOM_POLICY</code>.
+      description: Provides the CustomPolicyDetails, the rule owner (<code>Amazon Web Services</code> for managed rules, <code>CUSTOM_POLICY</code> for Custom Policy rules, and <code>CUSTOM_LAMBDA</code> for Custom Lambda rules), the rule identifier, and the events that cause the evaluation of your Amazon Web Services resources.
+    BaseResourceId:
+      type: string
+      minLength: 1
+      maxLength: 768
+    PolicyRuntime:
+      type: string
+      pattern: guard\-2\.x\.x
+      minLength: 1
+      maxLength: 64
+    StringWithCharLimit256:
+      type: string
+      minLength: 1
+      maxLength: 256
+    Boolean:
+      type: boolean
+    TagsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+      minItems: 0
+      maxItems: 50
+    Tag:
+      type: object
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: One part of a key-value pair that make up a tag. A key is a general label that acts like a category for more specific tag values.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The optional part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key).
+      description: The tags for the resource. The metadata that you apply to a resource to help you categorize and organize them. Each tag consists of a key and an optional value, both of which you define. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters.
+    MaximumExecutionFrequency:
+      type: string
+      enum:
+      - One_Hour
+      - Three_Hours
+      - Six_Hours
+      - Twelve_Hours
+      - TwentyFour_Hours
+    InvalidParameterValueException: {}
+    TagValue:
+      type: string
+      minLength: 0
+      maxLength: 256
+    ComplianceResourceTypes:
+      type: array
+      items:
+        $ref: '#/components/schemas/StringWithCharLimit256'
+      minItems: 0
+      maxItems: 100
+    TagKey:
+      type: string
+      minLength: 1
+      maxLength: 128
+    ConfigRuleState:
+      type: string
+      enum:
+      - ACTIVE
+      - DELETING
+      - DELETING_RESULTS
+      - EVALUATING
+    EvaluationModeConfiguration:
+      type: object
+      properties:
+        Mode:
+          allOf:
+          - $ref: '#/components/schemas/EvaluationMode'
+          - description: The mode of an evaluation. The valid values are Detective or Proactive.
+      description: The configuration object for Config rule evaluation mode. The Supported valid values are Detective or Proactive.
+    MessageType:
+      type: string
+      enum:
+      - ConfigurationItemChangeNotification
+      - ConfigurationSnapshotDeliveryCompleted
+      - ScheduledNotification
+      - OversizedConfigurationItemChangeNotification
+    StringWithCharLimit64:
+      type: string
+      minLength: 1
+      maxLength: 64
+    EventSource:
+      type: string
+      enum:
+      - aws.config
+    ResourceInUseException: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -497,14 +518,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -515,8 +536,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

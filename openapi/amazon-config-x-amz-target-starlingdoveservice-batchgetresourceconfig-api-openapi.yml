@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2014-11-12'
   x-release: v4
-  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetResourceConfig #X Amz Target=StarlingDoveService.BatchGetResourceConfig #X Amz Target=StarlingDoveService.BatchGetResourceConfig API'
-  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetResourc…'
+  description: 'Config
+
+    Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account.'
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -23,6 +25,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +127,13 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: BatchGetResourceConfig
-      description: <p>Returns the <code>BaseConfigurationItem</code> for one or more requested resources. The operation also returns a list of resources that are not processed in the current request. If there are no unprocessed resources, the operation returns an empty unprocessedResourceKeys list. </p> <note> <ul> <li> <p>The API does not return results for deleted resources.</p> </li> <li> <p> The API does not return any tags for the requested resources. This information is filtered out of the supplementaryConfiguration section of the API response.</p> </li> </ul> </note>
+      description: 'Returns the BaseConfigurationItem for one or more requested resources. The operation also returns a list of resources that are not processed in the current request. If there are no unprocessed resources, the operation returns an empty unprocessedResourceKeys list.
+
+
+        The API does not return results for deleted resources.
+
+
+        The API does not return any tags for the requested resources. This information is filtered out of the supplementaryConfiguration section of the API response.'
       responses:
         '200':
           description: Success
@@ -183,11 +192,128 @@ paths:
       - '#X Amz Target=StarlingDoveService.BatchGetResourceConfig'
 components:
   schemas:
+    SupplementaryConfigurationValue:
+      type: string
     ARN:
       type: string
-    ValidationException: {}
+    BatchGetResourceConfigRequest:
+      type: object
+      required:
+      - resourceKeys
+      title: BatchGetResourceConfigRequest
+      properties:
+        resourceKeys:
+          allOf:
+          - $ref: '#/components/schemas/ResourceKeys'
+          - description: A list of resource keys to be processed with the current request. Each element in the list consists of the resource type and resource ID.
+    ResourceCreationTime:
+      type: string
+      format: date-time
+    ResourceName:
+      type: string
+    NoAvailableConfigurationRecorderException: {}
+    BaseConfigurationItem:
+      type: object
+      properties:
+        version:
+          allOf:
+          - $ref: '#/components/schemas/Version'
+          - description: The version number of the resource configuration.
+        accountId:
+          allOf:
+          - $ref: '#/components/schemas/AccountId'
+          - description: The 12-digit Amazon Web Services account ID associated with the resource.
+        configurationItemCaptureTime:
+          allOf:
+          - $ref: '#/components/schemas/ConfigurationItemCaptureTime'
+          - description: The time when the configuration recording was initiated.
+        configurationItemStatus:
+          allOf:
+          - $ref: '#/components/schemas/ConfigurationItemStatus'
+          - description: <p>The configuration item status. The valid values are:</p> <ul> <li> <p>OK – The resource configuration has been updated</p> </li> <li> <p>ResourceDiscovered – The resource was newly discovered</p> </li> <li> <p>ResourceNotRecorded – The resource was discovered but its configuration was not recorded since the recorder excludes the recording of resources of this type</p> </li> <li> <p>ResourceDeleted – The resource was deleted</p> </li> <li> <p>ResourceDeletedNotRecorded – The resource was deleted but its configuration was not recorded since the recorder excludes the recording of resources of this type</p> </li> </ul> <note> <p>The CIs do not incur any cost.</p> </note>
+        configurationStateId:
+          allOf:
+          - $ref: '#/components/schemas/ConfigurationStateId'
+          - description: An identifier that indicates the ordering of the configuration items of a resource.
+        arn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The Amazon Resource Name (ARN) of the resource.
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/ResourceType'
+          - description: The type of Amazon Web Services resource.
+        resourceId:
+          allOf:
+          - $ref: '#/components/schemas/ResourceId'
+          - description: The ID of the resource (for example., sg-xxxxxx).
+        resourceName:
+          allOf:
+          - $ref: '#/components/schemas/ResourceName'
+          - description: The custom name of the resource, if available.
+        awsRegion:
+          allOf:
+          - $ref: '#/components/schemas/AwsRegion'
+          - description: The region where the resource resides.
+        availabilityZone:
+          allOf:
+          - $ref: '#/components/schemas/AvailabilityZone'
+          - description: The Availability Zone associated with the resource.
+        resourceCreationTime:
+          allOf:
+          - $ref: '#/components/schemas/ResourceCreationTime'
+          - description: The time stamp when the resource was created.
+        configuration:
+          allOf:
+          - $ref: '#/components/schemas/Configuration'
+          - description: The description of the resource configuration.
+        supplementaryConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/SupplementaryConfiguration'
+          - description: Configuration attributes that Config returns for certain resource types to supplement the information returned for the configuration parameter.
+      description: The detailed configuration of a specified resource.
+    AccountId:
+      type: string
+      pattern: \d{12}
+    ConfigurationItemStatus:
+      type: string
+      enum:
+      - OK
+      - ResourceDiscovered
+      - ResourceNotRecorded
+      - ResourceDeleted
+      - ResourceDeletedNotRecorded
     AvailabilityZone:
       type: string
+    ResourceKeys:
+      type: array
+      items:
+        $ref: '#/components/schemas/ResourceKey'
+      minItems: 1
+      maxItems: 100
+    ValidationException: {}
+    AwsRegion:
+      type: string
+      minLength: 1
+      maxLength: 64
+    ConfigurationStateId:
+      type: string
+    Configuration:
+      type: string
+    Version:
+      type: string
+    BaseConfigurationItems:
+      type: array
+      items:
+        $ref: '#/components/schemas/BaseConfigurationItem'
+    SupplementaryConfiguration:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/SupplementaryConfigurationValue'
+    ResourceId:
+      type: string
+      minLength: 1
+      maxLength: 768
     BatchGetResourceConfigResponse:
       type: object
       properties:
@@ -202,35 +328,21 @@ components:
     ConfigurationItemCaptureTime:
       type: string
       format: date-time
-    Version:
-      type: string
-    ConfigurationItemStatus:
-      type: string
-      enum:
-      - OK
-      - ResourceDiscovered
-      - ResourceNotRecorded
-      - ResourceDeleted
-      - ResourceDeletedNotRecorded
-    ResourceKeys:
-      type: array
-      items:
-        $ref: '#/components/schemas/ResourceKey'
-      minItems: 1
-      maxItems: 100
-    SupplementaryConfigurationValue:
-      type: string
-    NoAvailableConfigurationRecorderException: {}
-    ResourceId:
-      type: string
-      minLength: 1
-      maxLength: 768
-    AwsRegion:
-      type: string
-      minLength: 1
-      maxLength: 64
-    ConfigurationStateId:
-      type: string
+    ResourceKey:
+      type: object
+      required:
+      - resourceType
+      - resourceId
+      properties:
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/ResourceType'
+          - description: The resource type.
+        resourceId:
+          allOf:
+          - $ref: '#/components/schemas/ResourceId'
+          - description: 'The ID of the resource (for example., sg-xxxxxx). '
+      description: The details that identify a resource within Config, including the resource type and resource ID.
     ResourceType:
       type: string
       enum:
@@ -552,118 +664,9 @@ components:
       - AWS::Transfer::Agreement
       - AWS::Transfer::Connector
       - AWS::KinesisFirehose::DeliveryStream
-    AccountId:
-      type: string
-      pattern: \d{12}
-    Configuration:
-      type: string
-    BatchGetResourceConfigRequest:
-      type: object
-      required:
-      - resourceKeys
-      title: BatchGetResourceConfigRequest
-      properties:
-        resourceKeys:
-          allOf:
-          - $ref: '#/components/schemas/ResourceKeys'
-          - description: A list of resource keys to be processed with the current request. Each element in the list consists of the resource type and resource ID.
-    BaseConfigurationItem:
-      type: object
-      properties:
-        version:
-          allOf:
-          - $ref: '#/components/schemas/Version'
-          - description: The version number of the resource configuration.
-        accountId:
-          allOf:
-          - $ref: '#/components/schemas/AccountId'
-          - description: The 12-digit Amazon Web Services account ID associated with the resource.
-        configurationItemCaptureTime:
-          allOf:
-          - $ref: '#/components/schemas/ConfigurationItemCaptureTime'
-          - description: The time when the configuration recording was initiated.
-        configurationItemStatus:
-          allOf:
-          - $ref: '#/components/schemas/ConfigurationItemStatus'
-          - description: <p>The configuration item status. The valid values are:</p> <ul> <li> <p>OK – The resource configuration has been updated</p> </li> <li> <p>ResourceDiscovered – The resource was newly discovered</p> </li> <li> <p>ResourceNotRecorded – The resource was discovered but its configuration was not recorded since the recorder excludes the recording of resources of this type</p> </li> <li> <p>ResourceDeleted – The resource was deleted</p> </li> <li> <p>ResourceDeletedNotRecorded – The resource was deleted but its configuration was not recorded since the recorder excludes the recording of resources of this type</p> </li> </ul> <note> <p>The CIs do not incur any cost.</p> </note>
-        configurationStateId:
-          allOf:
-          - $ref: '#/components/schemas/ConfigurationStateId'
-          - description: An identifier that indicates the ordering of the configuration items of a resource.
-        arn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The Amazon Resource Name (ARN) of the resource.
-        resourceType:
-          allOf:
-          - $ref: '#/components/schemas/ResourceType'
-          - description: The type of Amazon Web Services resource.
-        resourceId:
-          allOf:
-          - $ref: '#/components/schemas/ResourceId'
-          - description: The ID of the resource (for example., sg-xxxxxx).
-        resourceName:
-          allOf:
-          - $ref: '#/components/schemas/ResourceName'
-          - description: The custom name of the resource, if available.
-        awsRegion:
-          allOf:
-          - $ref: '#/components/schemas/AwsRegion'
-          - description: The region where the resource resides.
-        availabilityZone:
-          allOf:
-          - $ref: '#/components/schemas/AvailabilityZone'
-          - description: The Availability Zone associated with the resource.
-        resourceCreationTime:
-          allOf:
-          - $ref: '#/components/schemas/ResourceCreationTime'
-          - description: The time stamp when the resource was created.
-        configuration:
-          allOf:
-          - $ref: '#/components/schemas/Configuration'
-          - description: The description of the resource configuration.
-        supplementaryConfiguration:
-          allOf:
-          - $ref: '#/components/schemas/SupplementaryConfiguration'
-          - description: Configuration attributes that Config returns for certain resource types to supplement the information returned for the configuration parameter.
-      description: The detailed configuration of a specified resource.
-    ResourceKey:
-      type: object
-      required:
-      - resourceType
-      - resourceId
-      properties:
-        resourceType:
-          allOf:
-          - $ref: '#/components/schemas/ResourceType'
-          - description: The resource type.
-        resourceId:
-          allOf:
-          - $ref: '#/components/schemas/ResourceId'
-          - description: 'The ID of the resource (for example., sg-xxxxxx). '
-      description: The details that identify a resource within Config, including the resource type and resource ID.
-    ResourceCreationTime:
-      type: string
-      format: date-time
-    ResourceName:
-      type: string
-    BaseConfigurationItems:
-      type: array
-      items:
-        $ref: '#/components/schemas/BaseConfigurationItem'
-    SupplementaryConfiguration:
-      type: object
-      additionalProperties:
-        $ref: '#/components/schemas/SupplementaryConfigurationValue'
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -674,14 +677,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -692,8 +695,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

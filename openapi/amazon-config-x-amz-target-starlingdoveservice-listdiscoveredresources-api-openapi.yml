@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2014-11-12'
   x-release: v4
-  title: 'AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.ListDiscoveredResources #X Amz Target=StarlingDoveService.ListDiscoveredResources #X Amz Target=StarlingDoveService.ListDiscoveredResources API'
-  description: <fullname>Config</fullname> <p>Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account. You can use Config to get the current and historical configurations of each Amazon Web Services resource and also to get information about the relationship between the resources. An Amazon Web Services resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by Config, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resources</a>.</p> <p>You can access and manage Config through the Amazon Web Services Management Console, the Amazon Web Services Command Line Interface (Amazon Web Services CLI), the Config API, or the Amazon Web Services SDKs for Config. This reference guide contains documentation for the Config API and the Amazon Web Services CLI commands that you can use to manage Config. The Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>. For detailed information about Config features and their associated actions or commands, as well as how to work with Amazon Web Services Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is Config</a> in the <i>Config Developer Guide</i>.</p>
+  title: 'AWS Config #X Amz Target=StarlingDoveService.ListDiscoveredR…'
+  description: 'Config
+
+    Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account.'
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -23,6 +25,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/config-2014-11-12.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +127,13 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: ListDiscoveredResources
-      description: <p>Accepts a resource type and returns a list of resource identifiers for the resources of that type. A resource identifier includes the resource type, ID, and (if available) the custom resource name. The results consist of resources that Config has discovered, including those that Config is not currently recording. You can narrow the results to include only resources that have specific resource IDs or a resource name.</p> <note> <p>You can specify either resource IDs or a resource name, but not both, in the same request.</p> </note> <p>The response is paginated. By default, Config lists 100 resource identifiers on each page. You can customize this number with the <code>limit</code> parameter. The response includes a <code>nextToken</code> string. To get the next page of results, run the request again and specify the string for the <code>nextToken</code> parameter.</p>
+      description: 'Accepts a resource type and returns a list of resource identifiers for the resources of that type. A resource identifier includes the resource type, ID, and (if available) the custom resource name. The results consist of resources that Config has discovered, including those that Config is not currently recording. You can narrow the results to include only resources that have specific resource IDs or a resource name.
+
+
+        You can specify either resource IDs or a resource name, but not both, in the same request.
+
+
+        The response is paginated. By default, Config lists 100 resource identifiers on each page. You can customize this number with the limit parameter. The response includes a nextToken string. To get the next page of results, run the request again and specify the string for the nextToken parameter.'
       responses:
         '200':
           description: Success
@@ -217,6 +226,55 @@ paths:
       - '#X Amz Target=StarlingDoveService.ListDiscoveredResources'
 components:
   schemas:
+    ResourceName:
+      type: string
+    NoAvailableConfigurationRecorderException: {}
+    NextToken:
+      type: string
+    ResourceIdentifier:
+      type: object
+      properties:
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/ResourceType'
+          - description: The type of resource.
+        resourceId:
+          allOf:
+          - $ref: '#/components/schemas/ResourceId'
+          - description: The ID of the resource (for example, <code>sg-xxxxxx</code>).
+        resourceName:
+          allOf:
+          - $ref: '#/components/schemas/ResourceName'
+          - description: The custom name of the resource (if available).
+        resourceDeletionTime:
+          allOf:
+          - $ref: '#/components/schemas/ResourceDeletionTime'
+          - description: The time that the resource was deleted.
+      description: The details that identify a resource that is discovered by Config, including the resource type, ID, and (if available) the custom resource name.
+    ValidationException: {}
+    InvalidNextTokenException: {}
+    ResourceDeletionTime:
+      type: string
+      format: date-time
+    Limit:
+      type: integer
+      minimum: 0
+      maximum: 100
+    Boolean:
+      type: boolean
+    InvalidLimitException: {}
+    ResourceIdList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ResourceId'
+    ResourceId:
+      type: string
+      minLength: 1
+      maxLength: 768
+    ResourceIdentifierList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ResourceIdentifier'
     ListDiscoveredResourcesRequest:
       type: object
       required:
@@ -248,58 +306,6 @@ components:
           - $ref: '#/components/schemas/NextToken'
           - description: The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.
       description: <p/>
-    ValidationException: {}
-    Boolean:
-      type: boolean
-    ResourceIdentifier:
-      type: object
-      properties:
-        resourceType:
-          allOf:
-          - $ref: '#/components/schemas/ResourceType'
-          - description: The type of resource.
-        resourceId:
-          allOf:
-          - $ref: '#/components/schemas/ResourceId'
-          - description: The ID of the resource (for example, <code>sg-xxxxxx</code>).
-        resourceName:
-          allOf:
-          - $ref: '#/components/schemas/ResourceName'
-          - description: The custom name of the resource (if available).
-        resourceDeletionTime:
-          allOf:
-          - $ref: '#/components/schemas/ResourceDeletionTime'
-          - description: The time that the resource was deleted.
-      description: The details that identify a resource that is discovered by Config, including the resource type, ID, and (if available) the custom resource name.
-    NoAvailableConfigurationRecorderException: {}
-    ResourceIdentifierList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ResourceIdentifier'
-    InvalidNextTokenException: {}
-    ResourceId:
-      type: string
-      minLength: 1
-      maxLength: 768
-    ResourceIdList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ResourceId'
-    ListDiscoveredResourcesResponse:
-      type: object
-      properties:
-        resourceIdentifiers:
-          allOf:
-          - $ref: '#/components/schemas/ResourceIdentifierList'
-          - description: The details that identify a resource that is discovered by Config, including the resource type, ID, and (if available) the custom resource name.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/NextToken'
-          - description: The string that you use in a subsequent request to get the next page of results in a paginated response.
-      description: <p/>
-    ResourceDeletionTime:
-      type: string
-      format: date-time
     ResourceType:
       type: string
       enum:
@@ -621,24 +627,21 @@ components:
       - AWS::Transfer::Agreement
       - AWS::Transfer::Connector
       - AWS::KinesisFirehose::DeliveryStream
-    Limit:
-      type: integer
-      minimum: 0
-      maximum: 100
-    ResourceName:
-      type: string
-    NextToken:
-      type: string
-    InvalidLimitException: {}
+    ListDiscoveredResourcesResponse:
+      type: object
+      properties:
+        resourceIdentifiers:
+          allOf:
+          - $ref: '#/components/schemas/ResourceIdentifierList'
+          - description: The details that identify a resource that is discovered by Config, including the resource type, ID, and (if available) the custom resource name.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/NextToken'
+          - description: The string that you use in a subsequent request to get the next page of results in a paginated response.
+      description: <p/>
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -649,14 +652,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -667,8 +670,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
