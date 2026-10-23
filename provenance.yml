@@ -13,557 +13,557 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-batchgetaggregateresourceconfig-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-batchgetaggregateresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-batchgetaggregateresourceconfig-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-batchgetaggregateresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-batchgetresourceconfig-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-batchgetresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-batchgetresourceconfig-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-batchgetresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteaggregationauthorization-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteaggregationauthorization-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteaggregationauthorization-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteaggregationauthorization-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteconfigrule-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteconfigrule-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationaggregator-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationaggregator-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationaggregator-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationaggregator-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationrecorder-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationrecorder-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationrecorder-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationrecorder-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteconformancepack-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconformancepack-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteconformancepack-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconformancepack-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deletedeliverychannel-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deletedeliverychannel-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deletedeliverychannel-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deletedeliverychannel-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteevaluationresults-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteevaluationresults-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteevaluationresults-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteevaluationresults-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconfigrule-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconfigrule-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconformancepack-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconformancepack-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconformancepack-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconformancepack-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deletependingaggregationrequest-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deletependingaggregationrequest-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deletependingaggregationrequest-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deletependingaggregationrequest-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteremediationconfiguration-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteremediationconfiguration-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteremediationconfiguration-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteremediationconfiguration-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteremediationexceptions-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteremediationexceptions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteremediationexceptions-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteremediationexceptions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteresourceconfig-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteresourceconfig-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteretentionconfiguration-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteretentionconfiguration-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deleteretentionconfiguration-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deleteretentionconfiguration-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deletestoredquery-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deletestoredquery-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deletestoredquery-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deletestoredquery-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deliverconfigsnapshot-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deliverconfigsnapshot-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-deliverconfigsnapshot-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-deliverconfigsnapshot-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-describeaggregatecompliancebyconfigrules-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeaggregatecompliancebyconfigrules-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-describeaggregatecompliancebyconfigrules-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeaggregatecompliancebyconfigrules-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-describeaggregatecompliancebyconformancepacks-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeaggregatecompliancebyconformancepacks-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-describeaggregatecompliancebyconformancepacks-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeaggregatecompliancebyconformancepacks-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeaggregationauthorizations-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeaggregationauthorizations-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeaggregationauthorizations-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeaggregationauthorizations-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describecompliancebyconfigrule-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describecompliancebyconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describecompliancebyconfigrule-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describecompliancebyconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describecompliancebyresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describecompliancebyresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describecompliancebyresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describecompliancebyresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconfigruleevaluationstatus-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigruleevaluationstatus-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconfigruleevaluationstatus-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigruleevaluationstatus-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconfigrules-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigrules-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconfigrules-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigrules-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationaggregators-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationaggregators-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationaggregators-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationaggregators-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationaggregatorsourcesstatus-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationaggregatorsourcesstatus-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationaggregatorsourcesstatus-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationaggregatorsourcesstatus-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationrecorders-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationrecorders-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationrecorders-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationrecorders-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationrecorderstatus-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationrecorderstatus-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationrecorderstatus-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationrecorderstatus-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconformancepackcompliance-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconformancepackcompliance-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconformancepackcompliance-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconformancepackcompliance-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconformancepacks-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconformancepacks-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconformancepacks-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconformancepacks-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconformancepackstatus-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconformancepackstatus-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeconformancepackstatus-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeconformancepackstatus-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describedeliverychannels-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describedeliverychannels-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describedeliverychannels-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describedeliverychannels-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describedeliverychannelstatus-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describedeliverychannelstatus-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describedeliverychannelstatus-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describedeliverychannelstatus-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconfigrules-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconfigrules-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconfigrules-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconfigrules-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconfigrulestatuses-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconfigrulestatuses-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconfigrulestatuses-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconfigrulestatuses-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconformancepacks-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconformancepacks-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconformancepacks-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconformancepacks-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconformancepackstatuses-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconformancepackstatuses-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconformancepackstatuses-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconformancepackstatuses-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describependingaggregationrequests-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describependingaggregationrequests-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describependingaggregationrequests-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describependingaggregationrequests-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeremediationconfigurations-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeremediationconfigurations-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeremediationconfigurations-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeremediationconfigurations-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeremediationexceptions-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeremediationexceptions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeremediationexceptions-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeremediationexceptions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeremediationexecutionstatus-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeremediationexecutionstatus-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeremediationexecutionstatus-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeremediationexecutionstatus-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeretentionconfigurations-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeretentionconfigurations-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-describeretentionconfigurations-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-describeretentionconfigurations-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-getaggregatecompliancedetailsbyconfigrule-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregatecompliancedetailsbyconfigrule-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-getaggregatecompliancedetailsbyconfigrule-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregatecompliancedetailsbyconfigrule-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getaggregateconfigrulecompliancesummary-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregateconfigrulecompliancesummary-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-getaggregateconfigrulecompliancesummary-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregateconfigrulecompliancesummary-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-getaggregateconformancepackcompliancesummary-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregateconformancepackcompliancesummary-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-getaggregateconformancepackcompliancesummary-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregateconformancepackcompliancesummary-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getaggregatediscoveredresourcecounts-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregatediscoveredresourcecounts-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-getaggregatediscoveredresourcecounts-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregatediscoveredresourcecounts-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getaggregateresourceconfig-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregateresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getaggregateresourceconfig-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregateresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getcompliancedetailsbyconfigrule-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancedetailsbyconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getcompliancedetailsbyconfigrule-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancedetailsbyconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getcompliancedetailsbyresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancedetailsbyresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getcompliancedetailsbyresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancedetailsbyresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getcompliancesummarybyconfigrule-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancesummarybyconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getcompliancesummarybyconfigrule-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancesummarybyconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getcompliancesummarybyresourcetype-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancesummarybyresourcetype-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getcompliancesummarybyresourcetype-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancesummarybyresourcetype-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getconformancepackcompliancedetails-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getconformancepackcompliancedetails-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getconformancepackcompliancedetails-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getconformancepackcompliancedetails-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getconformancepackcompliancesummary-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getconformancepackcompliancesummary-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getconformancepackcompliancesummary-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getconformancepackcompliancesummary-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getcustomrulepolicy-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getcustomrulepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getcustomrulepolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getcustomrulepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getdiscoveredresourcecounts-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getdiscoveredresourcecounts-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getdiscoveredresourcecounts-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getdiscoveredresourcecounts-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getorganizationconfigruledetailedstatus-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getorganizationconfigruledetailedstatus-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-getorganizationconfigruledetailedstatus-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getorganizationconfigruledetailedstatus-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-getorganizationconformancepackdetailedstatus-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getorganizationconformancepackdetailedstatus-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-config-x-amz-target-starlingdoveservice-getorganizationconformancepackdetailedstatus-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getorganizationconformancepackdetailedstatus-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getorganizationcustomrulepolicy-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getorganizationcustomrulepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getorganizationcustomrulepolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getorganizationcustomrulepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getresourceconfighistory-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getresourceconfighistory-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getresourceconfighistory-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getresourceconfighistory-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getresourceevaluationsummary-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getresourceevaluationsummary-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getresourceevaluationsummary-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getresourceevaluationsummary-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getstoredquery-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getstoredquery-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-getstoredquery-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-getstoredquery-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-listaggregatediscoveredresources-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-listaggregatediscoveredresources-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-listaggregatediscoveredresources-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-listaggregatediscoveredresources-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-listconformancepackcompliancescores-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-listconformancepackcompliancescores-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-listconformancepackcompliancescores-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-listconformancepackcompliancescores-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-listdiscoveredresources-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-listdiscoveredresources-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-listdiscoveredresources-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-listdiscoveredresources-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-listresourceevaluations-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-listresourceevaluations-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-listresourceevaluations-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-listresourceevaluations-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-liststoredqueries-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-liststoredqueries-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-liststoredqueries-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-liststoredqueries-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-listtagsforresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-listtagsforresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-listtagsforresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-listtagsforresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putaggregationauthorization-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putaggregationauthorization-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putaggregationauthorization-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putaggregationauthorization-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putconfigrule-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putconfigrule-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putconfigurationaggregator-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putconfigurationaggregator-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putconfigurationaggregator-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putconfigurationaggregator-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putconfigurationrecorder-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putconfigurationrecorder-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putconfigurationrecorder-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putconfigurationrecorder-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putconformancepack-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putconformancepack-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putconformancepack-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putconformancepack-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putdeliverychannel-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putdeliverychannel-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putdeliverychannel-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putdeliverychannel-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putevaluations-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putevaluations-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putevaluations-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putevaluations-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putexternalevaluation-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putexternalevaluation-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putexternalevaluation-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putexternalevaluation-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putorganizationconfigrule-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putorganizationconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putorganizationconfigrule-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putorganizationconfigrule-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putorganizationconformancepack-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putorganizationconformancepack-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putorganizationconformancepack-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putorganizationconformancepack-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putremediationconfigurations-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putremediationconfigurations-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putremediationconfigurations-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putremediationconfigurations-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putremediationexceptions-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putremediationexceptions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putremediationexceptions-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putremediationexceptions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putresourceconfig-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putresourceconfig-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putretentionconfiguration-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putretentionconfiguration-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putretentionconfiguration-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putretentionconfiguration-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putstoredquery-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putstoredquery-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-putstoredquery-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-putstoredquery-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-selectaggregateresourceconfig-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-selectaggregateresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-selectaggregateresourceconfig-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-selectaggregateresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-selectresourceconfig-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-selectresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-selectresourceconfig-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-selectresourceconfig-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-startconfigrulesevaluation-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-startconfigrulesevaluation-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-startconfigrulesevaluation-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-startconfigrulesevaluation-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-startconfigurationrecorder-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-startconfigurationrecorder-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-startconfigurationrecorder-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-startconfigurationrecorder-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-startremediationexecution-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-startremediationexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-startremediationexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-startremediationexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-startresourceevaluation-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-startresourceevaluation-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-startresourceevaluation-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-startresourceevaluation-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-stopconfigurationrecorder-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-stopconfigurationrecorder-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-stopconfigurationrecorder-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-stopconfigurationrecorder-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-tagresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-tagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-untagresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-config-x-amz-target-starlingdoveservice-untagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-config-x-amz-target-starlingdoveservice-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   conformance/amazon-config-conformance.yml:
     method: derived
     evidence: declared in the artifact
@@ -4887,127 +4887,7 @@ artifacts:
   json-structure/config-version-structure.json:
     method: unknown
     evidence: no authorship recorded
-  kin/checks-2026-09-24T161608.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T125852.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T133943.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T143147.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T154045.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-26T215308.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T094438.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T103455.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T123021.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T132314.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T140727.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-28T221322.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T213958.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T230545.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T203505.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T220315.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-31T223420.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T063623.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T210448.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T222808.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T224043.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T161828.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T174231.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T062714.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T212454.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T224856.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T055819.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T072335.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T144739.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T195450.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T211839.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T011047.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T224210.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T200636.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T213054.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T214843.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T232836.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T204815.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T222408.yml:
+  kin/checks-2026-10-11T110117.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-12T062655.yml:
@@ -5091,6 +4971,21 @@ artifacts:
   kin/score-2026-09-24T161608.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T210408.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T232841.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T000835.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T024842.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-11T110117.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   lifecycle/amazon-config-lifecycle.yml:
     method: searched
     evidence: declared in the artifact
@@ -5107,285 +5002,12 @@ artifacts:
     method: harvested
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
       to the provider's source is unverified
-  openapi/amazon-config-x-amz-target-starlingdoveservice-batchgetaggregateresourceconfig-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-batchgetresourceconfig-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deleteaggregationauthorization-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconfigrule-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationaggregator-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationrecorder-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deleteconformancepack-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deletedeliverychannel-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deleteevaluationresults-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconfigrule-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconformancepack-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deletependingaggregationrequest-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deleteremediationconfiguration-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deleteremediationexceptions-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deleteresourceconfig-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deleteretentionconfiguration-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deletestoredquery-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-deliverconfigsnapshot-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeaggregatecompliancebyconfigrules-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeaggregatecompliancebyconformancepacks-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeaggregationauthorizations-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describecompliancebyconfigrule-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describecompliancebyresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigruleevaluationstatus-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigrules-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationaggregators-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationaggregatorsourcesstatus-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationrecorders-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeconfigurationrecorderstatus-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeconformancepackcompliance-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeconformancepacks-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeconformancepackstatus-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describedeliverychannels-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describedeliverychannelstatus-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconfigrules-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconfigrulestatuses-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconformancepacks-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeorganizationconformancepackstatuses-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describependingaggregationrequests-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeremediationconfigurations-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeremediationexceptions-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeremediationexecutionstatus-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-describeretentionconfigurations-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregatecompliancedetailsbyconfigrule-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregateconfigrulecompliancesummary-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregateconformancepackcompliancesummary-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregatediscoveredresourcecounts-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getaggregateresourceconfig-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancedetailsbyconfigrule-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancedetailsbyresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancesummarybyconfigrule-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getcompliancesummarybyresourcetype-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getconformancepackcompliancedetails-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getconformancepackcompliancesummary-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getcustomrulepolicy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getdiscoveredresourcecounts-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getorganizationconfigruledetailedstatus-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getorganizationconformancepackdetailedstatus-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getorganizationcustomrulepolicy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getresourceconfighistory-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getresourceevaluationsummary-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-getstoredquery-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-listaggregatediscoveredresources-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-listconformancepackcompliancescores-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-listdiscoveredresources-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-listresourceevaluations-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-liststoredqueries-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-listtagsforresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putaggregationauthorization-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putconfigrule-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putconfigurationaggregator-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putconfigurationrecorder-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putconformancepack-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putdeliverychannel-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putevaluations-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putexternalevaluation-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putorganizationconfigrule-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putorganizationconformancepack-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putremediationconfigurations-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putremediationexceptions-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putresourceconfig-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putretentionconfiguration-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-putstoredquery-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-selectaggregateresourceconfig-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-selectresourceconfig-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-startconfigrulesevaluation-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-startconfigurationrecorder-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-startremediationexecution-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-startresourceevaluation-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-stopconfigurationrecorder-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-tagresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-config-x-amz-target-starlingdoveservice-untagresource-api-openapi.yml:
+  openapi/amazon-config-aws-config-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   overlays/amazon-config-openapi-overlay.yaml:
-    method: generated
-    evidence: declared in the artifact
+    method: derived
+    evidence: an API Evangelist overlay (title) over the provider's contract
   packages/amazon-config-packages.yml:
     method: searched
     evidence: declared in the artifact
