@@ -1,4 +1,4 @@
-# Amazon Config (amazon-config)
+# Amazon Config
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,144 +66,257 @@
 
 AWS Config provides a detailed view of the configuration of AWS resources in your AWS account. This includes how the resources are related to one another and how they were configured in the past, enabling assessment, auditing, and evaluation of configurations for compliance and security governance. It records configuration changes continuously, evaluates compliance against rules, and supports automated remediation of noncompliant resources.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/amazon-config/refs/heads/main/apis.yml)
+**Areas:** Auditing · AWS · Compliance · Configuration Management · Governance · Security
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon Config on APIs.io
 
-## Tags:
+Everything profiled for Amazon Config is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-config/](https://apis.io/providers/amazon-config/)** — or go straight to one of the APIs or properties below.
 
- - Auditing, AWS, Compliance, Configuration Management, Governance, Security
+### APIs (3)
 
-## Timestamps
+- [Amazon Config AWS Config API](https://apis.io/apis/amazon-config/amazon-config-aws-config-api/) — The AWS Config API from Amazon Config — 92 operation(s) for aws config.
+- [Amazon Config Config Connector API](https://apis.io/apis/amazon-config/amazon-config-connector-api/) — The Config Connector API from Amazon Config — 4 operation(s) for config connector.
+- [Amazon Config Config Operations API](https://apis.io/apis/amazon-config/amazon-config-operations-api/) — The Config Operations API from Amazon Config — 6 operation(s) for config operations.
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Amazon Config API
-The AWS Config API provides 92 operations for managing configuration recording, evaluating resource compliance against rules, querying resource configurations, tracking configuration history, managing conformance packs, configuring remediation, and aggregating configuration data across accounts and regions.
+#### MCP servers (1)
 
-**Human URL:** [https://aws.amazon.com/config/](https://aws.amazon.com/config/)
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags:
+- [amazon-config](https://apis.io/servers/amazon-config/amazon-config/)
 
- - Auditing, AWS, Compliance, Configuration Management, Governance
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Documentation](https://docs.aws.amazon.com/config/latest/developerguide/)
-- [OpenAPI](openapi/amazon-config-openapi.yml)
-- [APIReference](https://docs.aws.amazon.com/config/latest/APIReference/)
-- [Pricing](https://aws.amazon.com/config/pricing/)
-- [GettingStarted](https://aws.amazon.com/config/getting-started/)
-- [FAQ](https://aws.amazon.com/config/faq/)
-- [JSONSchema](json-schema/config-config-rule-schema.json)
-- [JSONStructure](json-structure/config-config-rule-structure.json)
-- [JSON-LD](json-ld/amazon-config-context.jsonld)
+- [Amazon Config Agentic Access](https://apis.io/agentic-access/amazon-config/amazon-config-agentic-access/)
 
-## Common Properties
+#### JSON Schema (479)
 
-- [Portal](https://aws.amazon.com/)
+The data models the API reads and writes.
+
+- [AWS Config Rule](https://apis.io/schemas/amazon-config/amazon-config-rule/)
+- [AccountAggregationSource](https://apis.io/schemas/amazon-config/config-account-aggregation-source/)
+- [AccountAggregationSourceAccountList](https://apis.io/schemas/amazon-config/config-account-aggregation-source-account-list/)
+- [AccountAggregationSourceList](https://apis.io/schemas/amazon-config/config-account-aggregation-source-list/)
+- [AccountId](https://apis.io/schemas/amazon-config/config-account-id/)
+- [AggregateComplianceByConfigRule](https://apis.io/schemas/amazon-config/config-aggregate-compliance-by-config-rule/)
+- [AggregateComplianceByConfigRuleList](https://apis.io/schemas/amazon-config/config-aggregate-compliance-by-config-rule-list/)
+- [AggregateComplianceByConformancePack](https://apis.io/schemas/amazon-config/config-aggregate-compliance-by-conformance-pack/)
+- [AggregateComplianceByConformancePackList](https://apis.io/schemas/amazon-config/config-aggregate-compliance-by-conformance-pack-list/)
+- [AggregateComplianceCount](https://apis.io/schemas/amazon-config/config-aggregate-compliance-count/)
+- [AggregateComplianceCountList](https://apis.io/schemas/amazon-config/config-aggregate-compliance-count-list/)
+- [AggregateConformancePackCompliance](https://apis.io/schemas/amazon-config/config-aggregate-conformance-pack-compliance/)
+- [AggregateConformancePackComplianceCount](https://apis.io/schemas/amazon-config/config-aggregate-conformance-pack-compliance-count/)
+- [AggregateConformancePackComplianceFilters](https://apis.io/schemas/amazon-config/config-aggregate-conformance-pack-compliance-filters/)
+- [AggregateConformancePackComplianceSummary](https://apis.io/schemas/amazon-config/config-aggregate-conformance-pack-compliance-summary/)
+- [AggregateConformancePackComplianceSummaryFilters](https://apis.io/schemas/amazon-config/config-aggregate-conformance-pack-compliance-summary-filters/)
+- [AggregateConformancePackComplianceSummaryGroupKey](https://apis.io/schemas/amazon-config/config-aggregate-conformance-pack-compliance-summary-group-key/)
+- [AggregateConformancePackComplianceSummaryList](https://apis.io/schemas/amazon-config/config-aggregate-conformance-pack-compliance-summary-list/)
+- [AggregateEvaluationResult](https://apis.io/schemas/amazon-config/config-aggregate-evaluation-result/)
+- [AggregateEvaluationResultList](https://apis.io/schemas/amazon-config/config-aggregate-evaluation-result-list/)
+- [AggregateResourceIdentifier](https://apis.io/schemas/amazon-config/config-aggregate-resource-identifier/)
+- [AggregatedSourceStatus](https://apis.io/schemas/amazon-config/config-aggregated-source-status/)
+- [AggregatedSourceStatusList](https://apis.io/schemas/amazon-config/config-aggregated-source-status-list/)
+- [AggregatedSourceStatusType](https://apis.io/schemas/amazon-config/config-aggregated-source-status-type/)
+- [AggregatedSourceStatusTypeList](https://apis.io/schemas/amazon-config/config-aggregated-source-status-type-list/)
+- …and 454 more published on APIs.io
+
+#### JSON Structure (479)
+
+Data models expressed in JSON Structure.
+
+- [Amazon Config Rule Structure](https://apis.io/json-structure/amazon-config/amazon-config-rule-structure/)
+- [Config Account Aggregation Source Account List Structure](https://apis.io/json-structure/amazon-config/config-account-aggregation-source-account-list-structure/)
+- [Config Account Aggregation Source List Structure](https://apis.io/json-structure/amazon-config/config-account-aggregation-source-list-structure/)
+- [Config Account Aggregation Source Structure](https://apis.io/json-structure/amazon-config/config-account-aggregation-source-structure/)
+- [Config Account Id Structure](https://apis.io/json-structure/amazon-config/config-account-id-structure/)
+- [Config Aggregate Compliance By Config Rule List Structure](https://apis.io/json-structure/amazon-config/config-aggregate-compliance-by-config-rule-list-structure/)
+- [Config Aggregate Compliance By Config Rule Structure](https://apis.io/json-structure/amazon-config/config-aggregate-compliance-by-config-rule-structure/)
+- [Config Aggregate Compliance By Conformance Pack List Structure](https://apis.io/json-structure/amazon-config/config-aggregate-compliance-by-conformance-pack-list-structure/)
+- [Config Aggregate Compliance By Conformance Pack Structure](https://apis.io/json-structure/amazon-config/config-aggregate-compliance-by-conformance-pack-structure/)
+- [Config Aggregate Compliance Count List Structure](https://apis.io/json-structure/amazon-config/config-aggregate-compliance-count-list-structure/)
+- [Config Aggregate Compliance Count Structure](https://apis.io/json-structure/amazon-config/config-aggregate-compliance-count-structure/)
+- [Config Aggregate Conformance Pack Compliance Count Structure](https://apis.io/json-structure/amazon-config/config-aggregate-conformance-pack-compliance-count-structure/)
+- [Config Aggregate Conformance Pack Compliance Filters Structure](https://apis.io/json-structure/amazon-config/config-aggregate-conformance-pack-compliance-filters-structure/)
+- [Config Aggregate Conformance Pack Compliance Structure](https://apis.io/json-structure/amazon-config/config-aggregate-conformance-pack-compliance-structure/)
+- [Config Aggregate Conformance Pack Compliance Summary Filters Structure](https://apis.io/json-structure/amazon-config/config-aggregate-conformance-pack-compliance-summary-filters-structure/)
+- [Config Aggregate Conformance Pack Compliance Summary Group Key Structure](https://apis.io/json-structure/amazon-config/config-aggregate-conformance-pack-compliance-summary-group-key-structure/)
+- [Config Aggregate Conformance Pack Compliance Summary List Structure](https://apis.io/json-structure/amazon-config/config-aggregate-conformance-pack-compliance-summary-list-structure/)
+- [Config Aggregate Conformance Pack Compliance Summary Structure](https://apis.io/json-structure/amazon-config/config-aggregate-conformance-pack-compliance-summary-structure/)
+- [Config Aggregate Evaluation Result List Structure](https://apis.io/json-structure/amazon-config/config-aggregate-evaluation-result-list-structure/)
+- [Config Aggregate Evaluation Result Structure](https://apis.io/json-structure/amazon-config/config-aggregate-evaluation-result-structure/)
+- [Config Aggregate Resource Identifier Structure](https://apis.io/json-structure/amazon-config/config-aggregate-resource-identifier-structure/)
+- [Config Aggregated Source Status List Structure](https://apis.io/json-structure/amazon-config/config-aggregated-source-status-list-structure/)
+- [Config Aggregated Source Status Structure](https://apis.io/json-structure/amazon-config/config-aggregated-source-status-structure/)
+- [Config Aggregated Source Status Type List Structure](https://apis.io/json-structure/amazon-config/config-aggregated-source-status-type-list-structure/)
+- [Config Aggregated Source Status Type Structure](https://apis.io/json-structure/amazon-config/config-aggregated-source-status-type-structure/)
+- …and 454 more published on APIs.io
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Config Context](https://apis.io/jsonld/amazon-config/amazon-config-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Config Vocabulary](https://apis.io/vocabularies/amazon-config/amazon-config-vocabulary/)
+
+#### Examples (263)
+
+Example requests and responses.
+
+- [Amazon Config Rule Example](https://apis.io/examples/amazon-config/amazon-config-rule-example/)
+- [Config Account Aggregation Source Example](https://apis.io/examples/amazon-config/config-account-aggregation-source-example/)
+- [Config Aggregate Compliance By Config Rule Example](https://apis.io/examples/amazon-config/config-aggregate-compliance-by-config-rule-example/)
+- [Config Aggregate Compliance By Conformance Pack Example](https://apis.io/examples/amazon-config/config-aggregate-compliance-by-conformance-pack-example/)
+- [Config Aggregate Compliance Count Example](https://apis.io/examples/amazon-config/config-aggregate-compliance-count-example/)
+- [Config Aggregate Conformance Pack Compliance Count Example](https://apis.io/examples/amazon-config/config-aggregate-conformance-pack-compliance-count-example/)
+- [Config Aggregate Conformance Pack Compliance Example](https://apis.io/examples/amazon-config/config-aggregate-conformance-pack-compliance-example/)
+- [Config Aggregate Conformance Pack Compliance Filters Example](https://apis.io/examples/amazon-config/config-aggregate-conformance-pack-compliance-filters-example/)
+- [Config Aggregate Conformance Pack Compliance Summary Example](https://apis.io/examples/amazon-config/config-aggregate-conformance-pack-compliance-summary-example/)
+- [Config Aggregate Conformance Pack Compliance Summary Filters Example](https://apis.io/examples/amazon-config/config-aggregate-conformance-pack-compliance-summary-filters-example/)
+- [Config Aggregate Evaluation Result Example](https://apis.io/examples/amazon-config/config-aggregate-evaluation-result-example/)
+- [Config Aggregate Resource Identifier Example](https://apis.io/examples/amazon-config/config-aggregate-resource-identifier-example/)
+- [Config Aggregated Source Status Example](https://apis.io/examples/amazon-config/config-aggregated-source-status-example/)
+- [Config Aggregation Authorization Example](https://apis.io/examples/amazon-config/config-aggregation-authorization-example/)
+- [Config Base Configuration Item Example](https://apis.io/examples/amazon-config/config-base-configuration-item-example/)
+- [Config Batch Get Aggregate Resource Config Request Example](https://apis.io/examples/amazon-config/config-batch-get-aggregate-resource-config-request-example/)
+- [Config Batch Get Aggregate Resource Config Response Example](https://apis.io/examples/amazon-config/config-batch-get-aggregate-resource-config-response-example/)
+- [Config Batch Get Resource Config Request Example](https://apis.io/examples/amazon-config/config-batch-get-resource-config-request-example/)
+- [Config Batch Get Resource Config Response Example](https://apis.io/examples/amazon-config/config-batch-get-resource-config-response-example/)
+- [Config Compliance By Config Rule Example](https://apis.io/examples/amazon-config/config-compliance-by-config-rule-example/)
+- [Config Compliance By Resource Example](https://apis.io/examples/amazon-config/config-compliance-by-resource-example/)
+- [Config Compliance Contributor Count Example](https://apis.io/examples/amazon-config/config-compliance-contributor-count-example/)
+- [Config Compliance Example](https://apis.io/examples/amazon-config/config-compliance-example/)
+- [Config Compliance Summary By Resource Type Example](https://apis.io/examples/amazon-config/config-compliance-summary-by-resource-type-example/)
+- [Config Compliance Summary Example](https://apis.io/examples/amazon-config/config-compliance-summary-example/)
+- …and 238 more published on APIs.io
+
+#### Collections (92)
+
+Postman and Open Collection request collections.
+
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-batchgetaggregateresourceconfig-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetResourceConfig API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-batchgetresourceconfig-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteAggregationAuthorization API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deleteaggregationauthorization-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteConfigRule API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deleteconfigrule-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteConfigurationAggregator API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationaggregator-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteConfigurationRecorder API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deleteconfigurationrecorder-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteConformancePack API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deleteconformancepack-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteDeliveryChannel API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deletedeliverychannel-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteEvaluationResults API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deleteevaluationresults-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteOrganizationConfigRule API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconfigrule-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteOrganizationConformancePack API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deleteorganizationconformancepack-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeletePendingAggregationRequest API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deletependingaggregationrequest-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteRemediationConfiguration API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deleteremediationconfiguration-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteRemediationExceptions API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deleteremediationexceptions-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteResourceConfig API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deleteresourceconfig-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteRetentionConfiguration API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deleteretentionconfiguration-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeleteStoredQuery API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deletestoredquery-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DeliverConfigSnapshot API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-deliverconfigsnapshot-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DescribeAggregateComplianceByConfigRules API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-describeaggregatecompliancebyconfigrules-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DescribeAggregateComplianceByConformancePacks API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-describeaggregatecompliancebyconformancepacks-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DescribeAggregationAuthorizations API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-describeaggregationauthorizations-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DescribeComplianceByConfigRule API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-describecompliancebyconfigrule-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DescribeComplianceByResource API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-describecompliancebyresource-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DescribeConfigRuleEvaluationStatus API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-describeconfigruleevaluationstatus-api/)
+- [AWS Config #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.BatchGetAggregateResourceConfig #X Amz Target=StarlingDoveService.DescribeConfigRules API](https://apis.io/collections/amazon-config/open-amazon-config-x-amz-target-starlingdoveservice-describeconfigrules-api/)
+- …and 67 more published on APIs.io
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Amazon Config Openapi Overlay](https://apis.io/overlays/amazon-config/amazon-config-openapi-overlay/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Config — jsonschema rules](https://apis.io/rules/amazon-config/amazon-config-jsonschema-spectral-rules/)
+- [Amazon Config API Rules](https://apis.io/rules/amazon-config/amazon-config-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Config Authentication](https://apis.io/security/amazon-config/amazon-config-authentication/)
+- [Amazon Config Domain Security](https://apis.io/security/amazon-config/amazon-config-domain-security/)
+- [Amazon Config Trust Center](https://apis.io/security/amazon-config/amazon-config-trust-center/)
+- [Amazon Config Vulnerability Disclosure](https://apis.io/security/amazon-config/amazon-config-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://aws.amazon.com/config/)
 - [Documentation](https://docs.aws.amazon.com/config/)
-- [TermsOfService](https://aws.amazon.com/service-terms/)
-- [PrivacyPolicy](https://aws.amazon.com/privacy/)
+- [Sign up](https://portal.aws.amazon.com/billing/signup)
 - [Support](https://aws.amazon.com/support/)
 - [Blog](https://aws.amazon.com/blogs/mt/)
-- [GitHubOrganization](https://github.com/aws)
-- [Console](https://console.aws.amazon.com/config/)
-- [SignUp](https://portal.aws.amazon.com/billing/signup)
-- [Login](https://signin.aws.amazon.com/)
-- [StatusPage](https://health.aws.amazon.com/health/status)
-- [YouTube](https://www.youtube.com/user/AmazonWebServices)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/aws-config)
-- [Contact](https://aws.amazon.com/contact-us/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Configuration Recording | Continuously record configuration changes to all supported AWS resources in your account with detailed configuration items. |
-| Config Rules | Evaluate AWS resource configurations against desired settings using AWS-managed or custom Lambda-based rules. |
-| Conformance Packs | Deploy collections of Config rules and remediation actions as a single unit across an AWS Organization. |
-| Configuration History | View detailed configuration history for any AWS resource including who changed what and when. |
-| Resource Inventory | Maintain a complete inventory of all AWS resources in your account with current and past configurations. |
-| Automated Remediation | Automatically remediate noncompliant resources using SSM Automation documents triggered by Config rules. |
-| Multi-Account Aggregation | Aggregate configuration and compliance data from multiple accounts and regions into a single view. |
-| Advanced Query | Use SQL-like queries to search across resource configurations and compliance states. |
+**Kin Score 58.1** — strong · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 65.6 |
+| Contract governance | 31.8 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 52.6 |
 
-| Name | Description |
-|------|-------------|
-| Security and Compliance Auditing | Continuously audit AWS resource configurations against security benchmarks like CIS, PCI DSS, and HIPAA. |
-| Change Management | Track who changed what configuration on which resource and when for change management and troubleshooting. |
-| Resource Inventory | Maintain an always-current inventory of all AWS resources for asset management and CMDB purposes. |
-| Drift Detection | Detect configuration drift from approved baselines and trigger alerts or automated remediation. |
-| Incident Investigation | Reconstruct the configuration state of resources at any point in time to aid incident investigation. |
-| Governance at Scale | Enforce organization-wide governance policies using conformance packs deployed across all accounts. |
+**Agent readiness 29.6** — agent-ready
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| AWS CloudTrail | Correlate Config configuration items with CloudTrail API activity to understand who made changes. |
-| AWS Security Hub | Send Config compliance findings to Security Hub for centralized security posture management. |
-| Amazon S3 | Deliver configuration snapshots and history to S3 for long-term storage and analysis. |
-| Amazon SNS | Send notifications for compliance changes and configuration changes via SNS topics. |
-| AWS Systems Manager | Use SSM Automation documents as remediation targets for Config rules. |
-| AWS Organizations | Deploy Config rules and conformance packs across entire AWS Organizations for governance at scale. |
-| AWS Lambda | Create custom Config rules using Lambda functions for organization-specific compliance requirements. |
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-config/](https://apis.io/providers/amazon-config/).
 
-Machine-readable API specifications organized by format.
+## How this profile is made
 
-### OpenAPI
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [Amazon Config OpenAPI](openapi/amazon-config-openapi.yml)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Config: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Schema
+## Open an issue
 
-479 schema files extracted from the OpenAPI specification covering all request/response models.
-
-### JSON Structure
-
-479 JSON Structure files converted from JSON Schema using the json-structure.org specification.
-
-### JSON-LD
-
-- [Amazon Config Context](json-ld/amazon-config-context.jsonld) — 262 types, 327 properties
-
-### Examples
-
-479 example JSON files generated from JSON Schema definitions.
-
-## Capabilities
-
-Naftiko capabilities organized as shared per-API definitions composed into customer-facing workflows.
-
-### Shared Per-API Definitions
-
-- [Amazon Config API](capabilities/shared/config.yaml) — 11 operations for compliance rules, resource inventory, and remediation
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Amazon Config Compliance and Governance](capabilities/compliance-governance.yaml) | Amazon Config API | 10 | Security Engineer, Compliance Officer |
-
-## Vocabulary
-
-- [Amazon Config Vocabulary](vocabulary/amazon-config-vocabulary.yaml) — Unified taxonomy mapping 9 resources, 8 actions, 1 workflow, and 2 personas across operational (OpenAPI) and capability (Naftiko) dimensions
-
-## Rules
-
-- [Amazon Config Spectral Rules](rules/amazon-config-spectral-rules.yml) — 23 rules across 13 categories enforcing Amazon Config API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-config/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
